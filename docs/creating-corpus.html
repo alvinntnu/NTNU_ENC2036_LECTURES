@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Creating Corpus | Corpus Linguistics</title>
+  <meta name="description" content="ENC2036 Course material first edition" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Creating Corpus | Corpus Linguistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="ENC2036 Course material first edition" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Creating Corpus | Corpus Linguistics" />
+  
+  <meta name="twitter:description" content="ENC2036 Course material first edition" />
+  
+
+<meta name="author" content="Alvin Chen" />
+
+
+<meta name="date" content="2019-12-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="corpus-analysis-a-start.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://alvinntnu.github.io/NTNU_ENC2036/"><img src="images/alerts/home.svg" height = "20" width = "20"> Course Website</a></li>
+<li><a href="./"><img src="images/alerts/book-solid.svg" height = "20" width = "20"> ENC 2036 Corpus Linguistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="creating-corpus.html"><a href="creating-corpus.html"><i class="fa fa-check"></i><b>1</b> Creating Corpus</a><ul>
+<li class="chapter" data-level="1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-structure"><i class="fa fa-check"></i><b>1.1</b> HTML Structure</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-syntax"><i class="fa fa-check"></i><b>1.1.1</b> HTML Syntax</a></li>
+<li class="chapter" data-level="1.1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#tags-and-attributes"><i class="fa fa-check"></i><b>1.1.2</b> Tags and Attributes</a></li>
+<li class="chapter" data-level="1.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>1.1.3</b> CSS</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>1.2</b> Web Crawling</a></li>
+<li class="chapter" data-level="1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>1.3</b> Functional Programming</a></li>
+<li class="chapter" data-level="1.4" data-path="creating-corpus.html"><a href="creating-corpus.html#save-corpus"><i class="fa fa-check"></i><b>1.4</b> Save Corpus</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>2</b> Corpus Analysis: A Start</a><ul>
+<li class="chapter" data-level="2.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#installing-quanteda"><i class="fa fa-check"></i><b>2.1</b> Installing <code>quanteda</code></a></li>
+<li class="chapter" data-level="2.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#building-a-corpus-from-character-vector"><i class="fa fa-check"></i><b>2.2</b> Building a <code>corpus</code> from character vector</a></li>
+<li class="chapter" data-level="2.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#keyword-in-context-kwic"><i class="fa fa-check"></i><b>2.3</b> Keyword-in-Context (KWIC)</a></li>
+<li class="chapter" data-level="2.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>2.4</b> KWIC with Regular Expressions</a></li>
+<li class="chapter" data-level="2.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>2.5</b> Tidy Text Format of the Corpus</a></li>
+<li class="chapter" data-level="2.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>2.6</b> Frequency Lists</a></li>
+<li class="chapter" data-level="2.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>2.7</b> Collocations</a></li>
+<li class="chapter" data-level="2.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>2.8</b> Word Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="text-processing.html"><a href="text-processing.html"><i class="fa fa-check"></i><b>3</b> Text Processing</a></li>
+<li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Corpus Linguistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="creating-corpus" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Creating Corpus</h1>
+<p>Linguistic data are important to us linguists. Data usually tell us something we don’t know, or something we are not sure of. In this chapter, I would like to show you a quick way to extract lingusitic data from web pages, which is by now undoubtedly the largest source of textual data available. While there are many existing text data collections, chances are that sometimes you still need to collect your own data for a particular research question.</p>
+<p>Following the spirit of tidy <i class="fab  fa-r-project "></i>, we will mainly do our tasks with the libraries of <code>tidyverse</code> and <code>rvests</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Uncomment the following line for installation</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># install.packages(c(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;stringr&quot;, &quot;jiebaR&quot;, &quot;tmcn&quot;, &quot;RCurl&quot;))</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">library</span>(rvest)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co"># Packages needed for further text processing</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co"># library(jiebaR)</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co"># library(tmcn)</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#library(RCurl)</span></a></code></pre></div>
+<div id="html-structure" class="section level2">
+<h2><span class="header-section-number">1.1</span> HTML Structure</h2>
+<div id="html-syntax" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> HTML Syntax</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">&lt;html&gt;</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="kw">&lt;head&gt;</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="kw">&lt;title&gt;</span>My First HTML <span class="kw">&lt;/title&gt;</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">  <span class="kw">&lt;/head&gt;</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">  </a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">  <span class="kw">&lt;body&gt;</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">    <span class="kw">&lt;h1&gt;</span> Introduction <span class="kw">&lt;/h1&gt;</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">    <span class="kw">&lt;p&gt;</span> Have you ever read the source code of a html page? <span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">  <span class="kw">&lt;/body&gt;</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="kw">&lt;/html&gt;</span></a></code></pre></div>
+<p>A html document includes several important elements (cf. <a href="creating-corpus.html#fig:htmltag">1.1</a>):</p>
+<ul>
+<li><code>DTD</code>: document type definition which informs the browswer about the version of the HTML standard that the document adheres to (e.g., <code>&lt;!DOCTYPE HTML&gt;</code>)</li>
+<li><code>tag</code>: named braces that enclose the content and define its structural function (e.g., <code>title</code>, <code>body</code>, <code>p</code>)</li>
+<li><code>element</code>: the combination of start tag, content, and end tag (e.g, <code>&lt;title&gt;My First HTML&lt;/title&gt;</code>)</li>
+<li><code>attribute</code>: specific properties of the tag, which are often placed in the start end of the element (e.g., <code>&lt;a href= &quot;index.html&quot;&gt; Homepage &lt;/a&gt;</code>). They are expressed as <code>name = &quot;value&quot;</code> pairs.</li>
+</ul>
+<!-- ```{r echo=F, purl = F, out.width = "70%"} -->
+<!-- htmltools::includeHTML("demo_data/my-first-html.html") -->
+<!-- ``` -->
+<div class="figure"><span id="fig:htmltag"></span>
+<img src="images/html-tag.png" alt="Syntax of A HTML Tag Element" width="90%" />
+<p class="caption">
+Figure 1.1: Syntax of A HTML Tag Element
+</p>
+</div>
+<p>A html document starts with the root element <code>&lt;html&gt;</code>, which splits into two branches, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>. Most of the main webpage contents would go into the <code>&lt;body</code>&gt; part. All elements need to be strictly nested within each other in a well-formed and valid HTML file, as shown in <a href="creating-corpus.html#fig:htmltree">1.2</a>.</p>
+<div class="figure"><span id="fig:htmltree"></span>
+<img src="images/html-tree.png" alt="Tree Structure of A HTML Document" width="648" />
+<p class="caption">
+Figure 1.2: Tree Structure of A HTML Document
+</p>
+</div>
+</div>
+<div id="tags-and-attributes" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Tags and Attributes</h3>
+<p>HTML has plenty of legal tags and attributes. On <a href="https://www.w3schools.com/html/html_basic.asp">W3CSchools</a>, there is a complete list of HTML tags and attributes for your reference. Common tags may include:</p>
+<ul>
+<li>Anchor tag <code>&lt;a&gt;</code></li>
+<li>Metadata tag <code>&lt;meta</code>&gt;</li>
+<li>External tag <code>&lt;link&gt;</code></li>
+<li>Emphasizing tags <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;strong&gt;</code></li>
+<li>Paragraph tags <code>&lt;p&gt;</code></li>
+<li>Heading tags <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code></li>
+<li>Listing content tags <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code></li>
+<li>Block tags <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></li>
+<li>Form-related tag <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code></li>
+<li>Foreign script tag <code>&lt;script&gt;</code></li>
+<li>Table tag <code>&lt;table&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code></li>
+</ul>
+<p>You probably don’t have to know all the detail about the HTML tags. However, in order to scrape the data from the Internet, you need to know at least from which types of HTML elements you need your textual data from on the web pages.</p>
+</div>
+<div id="css" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> CSS</h3>
+<p>Cascading Style Sheet (CSS) is a language for describing the layout of HTML and other markup documents (e.g., XML). HTML + CSS is by now the standard way to create and design web pages. The following is an example of the CSS:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb3-1" data-line-number="1">div<span class="fu">.warnings</span> {</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="kw">color</span>: pink;</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="kw">font-family</span>: <span class="st">&quot;Arial&quot;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">  font-size: <span class="dv">120%</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">h1 {</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">  <span class="kw">padding-top</span>: <span class="dv">20px</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">  padding-bottom: <span class="dv">20px</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">}</a></code></pre></div>
+<style type="text/css">
+div.warnings {
+  color: pink;
+  font-family: "Arial"
+  font-size: 120%
+}
+
+h1 {
+  padding-top: 20px
+  padding-bottom: 20px
+}
+</style>
+</div>
+</div>
+<div id="web-crawling" class="section level2">
+<h2><span class="header-section-number">1.2</span> Web Crawling</h2>
+<p>In this tutorial, let’s assume that we like to scape texts from PTT. In particular, we want to extract texts from the <code>Gossiping</code> board.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">ptt.url &lt;-<span class="st"> &quot;https://www.ptt.cc/bbs/Gossiping&quot;</span></a></code></pre></div>
+<p>If you use your browser to view <a href="https://www.ptt.cc/bbs/Gossiping">PTT Gossiping</a> page, you would see that you need to go through the age verification before you can enter the content page. So, our first job is to pass through this age verification.</p>
+<ul>
+<li>First, we create a html session (like we open a browswer linking to the page)</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">gossiping.session &lt;-<span class="st"> </span><span class="kw">html_session</span>(ptt.url)</a></code></pre></div>
+<ul>
+<li>Second, we extract the age verification form from the current page</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">gossiping.form &lt;-<span class="st"> </span>gossiping.session <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span><span class="kw">html_node</span>(<span class="st">&quot;form&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span>html_form</a></code></pre></div>
+<ul>
+<li>Then we automatically submit an <code>yes</code> to the age verification form</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">gossiping &lt;-<span class="st"> </span><span class="kw">submit_form</span>(</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">session =</span> gossiping.session,</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="dt">form =</span> gossiping.form,</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">  <span class="dt">submit =</span> <span class="st">&quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">gossiping</a></code></pre></div>
+<pre><code>## &lt;session&gt; https://www.ptt.cc/bbs/Gossiping/index.html
+##   Status: 200
+##   Type:   text/html; charset=utf-8
+##   Size:   25466</code></pre>
+<p>Now <code>gossiping</code> should be on the front page of the <code>Gossiping</code> board.</p>
+<ul>
+<li>Now we need to find the most recent index page of the board</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># Decide the number of index pages ----</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">page.latest &lt;-<span class="st"> </span>gossiping <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="st">  </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">  </span><span class="kw">str_subset</span>(<span class="st">&quot;index[0-9]{2,}</span><span class="ch">\\</span><span class="st">.html&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">str_extract</span>(<span class="st">&quot;[0-9]+&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="st">  </span><span class="kw">as.numeric</span>()</a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">page.latest</a></code></pre></div>
+<pre><code>## [1] 39135</code></pre>
+<ul>
+<li>On the most recent index page, we need to extract the hyperlinks to the articles</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co"># Retreive links -----</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">link &lt;-<span class="st"> </span><span class="kw">str_c</span>(ptt.url, <span class="st">&quot;/index&quot;</span>, page.latest, <span class="st">&quot;.html&quot;</span>)</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">links.article &lt;-<span class="st"> </span>gossiping <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="st">  </span><span class="kw">jump_to</span>(link) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="st">  </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="st">  </span><span class="kw">str_subset</span>(<span class="st">&quot;[A-z]</span><span class="ch">\\</span><span class="st">.[0-9]+</span><span class="ch">\\</span><span class="st">.[A-z]</span><span class="ch">\\</span><span class="st">.[A-z0-9]+</span><span class="ch">\\</span><span class="st">.html&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-8" data-line-number="8"><span class="st">  </span><span class="kw">str_c</span>(<span class="st">&quot;https://www.ptt.cc&quot;</span>,.)</a>
+<a class="sourceLine" id="cb11-9" data-line-number="9">links.article</a></code></pre></div>
+<pre><code>##  [1] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html&quot;
+##  [2] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html&quot;
+##  [3] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html&quot;
+##  [4] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html&quot;
+##  [5] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509083.A.C1D.html&quot;
+##  [6] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html&quot;
+##  [7] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html&quot;
+##  [8] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html&quot;
+##  [9] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html&quot;
+## [10] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html&quot;
+## [11] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html&quot;
+## [12] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html&quot;
+## [13] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html&quot;
+## [14] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html&quot;
+## [15] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html&quot;
+## [16] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html&quot;
+## [17] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509539.A.B88.html&quot;
+## [18] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html&quot;
+## [19] &quot;https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html&quot;</code></pre>
+<ul>
+<li>Next step is to scrape texts from each article hyperlink. Let’s consider one link first.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">article.url &lt;-<span class="st"> </span>links.article[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">temp.html &lt;-<span class="st"> </span>gossiping <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">jump_to</span>(article.url) <span class="co"># link to the article</span></a></code></pre></div>
+<ul>
+<li>Now the <code>temp.html</code> is like a browser on the article page. We are ready to extract article information. We first extract the metadata of the article.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co"># Extract article metadata</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">article.header &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.article-meta-value&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="st">  </span><span class="kw">html_text</span>()</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">article.header</a></code></pre></div>
+<pre><code>## [1] &quot;DORAQMON (哆啦哭夢)&quot;                         
+## [2] &quot;Gossiping&quot;                                   
+## [3] &quot;[新聞] 賴清德化身「阿德師」下麵 許淑華笑虧「&quot;
+## [4] &quot;Thu Dec  5 09:22:14 2019&quot;</code></pre>
+<ul>
+<li>From the <code>article.header</code>, we are able to extract the <code>author</code>, <code>title</code>, and <code>time stamp</code> of the article.</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">article.author &lt;-<span class="st"> </span>article.header[<span class="dv">1</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_extract</span>(<span class="st">&quot;^[A-z0-9_]+&quot;</span>) <span class="co"># athuor</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">article.title &lt;-<span class="st"> </span>article.header[<span class="dv">3</span>] <span class="co"># title</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">article.datetime &lt;-<span class="st"> </span>article.header[<span class="dv">4</span>] <span class="co"># time stamp</span></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb16-5" data-line-number="5">article.author</a></code></pre></div>
+<pre><code>## [1] &quot;DORAQMON&quot;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">article.title</a></code></pre></div>
+<pre><code>## [1] &quot;[新聞] 賴清德化身「阿德師」下麵 許淑華笑虧「&quot;</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">article.datetime</a></code></pre></div>
+<pre><code>## [1] &quot;Thu Dec  5 09:22:14 2019&quot;</code></pre>
+<ul>
+<li>Now we extract the main content of the article</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">article.content &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="st">        </span><span class="kw">html_nodes</span>( <span class="co"># article body</span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3">          <span class="dt">xpath =</span> <span class="st">&#39;//div[@id=&quot;main-content&quot;]/node()[not(self::div|self::span[@class=&quot;f2&quot;])]&#39;</span></a>
+<a class="sourceLine" id="cb22-4" data-line-number="4">        ) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb22-5" data-line-number="5"><span class="st">        </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb22-6" data-line-number="6"><span class="st">        </span><span class="kw">str_c</span>(<span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb22-7" data-line-number="7">article.content</a></code></pre></div>
+<pre><code>## [1] &quot;1.媒體來源:\n自由\n\n2.記者署名\n沈佩瑤\n\n3.完整新聞標題:\n賴清德化身「阿德師」下麵 許淑華笑虧「能吃嗎」\n\n4.完整新聞內文:\n民進黨副總統候選人賴清德今天化身「阿德師」，和黨籍台北市第七選區（信義、南松山\n）立委候選人許淑華開直播做料理，端出台南擔仔麵、醬油番茄等兩道台南在地小吃。曾\n擔任台南市長的賴清德，講起擔仔麵由來頭頭是道，還不忘藉機行銷台南觀光，但當被媒\n體詢問有沒有下廚做菜給另一半吃，只見他露出靦腆笑容說「呵呵，這問到痛處了。」\n\n賴清德強調自己雖然不會下廚，不過在大學的時候，會去菜市場買麵、買一些東西，通通\n丟在一起煮湯麵，一席話卻引來許淑華虧「能吃嗎？」讓賴清德又露出靦腆微笑。\n\n在廚藝老師講解做法時，賴清德認真聽講，頻頻點頭稱是，眼神相當專注，接著還在老師\n的指導下翻炒紅蔥頭等材料製作湯底，俐落身手獲評「架式」滿分。賴清德竟不忘行銷台\n南，提到台南的擔仔麵店會賣肉燥，如果沒有空自己熬製的民眾，可以到台南買肉燥順便\n遊玩，強調自己是「一日市長、終身市長」。\n\n賴清德並分享老台南人吃擔仔麵的步驟，首先是先聞一下、接著攪拌，再喝一口湯，最後\n才吃麵，就像喝茶有茶道，吃台南擔仔麵有麵道。\n\n許淑華說，看到很多年輕人創業，這間廚房教室也是在第10年了，希望能幫助這樣的青創\n產業繼續走下去，自己有一個構想，未來若進入國會，可以串聯和旅行社合作，例如若有\n背包客想體驗台灣小吃，就可以來DIY手做台灣小吃。\n\n賴清德說，現代人工作繁忙，外食居多，其實如果有這樣機會，大家能來這邊學習，在假\n日可以自己做菜做飯，不但可以感受家庭溫馨，現在大家對食材安全很重視，未來許淑華\n到立法院，一定會把關食安，這意義是非常大的。\n\n5.完整新聞連結 (或短網址):https://news.ltn.com.tw/news/politics/breakingnews/29986066.備註:\n應該很好吃...\n\n--&quot;</code></pre>
+<ul>
+<li>Now we combine all infomation related to the article into a data frame</li>
+</ul>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">article.table &lt;-<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb24-2" data-line-number="2">      <span class="dt">datetime =</span> article.datetime,</a>
+<a class="sourceLine" id="cb24-3" data-line-number="3">      <span class="dt">title =</span> article.title,</a>
+<a class="sourceLine" id="cb24-4" data-line-number="4">      <span class="dt">author =</span> article.author,</a>
+<a class="sourceLine" id="cb24-5" data-line-number="5">      <span class="dt">content =</span> article.content,</a>
+<a class="sourceLine" id="cb24-6" data-line-number="6">      <span class="dt">url =</span> article.url</a>
+<a class="sourceLine" id="cb24-7" data-line-number="7">    )</a>
+<a class="sourceLine" id="cb24-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb24-9" data-line-number="9">article.table</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["datetime"],"name":[1],"type":["chr"],"align":["left"]},{"label":["title"],"name":[2],"type":["chr"],"align":["left"]},{"label":["author"],"name":[3],"type":["chr"],"align":["left"]},{"label":["content"],"name":[4],"type":["chr"],"align":["left"]},{"label":["url"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"Thu Dec  5 09:22:14 2019","2":"[新聞] 賴清德化身「阿德師」下麵 許淑華笑虧「","3":"DORAQMON","4":"1.媒體來源:\\n自由\\n\\n2.記者署名\\n沈佩瑤\\n\\n3.完整新聞標題:\\n賴清德化身「阿德師」下麵 許淑華笑虧「能吃嗎」\\n\\n4.完整新聞內文:\\n民進黨副總統候選人賴清德今天化身「阿德師」，和黨籍台北市第七選區（信義、南松山\\n）立委候選人許淑華開直播做料理，端出台南擔仔麵、醬油番茄等兩道台南在地小吃。曾\\n擔任台南市長的賴清德，講起擔仔麵由來頭頭是道，還不忘藉機行銷台南觀光，但當被媒\\n體詢問有沒有下廚做菜給另一半吃，只見他露出靦腆笑容說「呵呵，這問到痛處了。」\\n\\n賴清德強調自己雖然不會下廚，不過在大學的時候，會去菜市場買麵、買一些東西，通通\\n丟在一起煮湯麵，一席話卻引來許淑華虧「能吃嗎？」讓賴清德又露出靦腆微笑。\\n\\n在廚藝老師講解做法時，賴清德認真聽講，頻頻點頭稱是，眼神相當專注，接著還在老師\\n的指導下翻炒紅蔥頭等材料製作湯底，俐落身手獲評「架式」滿分。賴清德竟不忘行銷台\\n南，提到台南的擔仔麵店會賣肉燥，如果沒有空自己熬製的民眾，可以到台南買肉燥順便\\n遊玩，強調自己是「一日市長、終身市長」。\\n\\n賴清德並分享老台南人吃擔仔麵的步驟，首先是先聞一下、接著攪拌，再喝一口湯，最後\\n才吃麵，就像喝茶有茶道，吃台南擔仔麵有麵道。\\n\\n許淑華說，看到很多年輕人創業，這間廚房教室也是在第10年了，希望能幫助這樣的青創\\n產業繼續走下去，自己有一個構想，未來若進入國會，可以串聯和旅行社合作，例如若有\\n背包客想體驗台灣小吃，就可以來DIY手做台灣小吃。\\n\\n賴清德說，現代人工作繁忙，外食居多，其實如果有這樣機會，大家能來這邊學習，在假\\n日可以自己做菜做飯，不但可以感受家庭溫馨，現在大家對食材安全很重視，未來許淑華\\n到立法院，一定會把關食安，這意義是非常大的。\\n\\n5.完整新聞連結 (或短網址):https://news.ltn.com.tw/news/politics/breakingnews/29986066.備註:\\n應該很好吃...\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<ul>
+<li>Next we extract the push comments at the end of the article</li>
+</ul>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">article.push &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="st">        </span><span class="kw">html_nodes</span>(<span class="dt">xpath =</span> <span class="st">&quot;//div[@class = &#39;push&#39;]&quot;</span>) </a>
+<a class="sourceLine" id="cb25-3" data-line-number="3">push.table.tag &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-4" data-line-number="4"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-tag&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-5" data-line-number="5"><span class="st">  </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># push types (like or dislike)</span></a>
+<a class="sourceLine" id="cb25-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb25-7" data-line-number="7">push.table.author &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-8" data-line-number="8"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-userid&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-9" data-line-number="9"><span class="st">  </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># author</span></a>
+<a class="sourceLine" id="cb25-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb25-11" data-line-number="11">push.table.content &lt;-<span class="st"> </span><span class="kw">sapply</span>(article.push, </a>
+<a class="sourceLine" id="cb25-12" data-line-number="12">                             <span class="cf">function</span>(x) <span class="kw">html_nodes</span>(x, <span class="st">&quot;span.push-content&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-13" data-line-number="13"><span class="st">                               </span><span class="kw">html_text</span>(<span class="dt">trim=</span><span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-14" data-line-number="14"><span class="st">                               </span><span class="kw">paste</span>(<span class="dt">collapse=</span><span class="st">&quot;&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-15" data-line-number="15"><span class="st">                               </span>str_sub) </a>
+<a class="sourceLine" id="cb25-16" data-line-number="16">      <span class="co"># push contents (new, edited by Alvin.deal with div.push has more than 1 span.push-content)</span></a>
+<a class="sourceLine" id="cb25-17" data-line-number="17">            </a>
+<a class="sourceLine" id="cb25-18" data-line-number="18">push.table.datetime &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb25-19" data-line-number="19"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-ipdatetime&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb25-20" data-line-number="20"><span class="st">  </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># push time stamp</span></a>
+<a class="sourceLine" id="cb25-21" data-line-number="21">      </a>
+<a class="sourceLine" id="cb25-22" data-line-number="22">push.table &lt;-<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb25-23" data-line-number="23">      <span class="dt">tag =</span> push.table.tag,</a>
+<a class="sourceLine" id="cb25-24" data-line-number="24">      <span class="dt">author =</span> push.table.author,</a>
+<a class="sourceLine" id="cb25-25" data-line-number="25">      <span class="dt">content =</span> push.table.content,</a>
+<a class="sourceLine" id="cb25-26" data-line-number="26">      <span class="dt">datetime =</span> push.table.datetime,</a>
+<a class="sourceLine" id="cb25-27" data-line-number="27">      <span class="dt">url =</span> article.url)</a>
+<a class="sourceLine" id="cb25-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb25-29" data-line-number="29">push.table</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["tag"],"name":[1],"type":["chr"],"align":["left"]},{"label":["author"],"name":[2],"type":["chr"],"align":["left"]},{"label":["content"],"name":[3],"type":["chr"],"align":["left"]},{"label":["datetime"],"name":[4],"type":["chr"],"align":["left"]},{"label":["url"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"推","2":"bighorse0","3":": 這標題也太歪","4":"220.140.2.242 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"Moratti","3":": 好小一碗","4":"59.124.93.142 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"jorden","3":": 下面給你吃","4":"1.170.152.82 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"MrXD","3":": 德滑 是你","4":"111.253.195.122 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"banbee100","3":": 記者真的是...","4":"1.172.60.184 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"ash9911911","3":": 清德下麵給你吃 龍介:>///<","4":"112.105.254.149 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"ridecule","3":": 矮額","4":"1.173.118.173 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"abobstar","3":": 高高在上的賴神,變成搞笑小丑 不勝唏噓","4":"122.146.195.162 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"mikepopkimo","3":": 色色德德","4":"39.9.226.196 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"chao0210","3":": 阿德壞壞喔","4":"39.13.133.110 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"rednah","3":": 先吃威而剛再說阿","4":"180.204.134.90 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"kyoiori100","3":": GG軟軟德","4":"39.8.12.233 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"wangyc","3":": 下面不小心滑進去","4":"150.117.156.72 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"sucktime","3":": 淑華我可以","4":"60.251.209.34 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"hackfox","3":": 有問過戴錫欽嗎?","4":"149.117.216.29 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"Beard5566","3":": 中共同路人下麵能吃嗎","4":"39.11.2.96 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="functional-programming" class="section level2">
+<h2><span class="header-section-number">1.3</span> Functional Programming</h2>
+<p>It should now be clear that there are several routines that we need to do again and again if we want to scape the PTT texts in a large amount:</p>
+<ul>
+<li>For each index page, we need to extract all the article hyperlinks on the page</li>
+<li>For each article hyperlink, we need to extract the article content, metadata, and the push comments</li>
+</ul>
+<p>So, it would be great if we can wrap these two routines into two functions:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">extract_art_links &lt;-<span class="st"> </span><span class="cf">function</span>(index_page, session){</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">  links.article &lt;-<span class="st"> </span>session <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st">  </span><span class="kw">jump_to</span>(index_page) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="st">  </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-6" data-line-number="6"><span class="st">  </span><span class="kw">str_subset</span>(<span class="st">&quot;[A-z]</span><span class="ch">\\</span><span class="st">.[0-9]+</span><span class="ch">\\</span><span class="st">.[A-z]</span><span class="ch">\\</span><span class="st">.[A-z0-9]+</span><span class="ch">\\</span><span class="st">.html&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-7" data-line-number="7"><span class="st">  </span><span class="kw">str_c</span>(<span class="st">&quot;https://www.ptt.cc&quot;</span>,.)</a>
+<a class="sourceLine" id="cb26-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb26-9" data-line-number="9">  <span class="kw">return</span>(links.article)</a>
+<a class="sourceLine" id="cb26-10" data-line-number="10">}</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">extract_article_push_tables &lt;-<span class="st"> </span><span class="cf">function</span>(link){</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2">  article.url &lt;-<span class="st"> </span>link</a>
+<a class="sourceLine" id="cb27-3" data-line-number="3">  temp.html &lt;-<span class="st"> </span>gossiping <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">jump_to</span>(article.url) <span class="co"># link to the www</span></a>
+<a class="sourceLine" id="cb27-4" data-line-number="4">  <span class="co"># article header</span></a>
+<a class="sourceLine" id="cb27-5" data-line-number="5">  article.header &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-6" data-line-number="6"><span class="st">    </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.article-meta-value&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># meta info regarding the article</span></a>
+<a class="sourceLine" id="cb27-7" data-line-number="7"><span class="st">    </span><span class="kw">html_text</span>()</a>
+<a class="sourceLine" id="cb27-8" data-line-number="8">  </a>
+<a class="sourceLine" id="cb27-9" data-line-number="9">  <span class="co"># article meta</span></a>
+<a class="sourceLine" id="cb27-10" data-line-number="10">  article.author &lt;-<span class="st"> </span>article.header[<span class="dv">1</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_extract</span>(<span class="st">&quot;^[A-z0-9_]+&quot;</span>) <span class="co"># athuor</span></a>
+<a class="sourceLine" id="cb27-11" data-line-number="11">  article.title &lt;-<span class="st"> </span>article.header[<span class="dv">3</span>] <span class="co"># title</span></a>
+<a class="sourceLine" id="cb27-12" data-line-number="12">  article.datetime &lt;-<span class="st"> </span>article.header[<span class="dv">4</span>] <span class="co"># time stamp</span></a>
+<a class="sourceLine" id="cb27-13" data-line-number="13">  </a>
+<a class="sourceLine" id="cb27-14" data-line-number="14">  <span class="co"># article content</span></a>
+<a class="sourceLine" id="cb27-15" data-line-number="15">  article.content &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-16" data-line-number="16"><span class="st">    </span><span class="kw">html_nodes</span>( <span class="co"># article body</span></a>
+<a class="sourceLine" id="cb27-17" data-line-number="17">      <span class="dt">xpath =</span> <span class="st">&#39;//div[@id=&quot;main-content&quot;]/node()[not(self::div|self::span[@class=&quot;f2&quot;])]&#39;</span></a>
+<a class="sourceLine" id="cb27-18" data-line-number="18">    ) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-19" data-line-number="19"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-20" data-line-number="20"><span class="st">    </span><span class="kw">str_c</span>(<span class="dt">collapse =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb27-21" data-line-number="21">  </a>
+<a class="sourceLine" id="cb27-22" data-line-number="22">  <span class="co"># Merge article table </span></a>
+<a class="sourceLine" id="cb27-23" data-line-number="23">  article.table &lt;-<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb27-24" data-line-number="24">        <span class="dt">datetime =</span> article.datetime,</a>
+<a class="sourceLine" id="cb27-25" data-line-number="25">        <span class="dt">title =</span> article.title,</a>
+<a class="sourceLine" id="cb27-26" data-line-number="26">        <span class="dt">author =</span> article.author,</a>
+<a class="sourceLine" id="cb27-27" data-line-number="27">        <span class="dt">content =</span> article.content,</a>
+<a class="sourceLine" id="cb27-28" data-line-number="28">        <span class="dt">url =</span> article.url</a>
+<a class="sourceLine" id="cb27-29" data-line-number="29">      )</a>
+<a class="sourceLine" id="cb27-30" data-line-number="30">      </a>
+<a class="sourceLine" id="cb27-31" data-line-number="31">  <span class="co"># push nodes</span></a>
+<a class="sourceLine" id="cb27-32" data-line-number="32">  article.push &lt;-<span class="st"> </span>temp.html <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-33" data-line-number="33"><span class="st">    </span><span class="kw">html_nodes</span>(<span class="dt">xpath =</span> <span class="st">&quot;//div[@class = &#39;push&#39;]&quot;</span>) <span class="co"># extracting pushes</span></a>
+<a class="sourceLine" id="cb27-34" data-line-number="34">    <span class="co"># </span><span class="al">NOTE</span><span class="co">: If CSS is used, div.push does a lazy match (extracting div.push.... also)</span></a>
+<a class="sourceLine" id="cb27-35" data-line-number="35">  </a>
+<a class="sourceLine" id="cb27-36" data-line-number="36">  <span class="co"># push tags    </span></a>
+<a class="sourceLine" id="cb27-37" data-line-number="37">  push.table.tag &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-38" data-line-number="38"><span class="st">    </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-tag&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-39" data-line-number="39"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># push types (like or dislike)</span></a>
+<a class="sourceLine" id="cb27-40" data-line-number="40">  </a>
+<a class="sourceLine" id="cb27-41" data-line-number="41">  <span class="co"># push author id</span></a>
+<a class="sourceLine" id="cb27-42" data-line-number="42">  push.table.author &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-43" data-line-number="43"><span class="st">    </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-userid&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-44" data-line-number="44"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># author</span></a>
+<a class="sourceLine" id="cb27-45" data-line-number="45">  </a>
+<a class="sourceLine" id="cb27-46" data-line-number="46">  <span class="co"># push content    </span></a>
+<a class="sourceLine" id="cb27-47" data-line-number="47">  push.table.content &lt;-<span class="st"> </span><span class="kw">sapply</span>(article.push,</a>
+<a class="sourceLine" id="cb27-48" data-line-number="48">                               <span class="cf">function</span>(x) <span class="kw">html_nodes</span>(x, <span class="st">&quot;span.push-content&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-49" data-line-number="49"><span class="st">                                 </span><span class="kw">html_text</span>(<span class="dt">trim=</span><span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-50" data-line-number="50"><span class="st">                                 </span><span class="kw">paste</span>(<span class="dt">collapse=</span><span class="st">&quot;&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-51" data-line-number="51"><span class="st">                                 </span>str_sub) </a>
+<a class="sourceLine" id="cb27-52" data-line-number="52">      <span class="co"># push contents (new, edited by Alvin.deal with div.push has more than 1 span.push-content)</span></a>
+<a class="sourceLine" id="cb27-53" data-line-number="53">  </a>
+<a class="sourceLine" id="cb27-54" data-line-number="54">  <span class="co"># push datetime      </span></a>
+<a class="sourceLine" id="cb27-55" data-line-number="55">  push.table.datetime &lt;-<span class="st"> </span>article.push <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-56" data-line-number="56"><span class="st">    </span><span class="kw">html_nodes</span>(<span class="st">&quot;span.push-ipdatetime&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-57" data-line-number="57"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>) <span class="co"># push time stamp</span></a>
+<a class="sourceLine" id="cb27-58" data-line-number="58">  </a>
+<a class="sourceLine" id="cb27-59" data-line-number="59">  <span class="co"># merge pusg table</span></a>
+<a class="sourceLine" id="cb27-60" data-line-number="60">  push.table &lt;-<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb27-61" data-line-number="61">          <span class="dt">tag =</span> push.table.tag,</a>
+<a class="sourceLine" id="cb27-62" data-line-number="62">          <span class="dt">author =</span> push.table.author,</a>
+<a class="sourceLine" id="cb27-63" data-line-number="63">          <span class="dt">content =</span> push.table.content,</a>
+<a class="sourceLine" id="cb27-64" data-line-number="64">          <span class="dt">datetime =</span> push.table.datetime,</a>
+<a class="sourceLine" id="cb27-65" data-line-number="65">          <span class="dt">url =</span> article.url</a>
+<a class="sourceLine" id="cb27-66" data-line-number="66">        )</a>
+<a class="sourceLine" id="cb27-67" data-line-number="67">  </a>
+<a class="sourceLine" id="cb27-68" data-line-number="68">  <span class="co"># return</span></a>
+<a class="sourceLine" id="cb27-69" data-line-number="69">  </a>
+<a class="sourceLine" id="cb27-70" data-line-number="70">  <span class="kw">return</span>(<span class="kw">list</span>(<span class="dt">article.table =</span> article.table, </a>
+<a class="sourceLine" id="cb27-71" data-line-number="71">              <span class="dt">push.table =</span> push.table))</a>
+<a class="sourceLine" id="cb27-72" data-line-number="72">}<span class="co">#endfunc</span></a></code></pre></div>
+<p>Now we can simply our codes quite a bit:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="co"># Get index page</span></a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">cur_index_page &lt;-<span class="st"> </span><span class="kw">str_c</span>(ptt.url, <span class="st">&quot;/index&quot;</span>, page.latest, <span class="st">&quot;.html&quot;</span>)</a>
+<a class="sourceLine" id="cb28-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb28-4" data-line-number="4"><span class="co"># Scape all article.tables and push.tables from each article hyperlink</span></a>
+<a class="sourceLine" id="cb28-5" data-line-number="5">cur_index_page <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-6" data-line-number="6"><span class="st">  </span><span class="kw">extract_art_links</span>(<span class="dt">session =</span> gossiping) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-7" data-line-number="7"><span class="st">  </span><span class="kw">map</span>(extract_article_push_tables) -&gt;<span class="st"> </span>ptt_data</a>
+<a class="sourceLine" id="cb28-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb28-9" data-line-number="9"><span class="co"># Merge all article.tables into one, all push.tables into one</span></a>
+<a class="sourceLine" id="cb28-10" data-line-number="10">article.table.all &lt;-<span class="st"> </span>ptt_data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb28-11" data-line-number="11"><span class="st">  </span><span class="kw">map</span>(<span class="cf">function</span>(x) x<span class="op">$</span>article.table) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-12" data-line-number="12"><span class="st">  </span>bind_rows</a>
+<a class="sourceLine" id="cb28-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb28-14" data-line-number="14">push.table.all &lt;-<span class="st"> </span>ptt_data <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-15" data-line-number="15"><span class="st">  </span><span class="kw">map</span>(<span class="cf">function</span>(x) x<span class="op">$</span>push.table) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-16" data-line-number="16"><span class="st">  </span>bind_rows</a>
+<a class="sourceLine" id="cb28-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb28-18" data-line-number="18">article.table.all</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["datetime"],"name":[1],"type":["chr"],"align":["left"]},{"label":["title"],"name":[2],"type":["chr"],"align":["left"]},{"label":["author"],"name":[3],"type":["chr"],"align":["left"]},{"label":["content"],"name":[4],"type":["chr"],"align":["left"]},{"label":["url"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"Thu Dec  5 09:22:14 2019","2":"[新聞] 賴清德化身「阿德師」下麵 許淑華笑虧「","3":"DORAQMON","4":"1.媒體來源:\\n自由\\n\\n2.記者署名\\n沈佩瑤\\n\\n3.完整新聞標題:\\n賴清德化身「阿德師」下麵 許淑華笑虧「能吃嗎」\\n\\n4.完整新聞內文:\\n民進黨副總統候選人賴清德今天化身「阿德師」，和黨籍台北市第七選區（信義、南松山\\n）立委候選人許淑華開直播做料理，端出台南擔仔麵、醬油番茄等兩道台南在地小吃。曾\\n擔任台南市長的賴清德，講起擔仔麵由來頭頭是道，還不忘藉機行銷台南觀光，但當被媒\\n體詢問有沒有下廚做菜給另一半吃，只見他露出靦腆笑容說「呵呵，這問到痛處了。」\\n\\n賴清德強調自己雖然不會下廚，不過在大學的時候，會去菜市場買麵、買一些東西，通通\\n丟在一起煮湯麵，一席話卻引來許淑華虧「能吃嗎？」讓賴清德又露出靦腆微笑。\\n\\n在廚藝老師講解做法時，賴清德認真聽講，頻頻點頭稱是，眼神相當專注，接著還在老師\\n的指導下翻炒紅蔥頭等材料製作湯底，俐落身手獲評「架式」滿分。賴清德竟不忘行銷台\\n南，提到台南的擔仔麵店會賣肉燥，如果沒有空自己熬製的民眾，可以到台南買肉燥順便\\n遊玩，強調自己是「一日市長、終身市長」。\\n\\n賴清德並分享老台南人吃擔仔麵的步驟，首先是先聞一下、接著攪拌，再喝一口湯，最後\\n才吃麵，就像喝茶有茶道，吃台南擔仔麵有麵道。\\n\\n許淑華說，看到很多年輕人創業，這間廚房教室也是在第10年了，希望能幫助這樣的青創\\n產業繼續走下去，自己有一個構想，未來若進入國會，可以串聯和旅行社合作，例如若有\\n背包客想體驗台灣小吃，就可以來DIY手做台灣小吃。\\n\\n賴清德說，現代人工作繁忙，外食居多，其實如果有這樣機會，大家能來這邊學習，在假\\n日可以自己做菜做飯，不但可以感受家庭溫馨，現在大家對食材安全很重視，未來許淑華\\n到立法院，一定會把關食安，這意義是非常大的。\\n\\n5.完整新聞連結 (或短網址):https://news.ltn.com.tw/news/politics/breakingnews/29986066.備註:\\n應該很好吃...\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"Thu Dec  5 09:22:28 2019","2":"Re: [問卦] 新聞一直在報網軍的事情是想掩蓋甚麼？","3":"michaelkobe","4":": ※ 引述《b8301013 (葉子)》之銘言：: : 之前討論的香港和大陸間諜，完全銷聲匿跡。: : 是不是有人在帶風向？到底想掩蓋甚麼？: 這篇文太棒了，我們來看看這兩天台灣發生什麼小事跟大事...: 首先是小事：: 1. 前國民黨中常委、退將羅文山收受中共政治獻金，地院判刑:    12/04 ptt 網軍炒作熱度：0 篇 事發至今熱度：2 篇 (一篇還是我):    https://imgur.com/3ruvyyR: 2. 與國民黨、新黨友好的工黨主席鄭昭明，涉共諜案遭起訴:    12/04 ptt 網軍炒作熱度：0 篇 事發至今熱度：4 篇 (又有一篇是我):    https://imgur.com/mj62yQI: 3. 向心共諜案的最新發展（包含王立強案）:    12/04 ptt網軍炒作熱度：9 篇:    https://imgur.com/Z7wGXjH:    https://imgur.com/jj92rYi: 再來是大事部分，: 4. 砂石案（我搜尋 砂）:    12/04 ptt網軍炒作熱度：17 篇:    https://imgur.com/y0J3LQm: 5. 楊蕙如 網軍一案 （搜尋 楊蕙如）:    12/04 ptt網軍炒作熱度：94 篇:    https://imgur.com/xFNW5vT:    https://imgur.com/MaZXAsm:    https://imgur.com/jSgQHZ1:    https://imgur.com/gBLKoXy:    https://imgur.com/MUFFHAn: 我是一直覺得ptt沒什麼有效的風向操作拉，楊蕙如說穿了就是個超無效的操作，: 媒體才是最大的問題；不過如果從現在這個角度看，有沒有網軍？應該是有拉...呵呵: 這風向真的很有趣呢。因為你們綠蟑螂就是廢啊懂？\\n蠢到網軍上來帶風向連跳板都不會用，\\n哪像我們柯、韓粉很多都是用任意門在環遊世界的，\\n你們也沒有人像我們偉大的前板主紅芒果一樣，\\n一個人就可以頻繁紀錄幾千隻蟑螂ID的IP、上站時間、推噓文等，\\n完全視批踢踢站方的資安為無物，\\n你們綠蟑螂先找出這樣的人才來好嗎？\\n\\n只請得起卡妖這種被我們柯師父嫌氣的咖，\\n難怪會搞到綠網軍全軍覆沒，\\n總歸一句綠蟑螂就是嫩！\\n懂？\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"Thu Dec  5 09:22:35 2019","2":"[問卦] 有沒有在日本巴士上想尿尿的八卦?","3":"leom1a210343","4":"目前在往河口湖的巴士上\\n\\n但是上車時忘記尿尿了\\n\\n現在很想尿\\n\\n請問我該怎麼辦QQ?\\n\\n有沒有日本巴士上想尿尿的八卦?\\n\\n-----\\nSent from JPTT on my Asus ASUS_Z012DA.\\n\\n--新宿沒錯  你今天也去?有看到一個凸出區域  剛剛也懷疑是廁所真的有廁所欸 ：D","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"Thu Dec  5 09:23:26 2019","2":"[問卦] 為什麼都要在ptt帶風向?","3":"soul5566","4":"奇怪\\n\\nptt八掛最臭的肥宅版\\n\\n也才一萬多人\\n\\n是有啥好帶的\\n\\n怎麼不去其ㄊ大論壇 低能卡之類\\n\\n有八掛ㄇ\\n\\n\\n--更多資訊https://www.facebook.com/rs5566/「我是檢察官，你的懶叫疑似被用來犯罪」千萬別上當！1.檢察官不會用視訊電話為民眾檢查懶叫，且凍結懶叫會有法院正式公文。\\n2.不要聽信朋友在LINE上「幫他去買烤懶叫，寄到指定地址」的要求。\\n3.無良商家用動物懶叫冒充人懶叫，賣高價詐騙消費者，發覺口感有異請立即報警。\\n4.求職時不要提供自己的懶叫長寬有無割包等資料，更不要拍攝懶照。\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"Thu Dec  5 09:24:41 2019","2":"Re: [問卦] 應該停止政治文了吧？","3":"G888888","4":"不知道為啥\\n\\n看到這麼多政治文在八甲板相互對弈\\n\\n我心中沒有一絲煩躁\\n\\n反而覺得很有趣\\n\\n偶爾參與打打嘴砲\\n\\n像我這種才是真正的有 ^獨立思考^ 能力的人吧\\n\\n嘻嘻\\n\\n--蛤！叫他出來跟我單挑","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509083.A.C1D.html"},{"1":"Thu Dec  5 09:24:49 2019","2":"[問卦] 為何砂石業不由國家經營?","3":"Sweet83921","4":"砂石業利益龐大 開放給民間經營衍生一大堆啊哩不達的問題 這個大家眾所周知\\n\\n本肥在想  為何這種行業不收歸國有? 可以增加國家收入也能掌控河床生態   評估一下\\n再決定要不要挖 要挖多少 有很難嗎?\\n\\n\\n有卦ㄇ\\n\\n--至少不會動不動就開槍吧  只能選Z>B的不是嗎\\n\\n跟酸總統港款 兩權相害取其輕 這邏輯 很好懂吧= =我沒說一定沒問題  只能說國家把持應該能減少問題  尤其是人命問題 \"0_0\"","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"Thu Dec  5 09:25:37 2019","2":"[新聞] 韓國瑜「328萬票↓」領不到30元補助？網","3":"ashylan","4":"完整新聞標題：韓國瑜「328萬票↓」領不到30元補助？網瘋傳關鍵密碼　國民黨回應了\\n\\n新聞來源：ettoday\\n\\n記者：陳俊宏／綜合報導\\n\\n\\n根據《總統副總統選舉罷免法》規定，總統候選人得票數超過當選票數的3分之1，就可以得\\n到每票30元的補助。不過，現在有網友發起拒投韓國瑜，讓他無法得到補助款，這也讓藍營\\n痛批根本是假消息。\\n網路瘋傳一組「關鍵密碼」，只要韓國瑜在2020大選選票少於328萬票，就不用給30元補助\\n。對此，國民黨台北市議員游淑慧痛批，散發不實訊息指韓貪圖選票補助款，但根據《總統\\n副總統選舉罷免法》，選票補助款是由政黨領取。\\n\\n\\n藍營議員批評根本是假議題，因根據該法，各組候選人得票數達當選票數的3分之1，每票可\\n補貼30元。假設韓國瑜守住國民黨基本盤，獲得超過300萬票，就有上億元的補助款，但這\\n些主要是給黨部，也不是收入韓的個人荷包。\\n\\n\\n游淑慧說，前總統馬英九和前黨主席朱立倫的選票補助款，都交由國民黨中央領取；只有蔡\\n英文在兩次的總統大選，民進黨都有退回去給蔡，用捐給小英基金會的方式，所以不要拿自\\n己來度量別人。\\n國民黨做法似乎是補助款全數歸黨內所有，蔡英文在2012年總統大選的補助款，3分之1給黨\\n內，其他分給小英基金會或公益使用，2016年則全數歸黨。而親民黨是清還選舉開銷後，剩\\n下也用於黨部運作。\\n蔡英文競選辦公室發言人廖泰翔表示，根據民進黨一般慣例，選票補助款的3分之1由政黨，\\n3分之2由總統提名人，2020大選補助款目前還待選後再與黨中央討論。\\n\\n\\n新聞來源網址：https://www.ettoday.net/news/20191205/1594670.htm--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"Thu Dec  5 09:27:31 2019","2":"[問卦] 有大樹鄉的卦嗎？","3":"ks32437","4":"https://imgur.com/faZFDis.jpg這是什麼地方啊\\n怎麼冷成這樣\\n比台北還冷欸\\n我看南部沒有一個低於17度的地方啊\\n\\n\\n--https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"Thu Dec  5 09:27:40 2019","2":"[問卦] 其實idcc對台灣有很大的貢獻吧?","3":"Borges","4":"想去年1124之後 小英支持度遙遙落後的時候\\n就是靠idcc等蕙如網軍的秒爆FB文\\n喚起英粉心中對小英的熱愛 把小英的支持度從谷底拉起\\n之後搭配習近平嗆聲  韓柯失言等時事\\n將韓柯篇篇噓爆 讓小英聲勢如日中天\\n\\n現在小英能在民調逆轉追回50% 且遙遙領先\\n蕙如網軍絕對功不可沒\\n\\n所以大家千萬不要以噎廢食\\n為了台灣要贏 忍受一時之惡也是沒辦法的事\\nidcc對台灣民主貢獻 等到小英連任之後 應該就能平反\\n\\n也請蕙如不要灰心喪志 忍個三十幾天 你的功勞黨都看在眼裡\\n\\n--IDCC勇敢揭穿了狗黨紅色的事實 所以IDCC/蕙如網軍確實是台灣之光","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"Thu Dec  5 09:27:47 2019","2":"[新聞] 韓國瑜喊唯一支持蔡英文後 雙方差距34%","3":"AllenHuang","4":"綠黨民調》韓國瑜喊「唯一支持蔡英文」後... 雙方差距34%https://newtalk.tw/news/view/2019-12-04/335637新頭殼newtalk | 周家豪 綜合報導 發布 2019.12.04 | 13:52\\n\\n根據綠黨今(4)日公布的最新民調，總統蔡英文與國民黨總統候選人韓國瑜差距再擴大到\\n34.2%   圖:新頭殼合成\\n\\n2020總統大選剩下38天，國民黨總統候選人韓國瑜面對持續低迷的民調，上周先是向支持\\n者喊話「拒答民調」，後又要支持者接到電話一律回答「唯一支持蔡英文」，嗆讓民進黨\\n高興到1月10日就好，究竟對民調有無產生影響？根據綠黨今(4)日公布的最新民調，總統\\n蔡英文與國民黨總統候選人韓國瑜差距再擴大到34.2%，此外，有49.1％的民眾害怕韓國\\n瑜當選。另在政黨票部分，民進黨則持續拉開與國民黨的差距，領先國民黨約9%，民眾黨\\n以及時代力量的支持率則呈現上揚。\\n\\n根據綠黨民調，總統候選人支持度部分，總統蔡英文以52.1％的支持度保持領先，國民黨\\n總統候選人韓國瑜為17.9％，雙方差距相差34.2個百分點，親民黨總統候選人宋楚瑜獲得9.5％支持度，未表態則有20.6％。\\n\\n不分區立委政黨票方面，民進黨獲得31.9%的支持度，國民黨則呈現下滑，來到22.7%，民\\n眾黨與時代力量的支持度呈現上揚，分別為11.5%以及7.0%，在前次調查中，兩黨支持度\\n分別為9.8%和6.5%。未過5%的政黨部分，親民黨2.9%、台灣基進2.0%、綠黨1.0%。\\n\\n至於最害怕誰當選，有49.1％民眾害怕韓國瑜當選，也有16.8％民眾害怕蔡英文當選，\\n9.9％民眾害怕宋楚瑜當選，24.2％民眾未表態。\\n\\n此調查也詢問民眾是否相信韓國瑜協助濫採砂石牟利，結果顯示，相信的民眾有43.3%，\\n不相信的民眾有31.7%，另有25.0%無意見。\\n\\n此次民調由《綠黨》委託「山水民意研究股份有限公司」調查，調查期間是12月2日至3日\\n，成功有效樣本數為1,010份，調查範圍以全國年滿20歲的成年人為調查對象，調查方法\\n手機與市話各半，在95%信心水準下，誤差正負3.07個百分點，經費來源為綠黨，計畫主\\n持人為王浩宇。\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"Thu Dec  5 09:28:02 2019","2":"Re: [新聞] 賭2700份雞排！謝龍介保證韓國瑜逆轉　狂","3":"twdreamnight","4":": 4.完整新聞內文:: 另外，謝龍介也在節目發下豪語，認為2020大選韓國瑜不只會逆轉勝，還會贏蔡英文90萬: 票以上，只要差1票，就要在北中南三地各發900份雞排。我這邊有一個小問題\\n\\n他的話是沒贏蔡英文90萬以上 差一票就會發雞排\\n\\n\\n那如果是輸蔡英文的話 是不是就可以不發了?\\n\\n\\n\\n畢竟這句話講寬點是只要沒有贏超過90萬以上就發雞排\\n\\n講窄點就是要贏 而且贏不到90萬以上就發雞排\\n那窄一點不就是輸就沒雞排了嗎?\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"Thu Dec  5 09:28:01 2019","2":"Re: [問卦] 認真問，社工值多少薪水？","3":"lpbrother","4":"亞當斯密在國富論裡面提到\\n\\n任何國家，儘管擁有大量財富，但是如果長期處於停滯狀態，\\n\\n那它的勞動工資通常不會很高。\\n\\n準備用來支付工資的財源，或居民的收入與資本，\\n\\n也許非常多，但是如果它們已經連續好幾世紀保持或接近一樣的水準，\\n\\n那麼每一年被雇用的勞工人數，便可輕易供應下一年需求的勞工人數，\\n\\n有時甚還有剩餘。如此一來，很少會發生勞工缺乏的情況，\\n\\n而雇主們也就沒有必要互相競價爭取勞工。\\n\\n\\n這就是為什麼社工的薪水總是被壓低了: 台積31算你年薪120萬就好: 請問社工呢？幫助弱勢的社工值得120萬嗎？: 還是說你各位覺得社工都是做無腦沒產值的工作，所以只值月薪3萬？: 怎樣的薪水才是大家沒意見的？: 我覺得社工值年薪百萬啦--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"Thu Dec  5 09:28:04 2019","2":"[問卦] 偽冒立院IP發文? 那集團帳號是不是解套了","3":"linceass","4":"乳提\\n\\n因立院一講 大家才知道阿共或某昆蟲有竄改IP留言的科技樹\\n\\n那之前被紅芒果抓出來的數千帳號\\n\\n是否能以此理由 跟站方提出抗告?\\n\\n大師兄六師弟是不是都能回來了?\\n\\n乾嗚八卦? 我很好奇\\n\\n\\n--＿＿＿＿、＿／     ╲│╱     ╲│╱  \\\\\\\\ ＼◎  ◎ ∣∣▂▂◎▂∣∣∣\\\\\\\\\\\\∣====== ～││    ││││———  —ι<   ││││◥—◤◥﹏◤╱　你害的我好慘啊．．◢██◤◢▇▇▇◣＿＿╱ψdiabloq13--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"Thu Dec  5 09:28:05 2019","2":"Re: [新聞] 卡神楊蕙如網軍案 柯文哲酸：民進黨都說","3":"waynedd","4":": 1.媒體來源:: 聯合新聞網: 2.記者署名: 邱瓊玉: 3.完整新聞標題:: 卡神楊蕙如網軍案 柯文哲酸：民進黨都說和他們無關: 4.完整新聞內文:: 2019-12-04 08:47 聯合報 記者邱瓊玉／台北即時報導: 不過柯文哲隨後卻忍不住酸說，民進黨都說和他們沒有關係喔？以前葛特曼事件，柯叫他: 們要交出戰犯，民進黨都說和他們無關；吳祥輝咧，也說和他們無關，問到卡神，也說和: 他們無關。https://www.storm.mg/article/1463021幕僚李縉穎發文挺郭台銘疑帶風向　柯文哲：誰寫誰負責啊\\n許玲瑄 + 追蹤 2019-07-08 15:35 7348 人氣\\n台北市長柯文哲幕僚李縉穎昨（7）日於PTT八卦版發文，表示高雄市長韓國\\n瑜從國民黨總統初選出線機率很高，呼籲非韓人口要團結，教戰初選民調要\\n「有韓不投、非韓投郭」，此舉引發軒然大波。有人質疑是柯文哲想要分裂\\n國民黨，柯文哲今受訪時回應，通常他們都是被帶風向的，沒有去帶什麼風向，北市府組成多元，每個人都有發表意見自由，「誰寫的誰負責啊」，有\\n問題應該問李縉穎本人才對。https://www.ctwant.com/article/12279蔡璧如爆佈局2024　柯：她的言論與本人無關\\n10月29日, 2019　編輯 / 葉定豊\\n台北市政府顧問蔡壁如29日上午受Hit Fm《周玉蔻嗆新聞》節目專訪時，聲\\n稱台北市長柯文哲已在布局2024，並且鴻海創辦人郭台銘表態願意協助。但\\n柯文哲在下午接受議會質詢時卻極力撇清，「她的言論與本人一切無關。」\\n、「郭董從來沒有和我說過這個。」\\n------------------------------------------------------------------\\n台北市政府的幕僚跟台北市長沒有關係，從台大醫院帶到台北市政府的心腹\\n也跟自己沒有關係，但是民進黨要記得把戰犯交出來。: 5.完整新聞連結 (或短網址):: https://udn.com/news/story/6656/4204114: 6.備註:: 大家一起努力繼續抓綠蟑螂吧--你確定葛特曼跟吳祥輝有收錢？","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"Thu Dec  5 09:28:16 2019","2":"Re: [新聞] 毛嘉慶：國昌，你娶老婆是先挑岳父嗎？","3":"bitch","4":": 毛嘉慶：國昌，你娶老婆是先挑岳父嗎？: 聯合報 記者王寓中／台北即時報導: 時代力量黃國昌追打國民黨總統參選人韓國瑜岳父的砂石生意，安定力量副秘書長毛嘉慶: 邀黃國昌辯論，毛嘉慶今晚在臉書發文表示，任何行業都只有兩種存在：合法與非法。任: 何在野黨非法違法，他相信蔡政府及其附隨的司法人員，一定可以入罪搞到死。: 毛嘉慶表示，單就韓岳父失敗的砂石生意追殺，他真的不知道黃國昌跟民進黨硬扯的意義: 在哪，但是，黃國昌岳父在大陸和台灣炒地皮是不爭的事實，而且大陸至今沒有阻卻他們: 的意思。國昌，「你是衝著岳父娶老婆的嗎？」: 毛嘉慶指出，已故的西螺鎮長林中禮，當年代表民進黨選雲林縣長，輸給張榮味，政壇咸: 認雖敗猶榮。不但公認林中禮的勇氣風範可佳，也為往後民進黨在雲林長期執政奠定基礎: 。: 毛嘉慶批評，現在，蔡英文的民進黨竟然因為林跟李日貴的關連，連他都要一起陪葬？這: 就是現在沒有中心思想、只問政治利益的民進黨！: UDN.com https://udn.com/vote2020/story/12702/4206243老實說我會ㄟ\\n\\n曾經差點娶的一個老婆\\n\\n因為他老爸不學好  好好的工作不做 去做直銷 開茶店(歐八桑那種)\\n\\n本魯深怕結婚後會一直被拿錢\\n\\n故直接果斷放棄\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"Thu Dec  5 09:30:33 2019","2":"[問卦] 台女出國旅遊還可以賺錢？？","3":"lauwei","4":"不好意思，我今天聽到太驚訝了\\n\\n一個女同事說她出國玩還可以賺錢\\n\\n她說除了可以跑單代購，還可以寫部落格賺點錢\\n\\n所以今年出國五次了，幾乎沒花錢還倒賺一筆\\n\\n這有可能嗎\\n\\n--怎麼可能阿？？？如果有價錢，我也省吃儉用也負擔得起阿","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"Thu Dec  5 09:32:17 2019","2":"Re: [問卦] 偽冒立院IP發文? 那集團帳號是不是解套了","3":"angellll","4":": 乳提: 因立院一講 大家才知道阿共或某昆蟲有竄改IP留言的科技樹: 那之前被紅芒果抓出來的數千帳號: 是否能以此理由 跟站方提出抗告?: 大師兄六師弟是不是都能回來了?: 乾嗚八卦? 我很好奇沒有解套吧\\n\\n民進黨的傻子 把事件還升級了\\n偽造文書是公訴罪\\nSlow 集團的網軍 故意偽造 立法院的 ip 進行\\n散布假消息 侮辱公署\\n\\n這句指控 已經將案件升級成公訴罪\\n這樣子只要有人去舉發 XD\\n\\n這件事情看來還要燒一個三個禮拜以上\\n\\n\\n--\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509539.A.B88.html"},{"1":"Thu Dec  5 09:32:36 2019","2":"[問卦] 生不到女兒該怎麼辦？","3":"doraBBO","4":"安安，各位魯蛇安安。\\n\\n因小弟住新北，想當有女鵝ｄｅＲ好爸爸\\n\\nＢｕＴ　就是那個ＢｕＴ\\n\\n拚了兩胎，第一胎醫生一開始說女生，害我很興奮~~~\\n\\n然後雞雞跑出來，變男生惹.......\\n\\n\\n\\n這次第二胎四個月照一下超音波，醫生９說看到雞雞惹\\n\\n窩崩潰惹，靠北阿ｒ阿Ｒ啊ｒㄚｒ\\n\\n窩的女兒不見惹～～　　\\n\\n\\n\\nｕ迷ｕ生不到女鵝的八卦？？？\\n\\n４否要拚第三胎..........\\n\\n\\n\\n\\n\\n--房仲退稅四萬三的小確幸！https://imgur.com/HTaj5EZhttps://imgur.com/Rf6ReDE--我都外食...............................","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"Thu Dec  5 09:32:51 2019","2":"[問卦] 下雨天點外送是不是很爽?","3":"DoraGmon","4":"當大爺\\n\\n等著別人爬樓梯送餐來\\n\\n不用出去淋雨\\n\\n開門取餐看著外送仔全身濕透\\n\\n還喘氣\\n\\n有種莫名的快感\\n\\n有沒有下雨天點外送是不是很爽的八卦?\\n\\n\\n--","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">push.table.all</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["tag"],"name":[1],"type":["chr"],"align":["left"]},{"label":["author"],"name":[2],"type":["chr"],"align":["left"]},{"label":["content"],"name":[3],"type":["chr"],"align":["left"]},{"label":["datetime"],"name":[4],"type":["chr"],"align":["left"]},{"label":["url"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"推","2":"bighorse0","3":": 這標題也太歪","4":"220.140.2.242 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"Moratti","3":": 好小一碗","4":"59.124.93.142 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"jorden","3":": 下面給你吃","4":"1.170.152.82 12/05 09:22","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"MrXD","3":": 德滑 是你","4":"111.253.195.122 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"banbee100","3":": 記者真的是...","4":"1.172.60.184 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"ash9911911","3":": 清德下麵給你吃 龍介:>///<","4":"112.105.254.149 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"ridecule","3":": 矮額","4":"1.173.118.173 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"abobstar","3":": 高高在上的賴神,變成搞笑小丑 不勝唏噓","4":"122.146.195.162 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"mikepopkimo","3":": 色色德德","4":"39.9.226.196 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"chao0210","3":": 阿德壞壞喔","4":"39.13.133.110 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"rednah","3":": 先吃威而剛再說阿","4":"180.204.134.90 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"kyoiori100","3":": GG軟軟德","4":"39.8.12.233 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"wangyc","3":": 下面不小心滑進去","4":"150.117.156.72 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"推","2":"sucktime","3":": 淑華我可以","4":"60.251.209.34 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"hackfox","3":": 有問過戴錫欽嗎?","4":"149.117.216.29 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"噓","2":"Beard5566","3":": 中共同路人下麵能吃嗎","4":"39.11.2.96 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508937.A.D97.html"},{"1":"→","2":"ckbdfrst","3":": 掩蓋砂石案+虫國網軍被抓","4":"118.170.145.83 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"噓","2":"Marty","3":": 好了啦 可以繼續截圖了","4":"223.136.248.130 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/ThmX2ts.gif","4":"223.136.248.130 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"噓","2":"sheagia","3":": 綠共辛苦了 最近手頭會比較緊忍耐一下","4":"114.136.243.238 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"→","2":"Marty","3":": 綠共還要繼續反串 然後被抓出來嗎?","4":"223.136.248.130 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"噓","2":"kairiyu","3":": 幾個月前你這篇一定被推爆 可惜現在蟑螂","4":"117.19.198.105 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"→","2":"kairiyu","3":": 不在了 沒同伴","4":"117.19.198.105 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508950.A.E19.html"},{"1":"→","2":"MrXD","3":": 說說捲舌音 就地","4":"111.253.195.122 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"kairi5217","3":": 噗哈哈哈哈哈哈 糗了 從新宿發車嗎","4":"39.8.165.18 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"OGCOGCOGCOGC","3":": 保特瓶QQ","4":"42.77.38.49 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"PanaS0Nic","3":": 寶特瓶或隔壁的","4":"115.43.36.79 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"Yu","3":": 後面有廁所阿 騙我沒搭過","4":"1.164.38.65 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"噓","2":"powyo","3":":  來自: 42.76.219.252 (臺灣)","4":"118.163.229.98 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"kairi5217","3":": 要坐一段不短的時間喔 我記得中途沒有","4":"39.8.165.18 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"alex00089","3":": 什麼？後面有廁所？怕","4":"42.76.159.208 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"kairi5217","3":": 停靠點","4":"39.8.165.18 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"kairi5217","3":": 真的假的？巴士後面有廁所？？？","4":"39.8.165.18 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"ffxx","3":": 印象是沒有廁所","4":"180.217.186.109 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"Yu","3":": 至少我去年搭的有 不然假日回程的大塞車 整車","4":"1.164.38.65 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"Yu","3":": 人就慘了","4":"1.164.38.65 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"推","2":"AAcrossBB","3":": 上次搭有廁所，在車尾","4":"111.250.139.127 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575508963.A.F94.html"},{"1":"→","2":"wa88","3":": 不要小看這個老界面","4":"101.12.132.72 12/05 09:23","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"losel","3":": 垃圾啊,還用分身id介入版主選舉","4":"111.250.24.200 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"ckbdfrst","3":": 請小看這個頁面 都老人","4":"118.170.145.83 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"kumori","3":": 因為記著會抄啊","4":"122.118.125.163 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"wa88","3":": 雖然2014後 它已是白矮星的狀態","4":"101.12.132.72 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"ckbdfrst","3":": 你有聽過臉書yt禁止注冊嗎 荒唐可笑","4":"118.170.145.83 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"kumori","3":":        者\\\\","4":"122.118.125.163 12/05 09:24","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"bighorse0","3":": 不是只帶八卦 是只有八卦在抓","4":"220.140.2.242 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"yyc1217","3":": 一條龍生產新聞呀","4":"111.248.11.218 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"sheagia","3":": 臉書更多 看那精美的綠共月花26買廣告","4":"114.136.243.238 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"talrasha","3":": 伊湄:鄉民很好操弄","4":"36.234.131.46 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"Workforme","3":": 你是真的忽略記者抄新聞還是故意不提起","4":"220.129.29.102 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"推","2":"ch333","3":": 洪仲丘 太陽花 2014民進黨年輕人量投票 八","4":"111.71.213.157 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"ch333","3":": 卦版都是起源地 現在變成這樣就是網軍玩爛","4":"111.71.213.157 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509008.A.6B2.html"},{"1":"→","2":"ckbdfrst","3":": 你沒有 柯共文哲才有","4":"118.170.145.83 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509083.A.C1D.html"},{"1":"→","2":"moswu","3":": 對啊大趴踢到底哪裡不好","4":"175.182.252.69 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509083.A.C1D.html"},{"1":"→","2":"sheagia","3":": 網軍可以國家經營啊","4":"114.136.243.238 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"james732","3":": 你是不是以為國家經營就不會有任何弊病","4":"114.136.200.218 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"推","2":"PanaS0Nic","3":": 國營事業喔","4":"115.43.36.79 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"rooo2012","3":": 除非改掉立委選舉","4":"180.217.117.78 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"ckbdfrst","3":": 已經不好賺了吧 都讓柯文哲推薦進北農了","4":"118.170.145.83 12/05 09:25","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"snow3804","3":": 原來國家經營就不會有問題","4":"114.44.117.145 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"推","2":"ahoyhoy","3":": 國家賺的錢不會進自己的口袋","4":"42.73.196.203 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"jimmy885","3":": 現在政府一堆清淤工程","4":"106.1.84.144 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"推","2":"twpisces","3":": 我也想過這問題由政府管理比黑道們把持","4":"58.20.50.200 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"twpisces","3":": 好得多吧","4":"58.20.50.200 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"推","2":"fake0824","3":": 一邊演好人;一邊演壞人很累的!分工好嗎?","4":"163.13.13.231 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509091.A.B86.html"},{"1":"→","2":"sheagia","3":": 哪像綠共靠選舉賺錢養網軍","4":"114.136.243.238 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"PanaS0Nic","3":": 投票就投票,算這個幹嘛= =","4":"115.43.36.79 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"MrXD","3":": 捐了嗎?  領了 這對活寶又可到處玩","4":"111.253.195.122 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"angellll","3":": 就是不爽因為韓國瑜 國民黨 跟韓國瑜有","4":"118.160.95.209 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"s81048112","3":": 有差別嗎 不給KMT領也不行????","4":"27.242.67.218 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"angellll","3":": 錢拿 所以不就剛剛好而已","4":"118.160.95.209 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"windbomb","3":": 挖砂石比較好賺","4":"111.82.52.179 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ckbdfrst","3":": 蚵共文哲推薦出來的有料人材耶","4":"118.170.145.83 12/05 09:26","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"angellll","3":": 國民黨不是應該問自己 為什麼要推韓摟","4":"118.160.95.209 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"qazxc1156892","3":": 發大財","4":"223.136.33.170 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"ikr3699654","3":": 就不要到時候開出來菸皇不到328萬票XD","4":"111.241.172.221 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"Beanoodle","3":": 就看看綠共洗腦成不成功囉  呵呵","4":"218.173.226.13 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"lastphil","3":": 一億又如何 又不是拿去養蟑螂","4":"220.132.89.29 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"wa88","3":": 韓一毛不拿嗎","4":"101.12.132.72 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"Xiong271","3":": 那選高雄的補助款怎麼還是跑過去？","4":"110.26.195.179 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"powyo","3":": 韓國瑜又不缺錢","4":"118.163.229.98 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"qazxc1156892","3":": 給KMT那就更不行","4":"223.136.33.170 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"a09856123","3":": 請問網軍1萬哪裡領？","4":"114.44.204.226 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ikr3699654","3":": 到時候菸皇沒補助款 1450也沒錢移民了","4":"111.241.172.221 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"wa88","3":": 韓其實真的不缺錢","4":"101.12.132.72 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"AZTEC","3":": 好 總統票請投廢票","4":"101.14.236.190 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ikr3699654","3":": 但是可肯定韓上任一定會讓1450沒錢臭","4":"111.241.172.221 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ikr3699654","3":": 還一個月好久喔..真想快點看到PTT崩潰","4":"111.241.172.221 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ddtlau","3":": 也不想給國民黨領啊...","4":"180.217.210.193 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"vul3vmp4","3":": 就是不給支那國民黨這筆錢啊 怎樣","4":"111.253.218.215 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"keane9112","3":": 那種不分區還想領補助？","4":"42.77.14.69 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"ikr3699654","3":": 到時候崩潰完後再把PTT關版 想起就爽","4":"111.241.172.221 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"piggywu","3":": 這是無聊的新聞.不投韓的也不是為了不讓","4":"114.24.226.158 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"piggywu","3":": 韓可否領$30,根本是韓太討厭才不投他票","4":"114.24.226.158 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"wa88","3":": 韓超噁","4":"101.12.132.72 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"cli6012","3":": 哈哈 韓自己搞的 那些老人到了投票所說不","4":"223.138.126.31 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"cli6012","3":": 定還停留在唯一支持蔡英文 金價北七","4":"223.138.126.31 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"piggywu","3":": 韓在意的是小額捐款獻金","4":"114.24.226.158 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"wa88","3":": 不只望之不似人君","4":"101.12.132.72 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"hsing7414","3":": 阿就是不想給你們國民黨咩，聽不懂嗎","4":"122.116.161.221 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"stantheman","3":": 提這麼噁心的總統候選人 國民黨都沒","4":"92.169.189.184 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"stantheman","3":": 有責任嗎？","4":"92.169.189.184 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"cashilips","3":": 挖不到補助挖砂石","4":"180.204.86.198 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"xomega","3":": 反串到最後當天真的蓋了蔡又撕選票，嘻嘻","4":"36.233.241.164 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"cheetahspeed","3":": 垃圾柯糞想幫韓導賺錢","4":"101.15.165.195 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"luckysmallsu","3":": 以韓粉智商反串到最後絕對會蓋小英","4":"114.136.133.52 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"cylimu","3":": 假消息？就真的不投國瑜黨啊！","4":"61.231.245.96 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"twpisces","3":": 啥假議題? 難道你國民黨想跟韓切割?","4":"58.20.50.200 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"james732","3":": 100%進國民黨庫聽起來更討厭ㄌ","4":"114.136.200.218 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"Morisato","3":": 不是講內部民調只差6%，這麼悲憤像是輸3","4":"49.216.100.95 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"Morisato","3":": 0%似的","4":"49.216.100.95 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"bigsun0709","3":": 現在最大黨是 消滅國民黨","4":"101.13.129.165 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"AaronEckhar","3":": 這個傢伙，搞東搞西的，荒廢市政，又","4":"220.136.33.177 12/05 09:38","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"AaronEckhar","3":": 是違建，豪宅，烙跑，更襯托出我們","4":"220.136.33.177 12/05 09:38","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"AaronEckhar","3":": 馬前總統，是多麼優秀，清廉，正直，","4":"220.136.33.177 12/05 09:38","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"AaronEckhar","3":": 堅持。","4":"220.136.33.177 12/05 09:38","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"gary2563","3":": 先說韓導在高雄市長選舉時有沒有領？","4":"42.74.193.91 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"x0003","3":": 都不想給韓了 難不成就會想給國民黨？","4":"223.136.170.251 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"thbygn98","3":": 所以老宋真的是出來養家的","4":"36.230.122.202 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"wwf0322","3":": 發大財","4":"39.9.204.142 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"kukuma","3":": 不想給韓 也不想給國民黨","4":"118.163.28.173 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"噓","2":"hp6910","3":": 庶民不在乎補助款啦，非韓不投","4":"101.137.18.114 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"baiya","3":": 韓總高雄的補助款有給國民黨嗎!?","4":"122.118.12.88 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"→","2":"topsight","3":": 給萬惡淵藪KMT！那更不行啊！","4":"1.175.116.153 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509140.A.809.html"},{"1":"推","2":"wuyiulin","3":": 鳳梨與它們的產地 - 大樹","4":"111.82.200.224 12/05 09:27","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"KangSuat","3":": 樹樹會冷","4":"36.238.197.97 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"→","2":"MrXD","3":": 臨海空曠","4":"111.253.195.122 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"kamayer","3":": 在山上嗎?","4":"1.174.177.253 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"→","2":"daicloud","3":": 有義大的地方","4":"111.83.201.9 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"→","2":"lifepass","3":": 8+9之鄉","4":"111.255.150.208 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"wl00669773","3":": 鳳梨 荔枝 義大 佛光山","4":"1.172.125.7 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"ericayou","3":": 當年每個都知道他要丟深卡球","4":"223.138.148.201 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"aiur313","3":": 有家煎餃超好吃，玉荷包也不錯","4":"180.217.245.152 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"→","2":"PanaS0Nic","3":": 想知道煎餃在哪","4":"115.43.36.79 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"→","2":"tulian","3":": 棒球跟保齡球一樣重的地方","4":"165.225.116.179 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509253.A.5A9.html"},{"1":"推","2":"klo578","3":": 看在眼裡 但要被起訴我還是會切割的呦","4":"101.13.151.145 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"→","2":"sheagia","3":": 可以 綠共價值儲下去 未來變新的共產黨","4":"114.136.243.238 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"推","2":"r250fx","3":": 卡神忍辱負重 升官發財指日可待","4":"115.82.5.57 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"→","2":"kandinsky","3":": 是因為狗民黨與韓總雞的爛吧，想太多","4":"114.32.133.159 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"推","2":"bighorse0","3":": 功在(民進)黨國","4":"220.140.2.242 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"→","2":"kandinsky","3":": 狗黨紅成這樣不檢討一下嗎","4":"114.32.133.159 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"推","2":"konanno1","3":": 希望楊不是D黨的免洗筷...","4":"110.50.155.245 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509262.A.3F1.html"},{"1":"→","2":"powyo","3":": 3.4%反而拉近 這招果然有奇效","4":"118.163.229.98 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"woods0598","3":": 有夠丢臉","4":"223.136.197.134 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"ckbdfrst","3":": 柯共文哲推薦的人材就是能出奇招","4":"118.170.145.83 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"sd09090","3":": 慟","4":"111.241.215.64 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"DORAQMON","3":": 2020下架蔡英文 方向不變","4":"110.50.155.250 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"luckysmallsu","3":": 韓導這個預防針打的真不錯","4":"114.136.133.52 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"tenoopy","3":": 宋杯杯都快追上來了","4":"27.242.62.21 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"cheetahspeed","3":": 畜牲柯糞崩潰","4":"101.15.165.195 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"luckysmallsu","3":": 17.9還是太高周遭朋友沒有一個人挺","4":"114.136.133.52 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"luckysmallsu","3":": 韓","4":"114.136.133.52 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"forv","3":": 玩大一點乾脆喊棄寒投宋，凝結泛藍，搶翻盤","4":"111.82.45.31 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"pigc","3":": 同溫層太厚的記得出去走走","4":"39.12.226.231 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"forv","3":": 這樣下去，等韓宋黃金交叉。","4":"111.82.45.31 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"amury","3":": 濫採砂石不信的那31.7%  就差不多韓的支持","4":"111.235.209.173 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"luckysmallsu","3":": 宋神掌這次應該有300萬票","4":"114.136.133.52 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"amury","3":": 黃國昌拿出一堆白紙黑字的證據還能不信","4":"111.235.209.173 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"amury","3":": 除了韓粉，還有誰能不信?","4":"111.235.209.173 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"gedicht","3":": 棄韓保宋！","4":"49.215.211.59 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"OpenGoodHate","3":": 有生之年可以看到神掌二度打趴老K","4":"114.136.154.159 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"giantwinter","3":": 棄台保菸","4":"114.137.168.116 12/05 09:38","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"jorden","3":": 這民調有鬼 觀察一下 有些韓粉沉默螺旋","4":"1.170.152.82 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"randylee","3":": 開票 神掌 應該還是會輸 魚至少 10%","4":"36.228.115.209 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"jorden","3":": 真實民調大概差7%","4":"1.170.152.82 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"sazabik","3":": 這還不趕快棄保","4":"223.139.140.191 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"dslite","3":": 跟tvbs差這麼多","4":"111.71.220.35 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"Moratti","3":": 韓導自己都放棄了","4":"59.124.93.142 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"EDFR","3":": 穩了  韓總統好","4":"114.43.66.245 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"luckysmallsu","3":": 以韓粉智商也想玩反串真的會笑死XD","4":"114.136.133.52 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"danic","3":": 反正金主都縮手了 沒用了~","4":"111.248.67.156 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"liudwan","3":": 神掌快喊棄保","4":"27.247.169.241 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"mack860120","3":": 未表態全都算韓的好嗎？","4":"223.139.49.34 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"噓","2":"goodideals","3":": 9.9%害怕宋楚瑜當選的是被害妄想症吧","4":"61.216.20.61 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"kilu","3":": 傑出的一手","4":"61.63.7.17 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"ucieric","3":": 韓應該會玩到立委也崩盤","4":"76.169.162.171 12/05 09:44","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"soyjay","3":": 不要想太多 蔡被柯粉幹醮得要死 民調不會","4":"36.225.0.118 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"soyjay","3":": 這麼高 出門投票才是真的","4":"36.225.0.118 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"噓","2":"NavyWind","3":": 綠黨","4":"223.140.70.119 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"twpisces","3":": 我要看宋楚瑜打敗韓國瑜","4":"58.20.50.200 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"推","2":"bloodmickey","3":": 說真的宋楚瑜行政能力肯定比韓強","4":"36.236.224.51 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"bloodmickey","3":": 韓來高雄一年 我真的不知道它在幹嘛","4":"36.236.224.51 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509269.A.985.html"},{"1":"→","2":"ckbdfrst","3":": 他發定了","4":"118.170.145.83 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"→","2":"MrXD","3":": 用雞排搏版 跟世姦跳海一樣 廉價好騙","4":"111.253.195.122 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"推","2":"ironaxe","3":": 是的，其實他根本沒想發","4":"223.138.208.100 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"噓","2":"baidu","3":": 看破他手腳 追蹤器講的跟真的一樣 打臉神隱","4":"36.233.93.121 12/05 09:41","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"→","2":"baidu","3":": 虧魯魯以為他是老k最後希望之一 真的可悲","4":"36.233.93.121 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"→","2":"ninimiga","3":": 可憐2700隻雞","4":"101.137.35.45 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.ABF.html"},{"1":"→","2":"powyo","3":": 社工門檻又不高 台積電不是隨便就能進","4":"118.163.229.98 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"konanno1","3":": 幹，好社工對社會來說是無價的，他們分","4":"110.50.155.245 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"konanno1","3":": 擔了多少的社會問題。無限支持警消社工","4":"110.50.155.245 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"konanno1","3":": 都要有更好的待遇。","4":"110.50.155.245 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"powyo","3":": 以產值來說 社工對社會算是可有可無","4":"118.163.229.98 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"powyo","3":": 幫助一些邊緣人也不會讓社會更好","4":"118.163.229.98 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"推","2":"mianbowhow","3":": 門檻低的職業沒資格要高薪","4":"223.136.203.105 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"konanno1","3":": 只看產值不看隱性成本，你絕不是生意人","4":"110.50.155.245 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"推","2":"mengjertsai","3":": 從降低社會成本的角度看是很便宜拉","4":"36.237.26.161 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"推","2":"linceass","3":": 社工日薪至少值2000 低於這標準都是不","4":"111.241.215.18 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"linceass","3":": 及格","4":"111.241.215.18 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"推","2":"LoveMakeLove","3":": 台灣真的需要小丑","4":"180.217.80.33 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509284.A.28F.html"},{"1":"→","2":"Beanoodle","3":": 4","4":"218.173.226.13 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"wuyiulin","3":": 4","4":"111.82.200.224 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"jac19860114","3":": 洗太多篇反而沒人想看，慢慢洗吧","4":"120.101.221.64 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"推","2":"hoodi","3":": 有Dpp黨證才能用這招好嗎","4":"223.141.90.190 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"推","2":"lastphil","3":": 跟超買菸一樣 要有台灣價值","4":"220.132.89.29 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"推","2":"revit","3":": 這樣slow和idcc同帳號的事也無效了，為何要","4":"1.163.26.172 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"revit","3":": 起訴？這檢查官沒台灣價值等著考績丙等吧","4":"1.163.26.172 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"推","2":"yyan1218","3":": 把理組當白痴","4":"61.216.156.247 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"推","2":"revit","3":": 而且沒有這謝網軍帶風向，當初是勝文當市","4":"1.163.26.172 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"revit","3":": 長，朱朱當總統，吃果子拜樹頭，別過河拆","4":"1.163.26.172 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"revit","3":": 橋好嗎","4":"1.163.26.172 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509288.A.3AF.html"},{"1":"→","2":"surahinagiku","3":": 你確定要把陳述意見和收錢帶風向混","4":"113.52.103.118 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"surahinagiku","3":": 在一起比較？","4":"113.52.103.118 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"推","2":"ckbdfrst","3":": 韓國瑜就蚵共文哲推薦的人材 柯敢負責?","4":"118.170.145.83 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"simonneko","3":": 你知道什麼是網軍嗎","4":"60.251.144.133 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"vizcacha","3":": 具名陳述意見是犯法了嗎？不是民主台灣","4":"49.158.40.214 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"推","2":"hoodi","3":": 自發性帶風向跟收錢帶風向可以類比？","4":"223.141.90.190 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"vizcacha","3":": 身為行政首長,尊重屬下言論自由很好啊","4":"49.158.40.214 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 央粉一定要像韓粉一樣無腦護航主子嗎？","4":"223.141.90.190 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"wayne80619","3":": 哈哈哈拿匿名造謠殺人跟署名發文比","4":"27.247.1.73 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 吳祥輝沒收錢？他不是開網路公關公司的嗎？","4":"223.141.90.190 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"Marty","3":": https://i.imgur.com/vXMQaIB.jpg","4":"223.136.248.130 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/JlnN5No.jpg","4":"223.136.248.130 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/P3NburN.jpg","4":"223.136.248.130 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 央粉力挺吳祥輝是義勇軍 打器捐是見義勇為","4":"223.141.90.190 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 央粉就繼續護航847 繼續打器捐 拜託","4":"223.141.90.190 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/o5cMh8E.jpg","4":"223.136.248.130 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"uniqueufo","3":": 個人發表意見，跟一群每人有多個帳號","4":"123.194.218.115 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"uniqueufo","3":": 帶風向類比？","4":"123.194.218.115 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"vizcacha","3":": 所以葛特曼自費機票住宿交通？誰信","4":"49.158.40.214 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"sted0101","3":": 大鍋炒一起講","4":"223.140.230.237 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 第一個被起訴 有金流的網軍 還敢護？","4":"223.141.90.190 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/eJmd3oa.jpg","4":"223.136.248.130 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"hoodi","3":": 央粉果然非同凡響","4":"223.141.90.190 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"Marty","3":": https://i.imgur.com/4OTYDtK.png","4":"223.136.248.130 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"Marty","3":": 綠共要幫忙複習證據 樂意奉陪啊","4":"223.136.248.130 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"噓","2":"aponla","3":": 有夠噁心的手法 這兩種就不一樣的狀況","4":"101.14.129.78 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"→","2":"aponla","3":": 蟑螂假帳號造謠 跟個人言論有一樣嗎？","4":"101.14.129.78 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509291.A.E2A.html"},{"1":"推","2":"yspen","3":": 我也會啊  岳父黑白兩道通吃 一個月賺3千萬","4":"111.250.145.218 12/05 09:28","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"Moratti","3":": 說不會是騙人","4":"59.124.93.142 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"yspen","3":": 還送我一台積架車開  為什麼不娶他女兒","4":"111.250.145.218 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"Moratti","3":": 而且他女兒也不醜啊","4":"59.124.93.142 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"ckbdfrst","3":": 岳父挑得好 失業後可以被柯文哲推進北農","4":"118.170.145.83 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"yspen","3":": 雖然他女兒看起來一臉姬芭樣 關上燈勉強可","4":"111.250.145.218 12/05 09:29","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"yspen","3":": 以啦","4":"111.250.145.218 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"tingstart","3":": 雷洛就挑張敏不挑邱淑貞","4":"27.52.12.89 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"Moratti","3":": 韓導也沒有長得多好看 不顯老倒是優點","4":"59.124.93.142 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"chocoball","3":": 真的是要挑","4":"180.217.119.190 12/05 09:30","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"KangSuat","3":": 怎麼不看丈人? 很多女人長的像假髮老爸","4":"36.238.197.97 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"fajita","3":": 會吧.問題出在知道岳父行為不端還幫下去的","4":"125.227.60.43 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"yamitis","3":": 結婚是兩家庭的事","4":"223.137.65.77 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"atpx","3":": 茶店覺很好賺阿","4":"118.160.49.71 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"atpx","3":":    感覺","4":"118.160.49.71 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"yspen","3":": 所以，毛嘉慶問黃國昌這個，真的很好笑","4":"111.250.145.218 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"Borges","3":": 國昌的岳父也是...恩...","4":"111.71.61.170 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"Moratti","3":": 毛的意思是 你黃國昌也不用裝的多清高","4":"59.124.93.142 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"Moratti","3":": 這質疑剛好就是適合 黃國昌而已","4":"59.124.93.142 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"lingsk","3":": 交往是一回事 能跟雙方家長切割才難","4":"125.224.110.238 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"yspen","3":": 毛也只是政治牆頭草而已，之前國民黨，跳到","4":"111.250.145.218 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"yspen","3":": 安定力量，不用講的好像多清高","4":"111.250.145.218 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"噓","2":"rcak801","3":": 這是在扯三小 黃國昌有利用立委職權去關","4":"101.12.40.14 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"rcak801","3":": 說岳父的投資嗎 少在那邊魚目混珠","4":"101.12.40.14 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"kinghtt","3":": 結婚把對方家長納入考量很奇怪嗎?","4":"210.242.157.127 12/05 09:43","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"aqsss","3":": 韓2013就在北農了 柯屁怎麼推進去","4":"140.112.125.206 12/05 09:44","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"q12341234","3":": 韓李 門當戶對 百年好合一直挖","4":"219.85.172.154 12/05 09:44","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"rcak801","3":": 而且這樣意思是韓看了李家的砂石業 才決","4":"101.12.40.14 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"rcak801","3":": 定跟李佳芬交往結婚？","4":"101.12.40.14 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"q12341234","3":": 毛 表示羨慕","4":"219.85.172.154 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"semicoma","3":": 當然會啊 這毛三小的是不是沒結婚啊？","4":"166.171.186.80 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"yspen","3":": 韓國瑜這件是跟岳父聯手坑殺好官吳約西耶!","4":"111.250.145.218 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"yspen","3":": 兩件事可以相提並論?","4":"111.250.145.218 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"boogieman","3":": Moratti 我第一次想凸槽你 那個姬芭臉","4":"223.140.20.117 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"boogieman","3":": ....","4":"223.140.20.117 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"semicoma","3":": 而且現在是在講弊案 跟選不選岳父有個","4":"166.171.186.80 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"semicoma","3":": 屁關係？主軸就是韓用立委身分幫他岳父","4":"166.171.186.80 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"semicoma","3":": 喬事情 這根毛在鬼扯什麼？","4":"166.171.186.80 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"推","2":"toray","3":": 失業17年，還可以買豪宅7200萬，岳父一定要","4":"114.39.26.68 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"→","2":"toray","3":": 挑","4":"114.39.26.68 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509298.A.9E8.html"},{"1":"噓","2":"thegreatlcx","3":": 賣淫啊 一定要講這麼白嗎 幹","4":"101.12.226.131 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"MrXD","3":": 台男吃醋?","4":"111.253.195.122 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"jorden","3":": 小秘密","4":"1.170.152.82 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"噓","2":"SonyXperiaZ3","3":": 五樓出國旅遊還可以順便賣屁股","4":"101.12.56.156 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"cattgirl","3":": 國際援交","4":"42.73.155.87 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"snow3804","3":": 你帶把就不行","4":"114.44.117.145 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"atpx","3":": 人家pretty tight, 你有嗎?","4":"118.160.49.71 12/05 09:31","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"WaWa3","3":": 又來了，台男沒本事只會酸，要知道還是有台","4":"1.173.225.32 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"WaWa3","3":": 男幹砲這些台女的，只是機會不屬於","4":"1.173.225.32 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"wa88","3":": 樓下pretty shoot.","4":"101.12.132.72 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"cattgirl","3":": 照片都在浴室 誰拍的","4":"42.73.155.87 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"噓","2":"Aidrux","3":": 付不起費用就閉嘴","4":"223.137.52.117 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"AllenHuang","3":": 窮酸台男週經文","4":"140.109.104.46 12/05 09:32","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"Kobelephants","3":": 陰道經濟學","4":"223.138.19.225 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"噓","2":"CavendishJr","3":": 對啊台男都不會出國留學找工作","4":"101.137.248.166 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"alex00089","3":": 國際觀吟哥理序","4":"42.76.159.208 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"syntax123","3":": 黑鮑魚換現金","4":"101.12.195.26 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"→","2":"alex00089","3":": 接吻照表示","4":"42.76.159.208 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"噓","2":"G12134","3":": 乾爹棒棒","4":"117.2.67.33 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"mig","3":": 出去玩還要幫代購，什麼窮酸玩法","4":"42.72.90.13 12/05 09:37","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"polarbear201","3":": 你有能力也可以去賺啊","4":"49.191.9.193 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509435.A.644.html"},{"1":"推","2":"revit","3":": 都是支那五毛幹的","4":"1.163.26.172 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509539.A.B88.html"},{"1":"推","2":"iam0718","3":": 有更大的事件就會洗掉了 台灣常態","4":"118.171.132.178 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509539.A.B88.html"},{"1":"噓","2":"kawhi5566","3":": 稅單貼出來啊 什麼都用嘴的難怪被桶","4":"","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"噓","2":"SP500","3":": 不要貼同一張圖很難嗎?","4":"","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"cattgirl","3":": 你是不是想...","4":"42.73.155.87 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"HD5850","3":": 我第一胎就女鵝了...怕下一胎還是女鵝QQ","4":"60.248.94.29 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"wa88","3":": 不要一直用後背式","4":"101.12.132.72 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"headcase","3":": 誰叫你沒本事娶小s","4":"110.26.136.143 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"wa88","3":": 後背式比較會生男的","4":"101.12.132.72 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"dlam002","3":": http://i.imgur.com/0uyTyZX.jpg","4":"101.12.63.62 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"kumori","3":": 常外食就有機會生女兒了","4":"122.118.125.163 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"wa88","3":": 自己在外面嚕 嚕到快射了插進去發射","4":"101.12.132.72 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"dai26","3":": 命運天註定","4":"111.83.78.240 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"wa88","3":": 據說這樣比較會生女兒","4":"101.12.132.72 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"aqsss","3":": 餵兒子吃塑化劑","4":"140.112.125.206 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"gold06181618","3":": 當女兒養啊","4":"111.82.71.254 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"baidu","3":": 先割包皮..有一定機會以後可以當女生養","4":"36.233.93.121 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"ch333","3":": 你被讀心了 趕快對外說你想要男孩","4":"111.71.213.157 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"mig","3":": 把兒子當女兒養啊","4":"42.72.90.13 12/05 09:39","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"alpha008","3":": 拼第三胎結果出GG*2 媽寶版看過這悲劇..","4":"220.128.123.190 12/05 09:40","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"Benbenyale","3":": 窩的愛莉啊啊啊 崩潰咯","4":"61.231.134.56 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"wwvvkai","3":": 表示你輪迴到今世第一次破處","4":"101.12.134.164 12/05 09:45","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"alex00089","3":": 淺一點就可以了","4":"42.76.159.208 12/05 09:46","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"kuromai","3":": 生到有啊，有啥好問？","4":"223.141.160.206 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"→","2":"kumori","3":": 用容易生女兒當關鍵字去查啊","4":"122.118.125.163 12/05 09:47","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"推","2":"k33536","3":": 代表你前世沒有情人 懂?","4":"1.1.248.153 12/05 09:48","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509562.A.204.html"},{"1":"噓","2":"Airhiker","3":": 4","4":"180.217.164.4 12/05 09:33","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"ridecule","3":": 4","4":"1.173.118.173 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"wtfman","3":": 樓下昨晚被我肛的時候什麼感覺？","4":"101.9.162.157 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"→","2":"moneydream","3":": 你叫過瓦斯嗎?","4":"39.11.162.145 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"→","2":"higameboy","3":": 4","4":"111.249.32.144 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"powyo","3":": 真的爽 比看A片還爽","4":"118.163.229.98 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"KangSuat","3":": 我都親自買 才能看到衣服濕了的女生","4":"36.238.197.97 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"噓","2":"thegreatlcx","3":": 爽啊 馬上點一波","4":"101.12.226.131 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"alimama","3":": 4","4":"114.137.127.222 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"hcg8xj","3":": 4","4":"39.9.33.89 12/05 09:34","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"→","2":"KangSuat","3":": 而且 自己吃的親自從店家手上拿安全些","4":"36.238.197.97 12/05 09:35","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"powyo","3":": 外送其實還好 覺得食物有問題直接客訴","4":"118.163.229.98 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"→","2":"KangSuat","3":": 哪天得罪了誰 半路被仇人加料就好玩了","4":"36.238.197.97 12/05 09:36","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"推","2":"ashylan","3":": 下雨天外送員也要賺錢啊！對於平臺的外","4":"101.12.138.81 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"},{"1":"→","2":"ashylan","3":": 送員其實這是商機好不好？","4":"101.12.138.81 12/05 09:42","5":"https://www.ptt.cc/bbs/Gossiping/M.1575509573.A.BA6.html"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p><img src="images/ptt-crawling.png" width="90%" /></p>
+</div>
+<div id="save-corpus" class="section level2">
+<h2><span class="header-section-number">1.4</span> Save Corpus</h2>
+<p>You can easily save your scaped texts in a <code>CSV</code> format.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="co"># Save ------</span></a>
+<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="kw">write_csv</span>(article.table, <span class="dt">path =</span> <span class="st">&quot;PTT_GOSSIPPING_ARTICLE.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb30-3" data-line-number="3"><span class="kw">write_csv</span>(push.table, <span class="dt">path =</span> <span class="st">&quot;PTT_GOSSIPPING_PUSH.csv&quot;</span>)</a></code></pre></div>
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-23" class="exercise"><strong>Exercise 1.1  </strong></span>Can you modify the R codes so that the script can automatically scrape more than one index page?
+</div>
+
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="corpus-analysis-a-start.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
