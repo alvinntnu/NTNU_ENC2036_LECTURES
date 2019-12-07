@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2019-12-05" />
+<meta name="date" content="2019-12-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="creating-corpus.html"/>
-<link rel="next" href="text-processing.html"/>
+<link rel="next" href="tokenization.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,6 +53,10 @@
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-0.3/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.1/grViz.js"></script>
 
 
 <style type="text/css">
@@ -161,8 +165,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>2.7</b> Collocations</a></li>
 <li class="chapter" data-level="2.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>2.8</b> Word Cloud</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="text-processing.html"><a href="text-processing.html"><i class="fa fa-check"></i><b>3</b> Text Processing</a></li>
-<li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
+<li class="chapter" data-level="3" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>3</b> Tokenization</a><ul>
+<li class="chapter" data-level="3.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>3.1</b> English Tokenization</a></li>
+<li class="chapter" data-level="3.2" data-path="tokenization.html"><a href="tokenization.html#text-analytics-pipeline"><i class="fa fa-check"></i><b>3.2</b> Text Analytics Pipeline</a></li>
+<li class="chapter" data-level="3.3" data-path="tokenization.html"><a href="tokenization.html#proper-units-for-analysis"><i class="fa fa-check"></i><b>3.3</b> Proper Units for Analysis</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="tokenization.html"><a href="tokenization.html#sentence-tokenization"><i class="fa fa-check"></i><b>3.3.1</b> Sentence Tokenization</a></li>
+<li class="chapter" data-level="3.3.2" data-path="tokenization.html"><a href="tokenization.html#words-tokenization"><i class="fa fa-check"></i><b>3.3.2</b> Words Tokenization</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="tokenization.html"><a href="tokenization.html#lexical-bundles-n-grams"><i class="fa fa-check"></i><b>3.4</b> Lexical Bundles (n-grams)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>4</b> Parts-of-Speech Tagging</a><ul>
+<li class="chapter" data-level="4.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parts-of-speech-tagging-1"><i class="fa fa-check"></i><b>4.1</b> Parts-of-Speech Tagging</a></li>
+<li class="chapter" data-level="4.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>4.2</b> Metalingusitic Analysis</a></li>
+<li class="chapter" data-level="4.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>4.3</b> Saving POS-tagged Texts</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>5</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="6" data-path="text-processing.html"><a href="text-processing.html"><i class="fa fa-check"></i><b>6</b> Text Processing</a></li>
+<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -390,7 +409,7 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
         </div>
       </div>
 <a href="creating-corpus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="text-processing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tokenization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -431,6 +450,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
