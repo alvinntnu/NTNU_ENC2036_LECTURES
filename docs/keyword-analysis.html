@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2019-12-07" />
+<meta name="date" content="2019-12-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="parts-of-speech-tagging.html"/>
-<link rel="next" href="text-processing.html"/>
+<link rel="next" href="chinese-text-processing.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -57,6 +57,10 @@
 <script src="libs/viz-0.3/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.1/grViz.js"></script>
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -180,7 +184,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>4.3</b> Saving POS-tagged Texts</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>5</b> Keyword Analysis</a></li>
-<li class="chapter" data-level="6" data-path="text-processing.html"><a href="text-processing.html"><i class="fa fa-check"></i><b>6</b> Text Processing</a></li>
+<li class="chapter" data-level="6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>6</b> Chinese Text Processing</a><ul>
+<li class="chapter" data-level="6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>6.1</b> Chinese Word Segmenter <code>jiebaR</code></a></li>
+<li class="chapter" data-level="6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>6.2</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="6.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>6.3</b> Case Study 2: Patterns</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
@@ -205,6 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="keyword-analysis" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Keyword Analysis</h1>
+<p><img src="images/keyword-contingency-table.png" width="650" /></p>
 <ul>
 <li>G2</li>
 </ul>
@@ -228,8 +237,8 @@ DC = \frac{a-b}{a+b}
 <a class="sourceLine" id="cb74-3" data-line-number="3"><span class="kw">library</span>(readtext)</a>
 <a class="sourceLine" id="cb74-4" data-line-number="4"><span class="kw">library</span>(quanteda)</a>
 <a class="sourceLine" id="cb74-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb74-6" data-line-number="6">flist&lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="st">&quot;demo_data&quot;</span>,<span class="dt">pattern =</span> <span class="st">&quot;corp_</span><span class="ch">\\</span><span class="st">w+.txt&quot;</span>, <span class="dt">full.names =</span> T)</a>
-<a class="sourceLine" id="cb74-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb74-6" data-line-number="6"><span class="co">#flist&lt;- dir(&quot;demo_data&quot;,pattern = &quot;corp_\\w+.txt&quot;, full.names = T)</span></a>
+<a class="sourceLine" id="cb74-7" data-line-number="7">flist &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;demo_data/corp_perl.txt&quot;</span>, <span class="st">&quot;demo_data/corp_python.txt&quot;</span>)</a>
 <a class="sourceLine" id="cb74-8" data-line-number="8">corpus &lt;-<span class="st"> </span><span class="kw">readtext</span>(flist) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb74-9" data-line-number="9"><span class="st">  </span>corpus <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb74-10" data-line-number="10"><span class="st">  </span>tidy <span class="op">%&gt;%</span></a>
@@ -272,7 +281,7 @@ DC = \frac{a-b}{a+b}
         </div>
       </div>
 <a href="parts-of-speech-tagging.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="text-processing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chinese-text-processing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
