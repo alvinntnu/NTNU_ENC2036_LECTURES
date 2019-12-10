@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2019-12-08" />
+<meta name="date" content="2019-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,12 +184,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>4.3</b> Saving POS-tagged Texts</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>5</b> Keyword Analysis</a></li>
-<li class="chapter" data-level="6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>6</b> Chinese Text Processing</a><ul>
-<li class="chapter" data-level="6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>6.1</b> Chinese Word Segmenter <code>jiebaR</code></a></li>
-<li class="chapter" data-level="6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>6.2</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="6.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>6.3</b> Case Study 2: Patterns</a></li>
+<li class="chapter" data-level="6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>6</b> Constructions and Idioms</a><ul>
+<li class="chapter" data-level="6.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#chinese-four-character-idioms"><i class="fa fa-check"></i><b>6.1</b> Chinese Four-character Idioms</a></li>
+<li class="chapter" data-level="6.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#dictionary-entries"><i class="fa fa-check"></i><b>6.2</b> Dictionary Entries</a></li>
+<li class="chapter" data-level="6.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#case-study-x來y去"><i class="fa fa-check"></i><b>6.3</b> Case Study: <code>X來Y去</code></a></li>
+<li class="chapter" data-level="6.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>6.4</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
+<li class="chapter" data-level="7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>7</b> Chinese Text Processing</a><ul>
+<li class="chapter" data-level="7.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>7.1</b> Chinese Word Segmenter <code>jiebaR</code></a></li>
+<li class="chapter" data-level="7.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.2</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="7.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>7.3</b> Case Study 2: Patterns</a></li>
+<li class="chapter" data-level="7.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>7.4</b> Case Study 3: Lexical Bundles</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>8</b> Vector Space Representation</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -214,28 +222,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Corpus Linguistics</h1>
 <p class="author"><em>Alvin Chen</em></p>
-<p class="date"><em>2019-12-08</em></p>
+<p class="date"><em>2019-12-09</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
-<p>Welcome to ENC2036. This is a grad-level course, which is devoted to Corpus Linguistics. Have you decided to embark upon a digital journey to your future career, there are a series of courses provided in the [Department of English, NTNU, Taiwan], offerring necessary skills and knowledge in important disciplines. This course requires as prerequisites basic knoweldge of computational coding.</p>
+<p>Welcome to ENC2036. This is a grad-level course, which is devoted to Corpus Linguistics. Have you decided to embark upon a digital journey to your future career, there are a series of courses provided in the <a href="http://www.eng.ntnu.edu.tw/en/main.php">Department of English, NTNU, Taiwan</a>, offerring necessary skills and knowledge in important disciplines. This course requires as prerequisite basic knoweldge of computational coding. It is highly recommended for students to take ENC2055 or other equivalents before taking this course.</p>
 <div id="course-objective" class="section level2 unnumbered">
 <h2>Course Objective</h2>
-<p>This course aims to introduce theories and practices of Corpus Linguistics as a scientific discipline of its own. Corpus Linguistics has now been considered an interdisciplinary subject, requiring knowledge of linguistic theories, quantitative statistics and data processing. Therefore, this course aims to provide the necessary foundation as well as skills for students who are interested in conducting corpus-based linguistic research or language-related research. Students are expected to learn:</p>
+<p>This course aims to introduce theories and practices of Corpus Linguistics as a scientific discipline of its own. Corpus Linguistics has now been considered an interdisciplinary subject, requiring knowledge of linguistic theories, quantitative statistics and data processing. Therefore, this course aims to provide the necessary foundation as well as computational skills for students who are interested in conducting corpus-based linguistic research or language-related research. Students are expected to learn:</p>
 <ul>
 <li>the methodological foundations of Corpus Linguistics</li>
 <li>the theoretical bases of Corpus Linguistics</li>
 <li>the technical designs and configuration of standard corpora</li>
-<li>how to adopt corpus linguistics as a scientific method in terms of :
+<li>how to adopt corpus linguistics as a scientific method in terms of:
 <ul>
+<li>corpus creation</li>
 <li>operationalization</li>
 <li>data retrieval</li>
 <li>quantifying research questions</li>
 <li>significance testing</li>
 </ul></li>
-<li>the applications of corpus-linguistic methodology in the sub-disciplines of linguistic studies</li>
+<li>the common applications of corpus-linguistic methodology:
+<ul>
+<li>concordances</li>
+<li>frequency lists</li>
+<li>collocations</li>
+<li>keywords</li>
+<li>lexical bundles</li>
+<li>word clouds</li>
+<li>vector-space representation of words and texts</li>
+</ul></li>
 </ul>
-<p>The objective of this course is two-fold. On the one hand, it will introduce the theoretical constructs behind corpus linguistics as well as the theoretical foundations that motivate such an empirical method. On the other hand, it will provide specific hands-on tutorials to equip students with the necessary skills of text and statistical processing. This course will be a prerequisite for more advanced courses such as Computational Linguistics, Quantitative Corpus Linguistics.</p>
+<p>This course is extremely hands-on and will lead the students through classic examples of these corpus-based applications via in-class tutorial sessions and take-home assignments. The main objective of this course is to provide students enough computational skills to perform similar corpus-based analyses on their own data or research questions. Also, it will provide specific hands-on tutorials to equip students with the necessary skills of text and statistical processing. This course will be a prerequisite for more advanced courses such as Computational Linguistics and Quantitative Corpus Linguistics.</p>
 </div>
 <div id="textbook" class="section level2 unnumbered">
 <h2>Textbook</h2>
