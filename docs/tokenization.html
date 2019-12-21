@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2019-12-14" />
+<meta name="date" content="2019-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,6 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-syntax"><i class="fa fa-check"></i><b>2.1.1</b> HTML Syntax</a></li>
 <li class="chapter" data-level="2.1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#tags-and-attributes"><i class="fa fa-check"></i><b>2.1.2</b> Tags and Attributes</a></li>
 <li class="chapter" data-level="2.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>2.1.3</b> CSS</a></li>
+<li class="chapter" data-level="2.1.4" data-path="creating-corpus.html"><a href="creating-corpus.html#html-css-javascript"><i class="fa fa-check"></i><b>2.1.4</b> HTML + CSS ( + JavaScript)</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>2.2</b> Web Crawling</a></li>
 <li class="chapter" data-level="2.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>2.3</b> Functional Programming</a></li>
@@ -227,18 +228,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>10</b> Vector Space Representation</a><ul>
 <li class="chapter" data-level="10.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>10.1</b> Data Processing Flowchart</a></li>
 <li class="chapter" data-level="10.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>10.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="10.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature"><i class="fa fa-check"></i><b>10.3</b> Defining <code>Feature</code></a><ul>
-<li class="chapter" data-level="10.3.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>10.3.1</b> Determining Linguistic Granularity</a></li>
-<li class="chapter" data-level="10.3.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>10.3.2</b> Distributional Cut-offs for Features</a></li>
+<li class="chapter" data-level="10.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>10.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
+<li class="chapter" data-level="10.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>10.4</b> Feature Selection</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>10.4.1</b> Determining Linguistic Granularity</a></li>
+<li class="chapter" data-level="10.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>10.4.2</b> Stopwords</a></li>
+<li class="chapter" data-level="10.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>10.4.3</b> Distributional Cut-offs for Features</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>10.4</b> Applying DFM</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>10.4.1</b> Document Similarity</a></li>
-<li class="chapter" data-level="10.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>10.4.2</b> Feature Similarity</a></li>
-<li class="chapter" data-level="10.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#network-analysis"><i class="fa fa-check"></i><b>10.4.3</b> Network Analysis</a></li>
-<li class="chapter" data-level="10.4.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#cluster-analysis"><i class="fa fa-check"></i><b>10.4.4</b> Cluster Analysis</a></li>
+<li class="chapter" data-level="10.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>10.5</b> Applying DFM</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>10.5.1</b> Wordcloud</a></li>
+<li class="chapter" data-level="10.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>10.5.2</b> Document Similarity</a></li>
+<li class="chapter" data-level="10.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>10.5.3</b> Feature Similarity</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
+<li class="chapter" data-level="11" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>11</b> Vector Space Representation II</a><ul>
+<li class="chapter" data-level="11.1" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#loading-the-corpus-1"><i class="fa fa-check"></i><b>11.1</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="11.2" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#semgentation"><i class="fa fa-check"></i><b>11.2</b> Semgentation</a></li>
+<li class="chapter" data-level="11.3" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#corpus-metadata"><i class="fa fa-check"></i><b>11.3</b> Corpus Metadata</a></li>
+<li class="chapter" data-level="11.4" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-feature-matrix"><i class="fa fa-check"></i><b>11.4</b> Document-Feature Matrix</a></li>
+<li class="chapter" data-level="11.5" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#wordcloud-1"><i class="fa fa-check"></i><b>11.5</b> Wordcloud</a></li>
+<li class="chapter" data-level="11.6" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-similarity-1"><i class="fa fa-check"></i><b>11.6</b> Document Similarity</a></li>
+<li class="chapter" data-level="11.7" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#feature-similarity-1"><i class="fa fa-check"></i><b>11.7</b> Feature Similarity</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -301,12 +312,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-50" class="exercise"><strong>Exercise 4.1  </strong></span>Please check the word tokens in the output data frame carefully and list characters that disappear in the word tokens but exist in the original text.
+<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.1  </strong></span>Please check the word tokens in the output data frame carefully and list characters that disappear in the word tokens but exist in the original text.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.2  </strong></span>For those missing characters, how do you preserve these characters in your output then?
+<span id="exr:unnamed-chunk-52" class="exercise"><strong>Exercise 4.2  </strong></span>For those missing characters, how do you preserve these characters in your output then?
 </div>
 
 <div data-pagedtable="false">
@@ -397,7 +408,7 @@ Please note that by default, <code>token = “words”</code> would normalize th
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.3  </strong></span>Please subset the top 3 trigrams of President Don. Trump, Bill Clinton, John Adams, from <code>corp_us_trigram</code>.</p>
+<p><span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.3  </strong></span>Please subset the top 3 trigrams of President Don. Trump, Bill Clinton, John Adams, from <code>corp_us_trigram</code>.</p>
 </div>
 
 <div data-pagedtable="false">
