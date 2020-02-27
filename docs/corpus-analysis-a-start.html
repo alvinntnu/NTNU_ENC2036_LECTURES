@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Corpus Analysis: A Start | Corpus Linguistics</title>
+  <title>Chapter 4 Corpus Analysis: A Start | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.15 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Corpus Analysis: A Start | Corpus Linguistics" />
+  <meta property="og:title" content="Chapter 4 Corpus Analysis: A Start | Corpus Linguistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Corpus Analysis: A Start | Corpus Linguistics" />
+  <meta name="twitter:title" content="Chapter 4 Corpus Analysis: A Start | Corpus Linguistics" />
   
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2019-12-28" />
+<meta name="date" content="2020-02-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -60,7 +60,7 @@
 <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
 <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
 <script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
+<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -149,124 +149,130 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="r-fundamentals.html"><a href="r-fundamentals.html"><i class="fa fa-check"></i><b>1</b> R Fundamentals</a><ul>
-<li class="chapter" data-level="1.1" data-path="r-fundamentals.html"><a href="r-fundamentals.html#reminders"><i class="fa fa-check"></i><b>1.1</b> Reminders</a></li>
+<li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a><ul>
+<li class="chapter" data-level="1.1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#why-do-we-need-corpus-data"><i class="fa fa-check"></i><b>1.1</b> Why do we need corpus data?</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#what-is-corpus"><i class="fa fa-check"></i><b>1.2</b> What is corpus?</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#what-is-a-corpus-linguistic-study"><i class="fa fa-check"></i><b>1.3</b> What is a corpus linguistic study?</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#additional-information-on-cl"><i class="fa fa-check"></i><b>1.4</b> Additional Information on CL</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="creating-corpus.html"><a href="creating-corpus.html"><i class="fa fa-check"></i><b>2</b> Creating Corpus</a><ul>
-<li class="chapter" data-level="2.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-structure"><i class="fa fa-check"></i><b>2.1</b> HTML Structure</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-syntax"><i class="fa fa-check"></i><b>2.1.1</b> HTML Syntax</a></li>
-<li class="chapter" data-level="2.1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#tags-and-attributes"><i class="fa fa-check"></i><b>2.1.2</b> Tags and Attributes</a></li>
-<li class="chapter" data-level="2.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>2.1.3</b> CSS</a></li>
-<li class="chapter" data-level="2.1.4" data-path="creating-corpus.html"><a href="creating-corpus.html#html-css-javascript"><i class="fa fa-check"></i><b>2.1.4</b> HTML + CSS ( + JavaScript)</a></li>
+<li class="chapter" data-level="2" data-path="r-fundamentals.html"><a href="r-fundamentals.html"><i class="fa fa-check"></i><b>2</b> R Fundamentals</a><ul>
+<li class="chapter" data-level="" data-path="r-fundamentals.html"><a href="r-fundamentals.html#a-quick-note"><i class="fa fa-check"></i>A Quick Note</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>2.2</b> Web Crawling</a></li>
-<li class="chapter" data-level="2.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>2.3</b> Functional Programming</a></li>
-<li class="chapter" data-level="2.4" data-path="creating-corpus.html"><a href="creating-corpus.html#save-corpus"><i class="fa fa-check"></i><b>2.4</b> Save Corpus</a></li>
+<li class="chapter" data-level="3" data-path="creating-corpus.html"><a href="creating-corpus.html"><i class="fa fa-check"></i><b>3</b> Creating Corpus</a><ul>
+<li class="chapter" data-level="3.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-structure"><i class="fa fa-check"></i><b>3.1</b> HTML Structure</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-syntax"><i class="fa fa-check"></i><b>3.1.1</b> HTML Syntax</a></li>
+<li class="chapter" data-level="3.1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#tags-and-attributes"><i class="fa fa-check"></i><b>3.1.2</b> Tags and Attributes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>3.1.3</b> CSS</a></li>
+<li class="chapter" data-level="3.1.4" data-path="creating-corpus.html"><a href="creating-corpus.html#html-css-javascript"><i class="fa fa-check"></i><b>3.1.4</b> HTML + CSS ( + JavaScript)</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>3</b> Corpus Analysis: A Start</a><ul>
-<li class="chapter" data-level="3.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#installing-quanteda"><i class="fa fa-check"></i><b>3.1</b> Installing <code>quanteda</code></a></li>
-<li class="chapter" data-level="3.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#building-a-corpus-from-character-vector"><i class="fa fa-check"></i><b>3.2</b> Building a <code>corpus</code> from character vector</a></li>
-<li class="chapter" data-level="3.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#keyword-in-context-kwic"><i class="fa fa-check"></i><b>3.3</b> Keyword-in-Context (KWIC)</a></li>
-<li class="chapter" data-level="3.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>3.4</b> KWIC with Regular Expressions</a></li>
-<li class="chapter" data-level="3.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>3.5</b> Tidy Text Format of the Corpus</a></li>
-<li class="chapter" data-level="3.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>3.6</b> Frequency Lists</a></li>
-<li class="chapter" data-level="3.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>3.7</b> Collocations</a></li>
-<li class="chapter" data-level="3.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>3.8</b> Word Cloud</a></li>
+<li class="chapter" data-level="3.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>3.2</b> Web Crawling</a></li>
+<li class="chapter" data-level="3.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>3.3</b> Functional Programming</a></li>
+<li class="chapter" data-level="3.4" data-path="creating-corpus.html"><a href="creating-corpus.html#save-corpus"><i class="fa fa-check"></i><b>3.4</b> Save Corpus</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>4</b> Tokenization</a><ul>
-<li class="chapter" data-level="4.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>4.1</b> English Tokenization</a></li>
-<li class="chapter" data-level="4.2" data-path="tokenization.html"><a href="tokenization.html#text-analytics-pipeline"><i class="fa fa-check"></i><b>4.2</b> Text Analytics Pipeline</a></li>
-<li class="chapter" data-level="4.3" data-path="tokenization.html"><a href="tokenization.html#proper-units-for-analysis"><i class="fa fa-check"></i><b>4.3</b> Proper Units for Analysis</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="tokenization.html"><a href="tokenization.html#sentence-tokenization"><i class="fa fa-check"></i><b>4.3.1</b> Sentence Tokenization</a></li>
-<li class="chapter" data-level="4.3.2" data-path="tokenization.html"><a href="tokenization.html#words-tokenization"><i class="fa fa-check"></i><b>4.3.2</b> Words Tokenization</a></li>
+<li class="chapter" data-level="4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>4</b> Corpus Analysis: A Start</a><ul>
+<li class="chapter" data-level="4.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#installing-quanteda"><i class="fa fa-check"></i><b>4.1</b> Installing <code>quanteda</code></a></li>
+<li class="chapter" data-level="4.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#building-a-corpus-from-character-vector"><i class="fa fa-check"></i><b>4.2</b> Building a <code>corpus</code> from character vector</a></li>
+<li class="chapter" data-level="4.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#keyword-in-context-kwic"><i class="fa fa-check"></i><b>4.3</b> Keyword-in-Context (KWIC)</a></li>
+<li class="chapter" data-level="4.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>4.4</b> KWIC with Regular Expressions</a></li>
+<li class="chapter" data-level="4.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>4.5</b> Tidy Text Format of the Corpus</a></li>
+<li class="chapter" data-level="4.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>4.6</b> Frequency Lists</a></li>
+<li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.7</b> Collocations</a></li>
+<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.8</b> Word Cloud</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="tokenization.html"><a href="tokenization.html#lexical-bundles-n-grams"><i class="fa fa-check"></i><b>4.4</b> Lexical Bundles (n-grams)</a></li>
+<li class="chapter" data-level="5" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>5</b> Tokenization</a><ul>
+<li class="chapter" data-level="5.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>5.1</b> English Tokenization</a></li>
+<li class="chapter" data-level="5.2" data-path="tokenization.html"><a href="tokenization.html#text-analytics-pipeline"><i class="fa fa-check"></i><b>5.2</b> Text Analytics Pipeline</a></li>
+<li class="chapter" data-level="5.3" data-path="tokenization.html"><a href="tokenization.html#proper-units-for-analysis"><i class="fa fa-check"></i><b>5.3</b> Proper Units for Analysis</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="tokenization.html"><a href="tokenization.html#sentence-tokenization"><i class="fa fa-check"></i><b>5.3.1</b> Sentence Tokenization</a></li>
+<li class="chapter" data-level="5.3.2" data-path="tokenization.html"><a href="tokenization.html#words-tokenization"><i class="fa fa-check"></i><b>5.3.2</b> Words Tokenization</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a><ul>
-<li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parts-of-speech-tagging-1"><i class="fa fa-check"></i><b>5.1</b> Parts-of-Speech Tagging</a></li>
-<li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.2</b> Metalingusitic Analysis</a></li>
-<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.3</b> Saving POS-tagged Texts</a></li>
+<li class="chapter" data-level="5.4" data-path="tokenization.html"><a href="tokenization.html#lexical-bundles-n-grams"><i class="fa fa-check"></i><b>5.4</b> Lexical Bundles (n-grams)</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a></li>
-<li class="chapter" data-level="7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>7</b> Constructions and Idioms</a><ul>
-<li class="chapter" data-level="7.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#chinese-four-character-idioms"><i class="fa fa-check"></i><b>7.1</b> Chinese Four-character Idioms</a></li>
-<li class="chapter" data-level="7.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#dictionary-entries"><i class="fa fa-check"></i><b>7.2</b> Dictionary Entries</a></li>
-<li class="chapter" data-level="7.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#case-study-x來y去"><i class="fa fa-check"></i><b>7.3</b> Case Study: <code>X來Y去</code></a></li>
-<li class="chapter" data-level="7.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>7.4</b> Exercises</a></li>
+<li class="chapter" data-level="6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>6</b> Parts-of-Speech Tagging</a><ul>
+<li class="chapter" data-level="6.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parts-of-speech-tagging-1"><i class="fa fa-check"></i><b>6.1</b> Parts-of-Speech Tagging</a></li>
+<li class="chapter" data-level="6.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>6.2</b> Metalingusitic Analysis</a></li>
+<li class="chapter" data-level="6.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>6.3</b> Saving POS-tagged Texts</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>8</b> Chinese Text Processing</a><ul>
-<li class="chapter" data-level="8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>8.1</b> Chinese Word Segmenter <code>jiebaR</code></a><ul>
-<li class="chapter" data-level="8.1.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#start"><i class="fa fa-check"></i><b>8.1.1</b> Start</a></li>
-<li class="chapter" data-level="8.1.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#settings"><i class="fa fa-check"></i><b>8.1.2</b> Settings</a></li>
-<li class="chapter" data-level="8.1.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#user-defined-dictionary"><i class="fa fa-check"></i><b>8.1.3</b> User-defined dictionary</a></li>
-<li class="chapter" data-level="8.1.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#stopwords"><i class="fa fa-check"></i><b>8.1.4</b> Stopwords</a></li>
-<li class="chapter" data-level="8.1.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#pos-tagging"><i class="fa fa-check"></i><b>8.1.5</b> POS Tagging</a></li>
-<li class="chapter" data-level="8.1.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#default"><i class="fa fa-check"></i><b>8.1.6</b> Default</a></li>
-<li class="chapter" data-level="8.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminder"><i class="fa fa-check"></i><b>8.1.7</b> Reminder</a></li>
+<li class="chapter" data-level="7" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>7</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>8</b> Constructions and Idioms</a><ul>
+<li class="chapter" data-level="8.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#chinese-four-character-idioms"><i class="fa fa-check"></i><b>8.1</b> Chinese Four-character Idioms</a></li>
+<li class="chapter" data-level="8.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#dictionary-entries"><i class="fa fa-check"></i><b>8.2</b> Dictionary Entries</a></li>
+<li class="chapter" data-level="8.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#case-study-x來y去"><i class="fa fa-check"></i><b>8.3</b> Case Study: <code>X來Y去</code></a></li>
+<li class="chapter" data-level="8.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>8.4</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>8.2</b> Chinese Text Analytics Pipeline</a></li>
-<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.3</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.4</b> Case Study 2: Patterns</a></li>
-<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.5</b> Case Study 3: Lexical Bundles</a></li>
+<li class="chapter" data-level="9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>9</b> Chinese Text Processing</a><ul>
+<li class="chapter" data-level="9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>9.1</b> Chinese Word Segmenter <code>jiebaR</code></a><ul>
+<li class="chapter" data-level="9.1.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#start"><i class="fa fa-check"></i><b>9.1.1</b> Start</a></li>
+<li class="chapter" data-level="9.1.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#settings"><i class="fa fa-check"></i><b>9.1.2</b> Settings</a></li>
+<li class="chapter" data-level="9.1.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#user-defined-dictionary"><i class="fa fa-check"></i><b>9.1.3</b> User-defined dictionary</a></li>
+<li class="chapter" data-level="9.1.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#stopwords"><i class="fa fa-check"></i><b>9.1.4</b> Stopwords</a></li>
+<li class="chapter" data-level="9.1.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#pos-tagging"><i class="fa fa-check"></i><b>9.1.5</b> POS Tagging</a></li>
+<li class="chapter" data-level="9.1.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#default"><i class="fa fa-check"></i><b>9.1.6</b> Default</a></li>
+<li class="chapter" data-level="9.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminder"><i class="fa fa-check"></i><b>9.1.7</b> Reminder</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>9</b> Structured Corpus</a><ul>
-<li class="chapter" data-level="9.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>9.1</b> NCCU Spoken Mandarin</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>9.1.1</b> Loading the Corpus</a></li>
-<li class="chapter" data-level="9.1.2" data-path="structured-corpus.html"><a href="structured-corpus.html#line-segmentation"><i class="fa fa-check"></i><b>9.1.2</b> Line Segmentation</a></li>
-<li class="chapter" data-level="9.1.3" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.transcript"><i class="fa fa-check"></i><b>9.1.3</b> Metadata vs. Transcript</a></li>
-<li class="chapter" data-level="9.1.4" data-path="structured-corpus.html"><a href="structured-corpus.html#word-tokenization"><i class="fa fa-check"></i><b>9.1.4</b> Word Tokenization</a></li>
-<li class="chapter" data-level="9.1.5" data-path="structured-corpus.html"><a href="structured-corpus.html#word-frequencies-and-wordcloud"><i class="fa fa-check"></i><b>9.1.5</b> Word frequencies and Wordcloud</a></li>
-<li class="chapter" data-level="9.1.6" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>9.1.6</b> Concordances</a></li>
-<li class="chapter" data-level="9.1.7" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>9.1.7</b> N-grams (Lexical Bundles)</a></li>
+<li class="chapter" data-level="9.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>9.2</b> Chinese Text Analytics Pipeline</a></li>
+<li class="chapter" data-level="9.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>9.3</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="9.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>9.4</b> Case Study 2: Patterns</a></li>
+<li class="chapter" data-level="9.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>9.5</b> Case Study 3: Lexical Bundles</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>9.2</b> Connecting SPID to Metadata</a></li>
-<li class="chapter" data-level="9.3" data-path="structured-corpus.html"><a href="structured-corpus.html#more-socialinguistic-analyses"><i class="fa fa-check"></i><b>9.3</b> More Socialinguistic Analyses</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-ngram-distribution-by-age-groups"><i class="fa fa-check"></i><b>9.3.1</b> Check Ngram Distribution By Age Groups</a></li>
-<li class="chapter" data-level="9.3.2" data-path="structured-corpus.html"><a href="structured-corpus.html#check-word-distribution-of-different-genders"><i class="fa fa-check"></i><b>9.3.2</b> Check Word Distribution of different genders</a></li>
+<li class="chapter" data-level="10" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>10</b> Structured Corpus</a><ul>
+<li class="chapter" data-level="10.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>10.1</b> NCCU Spoken Mandarin</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>10.1.1</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="10.1.2" data-path="structured-corpus.html"><a href="structured-corpus.html#line-segmentation"><i class="fa fa-check"></i><b>10.1.2</b> Line Segmentation</a></li>
+<li class="chapter" data-level="10.1.3" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.transcript"><i class="fa fa-check"></i><b>10.1.3</b> Metadata vs. Transcript</a></li>
+<li class="chapter" data-level="10.1.4" data-path="structured-corpus.html"><a href="structured-corpus.html#word-tokenization"><i class="fa fa-check"></i><b>10.1.4</b> Word Tokenization</a></li>
+<li class="chapter" data-level="10.1.5" data-path="structured-corpus.html"><a href="structured-corpus.html#word-frequencies-and-wordcloud"><i class="fa fa-check"></i><b>10.1.5</b> Word frequencies and Wordcloud</a></li>
+<li class="chapter" data-level="10.1.6" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>10.1.6</b> Concordances</a></li>
+<li class="chapter" data-level="10.1.7" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>10.1.7</b> N-grams (Lexical Bundles)</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>10</b> XML</a><ul>
-<li class="chapter" data-level="10.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>10.1</b> BNC Spoken 2014</a></li>
-<li class="chapter" data-level="10.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>10.2</b> Process the Whole Directory of BNC2014 Sample</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>10.2.1</b> Define Function</a></li>
-<li class="chapter" data-level="10.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>10.2.2</b> Process the all files in the Directory</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>10.3</b> Metadata</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>10.3.1</b> Text Metadata</a></li>
-<li class="chapter" data-level="10.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>10.3.2</b> Speaker Metadata</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>10.4</b> BNC2014 for Socialinguistic Variation</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>10.4.1</b> Word Frequency vs. Gender</a></li>
-<li class="chapter" data-level="10.4.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>10.4.2</b> Degree ADV + ADJ</a></li>
-<li class="chapter" data-level="10.4.3" data-path="xml.html"><a href="xml.html#trigrams"><i class="fa fa-check"></i><b>10.4.3</b> Trigrams</a></li>
+<li class="chapter" data-level="10.2" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>10.2</b> Connecting SPID to Metadata</a></li>
+<li class="chapter" data-level="10.3" data-path="structured-corpus.html"><a href="structured-corpus.html#more-socialinguistic-analyses"><i class="fa fa-check"></i><b>10.3</b> More Socialinguistic Analyses</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-ngram-distribution-by-age-groups"><i class="fa fa-check"></i><b>10.3.1</b> Check Ngram Distribution By Age Groups</a></li>
+<li class="chapter" data-level="10.3.2" data-path="structured-corpus.html"><a href="structured-corpus.html#check-word-distribution-of-different-genders"><i class="fa fa-check"></i><b>10.3.2</b> Check Word Distribution of different genders</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>11</b> Vector Space Representation</a><ul>
-<li class="chapter" data-level="11.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>11.1</b> Data Processing Flowchart</a></li>
-<li class="chapter" data-level="11.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>11.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="11.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>11.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
-<li class="chapter" data-level="11.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>11.4</b> Feature Selection</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>11.4.1</b> Determining Linguistic Granularity</a></li>
-<li class="chapter" data-level="11.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>11.4.2</b> Stopwords</a></li>
-<li class="chapter" data-level="11.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>11.4.3</b> Distributional Cut-offs for Features</a></li>
+<li class="chapter" data-level="11" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>11</b> XML</a><ul>
+<li class="chapter" data-level="11.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>11.1</b> BNC Spoken 2014</a></li>
+<li class="chapter" data-level="11.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>11.2</b> Process the Whole Directory of BNC2014 Sample</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>11.2.1</b> Define Function</a></li>
+<li class="chapter" data-level="11.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>11.2.2</b> Process the all files in the Directory</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>11.5</b> Applying DFM</a><ul>
-<li class="chapter" data-level="11.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>11.5.1</b> Wordcloud</a></li>
-<li class="chapter" data-level="11.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>11.5.2</b> Document Similarity</a></li>
-<li class="chapter" data-level="11.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>11.5.3</b> Feature Similarity</a></li>
+<li class="chapter" data-level="11.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>11.3</b> Metadata</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>11.3.1</b> Text Metadata</a></li>
+<li class="chapter" data-level="11.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>11.3.2</b> Speaker Metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>11.4</b> BNC2014 for Socialinguistic Variation</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>11.4.1</b> Word Frequency vs. Gender</a></li>
+<li class="chapter" data-level="11.4.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>11.4.2</b> Degree ADV + ADJ</a></li>
+<li class="chapter" data-level="11.4.3" data-path="xml.html"><a href="xml.html#trigrams"><i class="fa fa-check"></i><b>11.4.3</b> Trigrams</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>12</b> Vector Space Representation II</a><ul>
-<li class="chapter" data-level="12.1" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#a-quick-view"><i class="fa fa-check"></i><b>12.1</b> A Quick View</a></li>
-<li class="chapter" data-level="12.2" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#loading-the-corpus-1"><i class="fa fa-check"></i><b>12.2</b> Loading the Corpus</a></li>
-<li class="chapter" data-level="12.3" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#semgentation"><i class="fa fa-check"></i><b>12.3</b> Semgentation</a></li>
-<li class="chapter" data-level="12.4" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#corpus-metadata"><i class="fa fa-check"></i><b>12.4</b> Corpus Metadata</a></li>
-<li class="chapter" data-level="12.5" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-feature-matrix"><i class="fa fa-check"></i><b>12.5</b> Document-Feature Matrix</a></li>
-<li class="chapter" data-level="12.6" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#wordcloud-1"><i class="fa fa-check"></i><b>12.6</b> Wordcloud</a></li>
-<li class="chapter" data-level="12.7" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-similarity-1"><i class="fa fa-check"></i><b>12.7</b> Document Similarity</a></li>
-<li class="chapter" data-level="12.8" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#feature-similarity-1"><i class="fa fa-check"></i><b>12.8</b> Feature Similarity</a></li>
+<li class="chapter" data-level="12" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>12</b> Vector Space Representation</a><ul>
+<li class="chapter" data-level="12.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>12.1</b> Data Processing Flowchart</a></li>
+<li class="chapter" data-level="12.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>12.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
+<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>12.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
+<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.4</b> Feature Selection</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>12.4.1</b> Determining Linguistic Granularity</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>12.4.2</b> Stopwords</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>12.4.3</b> Distributional Cut-offs for Features</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>13</b> References</a></li>
+<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>12.5</b> Applying DFM</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>12.5.1</b> Wordcloud</a></li>
+<li class="chapter" data-level="12.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.5.2</b> Document Similarity</a></li>
+<li class="chapter" data-level="12.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>12.5.3</b> Feature Similarity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>13</b> Vector Space Representation II</a><ul>
+<li class="chapter" data-level="13.1" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#a-quick-view"><i class="fa fa-check"></i><b>13.1</b> A Quick View</a></li>
+<li class="chapter" data-level="13.2" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#loading-the-corpus-1"><i class="fa fa-check"></i><b>13.2</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="13.3" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#semgentation"><i class="fa fa-check"></i><b>13.3</b> Semgentation</a></li>
+<li class="chapter" data-level="13.4" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#corpus-metadata"><i class="fa fa-check"></i><b>13.4</b> Corpus Metadata</a></li>
+<li class="chapter" data-level="13.5" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-feature-matrix"><i class="fa fa-check"></i><b>13.5</b> Document-Feature Matrix</a></li>
+<li class="chapter" data-level="13.6" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#wordcloud-1"><i class="fa fa-check"></i><b>13.6</b> Wordcloud</a></li>
+<li class="chapter" data-level="13.7" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-similarity-1"><i class="fa fa-check"></i><b>13.7</b> Document Similarity</a></li>
+<li class="chapter" data-level="13.8" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#feature-similarity-1"><i class="fa fa-check"></i><b>13.8</b> Feature Similarity</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -289,10 +295,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="corpus-analysis-a-start" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Corpus Analysis: A Start</h1>
+<h1><span class="header-section-number">Chapter 4</span> Corpus Analysis: A Start</h1>
 <p>In this chapter, I will demonstrate how to do basic corpus analysis after you have collected data. I will show you some of the most common ways that people work with the text data.</p>
 <div id="installing-quanteda" class="section level2">
-<h2><span class="header-section-number">3.1</span> Installing <code>quanteda</code></h2>
+<h2><span class="header-section-number">4.1</span> Installing <code>quanteda</code></h2>
 <p>To start with, this tutorial will use a powerful package, <code>quanteda</code>, for managing and analyzing textual data in R. You may refer to the <a href="https://quanteda.io/">official documentation of the package</a> for more detail.</p>
 <p><code>quanteda</code> is not included in the default R installation. Please install the package if you haven’t done so.</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;quanteda&quot;</span>)</a>
@@ -305,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If you run into any installation errors, please go to the official documentation page for additional assistance.</p>
 </div>
 <div id="building-a-corpus-from-character-vector" class="section level2">
-<h2><span class="header-section-number">3.2</span> Building a <code>corpus</code> from character vector</h2>
+<h2><span class="header-section-number">4.2</span> Building a <code>corpus</code> from character vector</h2>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">library</span>(quanteda)</a>
 <a class="sourceLine" id="cb32-2" data-line-number="2"><span class="kw">library</span>(readtext)</a>
 <a class="sourceLine" id="cb32-3" data-line-number="3"><span class="kw">library</span>(tidytext)</a>
@@ -331,7 +337,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 </div>
 <div id="keyword-in-context-kwic" class="section level2">
-<h2><span class="header-section-number">3.3</span> Keyword-in-Context (KWIC)</h2>
+<h2><span class="header-section-number">4.3</span> Keyword-in-Context (KWIC)</h2>
 <p>Keyword-in-Context (KWIC), or Concordances, is the most frequently used method in corpus linguistics. The idea is very intuitive: we get to know more about the semantics of a word by examing how it is being used in a wider context.</p>
 <p>We can use <code>kwic()</code> to perform a search for a word and retrieve its concordances from the corpus:</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror&quot;</span>)</a></code></pre></div>
@@ -343,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>kwic()</code> returns a data frame, which can be easily output to a CSV file for later use.</p>
 </div>
 <div id="kwic-with-regular-expressions" class="section level2">
-<h2><span class="header-section-number">3.4</span> KWIC with Regular Expressions</h2>
+<h2><span class="header-section-number">4.4</span> KWIC with Regular Expressions</h2>
 <p>For more complex searches, we can use regular expressions as well in <code>kwic()</code>. For example, if you want to include <code>terror</code> and all its other related word forms, such as <code>terrorist</code>, <code>terrorism</code>, <code>terrors</code>, you can do a regular expression search.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror.*&quot;</span>, <span class="dt">valuetype =</span> <span class="st">&quot;regex&quot;</span>)</a></code></pre></div>
 <div data-pagedtable="false">
@@ -361,7 +367,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>It should be noted that the output of <code>kwic</code> includes not only the concordances (i.e., preceding/subsequent co-texts + the keyword), but also the sources of the texts for each concordance line. This would be extremely convenient if you need to refer back to the original discourse context of the concordance line.</p>
 </div>
 <div id="tidy-text-format-of-the-corpus" class="section level2">
-<h2><span class="header-section-number">3.5</span> Tidy Text Format of the Corpus</h2>
+<h2><span class="header-section-number">4.5</span> Tidy Text Format of the Corpus</h2>
 <p>Using tidy data principles is a powerful way to make handling data easier and more effective, and this is no less true when it comes to dealing with text. As described by Hadley Wickham (Wickham 2014), tidy data has a specific structure:</p>
 <p>Each variable is a column
 Each observation is a row
@@ -378,7 +384,7 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
 </div>
 </div>
 <div id="frequency-lists" class="section level2">
-<h2><span class="header-section-number">3.6</span> Frequency Lists</h2>
+<h2><span class="header-section-number">4.6</span> Frequency Lists</h2>
 <p>To get a frequency list of words, word tokenization is an important step for corpus analysis because words are a meaningful linguistic unit in language. Also, word frequency lists are often indicative of many important messages.</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">corp_us_words &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb39-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(word, text)</a>
@@ -424,7 +430,7 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
 <pre><code>## [1] 135504</code></pre>
 </div>
 <div id="collocations" class="section level2">
-<h2><span class="header-section-number">3.7</span> Collocations</h2>
+<h2><span class="header-section-number">4.7</span> Collocations</h2>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1">corp_us_collocations &lt;-<span class="st"> </span>corp_us_bigrams_freq <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb47-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># set bigram frequency cut-off</span></a>
 <a class="sourceLine" id="cb47-3" data-line-number="3"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw">separate</span>(bigram, <span class="kw">c</span>(<span class="st">&quot;w1&quot;</span>, <span class="st">&quot;w2&quot;</span>)) <span class="op">%&gt;%</span></a>
@@ -444,13 +450,13 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-40" class="exercise"><strong>Exercise 3.1  </strong></span>Create a collocation data frame arranged by other association metrics, such as <code>t-score</code>.
+<span id="exr:unnamed-chunk-40" class="exercise"><strong>Exercise 4.1  </strong></span>Create a collocation data frame arranged by other association metrics, such as <code>t-score</code>.
 </div>
 
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-41" class="exercise"><strong>Exercise 3.2  </strong></span>Find the top FIVE bigrams ranked according to MI values for each president.
+<span id="exr:unnamed-chunk-41" class="exercise"><strong>Exercise 4.2  </strong></span>Find the top FIVE bigrams ranked according to MI values for each president.
 </div>
 
 <div data-pagedtable="false">
@@ -462,7 +468,7 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
 <hr />
 </div>
 <div id="word-cloud" class="section level2">
-<h2><span class="header-section-number">3.8</span> Word Cloud</h2>
+<h2><span class="header-section-number">4.8</span> Word Cloud</h2>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="kw">library</span>(wordcloud)</a>
 <a class="sourceLine" id="cb48-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
 <a class="sourceLine" id="cb48-3" data-line-number="3"><span class="kw">with</span>(corp_us_words_freq, <span class="kw">wordcloud</span>(word, n, </a>
@@ -474,7 +480,7 @@ We thus define the tidy text format as being a table with one-token-per-row. A t
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 3.3  </strong></span>Word cloud would be more informative if we first remove functional words. In <code>tidytext</code>, there is a preloaded data frame, <code>stop_words</code>, which contains common English stop words. Please make use of this data frame and try to re-create a word cloud with all stopwords removed.
+<span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.3  </strong></span>Word cloud would be more informative if we first remove functional words. In <code>tidytext</code>, there is a preloaded data frame, <code>stop_words</code>, which contains common English stop words. Please make use of this data frame and try to re-create a word cloud with all stopwords removed.
 </div>
 
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" data-line-number="1"><span class="kw">require</span>(tidytext)</a>
@@ -542,6 +548,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
