@@ -336,7 +336,7 @@ For some reasons, the module <code>ckiptagger</code> cannot be found in the base
 <div id="r-python-communication" class="section level2">
 <h2><span class="header-section-number">10.3</span> R-Python Communication</h2>
 <p>In order to call Python functions in R/Rstudio, we need to install an R library in your R. The R-Python communication is made possible through the R library <code>reticulate</code>. Please make sure that you have this library installed in your R.</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb137-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;reticule&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb137-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</a></code></pre></div>
 </div>
 <div id="word-segmentation-in-r" class="section level2">
 <h2><span class="header-section-number">10.4</span> Word Segmentation in R</h2>
@@ -355,8 +355,8 @@ For some reasons, the module <code>ckiptagger</code> cannot be found in the base
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb138-1" data-line-number="1"><span class="kw">library</span>(reticulate)</a>
 <a class="sourceLine" id="cb138-2" data-line-number="2"><span class="co"># spacy_initialize() would set the default python to miniconda/spacy_condaenviron</span></a>
 <a class="sourceLine" id="cb138-3" data-line-number="3"><span class="co"># install ckiptagger and tensorflow-1.13.1 in spacy_condaenviron</span></a>
-<a class="sourceLine" id="cb138-4" data-line-number="4"><span class="co">#path_to_python &lt;- &quot;/Users/alvinchen/opt/anaconda3/bin/python&quot;</span></a>
-<a class="sourceLine" id="cb138-5" data-line-number="5"><span class="co">#use_python(path_to_python, required = TRUE)</span></a></code></pre></div>
+<a class="sourceLine" id="cb138-4" data-line-number="4"><span class="co"># path_to_python &lt;- &quot;/Users/alvinchen/opt/anaconda3/bin/python&quot;</span></a>
+<a class="sourceLine" id="cb138-5" data-line-number="5"><span class="co"># use_python(path_to_python)</span></a></code></pre></div>
 </div>
 <div id="loading-python-modules" class="section level2">
 <h2><span class="header-section-number">10.6</span> Loading Python Modules</h2>
@@ -521,25 +521,94 @@ For some reasons, the module <code>ckiptagger</code> cannot be found in the base
 </ul>
 <p>To perform these additional tasks, we need to load the necessary models (pretrained and provided by the CKIP) first as well. They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb146-1" data-line-number="1"><span class="co"># loading other necessary models</span></a>
-<a class="sourceLine" id="cb146-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 495s</span></a>
-<a class="sourceLine" id="cb146-3" data-line-number="3"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 426s</span></a></code></pre></div>
+<a class="sourceLine" id="cb146-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 495s</span></a></code></pre></div>
+<pre><code>##    user  system elapsed 
+##   4.831   1.327   5.044</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" data-line-number="1"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 426s</span></a></code></pre></div>
+<pre><code>##    user  system elapsed 
+##   5.116   2.119   6.556</code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb147-1" data-line-number="1"><span class="co"># Parts-of-speech Tagging</span></a>
-<a class="sourceLine" id="cb147-2" data-line-number="2">pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb147-3" data-line-number="3">pos_words</a>
-<a class="sourceLine" id="cb147-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb147-5" data-line-number="5"><span class="co"># Named Entity Recognition</span></a>
-<a class="sourceLine" id="cb147-6" data-line-number="6">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
-<a class="sourceLine" id="cb147-7" data-line-number="7">ner</a></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb150-1" data-line-number="1"><span class="co"># Parts-of-speech Tagging</span></a>
+<a class="sourceLine" id="cb150-2" data-line-number="2">pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb150-3" data-line-number="3">pos_words</a></code></pre></div>
+<pre><code>## [[1]]
+##  [1] &quot;Nb&quot;             &quot;Nd&quot;             &quot;D&quot;              &quot;VC&quot;            
+##  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
+##  [9] &quot;VJ&quot;             &quot;Nh&quot;             &quot;Neu&quot;            &quot;Nf&quot;            
+## [13] &quot;Ng&quot;             &quot;P&quot;              &quot;Nc&quot;             &quot;VC&quot;            
+## [17] &quot;COMMACATEGORY&quot;  &quot;Nh&quot;             &quot;D&quot;              &quot;VK&quot;            
+## [21] &quot;Nh&quot;             &quot;Ncd&quot;            &quot;VJ&quot;             &quot;Nc&quot;            
+## [25] &quot;PERIODCATEGORY&quot;
+## 
+## [[2]]
+##  [1] &quot;Nc&quot;             &quot;Nc&quot;             &quot;P&quot;              &quot;Nd&quot;            
+##  [5] &quot;Na&quot;             &quot;Nb&quot;             &quot;D&quot;              &quot;VC&quot;            
+##  [9] &quot;DE&quot;             &quot;Na&quot;             &quot;Nb&quot;             &quot;VC&quot;            
+## [13] &quot;VC&quot;             &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;VE&quot;            
+## [17] &quot;Nh&quot;             &quot;D&quot;              &quot;D&quot;              &quot;Dfa&quot;           
+## [21] &quot;VH&quot;             &quot;VC&quot;             &quot;Nc&quot;             &quot;VC&quot;            
+## [25] &quot;COMMACATEGORY&quot;  &quot;VG&quot;             &quot;Nes&quot;            &quot;Nc&quot;            
+## [29] &quot;D&quot;              &quot;Neu&quot;            &quot;Nf&quot;             &quot;DE&quot;            
+## [33] &quot;Na&quot;             &quot;Na&quot;             &quot;Na&quot;             &quot;Na&quot;            
+## [37] &quot;PERIODCATEGORY&quot;
+## 
+## [[3]]
+## [1] &quot;VH&quot;               &quot;QUESTIONCATEGORY&quot; &quot;QUESTIONCATEGORY&quot; &quot;Caa&quot;             
+## [5] &quot;Nb&quot;               &quot;V_2&quot;              &quot;Na&quot;               &quot;PERIODCATEGORY&quot;  
+## [9] &quot;PERIODCATEGORY&quot;  
+## 
+## [[4]]
+##  [1] &quot;ETCCATEGORY&quot; &quot;WHITESPACE&quot;  &quot;Nh&quot;          &quot;VK&quot;          &quot;T&quot;          
+##  [6] &quot;ETCCATEGORY&quot; &quot;WHITESPACE&quot;  &quot;D&quot;           &quot;D&quot;           &quot;VC&quot;         
+## [11] &quot;Di&quot;          &quot;ETCCATEGORY&quot; &quot;ETCCATEGORY&quot;
+## 
+## [[5]]
+##  [1] &quot;VH&quot;             &quot;VJ&quot;             &quot;Neu&quot;            &quot;Nf&quot;            
+##  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;Caa&quot;            &quot;Neu&quot;           
+##  [9] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
+## [13] &quot;D&quot;              &quot;VH&quot;             &quot;T&quot;              &quot;PERIODCATEGORY&quot;
+## [17] &quot;Nep&quot;            &quot;SHI&quot;            &quot;Na&quot;             &quot;DE&quot;            
+## [21] &quot;Na&quot;             &quot;PERIODCATEGORY&quot;
+## 
+## [[6]]
+##  [1] &quot;Na&quot;             &quot;VE&quot;             &quot;Neu&quot;            &quot;Na&quot;            
+##  [5] &quot;P&quot;              &quot;Na&quot;             &quot;VG&quot;             &quot;Neu&quot;           
+##  [9] &quot;PERIODCATEGORY&quot; &quot;Neu&quot;            &quot;COMMACATEGORY&quot;  &quot;D&quot;             
+## [13] &quot;D&quot;              &quot;VHC&quot;            &quot;PERIODCATEGORY&quot;</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb152-1" data-line-number="1"><span class="co"># Named Entity Recognition</span></a>
+<a class="sourceLine" id="cb152-2" data-line-number="2">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
+<a class="sourceLine" id="cb152-3" data-line-number="3">ner</a></code></pre></div>
+<pre><code>## [[1]]
+## {(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
+## 
+## [[2]]
+## {(7, 9, &#39;DATE&#39;, &#39;今天&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;)}
+## 
+## [[3]]
+## {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
+## 
+## [[4]]
+## set()
+## 
+## [[5]]
+## {(4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;), (14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;)}
+## 
+## [[6]]
+## {(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
 </div>
 <div id="tidy-up-the-results" class="section level2">
 <h2><span class="header-section-number">10.10</span> Tidy Up the Results</h2>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" data-line-number="1">sent_corp &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(sents)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</a>
-<a class="sourceLine" id="cb148-2" data-line-number="2">           <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb148-3" data-line-number="3">           <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</a>
-<a class="sourceLine" id="cb148-4" data-line-number="4">sent_corp</a></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb154-1" data-line-number="1">sent_corp &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(sents)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</a>
+<a class="sourceLine" id="cb154-2" data-line-number="2">           <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb154-3" data-line-number="3">           <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</a>
+<a class="sourceLine" id="cb154-4" data-line-number="4">sent_corp</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["words"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["pos"],"name":[3],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁","3":"Nb"},{"1":"1","2":"今","3":"Nd"},{"1":"1","2":"將","3":"D"},{"1":"1","2":"執行","3":"VC"},{"1":"1","2":"安樂死","3":"Na"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"卻","3":"D"},{"1":"1","2":"突然","3":"D"},{"1":"1","2":"爆出","3":"VJ"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"20","3":"Neu"},{"1":"1","2":"年","3":"Nf"},{"1":"1","2":"前","3":"Ng"},{"1":"1","2":"遭","3":"P"},{"1":"1","2":"緯來體育台","3":"Nc"},{"1":"1","2":"封殺","3":"VC"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"他","3":"Nh"},{"1":"1","2":"不","3":"D"},{"1":"1","2":"懂","3":"VK"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"哪裡","3":"Ncd"},{"1":"1","2":"得罪到","3":"VJ"},{"1":"1","2":"電視台","3":"Nc"},{"1":"1","2":"。","3":"PERIODCATEGORY"},{"1":"2","2":"美國","3":"Nc"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"針對","3":"P"},{"1":"2","2":"今天","3":"Nd"},{"1":"2","2":"總統","3":"Na"},{"1":"2","2":"布什","3":"Nb"},{"1":"2","2":"所","3":"D"},{"1":"2","2":"提名","3":"VC"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"勞工部長","3":"Na"},{"1":"2","2":"趙小蘭","3":"Nb"},{"1":"2","2":"展開","3":"VC"},{"1":"2","2":"認可","3":"VC"},{"1":"2","2":"聽證會","3":"Na"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"預料","3":"VE"},{"1":"2","2":"她","3":"Nh"},{"1":"2","2":"將","3":"D"},{"1":"2","2":"會","3":"D"},{"1":"2","2":"很","3":"Dfa"},{"1":"2","2":"順利","3":"VH"},{"1":"2","2":"通過","3":"VC"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"支持","3":"VC"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"成為","3":"VG"},{"1":"2","2":"該","3":"Nes"},{"1":"2","2":"國","3":"Nc"},{"1":"2","2":"有史以來","3":"D"},{"1":"2","2":"第一","3":"Neu"},{"1":"2","2":"位","3":"Nf"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"華裔","3":"Na"},{"1":"2","2":"女性","3":"Na"},{"1":"2","2":"內閣","3":"Na"},{"1":"2","2":"成員","3":"Na"},{"1":"2","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":"土地公有政策","3":"VH"},{"1":"3","2":"?","3":"QUESTIONCATEGORY"},{"1":"3","2":"？","3":"QUESTIONCATEGORY"},{"1":"3","2":"還是","3":"Caa"},{"1":"3","2":"土地婆","3":"Nb"},{"1":"3","2":"有","3":"V_2"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":".","3":"PERIODCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"你","3":"Nh"},{"1":"4","2":"確定","3":"VK"},{"1":"4","2":"嗎","3":"T"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"不要","3":"D"},{"1":"4","2":"再","3":"D"},{"1":"4","2":"騙","3":"VC"},{"1":"4","2":"了","3":"Di"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"5","2":"最多","3":"VH"},{"1":"5","2":"容納","3":"VJ"},{"1":"5","2":"59,000","3":"Neu"},{"1":"5","2":"個","3":"Nf"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"或","3":"Caa"},{"1":"5","2":"5.9萬","3":"Neu"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"再","3":"D"},{"1":"5","2":"多","3":"D"},{"1":"5","2":"就","3":"D"},{"1":"5","2":"不行","3":"VH"},{"1":"5","2":"了","3":"T"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"5","2":"這","3":"Nep"},{"1":"5","2":"是","3":"SHI"},{"1":"5","2":"環評","3":"Na"},{"1":"5","2":"的","3":"DE"},{"1":"5","2":"結論","3":"Na"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"6","2":"科長","3":"Na"},{"1":"6","2":"說","3":"VE"},{"1":"6","2":":1,","3":"Neu"},{"1":"6","2":"坪數","3":"Na"},{"1":"6","2":"對","3":"P"},{"1":"6","2":"人數","3":"Na"},{"1":"6","2":"為","3":"VG"},{"1":"6","2":"1:3","3":"Neu"},{"1":"6","2":"。","3":"PERIODCATEGORY"},{"1":"6","2":"2","3":"Neu"},{"1":"6","2":",","3":"COMMACATEGORY"},{"1":"6","2":"可以","3":"D"},{"1":"6","2":"再","3":"D"},{"1":"6","2":"增加","3":"VHC"},{"1":"6","2":"。","3":"PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 
 <div class="exercise">
 <span id="exr:unnamed-chunk-151" class="exercise"><strong>Exercise 10.2  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same data frame <code>sent_corp</code>?
