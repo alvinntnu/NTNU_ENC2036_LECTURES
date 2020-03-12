@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Vector Space Representation II | Corpus Linguistics</title>
+  <title>Chapter 14 Vector Space Representation II | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Vector Space Representation II | Corpus Linguistics" />
+  <meta property="og:title" content="Chapter 14 Vector Space Representation II | Corpus Linguistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Vector Space Representation II | Corpus Linguistics" />
+  <meta name="twitter:title" content="Chapter 14 Vector Space Representation II | Corpus Linguistics" />
   
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-02-27" />
+<meta name="date" content="2020-03-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,13 +54,13 @@
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-0.3/viz.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
 <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
 <script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -168,6 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>3.2</b> Web Crawling</a></li>
 <li class="chapter" data-level="3.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>3.3</b> Functional Programming</a></li>
 <li class="chapter" data-level="3.4" data-path="creating-corpus.html"><a href="creating-corpus.html#save-corpus"><i class="fa fa-check"></i><b>3.4</b> Save Corpus</a></li>
+<li class="chapter" data-level="3.5" data-path="creating-corpus.html"><a href="creating-corpus.html#additional-resourcess"><i class="fa fa-check"></i><b>3.5</b> Additional Resourcess</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>4</b> Corpus Analysis: A Start</a><ul>
 <li class="chapter" data-level="4.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#installing-quanteda"><i class="fa fa-check"></i><b>4.1</b> Installing <code>quanteda</code></a></li>
@@ -215,64 +216,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>9.4</b> Case Study 2: Patterns</a></li>
 <li class="chapter" data-level="9.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>9.5</b> Case Study 3: Lexical Bundles</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>10</b> Structured Corpus</a><ul>
-<li class="chapter" data-level="10.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>10.1</b> NCCU Spoken Mandarin</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>10.1.1</b> Loading the Corpus</a></li>
-<li class="chapter" data-level="10.1.2" data-path="structured-corpus.html"><a href="structured-corpus.html#line-segmentation"><i class="fa fa-check"></i><b>10.1.2</b> Line Segmentation</a></li>
-<li class="chapter" data-level="10.1.3" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.transcript"><i class="fa fa-check"></i><b>10.1.3</b> Metadata vs. Transcript</a></li>
-<li class="chapter" data-level="10.1.4" data-path="structured-corpus.html"><a href="structured-corpus.html#word-tokenization"><i class="fa fa-check"></i><b>10.1.4</b> Word Tokenization</a></li>
-<li class="chapter" data-level="10.1.5" data-path="structured-corpus.html"><a href="structured-corpus.html#word-frequencies-and-wordcloud"><i class="fa fa-check"></i><b>10.1.5</b> Word frequencies and Wordcloud</a></li>
-<li class="chapter" data-level="10.1.6" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>10.1.6</b> Concordances</a></li>
-<li class="chapter" data-level="10.1.7" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>10.1.7</b> N-grams (Lexical Bundles)</a></li>
+<li class="chapter" data-level="10" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>10</b> CKIP Tagger</a><ul>
+<li class="chapter" data-level="10.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>10.1</b> Installation</a></li>
+<li class="chapter" data-level="10.2" data-path="ckiptagger.html"><a href="ckiptagger.html#download-the-model-files"><i class="fa fa-check"></i><b>10.2</b> Download the Model Files</a></li>
+<li class="chapter" data-level="10.3" data-path="ckiptagger.html"><a href="ckiptagger.html#r-python-communication"><i class="fa fa-check"></i><b>10.3</b> R-Python Communication</a></li>
+<li class="chapter" data-level="10.4" data-path="ckiptagger.html"><a href="ckiptagger.html#word-segmentation-in-r"><i class="fa fa-check"></i><b>10.4</b> Word Segmentation in R</a></li>
+<li class="chapter" data-level="10.5" data-path="ckiptagger.html"><a href="ckiptagger.html#r-environment-setting"><i class="fa fa-check"></i><b>10.5</b> R Environment Setting</a></li>
+<li class="chapter" data-level="10.6" data-path="ckiptagger.html"><a href="ckiptagger.html#loading-python-modules"><i class="fa fa-check"></i><b>10.6</b> Loading Python Modules</a></li>
+<li class="chapter" data-level="10.7" data-path="ckiptagger.html"><a href="ckiptagger.html#segmenting-texts"><i class="fa fa-check"></i><b>10.7</b> Segmenting Texts</a></li>
+<li class="chapter" data-level="10.8" data-path="ckiptagger.html"><a href="ckiptagger.html#define-own-dictionary"><i class="fa fa-check"></i><b>10.8</b> Define Own Dictionary</a></li>
+<li class="chapter" data-level="10.9" data-path="ckiptagger.html"><a href="ckiptagger.html#beyond-word-boundaries"><i class="fa fa-check"></i><b>10.9</b> Beyond Word Boundaries</a></li>
+<li class="chapter" data-level="10.10" data-path="ckiptagger.html"><a href="ckiptagger.html#tidy-up-the-results"><i class="fa fa-check"></i><b>10.10</b> Tidy Up the Results</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>10.2</b> Connecting SPID to Metadata</a></li>
-<li class="chapter" data-level="10.3" data-path="structured-corpus.html"><a href="structured-corpus.html#more-socialinguistic-analyses"><i class="fa fa-check"></i><b>10.3</b> More Socialinguistic Analyses</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-ngram-distribution-by-age-groups"><i class="fa fa-check"></i><b>10.3.1</b> Check Ngram Distribution By Age Groups</a></li>
-<li class="chapter" data-level="10.3.2" data-path="structured-corpus.html"><a href="structured-corpus.html#check-word-distribution-of-different-genders"><i class="fa fa-check"></i><b>10.3.2</b> Check Word Distribution of different genders</a></li>
+<li class="chapter" data-level="11" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>11</b> Structured Corpus</a><ul>
+<li class="chapter" data-level="11.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>11.1</b> NCCU Spoken Mandarin</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>11.1.1</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="11.1.2" data-path="structured-corpus.html"><a href="structured-corpus.html#line-segmentation"><i class="fa fa-check"></i><b>11.1.2</b> Line Segmentation</a></li>
+<li class="chapter" data-level="11.1.3" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.transcript"><i class="fa fa-check"></i><b>11.1.3</b> Metadata vs. Transcript</a></li>
+<li class="chapter" data-level="11.1.4" data-path="structured-corpus.html"><a href="structured-corpus.html#word-tokenization"><i class="fa fa-check"></i><b>11.1.4</b> Word Tokenization</a></li>
+<li class="chapter" data-level="11.1.5" data-path="structured-corpus.html"><a href="structured-corpus.html#word-frequencies-and-wordcloud"><i class="fa fa-check"></i><b>11.1.5</b> Word frequencies and Wordcloud</a></li>
+<li class="chapter" data-level="11.1.6" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>11.1.6</b> Concordances</a></li>
+<li class="chapter" data-level="11.1.7" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>11.1.7</b> N-grams (Lexical Bundles)</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>11</b> XML</a><ul>
-<li class="chapter" data-level="11.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>11.1</b> BNC Spoken 2014</a></li>
-<li class="chapter" data-level="11.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>11.2</b> Process the Whole Directory of BNC2014 Sample</a><ul>
-<li class="chapter" data-level="11.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>11.2.1</b> Define Function</a></li>
-<li class="chapter" data-level="11.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>11.2.2</b> Process the all files in the Directory</a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>11.3</b> Metadata</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>11.3.1</b> Text Metadata</a></li>
-<li class="chapter" data-level="11.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>11.3.2</b> Speaker Metadata</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>11.4</b> BNC2014 for Socialinguistic Variation</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>11.4.1</b> Word Frequency vs. Gender</a></li>
-<li class="chapter" data-level="11.4.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>11.4.2</b> Degree ADV + ADJ</a></li>
-<li class="chapter" data-level="11.4.3" data-path="xml.html"><a href="xml.html#trigrams"><i class="fa fa-check"></i><b>11.4.3</b> Trigrams</a></li>
+<li class="chapter" data-level="11.2" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>11.2</b> Connecting SPID to Metadata</a></li>
+<li class="chapter" data-level="11.3" data-path="structured-corpus.html"><a href="structured-corpus.html#more-socialinguistic-analyses"><i class="fa fa-check"></i><b>11.3</b> More Socialinguistic Analyses</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-ngram-distribution-by-age-groups"><i class="fa fa-check"></i><b>11.3.1</b> Check Ngram Distribution By Age Groups</a></li>
+<li class="chapter" data-level="11.3.2" data-path="structured-corpus.html"><a href="structured-corpus.html#check-word-distribution-of-different-genders"><i class="fa fa-check"></i><b>11.3.2</b> Check Word Distribution of different genders</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>12</b> Vector Space Representation</a><ul>
-<li class="chapter" data-level="12.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>12.1</b> Data Processing Flowchart</a></li>
-<li class="chapter" data-level="12.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>12.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>12.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
-<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.4</b> Feature Selection</a><ul>
-<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>12.4.1</b> Determining Linguistic Granularity</a></li>
-<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>12.4.2</b> Stopwords</a></li>
-<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>12.4.3</b> Distributional Cut-offs for Features</a></li>
+<li class="chapter" data-level="12" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>12</b> XML</a><ul>
+<li class="chapter" data-level="12.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>12.1</b> BNC Spoken 2014</a></li>
+<li class="chapter" data-level="12.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>12.2</b> Process the Whole Directory of BNC2014 Sample</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>12.2.1</b> Define Function</a></li>
+<li class="chapter" data-level="12.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>12.2.2</b> Process the all files in the Directory</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>12.5</b> Applying DFM</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>12.5.1</b> Wordcloud</a></li>
-<li class="chapter" data-level="12.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.5.2</b> Document Similarity</a></li>
-<li class="chapter" data-level="12.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>12.5.3</b> Feature Similarity</a></li>
+<li class="chapter" data-level="12.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>12.3</b> Metadata</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>12.3.1</b> Text Metadata</a></li>
+<li class="chapter" data-level="12.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>12.3.2</b> Speaker Metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socialinguistic Variation</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>12.4.1</b> Word Frequency vs. Gender</a></li>
+<li class="chapter" data-level="12.4.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>12.4.2</b> Degree ADV + ADJ</a></li>
+<li class="chapter" data-level="12.4.3" data-path="xml.html"><a href="xml.html#trigrams"><i class="fa fa-check"></i><b>12.4.3</b> Trigrams</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>13</b> Vector Space Representation II</a><ul>
-<li class="chapter" data-level="13.1" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#a-quick-view"><i class="fa fa-check"></i><b>13.1</b> A Quick View</a></li>
-<li class="chapter" data-level="13.2" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#loading-the-corpus-1"><i class="fa fa-check"></i><b>13.2</b> Loading the Corpus</a></li>
-<li class="chapter" data-level="13.3" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#semgentation"><i class="fa fa-check"></i><b>13.3</b> Semgentation</a></li>
-<li class="chapter" data-level="13.4" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#corpus-metadata"><i class="fa fa-check"></i><b>13.4</b> Corpus Metadata</a></li>
-<li class="chapter" data-level="13.5" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-feature-matrix"><i class="fa fa-check"></i><b>13.5</b> Document-Feature Matrix</a></li>
-<li class="chapter" data-level="13.6" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#wordcloud-1"><i class="fa fa-check"></i><b>13.6</b> Wordcloud</a></li>
-<li class="chapter" data-level="13.7" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-similarity-1"><i class="fa fa-check"></i><b>13.7</b> Document Similarity</a></li>
-<li class="chapter" data-level="13.8" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#feature-similarity-1"><i class="fa fa-check"></i><b>13.8</b> Feature Similarity</a></li>
+<li class="chapter" data-level="13" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>13</b> Vector Space Representation</a><ul>
+<li class="chapter" data-level="13.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>13.1</b> Data Processing Flowchart</a></li>
+<li class="chapter" data-level="13.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>13.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
+<li class="chapter" data-level="13.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>13.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
+<li class="chapter" data-level="13.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>13.4</b> Feature Selection</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>13.4.1</b> Determining Linguistic Granularity</a></li>
+<li class="chapter" data-level="13.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>13.4.2</b> Stopwords</a></li>
+<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>13.4.3</b> Distributional Cut-offs for Features</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="13.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>13.5</b> Applying DFM</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>13.5.1</b> Wordcloud</a></li>
+<li class="chapter" data-level="13.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>13.5.2</b> Document Similarity</a></li>
+<li class="chapter" data-level="13.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>13.5.3</b> Feature Similarity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>14</b> Vector Space Representation II</a><ul>
+<li class="chapter" data-level="14.1" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#a-quick-view"><i class="fa fa-check"></i><b>14.1</b> A Quick View</a></li>
+<li class="chapter" data-level="14.2" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#loading-the-corpus-1"><i class="fa fa-check"></i><b>14.2</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="14.3" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#semgentation"><i class="fa fa-check"></i><b>14.3</b> Semgentation</a></li>
+<li class="chapter" data-level="14.4" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#corpus-metadata"><i class="fa fa-check"></i><b>14.4</b> Corpus Metadata</a></li>
+<li class="chapter" data-level="14.5" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-feature-matrix"><i class="fa fa-check"></i><b>14.5</b> Document-Feature Matrix</a></li>
+<li class="chapter" data-level="14.6" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#wordcloud-1"><i class="fa fa-check"></i><b>14.6</b> Wordcloud</a></li>
+<li class="chapter" data-level="14.7" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#document-similarity-1"><i class="fa fa-check"></i><b>14.7</b> Document Similarity</a></li>
+<li class="chapter" data-level="14.8" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html#feature-similarity-1"><i class="fa fa-check"></i><b>14.8</b> Feature Similarity</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -295,25 +308,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="vector-space-representation-ii" class="section level1">
-<h1><span class="header-section-number">Chapter 13</span> Vector Space Representation II</h1>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb216-2" data-line-number="2"><span class="kw">library</span>(quanteda)</a>
-<a class="sourceLine" id="cb216-3" data-line-number="3"><span class="kw">library</span>(readtext)</a>
-<a class="sourceLine" id="cb216-4" data-line-number="4"><span class="kw">library</span>(jiebaR)</a></code></pre></div>
+<h1><span class="header-section-number">Chapter 14</span> Vector Space Representation II</h1>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb224-2" data-line-number="2"><span class="kw">library</span>(quanteda)</a>
+<a class="sourceLine" id="cb224-3" data-line-number="3"><span class="kw">library</span>(readtext)</a>
+<a class="sourceLine" id="cb224-4" data-line-number="4"><span class="kw">library</span>(jiebaR)</a></code></pre></div>
 <hr />
 <div class="figure"><span id="fig:cpf"></span>
 <img src="images/r-nlp-workflow.png" alt="Corpus Processing Flowchart" width="90%" />
 <p class="caption">
-Figure 13.1: Corpus Processing Flowchart
+Figure 14.1: Corpus Processing Flowchart
 </p>
 </div>
 <hr />
-<p>In Chapter <a href="vector-space-representation.html#vector-space-representation">12</a>, we have demonstrated the potential of a vector representation of documents with the English data. Here, we would like to look at the Chinese data in more detail.</p>
-<p>In the corpus data processing flowchart, as repeated below (Figure <a href="vector-space-representation-ii.html#fig:cpf">13.1</a>), we need to deal with the word segmentation with the Chinese data. This prevents us from creating a <code>dfm</code> directly from a <code>corpus</code> object because the default internal word tokenization in <code>quanteda</code> is <strong>not</strong> optimized for non-English languages.</p>
+<p>In Chapter <a href="vector-space-representation.html#vector-space-representation">13</a>, we have demonstrated the potential of a vector representation of documents with the English data. Here, we would like to look at the Chinese data in more detail.</p>
+<p>In the corpus data processing flowchart, as repeated below (Figure <a href="vector-space-representation-ii.html#fig:cpf">14.1</a>), we need to deal with the word segmentation with the Chinese data. This prevents us from creating a <code>dfm</code> directly from a <code>corpus</code> object because the default internal word tokenization in <code>quanteda</code> is <strong>not</strong> optimized for non-English languages.</p>
 <p>In this chapter, we will be using the dataset <code>TaiwanPresidentalSpeech.zip</code> in our <code>demo_data</code> directory. Please make sure that you have downloaded the dataset from <code>demo_data</code>.</p>
 <div id="a-quick-view" class="section level2">
-<h2><span class="header-section-number">13.1</span> A Quick View</h2>
-<p>For Chinese data, the major preprocessing steps have been highlighted in Figure <a href="vector-space-representation-ii.html#fig:cpf">13.1</a>:</p>
+<h2><span class="header-section-number">14.1</span> A Quick View</h2>
+<p>For Chinese data, the major preprocessing steps have been highlighted in Figure <a href="vector-space-representation-ii.html#fig:cpf">14.1</a>:</p>
 <ol style="list-style-type: decimal">
 <li>First read in the corpus using <code>readtext()</code> and create corpus <code>data.frame</code> object</li>
 <li>Subset the text column of the corpus <code>data.frame</code> for word segmentation</li>
@@ -327,12 +340,12 @@ When you utilize many different libaries in R for your tasks, one thing you need
 </div>
 </div>
 <div id="loading-the-corpus-1" class="section level2">
-<h2><span class="header-section-number">13.2</span> Loading the Corpus</h2>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb217-1" data-line-number="1">corp_tw &lt;-<span class="st"> </span><span class="kw">readtext</span>(<span class="dt">file=</span><span class="st">&quot;demo_data/TW_President.tar.gz&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as_tibble</a>
-<a class="sourceLine" id="cb217-2" data-line-number="2"><span class="kw">class</span>(corp_tw)</a></code></pre></div>
+<h2><span class="header-section-number">14.2</span> Loading the Corpus</h2>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1">corp_tw &lt;-<span class="st"> </span><span class="kw">readtext</span>(<span class="dt">file=</span><span class="st">&quot;demo_data/TW_President.tar.gz&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as_tibble</a>
+<a class="sourceLine" id="cb225-2" data-line-number="2"><span class="kw">class</span>(corp_tw)</a></code></pre></div>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb219-1" data-line-number="1">corp_tw <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb219-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">text =</span> <span class="kw">str_sub</span>(text, <span class="dv">1</span>,<span class="dv">20</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1">corp_tw <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb227-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">text =</span> <span class="kw">str_sub</span>(text, <span class="dv">1</span>,<span class="dv">20</span>))</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["text"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1948_1_JIANGZHONGZHENG.txt","2":"中正承國民大會依照憲法選舉為中華民國總統"},{"1":"1954_2_JIANGZHONGZHENG.txt","2":"我大陸淪陷，已經四載。全體同胞正遭受著俄"},{"1":"1960_3_JIANGZHONGZHENG.txt","2":"國民大會第三次會議，重新選舉中正，賦予先"},{"1":"1966_4_JIANGZHONGZHENG.txt","2":"國民大會第四次會議，根據憲法，代表全國人"},{"1":"1972_5_JIANGZHONGZHENG.txt","2":"中正今天再度接受全國國民之付託，國民大會"},{"1":"1978_6_JIANGJINGGUO.txt","2":"國民大會受國民付託，依據憲法，選舉經國為"},{"1":"1984_7_JIANGJINGGUO.txt","2":"親愛的全國同胞們、諸位貴賓：\\n\\n　　國民"},{"1":"1990_8_LIDEHUI.txt","2":"開創中華民族的新時代\\n\\n親愛的全國同胞、"},{"1":"1996_9_LIDEHUI.txt","2":"經營大台灣，建立新中原\\n\\n各位遠道而來的"},{"1":"2000_10_CHENSHUIBIAN.txt","2":"台灣站起來——迎接向上提升的新時代\\n\\n各"},{"1":"2004_11_CHENSHUIBIAN.txt","2":"為永續台灣奠基\\n\\n各位友邦元首、使節及代"},{"1":"2008_12_MAYANGJIU.txt","2":"人民奮起，台灣新生\\n\\n各位友邦元首、各位"},{"1":"2012_13_MAYANGJIU.txt","2":"堅持理想、攜手改革、打造幸福臺灣\\n\\n各位"},{"1":"2016_14_CAYANGWEN.txt","2":"為年輕人打造一個更好的國家\\n\\n各位友邦的"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -341,60 +354,58 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <p>NB: <code>readtext()</code> creates a <code>readtext</code> or <code>data.frame</code> object. Following the tidy principle, we convert everything into <code>tibble</code>.</p>
 </div>
 <div id="semgentation" class="section level2">
-<h2><span class="header-section-number">13.3</span> Semgentation</h2>
+<h2><span class="header-section-number">14.3</span> Semgentation</h2>
 <p>Three important sub-steps in this part:</p>
 <ul>
 <li>initialize word segmenter, where a user dictionary is defined (Always use own dictionary to improve the performance of word segmentation)</li>
 <li>subset the text column of <code>corp_tw</code></li>
 <li>tokenize the texts and convert the output into a <em>quanteda</em>-compatible object, <code>token</code></li>
 </ul>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" data-line-number="1"><span class="co"># initialize segmenter</span></a>
-<a class="sourceLine" id="cb220-2" data-line-number="2">chi_seg &lt;-<span class="st"> </span><span class="kw">worker</span>(<span class="dt">bylines =</span> T, <span class="dt">user =</span> <span class="st">&quot;demo_data/dict-ch-user.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb220-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb220-4" data-line-number="4">corp_tw_tokens &lt;-<span class="st"> </span>corp_tw<span class="op">$</span>text <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">segment</span>(<span class="dt">jiebar =</span> chi_seg) <span class="op">%&gt;%</span><span class="st"> </span>as.tokens</a>
-<a class="sourceLine" id="cb220-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb220-6" data-line-number="6"><span class="kw">class</span>(corp_tw_tokens)</a></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1"><span class="co"># initialize segmenter</span></a>
+<a class="sourceLine" id="cb228-2" data-line-number="2">chi_seg &lt;-<span class="st"> </span><span class="kw">worker</span>(<span class="dt">bylines =</span> T, <span class="dt">user =</span> <span class="st">&quot;demo_data/dict-ch-user.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb228-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb228-4" data-line-number="4">corp_tw_tokens &lt;-<span class="st"> </span>corp_tw<span class="op">$</span>text <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">segment</span>(<span class="dt">jiebar =</span> chi_seg) <span class="op">%&gt;%</span><span class="st"> </span>as.tokens</a>
+<a class="sourceLine" id="cb228-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb228-6" data-line-number="6"><span class="kw">class</span>(corp_tw_tokens)</a></code></pre></div>
 <pre><code>## [1] &quot;tokens&quot;</code></pre>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1">corp_tw_tokens<span class="op">$</span>text14[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
-<pre><code>##  [1] &quot;為&quot;     &quot;年輕人&quot; &quot;打造&quot;   &quot;一個&quot;   &quot;更好&quot;   &quot;的&quot;     &quot;國家&quot;   &quot;各位&quot;  
-##  [9] &quot;友邦&quot;   &quot;的&quot;</code></pre>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb230-1" data-line-number="1">corp_tw_tokens<span class="op">$</span>text14[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<pre><code>## NULL</code></pre>
 </div>
 <div id="corpus-metadata" class="section level2">
-<h2><span class="header-section-number">13.4</span> Corpus Metadata</h2>
+<h2><span class="header-section-number">14.4</span> Corpus Metadata</h2>
 <p>When we subset the texts from <code>corp_tw</code> for word segmentation, all the metadata connected to the texts did not go with the texts. So the <code>corp_tw_tokens</code> did not have any metadata information. All you have is some arbitrary index to each text.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="kw">docvars</span>(corp_tw_tokens)</a></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">docvars</span>(corp_tw_tokens)</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]}],"data":[{"_rn_":"text1"},{"_rn_":"text2"},{"_rn_":"text3"},{"_rn_":"text4"},{"_rn_":"text5"},{"_rn_":"text6"},{"_rn_":"text7"},{"_rn_":"text8"},{"_rn_":"text9"},{"_rn_":"text10"},{"_rn_":"text11"},{"_rn_":"text12"},{"_rn_":"text13"},{"_rn_":"text14"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[],"data":[],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>So here we extract metadata information from the original filenames of each text stored in the <code>corp_tw</code>, and attach this metadata to <code>corp_tw_tokens</code>.</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1">corp_tw_meta &lt;-corp_tw <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb225-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>text) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb225-3" data-line-number="3"><span class="st">  </span><span class="kw">separate</span>(doc_id, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;YEAR&quot;</span>,<span class="st">&quot;TERM&quot;</span>,<span class="st">&quot;PRESIDENT&quot;</span>),<span class="dt">sep =</span> <span class="st">&quot;_&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb225-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">PRESIDENT =</span> <span class="kw">str_replace</span>(PRESIDENT, <span class="st">&quot;.txt&quot;</span>,<span class="st">&quot;&quot;</span>))</a>
-<a class="sourceLine" id="cb225-5" data-line-number="5">corp_tw_meta</a></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1">corp_tw_meta &lt;-corp_tw <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb233-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>text) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb233-3" data-line-number="3"><span class="st">  </span><span class="kw">separate</span>(doc_id, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;YEAR&quot;</span>,<span class="st">&quot;TERM&quot;</span>,<span class="st">&quot;PRESIDENT&quot;</span>),<span class="dt">sep =</span> <span class="st">&quot;_&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb233-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">PRESIDENT =</span> <span class="kw">str_replace</span>(PRESIDENT, <span class="st">&quot;.txt&quot;</span>,<span class="st">&quot;&quot;</span>))</a>
+<a class="sourceLine" id="cb233-5" data-line-number="5">corp_tw_meta</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["YEAR"],"name":[1],"type":["chr"],"align":["left"]},{"label":["TERM"],"name":[2],"type":["chr"],"align":["left"]},{"label":["PRESIDENT"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1948","2":"1","3":"JIANGZHONGZHENG"},{"1":"1954","2":"2","3":"JIANGZHONGZHENG"},{"1":"1960","2":"3","3":"JIANGZHONGZHENG"},{"1":"1966","2":"4","3":"JIANGZHONGZHENG"},{"1":"1972","2":"5","3":"JIANGZHONGZHENG"},{"1":"1978","2":"6","3":"JIANGJINGGUO"},{"1":"1984","2":"7","3":"JIANGJINGGUO"},{"1":"1990","2":"8","3":"LIDEHUI"},{"1":"1996","2":"9","3":"LIDEHUI"},{"1":"2000","2":"10","3":"CHENSHUIBIAN"},{"1":"2004","2":"11","3":"CHENSHUIBIAN"},{"1":"2008","2":"12","3":"MAYANGJIU"},{"1":"2012","2":"13","3":"MAYANGJIU"},{"1":"2016","2":"14","3":"CAYANGWEN"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb226-1" data-line-number="1"><span class="kw">docvars</span>(corp_tw_tokens) &lt;-<span class="st"> </span>corp_tw_meta</a></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb234-1" data-line-number="1"><span class="kw">docvars</span>(corp_tw_tokens) &lt;-<span class="st"> </span>corp_tw_meta</a></code></pre></div>
 </div>
 <div id="document-feature-matrix" class="section level2">
-<h2><span class="header-section-number">13.5</span> Document-Feature Matrix</h2>
-<p>Now that we have a <code>token</code> version of our corpus, we can create <code>dfm</code> using the <code>dfm()</code> in <code>quanteda</code>. Also, we can take care of the feature selection (cf. <a href="vector-space-representation.html#feature-selection">12.4</a>) using functions like <code>dfm_trim()</code>, <code>dfm_select()</code>.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1">corp_tw_dfm &lt;-<span class="st"> </span>corp_tw_tokens <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb227-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm</span>(<span class="dt">reove_punc =</span> T) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb227-3" data-line-number="3"><span class="st">  </span><span class="kw">dfm_trim</span>(<span class="dt">min_termfreq =</span> <span class="dv">10</span>, <span class="dt">termfreq_type =</span> <span class="st">&quot;count&quot;</span>,</a>
-<a class="sourceLine" id="cb227-4" data-line-number="4">           <span class="dt">min_docfreq =</span> <span class="dv">2</span>, <span class="dt">max_docfreq =</span> <span class="dv">10</span>, <span class="dt">docfreq_type =</span> <span class="st">&quot;count&quot;</span>)</a>
-<a class="sourceLine" id="cb227-5" data-line-number="5"><span class="kw">class</span>(corp_tw_dfm)</a></code></pre></div>
+<h2><span class="header-section-number">14.5</span> Document-Feature Matrix</h2>
+<p>Now that we have a <code>token</code> version of our corpus, we can create <code>dfm</code> using the <code>dfm()</code> in <code>quanteda</code>. Also, we can take care of the feature selection (cf. <a href="vector-space-representation.html#feature-selection">13.4</a>) using functions like <code>dfm_trim()</code>, <code>dfm_select()</code>.</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb235-1" data-line-number="1">corp_tw_dfm &lt;-<span class="st"> </span>corp_tw_tokens <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb235-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm</span>(<span class="dt">reove_punc =</span> T) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb235-3" data-line-number="3"><span class="st">  </span><span class="kw">dfm_trim</span>(<span class="dt">min_termfreq =</span> <span class="dv">10</span>, <span class="dt">termfreq_type =</span> <span class="st">&quot;count&quot;</span>,</a>
+<a class="sourceLine" id="cb235-4" data-line-number="4">           <span class="dt">min_docfreq =</span> <span class="dv">2</span>, <span class="dt">max_docfreq =</span> <span class="dv">10</span>, <span class="dt">docfreq_type =</span> <span class="st">&quot;count&quot;</span>)</a>
+<a class="sourceLine" id="cb235-5" data-line-number="5"><span class="kw">class</span>(corp_tw_dfm)</a></code></pre></div>
 <pre><code>## [1] &quot;dfm&quot;
 ## attr(,&quot;package&quot;)
 ## [1] &quot;quanteda&quot;</code></pre>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1">corp_tw_dfm[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
-<pre><code>## Document-feature matrix of: 5 documents, 10 features (32.0% sparse).
-## 5 x 10 sparse Matrix of class &quot;dfm&quot;
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" data-line-number="1">corp_tw_dfm[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<pre><code>## Document-feature matrix of: 5 documents, 10 features (32.0% sparse) and 3 docvars.
 ##        features
 ## docs    中正 國民大會 國父 環境 以及 到 以來 知道 自己 此
 ##   text1    5        1    3    2    2  1    1    2    1  2
@@ -404,75 +415,75 @@ When you utilize many different libaries in R for your tasks, one thing you need
 ##   text5    5        1    1    0    0  0    0    0    0  3</code></pre>
 </div>
 <div id="wordcloud-1" class="section level2">
-<h2><span class="header-section-number">13.6</span> Wordcloud</h2>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" data-line-number="1"><span class="kw">require</span>(wordcloud2)</a>
-<a class="sourceLine" id="cb231-2" data-line-number="2"><span class="kw">require</span>(wordcloud)</a>
-<a class="sourceLine" id="cb231-3" data-line-number="3">top_features &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">topfeatures</span>(<span class="dv">100</span>)</a>
-<a class="sourceLine" id="cb231-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb231-5" data-line-number="5">word_freq &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">word =</span> <span class="kw">names</span>(top_features),</a>
-<a class="sourceLine" id="cb231-6" data-line-number="6">                        <span class="dt">freq =</span> top_features)</a>
-<a class="sourceLine" id="cb231-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb231-8" data-line-number="8">word_freq <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb231-9" data-line-number="9"><span class="st">  </span><span class="kw">wordcloud2</span>()</a></code></pre></div>
-<div id="htmlwidget-d87240d6791e1ee00d5a" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d87240d6791e1ee00d5a">{"x":{"word":["台灣","讓","未來","兩岸","大陸","其","之","及","歷史","臺灣","關係","新政府","最","這個","掌聲","過去","以及","使","合作","各位","已經","民族","應該","個人","改革","會","憲政","為了","大家","司法","於","亦","共匪","對於","因為","參與","沒有","不能","全球","提升","不是","安全","價值","從","推動","環境","三民主義","可以","中正","革命","同時","並","反共","將","此","創造","制度","問題","任何","希望","重要","區域","今日","政策","重建","成為","國人","原則","人權","利益","等","正義","土地","才能","追求","四年","每","組織","成長","奸匪","中華民族","一起","政黨","打造","統一","但","公民","共產","面對","最後","國父","不僅","進步","法治","意志","穩定","人類","把","福祉","再"],"freq":[199,96,65,65,64,56,56,54,52,48,47,45,44,42,41,40,39,39,39,39,38,37,37,36,36,35,33,33,32,32,31,30,30,30,30,30,30,29,29,29,28,28,28,28,28,27,27,27,26,26,26,26,26,26,25,25,25,25,25,25,25,25,24,24,24,24,24,24,24,23,23,23,23,23,23,23,22,22,22,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.904522613065327,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
+<h2><span class="header-section-number">14.6</span> Wordcloud</h2>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" data-line-number="1"><span class="kw">require</span>(wordcloud2)</a>
+<a class="sourceLine" id="cb239-2" data-line-number="2"><span class="kw">require</span>(wordcloud)</a>
+<a class="sourceLine" id="cb239-3" data-line-number="3">top_features &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">topfeatures</span>(<span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb239-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb239-5" data-line-number="5">word_freq &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">word =</span> <span class="kw">names</span>(top_features),</a>
+<a class="sourceLine" id="cb239-6" data-line-number="6">                        <span class="dt">freq =</span> top_features)</a>
+<a class="sourceLine" id="cb239-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb239-8" data-line-number="8">word_freq <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb239-9" data-line-number="9"><span class="st">  </span><span class="kw">wordcloud2</span>()</a></code></pre></div>
+<div id="htmlwidget-a77bcbf5c10a08203ea4" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a77bcbf5c10a08203ea4">{"x":{"word":["台灣","讓","未來","兩岸","大陸","其","之","及","歷史","臺灣","關係","新政府","最","這個","掌聲","過去","以及","使","合作","各位","已經","民族","應該","個人","改革","會","憲政","為了","大家","司法","於","亦","共匪","對於","因為","參與","沒有","不能","全球","提升","不是","安全","價值","從","推動","環境","三民主義","可以","中正","革命","同時","並","反共","將","此","創造","制度","問題","任何","希望","重要","區域","今日","政策","重建","成為","國人","原則","人權","利益","等","正義","土地","才能","追求","四年","每","組織","成長","奸匪","中華民族","一起","政黨","打造","統一","但","公民","共產","面對","最後","國父","不僅","進步","法治","意志","穩定","人類","把","福祉","再"],"freq":[199,96,65,65,64,56,56,54,52,48,47,45,44,42,41,40,39,39,39,39,38,37,37,36,36,35,33,33,32,32,31,30,30,30,30,30,30,29,29,29,28,28,28,28,28,27,27,27,26,26,26,26,26,26,25,25,25,25,25,25,25,25,24,24,24,24,24,24,24,23,23,23,23,23,23,23,22,22,22,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.904522613065327,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 </div>
 <div id="document-similarity-1" class="section level2">
-<h2><span class="header-section-number">13.7</span> Document Similarity</h2>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1">corp_tw_dist &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb232-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm_weight</span>(<span class="dt">scheme =</span> <span class="st">&quot;prop&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb232-3" data-line-number="3"><span class="st">  </span>textstat_dist</a>
-<a class="sourceLine" id="cb232-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb232-5" data-line-number="5">corp_tw_hist &lt;-<span class="st"> </span>corp_tw_dist <span class="op">%&gt;%</span><span class="st"> </span>as.dist <span class="op">%&gt;%</span><span class="st"> </span>hclust</a>
-<a class="sourceLine" id="cb232-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb232-7" data-line-number="7">hist_labels &lt;-<span class="st"> </span><span class="kw">str_c</span>(<span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;YEAR&quot;</span>), <span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;PRESIDENT&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;_&quot;</span>)</a>
-<a class="sourceLine" id="cb232-8" data-line-number="8"><span class="kw">plot</span>(corp_tw_hist, <span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">1.2</span>, <span class="dt">label =</span> hist_labels)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-211-1.png" width="100%" /></p>
+<h2><span class="header-section-number">14.7</span> Document Similarity</h2>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" data-line-number="1">corp_tw_dist &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb240-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm_weight</span>(<span class="dt">scheme =</span> <span class="st">&quot;prop&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb240-3" data-line-number="3"><span class="st">  </span>textstat_dist</a>
+<a class="sourceLine" id="cb240-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb240-5" data-line-number="5">corp_tw_hist &lt;-<span class="st"> </span>corp_tw_dist <span class="op">%&gt;%</span><span class="st"> </span>as.dist <span class="op">%&gt;%</span><span class="st"> </span>hclust</a>
+<a class="sourceLine" id="cb240-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb240-7" data-line-number="7">hist_labels &lt;-<span class="st"> </span><span class="kw">str_c</span>(<span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;YEAR&quot;</span>), <span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;PRESIDENT&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;_&quot;</span>)</a>
+<a class="sourceLine" id="cb240-8" data-line-number="8"><span class="kw">plot</span>(corp_tw_hist, <span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">1.2</span>, <span class="dt">label =</span> hist_labels)</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-227-1.png" width="100%" /></p>
 </div>
 <div id="feature-similarity-1" class="section level2">
-<h2><span class="header-section-number">13.8</span> Feature Similarity</h2>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1"><span class="co"># convert `dfm` to `fcm`</span></a>
-<a class="sourceLine" id="cb233-2" data-line-number="2">corp_tw_fcm &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span>fcm</a>
-<a class="sourceLine" id="cb233-3" data-line-number="3"><span class="co"># select top 30 features</span></a>
-<a class="sourceLine" id="cb233-4" data-line-number="4">corp_tw_topfeatures &lt;-<span class="st"> </span><span class="kw">names</span>(<span class="kw">topfeatures</span>(corp_tw_fcm, <span class="dv">50</span>))</a>
-<a class="sourceLine" id="cb233-5" data-line-number="5"><span class="co"># plot network</span></a>
-<a class="sourceLine" id="cb233-6" data-line-number="6"><span class="kw">library</span>(showtext)</a>
-<a class="sourceLine" id="cb233-7" data-line-number="7"><span class="kw">font_add</span>(<span class="st">&quot;Arial Unicode MS&quot;</span>, <span class="st">&quot;Arial Unicode.ttf&quot;</span>)</a>
-<a class="sourceLine" id="cb233-8" data-line-number="8"><span class="co">## Automatically use showtext to render plots</span></a>
-<a class="sourceLine" id="cb233-9" data-line-number="9"><span class="kw">showtext_auto</span>(<span class="dt">enable =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb233-10" data-line-number="10"><span class="co">#par(family = &quot;Arial Unicode MS&quot;)</span></a>
-<a class="sourceLine" id="cb233-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb233-12" data-line-number="12"><span class="kw">fcm_select</span>(corp_tw_fcm, <span class="dt">pattern =</span> corp_tw_topfeatures) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb233-13" data-line-number="13"><span class="st">    </span><span class="kw">textplot_network</span>(<span class="dt">min_freq =</span> <span class="fl">0.5</span>) -&gt;g</a>
-<a class="sourceLine" id="cb233-14" data-line-number="14"><span class="kw">ggsave</span>(<span class="st">&quot;test.png&quot;</span>, g)</a></code></pre></div>
+<h2><span class="header-section-number">14.8</span> Feature Similarity</h2>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="co"># convert `dfm` to `fcm`</span></a>
+<a class="sourceLine" id="cb241-2" data-line-number="2">corp_tw_fcm &lt;-<span class="st"> </span>corp_tw_dfm <span class="op">%&gt;%</span><span class="st"> </span>fcm</a>
+<a class="sourceLine" id="cb241-3" data-line-number="3"><span class="co"># select top 30 features</span></a>
+<a class="sourceLine" id="cb241-4" data-line-number="4">corp_tw_topfeatures &lt;-<span class="st"> </span><span class="kw">names</span>(<span class="kw">topfeatures</span>(corp_tw_fcm, <span class="dv">50</span>))</a>
+<a class="sourceLine" id="cb241-5" data-line-number="5"><span class="co"># plot network</span></a>
+<a class="sourceLine" id="cb241-6" data-line-number="6"><span class="kw">library</span>(showtext)</a>
+<a class="sourceLine" id="cb241-7" data-line-number="7"><span class="kw">font_add</span>(<span class="st">&quot;Arial Unicode MS&quot;</span>, <span class="st">&quot;Arial Unicode.ttf&quot;</span>)</a>
+<a class="sourceLine" id="cb241-8" data-line-number="8"><span class="co">## Automatically use showtext to render plots</span></a>
+<a class="sourceLine" id="cb241-9" data-line-number="9"><span class="kw">showtext_auto</span>(<span class="dt">enable =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb241-10" data-line-number="10"><span class="co">#par(family = &quot;Arial Unicode MS&quot;)</span></a>
+<a class="sourceLine" id="cb241-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb241-12" data-line-number="12"><span class="kw">fcm_select</span>(corp_tw_fcm, <span class="dt">pattern =</span> corp_tw_topfeatures) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb241-13" data-line-number="13"><span class="st">    </span><span class="kw">textplot_network</span>(<span class="dt">min_freq =</span> <span class="fl">0.5</span>) -&gt;g</a>
+<a class="sourceLine" id="cb241-14" data-line-number="14"><span class="kw">ggsave</span>(<span class="st">&quot;test.png&quot;</span>, g)</a></code></pre></div>
 <p><img src="test.png" width="80%" /></p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-214" class="exercise"><strong>Exercise 13.1  </strong></span>Create the network of top 30 bigrams for the corpus <code>corp_tw</code>. The critera for bigrams selection are as follows:</p>
+<p><span id="exr:unnamed-chunk-230" class="exercise"><strong>Exercise 14.1  </strong></span>Create the network of top 30 bigrams for the corpus <code>corp_tw</code>. The critera for bigrams selection are as follows:</p>
 <ul>
 <li>include bigrams whose frequency &gt;= 10 and docfreq &gt;=5
 </div></li>
 </ul>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["document"],"name":[1],"type":["chr"],"align":["left"]},{"label":["人民_的"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["同胞_的"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["的_目標"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["國家_的"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["我們_必須"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["每_一個"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["一個_人"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["的_責任"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["政府_的"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["也_是"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"text1","2":"7","3":"1","4":"2","5":"6","6":"3","7":"3","8":"2","9":"5","10":"1","11":"1"},{"1":"text2","2":"2","3":"0","4":"1","5":"2","6":"0","7":"0","8":"0","9":"1","10":"0","11":"0"},{"1":"text3","2":"1","3":"0","4":"2","5":"0","6":"2","7":"0","8":"0","9":"2","10":"0","11":"1"},{"1":"text4","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"1"},{"1":"text5","2":"0","3":"1","4":"0","5":"0","6":"0","7":"0","8":"0","9":"1","10":"0","11":"0"},{"1":"text6","2":"0","3":"1","4":"1","5":"0","6":"1","7":"2","8":"2","9":"0","10":"0","11":"0"},{"1":"text7","2":"0","3":"0","4":"1","5":"1","6":"0","7":"0","8":"0","9":"1","10":"0","11":"2"},{"1":"text8","2":"1","3":"0","4":"1","5":"1","6":"0","7":"0","8":"0","9":"1","10":"0","11":"1"},{"1":"text9","2":"1","3":"5","4":"0","5":"2","6":"2","7":"0","8":"1","9":"1","10":"0","11":"1"},{"1":"text10","2":"10","3":"0","4":"0","5":"5","6":"3","7":"1","8":"1","9":"1","10":"9","11":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["document"],"name":[1],"type":["chr"],"align":["left"]},{"label":["中正"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["國民大會"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["憲法"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["選舉"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["為"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["中華民國"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["總統"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["國家"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["和"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["人民"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"text1","2":"5","3":"1","4":"12","5":"1","6":"11","7":"5","8":"1","9":"18","10":"20","11":"17"},{"1":"text2","2":"4","3":"4","4":"3","5":"1","6":"4","7":"4","8":"1","9":"8","10":"11","11":"5"},{"1":"text3","2":"5","3":"1","4":"0","5":"1","6":"13","7":"0","8":"2","9":"3","10":"18","11":"6"},{"1":"text4","2":"7","3":"3","4":"2","5":"1","6":"17","7":"1","8":"3","9":"10","10":"14","11":"4"},{"1":"text5","2":"5","3":"1","4":"1","5":"0","6":"9","7":"3","8":"2","9":"2","10":"1","11":"1"},{"1":"text6","2":"0","3":"1","4":"2","5":"1","6":"4","7":"2","8":"5","9":"12","10":"21","11":"1"},{"1":"text7","2":"0","3":"1","4":"1","5":"1","6":"13","7":"2","8":"4","9":"6","10":"3","11":"1"},{"1":"text8","2":"0","3":"1","4":"3","5":"3","6":"14","7":"6","8":"4","9":"11","10":"2","11":"4"},{"1":"text9","2":"0","3":"0","4":"0","5":"1","6":"10","7":"10","8":"4","9":"22","10":"0","11":"7"},{"1":"text10","2":"0","3":"0","4":"1","5":"6","6":"15","7":"9","8":"3","9":"16","10":"29","11":"35"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["document"],"name":[1],"type":["chr"],"align":["left"]},{"label":["人民_的"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["同胞_的"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["的_目標"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["國家_的"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["我們_必須"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["每_一個"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["一個_人"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["的_責任"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["政府_的"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["也_是"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"人民_的","2":"95","3":"21","4":"27","5":"197","6":"72","7":"69","8":"47","9":"113","10":"121","11":"136"},{"1":"同胞_的","2":"0","3":"10","4":"5","5":"22","6":"16","7":"7","8":"11","9":"18","10":"6","11":"20"},{"1":"的_目標","2":"0","3":"0","4":"4","5":"34","6":"21","7":"20","8":"10","9":"32","10":"11","11":"21"},{"1":"國家_的","2":"0","3":"0","4":"0","5":"134","6":"77","7":"125","8":"61","9":"165","10":"79","11":"134"},{"1":"我們_必須","2":"0","3":"0","4":"0","5":"0","6":"12","7":"37","8":"22","9":"48","10":"40","11":"46"},{"1":"每_一個","2":"0","3":"0","4":"0","5":"0","6":"0","7":"23","8":"30","9":"69","10":"25","11":"54"},{"1":"一個_人","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"4","9":"35","10":"18","11":"38"},{"1":"的_責任","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"41","10":"39","11":"86"},{"1":"政府_的","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"40","11":"64"},{"1":"也_是","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"78"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["document"],"name":[1],"type":["chr"],"align":["left"]},{"label":["中正"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["國民大會"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["憲法"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["選舉"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["為"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["中華民國"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["總統"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["國家"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["和"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["人民"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"中正","2":"57","3":"52","4":"91","5":"21","6":"300","7":"63","8":"50","9":"217","10":"337","11":"168"},{"1":"國民大會","2":"0","3":"9","4":"41","5":"20","6":"139","7":"45","8":"39","9":"137","10":"172","11":"97"},{"1":"憲法","2":"0","3":"0","4":"99","5":"85","6":"418","7":"251","8":"149","9":"588","10":"581","11":"532"},{"1":"選舉","2":"0","3":"0","4":"0","5":"41","6":"324","7":"206","8":"156","9":"516","10":"529","11":"573"},{"1":"為","2":"0","3":"0","4":"0","5":"0","6":"807","7":"797","8":"572","9":"1858","10":"1871","11":"1610"},{"1":"中華民國","2":"0","3":"0","4":"0","5":"0","6":"0","7":"257","8":"340","9":"1147","10":"912","11":"1084"},{"1":"總統","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"127","9":"941","10":"838","11":"720"},{"1":"國家","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"1607","10":"2982","11":"2653"},{"1":"和","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"1761","11":"2861"},{"1":"人民","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"1583"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p><img src="test2.png" width="90%" /></p>
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-216" class="exercise"><strong>Exercise 13.2  </strong></span>There is an interesting application. When we analyze the document similarity, we create the graph of a dendrogram using hierarchical cluster analysis. In fact, document relations can also be represented by a network as well, as we do with the features in <a href="vector-space-representation.html#feature-similarity">12.5.3</a>. How could you make use of the function <code>textplot_network()</code> in quanteda to create a network of the presidents?
+<span id="exr:unnamed-chunk-232" class="exercise"><strong>Exercise 14.2  </strong></span>There is an interesting application. When we analyze the document similarity, we create the graph of a dendrogram using hierarchical cluster analysis. In fact, document relations can also be represented by a network as well, as we do with the features in <a href="vector-space-representation.html#feature-similarity">13.5.3</a>. How could you make use of the function <code>textplot_network()</code> in quanteda to create a network of the presidents?
 Please create a similar president network as shown below.
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-217-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-233-1.png" width="672" /></p>
 
 </div>
 </div>
