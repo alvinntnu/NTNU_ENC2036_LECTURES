@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-03-15" />
+<meta name="date" content="2020-03-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,8 +177,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>4.4</b> KWIC with Regular Expressions</a></li>
 <li class="chapter" data-level="4.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>4.5</b> Tidy Text Format of the Corpus</a></li>
 <li class="chapter" data-level="4.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>4.6</b> Frequency Lists</a></li>
-<li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.7</b> Collocations</a></li>
-<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.8</b> Word Cloud</a></li>
+<li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.7</b> Word Cloud</a></li>
+<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.8</b> Collocations</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#cooccurrence-table-and-observed-frequencies"><i class="fa fa-check"></i><b>4.8.1</b> Cooccurrence Table and Observed Frequencies</a></li>
+<li class="chapter" data-level="4.8.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#expected-frequencies"><i class="fa fa-check"></i><b>4.8.2</b> Expected Frequencies</a></li>
+<li class="chapter" data-level="4.8.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#association-measures"><i class="fa fa-check"></i><b>4.8.3</b> Association Measures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>5</b> Tokenization</a><ul>
 <li class="chapter" data-level="5.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>5.1</b> English Tokenization</a></li>
@@ -452,7 +456,7 @@ Figure 13.1: Example of Document-Feature Matrix
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-227" class="exercise"><strong>Exercise 13.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
+<span id="exr:unnamed-chunk-234" class="exercise"><strong>Exercise 13.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
 </div>
 
 <div data-pagedtable="false">
@@ -568,7 +572,7 @@ Figure 13.1: Example of Document-Feature Matrix
 <div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
 <a class="sourceLine" id="cb242-2" data-line-number="2">corp_us_dfm_trimmed <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb242-3" data-line-number="3"><span class="st">  </span><span class="kw">textplot_wordcloud</span>(<span class="dt">min_count =</span> <span class="dv">60</span>, <span class="dt">rotation =</span> <span class="fl">.35</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-233-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-240-1.png" width="672" /></p>
 </div>
 <div id="document-similarity" class="section level3">
 <h3><span class="header-section-number">13.5.2</span> Document Similarity</h3>
@@ -576,7 +580,7 @@ Figure 13.1: Example of Document-Feature Matrix
 <div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1">corp_us_dist &lt;-<span class="st"> </span>corp_us_dfm_trimmed <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm_weight</span>(<span class="dt">scheme =</span> <span class="st">&quot;prop&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">textstat_dist</span>()</a>
 <a class="sourceLine" id="cb243-2" data-line-number="2">corp_us_hist &lt;-<span class="st"> </span>corp_us_dist <span class="op">%&gt;%</span><span class="st"> </span>as.dist <span class="op">%&gt;%</span><span class="st"> </span>hclust</a>
 <a class="sourceLine" id="cb243-3" data-line-number="3"><span class="kw">plot</span>(corp_us_hist,<span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-234-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-241-1.png" width="100%" /></p>
 </div>
 <div id="feature-similarity" class="section level3">
 <h3><span class="header-section-number">13.5.3</span> Feature Similarity</h3>
@@ -588,19 +592,19 @@ Figure 13.1: Example of Document-Feature Matrix
 <a class="sourceLine" id="cb244-5" data-line-number="5"><span class="co"># plot network</span></a>
 <a class="sourceLine" id="cb244-6" data-line-number="6"><span class="kw">fcm_select</span>(corp_us_fcm, <span class="dt">pattern =</span> corp_us_topfeatures) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb244-7" data-line-number="7"><span class="st">    </span><span class="kw">textplot_network</span>(<span class="dt">min_freq =</span> <span class="fl">0.5</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-235-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-242-1.png" width="672" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-236" class="exercise"><strong>Exercise 13.2  </strong></span>Please create a network of the top 30 bigrams based on the corpus <code>corp_us</code>. The criteria for bigrams selection are as follows:</p>
+<p><span id="exr:unnamed-chunk-243" class="exercise"><strong>Exercise 13.2  </strong></span>Please create a network of the top 30 bigrams based on the corpus <code>corp_us</code>. The criteria for bigrams selection are as follows:</p>
 <ul>
 <li>Include bigrams that consist of alphanumeric characters only (no punctuations)</li>
 <li>Include bigrams whose frequency &gt;= 10 and docfreq &gt;= 5 but &lt;= half number of the corpus</li>
 </ul>
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-237-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-244-1.png" width="672" /></p>
 <hr />
 
 </div>

@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-03-15" />
+<meta name="date" content="2020-03-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,8 +177,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>4.4</b> KWIC with Regular Expressions</a></li>
 <li class="chapter" data-level="4.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>4.5</b> Tidy Text Format of the Corpus</a></li>
 <li class="chapter" data-level="4.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>4.6</b> Frequency Lists</a></li>
-<li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.7</b> Collocations</a></li>
-<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.8</b> Word Cloud</a></li>
+<li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.7</b> Word Cloud</a></li>
+<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.8</b> Collocations</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#cooccurrence-table-and-observed-frequencies"><i class="fa fa-check"></i><b>4.8.1</b> Cooccurrence Table and Observed Frequencies</a></li>
+<li class="chapter" data-level="4.8.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#expected-frequencies"><i class="fa fa-check"></i><b>4.8.2</b> Expected Frequencies</a></li>
+<li class="chapter" data-level="4.8.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#association-measures"><i class="fa fa-check"></i><b>4.8.3</b> Association Measures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>5</b> Tokenization</a><ul>
 <li class="chapter" data-level="5.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>5.1</b> English Tokenization</a></li>
@@ -359,7 +363,7 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <a class="sourceLine" id="cb248-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">text =</span> <span class="kw">str_sub</span>(text, <span class="dv">1</span>,<span class="dv">20</span>))</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["text"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1948_1_JIANGZHONGZHENG.txt","2":"中正承國民大會依照憲法選舉為中華民國總統"},{"1":"1954_2_JIANGZHONGZHENG.txt","2":"我大陸淪陷，已經四載。全體同胞正遭受著俄"},{"1":"1960_3_JIANGZHONGZHENG.txt","2":"國民大會第三次會議，重新選舉中正，賦予先"},{"1":"1966_4_JIANGZHONGZHENG.txt","2":"國民大會第四次會議，根據憲法，代表全國人"},{"1":"1972_5_JIANGZHONGZHENG.txt","2":"中正今天再度接受全國國民之付託，國民大會"},{"1":"1978_6_JIANGJINGGUO.txt","2":"國民大會受國民付託，依據憲法，選舉經國為"},{"1":"1984_7_JIANGJINGGUO.txt","2":"親愛的全國同胞們、諸位貴賓：\\n\\n　　國民"},{"1":"1990_8_LIDEHUI.txt","2":"開創中華民族的新時代\\n\\n親愛的全國同胞、"},{"1":"1996_9_LIDEHUI.txt","2":"經營大台灣，建立新中原\\n\\n各位遠道而來的"},{"1":"2000_10_CHENSHUIBIAN.txt","2":"台灣站起來——迎接向上提升的新時代\\n\\n各"},{"1":"2004_11_CHENSHUIBIAN.txt","2":"為永續台灣奠基\\n\\n各位友邦元首、使節及代"},{"1":"2008_12_MAYANGJIU.txt","2":"人民奮起，台灣新生\\n\\n各位友邦元首、各位"},{"1":"2012_13_MAYANGJIU.txt","2":"堅持理想、攜手改革、打造幸福臺灣\\n\\n各位"},{"1":"2016_14_CAYANGWEN.txt","2":"為年輕人打造一個更好的國家\\n\\n各位友邦的"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["text"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1948_1_JIANGZHONGZHENG.txt","2":"中正承國民大會依照憲法選舉為中華民國總統"},{"1":"1954_2_JIANGZHONGZHENG.txt","2":"我大陸淪陷，已經四載。全體同胞正遭受著俄"},{"1":"1960_3_JIANGZHONGZHENG.txt","2":"國民大會第三次會議，重新選舉中正，賦予先"},{"1":"1966_4_JIANGZHONGZHENG.txt","2":"國民大會第四次會議，根據憲法，代表全國人"},{"1":"1972_5_JIANGZHONGZHENG.txt","2":"中正今天再度接受全國國民之付託，國民大會"},{"1":"1978_6_JIANGJINGGUO.txt","2":"國民大會受國民付託，依據憲法，選舉經國為"},{"1":"1984_7_JIANGJINGGUO.txt","2":"親愛的全國同胞們、諸位貴賓：\\n\\n　　國民"},{"1":"1990_8_LIDEHUI.txt","2":"開創中華民族的新時代\\n\\n親愛的全國同胞、"},{"1":"1996_9_LIDEHUI.txt","2":"經營大台灣，建立新中原\\n\\n各位遠道而來的"},{"1":"2000_10_CHENSHUIBIAN.txt","2":"台灣站起來——迎接向上提升的新時代\\n\\n各"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>NB: <code>readtext()</code> creates a <code>readtext</code> or <code>data.frame</code> object. Following the tidy principle, we convert everything into <code>tibble</code>.</p>
@@ -399,7 +403,7 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <a class="sourceLine" id="cb254-5" data-line-number="5">corp_tw_meta</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["YEAR"],"name":[1],"type":["chr"],"align":["left"]},{"label":["TERM"],"name":[2],"type":["chr"],"align":["left"]},{"label":["PRESIDENT"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1948","2":"1","3":"JIANGZHONGZHENG"},{"1":"1954","2":"2","3":"JIANGZHONGZHENG"},{"1":"1960","2":"3","3":"JIANGZHONGZHENG"},{"1":"1966","2":"4","3":"JIANGZHONGZHENG"},{"1":"1972","2":"5","3":"JIANGZHONGZHENG"},{"1":"1978","2":"6","3":"JIANGJINGGUO"},{"1":"1984","2":"7","3":"JIANGJINGGUO"},{"1":"1990","2":"8","3":"LIDEHUI"},{"1":"1996","2":"9","3":"LIDEHUI"},{"1":"2000","2":"10","3":"CHENSHUIBIAN"},{"1":"2004","2":"11","3":"CHENSHUIBIAN"},{"1":"2008","2":"12","3":"MAYANGJIU"},{"1":"2012","2":"13","3":"MAYANGJIU"},{"1":"2016","2":"14","3":"CAYANGWEN"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["YEAR"],"name":[1],"type":["chr"],"align":["left"]},{"label":["TERM"],"name":[2],"type":["chr"],"align":["left"]},{"label":["PRESIDENT"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1948","2":"1","3":"JIANGZHONGZHENG"},{"1":"1954","2":"2","3":"JIANGZHONGZHENG"},{"1":"1960","2":"3","3":"JIANGZHONGZHENG"},{"1":"1966","2":"4","3":"JIANGZHONGZHENG"},{"1":"1972","2":"5","3":"JIANGZHONGZHENG"},{"1":"1978","2":"6","3":"JIANGJINGGUO"},{"1":"1984","2":"7","3":"JIANGJINGGUO"},{"1":"1990","2":"8","3":"LIDEHUI"},{"1":"1996","2":"9","3":"LIDEHUI"},{"1":"2000","2":"10","3":"CHENSHUIBIAN"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="kw">docvars</span>(corp_tw_tokens) &lt;-<span class="st"> </span>corp_tw_meta</a></code></pre></div>
@@ -436,8 +440,8 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <a class="sourceLine" id="cb260-7" data-line-number="7"></a>
 <a class="sourceLine" id="cb260-8" data-line-number="8">word_freq <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb260-9" data-line-number="9"><span class="st">  </span><span class="kw">wordcloud2</span>()</a></code></pre></div>
-<div id="htmlwidget-8af7df771b26f4a1af75" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8af7df771b26f4a1af75">{"x":{"word":["台灣","讓","未來","兩岸","大陸","其","之","及","歷史","臺灣","關係","新政府","最","這個","掌聲","過去","以及","使","合作","各位","已經","民族","應該","個人","改革","會","憲政","為了","大家","司法","於","亦","共匪","對於","因為","參與","沒有","不能","全球","提升","不是","安全","價值","從","推動","環境","三民主義","可以","中正","革命","同時","並","反共","將","此","創造","制度","問題","任何","希望","重要","區域","今日","政策","重建","成為","國人","原則","人權","利益","等","正義","土地","才能","追求","四年","每","組織","成長","奸匪","中華民族","一起","政黨","打造","統一","但","公民","共產","面對","最後","國父","不僅","進步","法治","意志","穩定","人類","把","福祉","再"],"freq":[199,96,65,65,64,56,56,54,52,48,47,45,44,42,41,40,39,39,39,39,38,37,37,36,36,35,33,33,32,32,31,30,30,30,30,30,30,29,29,29,28,28,28,28,28,27,27,27,26,26,26,26,26,26,25,25,25,25,25,25,25,25,24,24,24,24,24,24,24,23,23,23,23,23,23,23,22,22,22,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.904522613065327,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<div id="htmlwidget-6b90df35ac7a992dabd1" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6b90df35ac7a992dabd1">{"x":{"word":["台灣","讓","未來","兩岸","大陸","其","之","及","歷史","臺灣","關係","新政府","最","這個","掌聲","過去","以及","使","合作","各位","已經","民族","應該","個人","改革","會","憲政","為了","大家","司法","於","亦","共匪","對於","因為","參與","沒有","不能","全球","提升","不是","安全","價值","從","推動","環境","三民主義","可以","中正","革命","同時","並","反共","將","此","創造","制度","問題","任何","希望","重要","區域","今日","政策","重建","成為","國人","原則","人權","利益","等","正義","土地","才能","追求","四年","每","組織","成長","奸匪","中華民族","一起","政黨","打造","統一","但","公民","共產","面對","最後","國父","不僅","進步","法治","意志","穩定","人類","把","福祉","再"],"freq":[199,96,65,65,64,56,56,54,52,48,47,45,44,42,41,40,39,39,39,39,38,37,37,36,36,35,33,33,32,32,31,30,30,30,30,30,30,29,29,29,28,28,28,28,28,27,27,27,26,26,26,26,26,26,25,25,25,25,25,25,25,25,24,24,24,24,24,24,24,23,23,23,23,23,23,23,22,22,22,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.904522613065327,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 </div>
 <div id="document-similarity-1" class="section level2">
 <h2><span class="header-section-number">14.7</span> Document Similarity</h2>
@@ -449,7 +453,7 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <a class="sourceLine" id="cb261-6" data-line-number="6"></a>
 <a class="sourceLine" id="cb261-7" data-line-number="7">hist_labels &lt;-<span class="st"> </span><span class="kw">str_c</span>(<span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;YEAR&quot;</span>), <span class="kw">docvars</span>(corp_tw_dfm,<span class="st">&quot;PRESIDENT&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;_&quot;</span>)</a>
 <a class="sourceLine" id="cb261-8" data-line-number="8"><span class="kw">plot</span>(corp_tw_hist, <span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">1.2</span>, <span class="dt">label =</span> hist_labels)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-248-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-255-1.png" width="100%" /></p>
 </div>
 <div id="feature-similarity-1" class="section level2">
 <h2><span class="header-section-number">14.8</span> Feature Similarity</h2>
@@ -471,7 +475,7 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-251" class="exercise"><strong>Exercise 14.1  </strong></span>Create the network of top 30 bigrams for the corpus <code>corp_tw</code>. The critera for bigrams selection are as follows:</p>
+<p><span id="exr:unnamed-chunk-258" class="exercise"><strong>Exercise 14.1  </strong></span>Create the network of top 30 bigrams for the corpus <code>corp_tw</code>. The critera for bigrams selection are as follows:</p>
 <ul>
 <li>include bigrams whose frequency &gt;= 10 and docfreq &gt;=5
 </div></li>
@@ -490,11 +494,11 @@ When you utilize many different libaries in R for your tasks, one thing you need
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-253" class="exercise"><strong>Exercise 14.2  </strong></span>There is an interesting application. When we analyze the document similarity, we create the graph of a dendrogram using hierarchical cluster analysis. In fact, document relations can also be represented by a network as well, as we do with the features in <a href="vector-space-representation.html#feature-similarity">13.5.3</a>. How could you make use of the function <code>textplot_network()</code> in quanteda to create a network of the presidents?
+<span id="exr:unnamed-chunk-260" class="exercise"><strong>Exercise 14.2  </strong></span>There is an interesting application. When we analyze the document similarity, we create the graph of a dendrogram using hierarchical cluster analysis. In fact, document relations can also be represented by a network as well, as we do with the features in <a href="vector-space-representation.html#feature-similarity">13.5.3</a>. How could you make use of the function <code>textplot_network()</code> in quanteda to create a network of the presidents?
 Please create a similar president network as shown below.
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-254-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-261-1.png" width="672" /></p>
 
 </div>
 </div>
