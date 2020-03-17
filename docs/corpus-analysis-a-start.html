@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Corpus Analysis: A Start | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Corpus Analysis: A Start | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -52,15 +52,9 @@
 
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
-<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
-<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
-<script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
+<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 
 
 <style type="text/css">
@@ -183,6 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#expected-frequencies"><i class="fa fa-check"></i><b>4.8.2</b> Expected Frequencies</a></li>
 <li class="chapter" data-level="4.8.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#association-measures"><i class="fa fa-check"></i><b>4.8.3</b> Association Measures</a></li>
 </ul></li>
+<li class="chapter" data-level="4.9" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#constructions"><i class="fa fa-check"></i><b>4.9</b> Constructions</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tokenization.html"><a href="tokenization.html"><i class="fa fa-check"></i><b>5</b> Tokenization</a><ul>
 <li class="chapter" data-level="5.1" data-path="tokenization.html"><a href="tokenization.html#english-tokenization"><i class="fa fa-check"></i><b>5.1</b> English Tokenization</a></li>
@@ -329,8 +324,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.1</span> Installing <code>quanteda</code></h2>
 <p>To start with, this tutorial will use a powerful package, <code>quanteda</code>, for managing and analyzing textual data in R. You may refer to the <a href="https://quanteda.io/">official documentation of the package</a> for more detail.</p>
 <p><code>quanteda</code> is not included in the default R installation. Please install the package if you haven’t done so.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;quanteda&quot;</span>)</a>
-<a class="sourceLine" id="cb41-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;readtext&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;quanteda&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;readtext&quot;</span>)</a></code></pre></div>
 <p>Also, as noted on the <code>quanteda</code> documentation, because this library compiles some C++ and Fortran source code, you will need to have installed the appropriate compilers.</p>
 <ul>
 <li>If you are using a Windows platform, this means you will need also to install the <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> software available from CRAN.</li>
@@ -340,12 +335,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="building-a-corpus-from-character-vector" class="section level2">
 <h2><span class="header-section-number">4.2</span> Building a <code>corpus</code> from character vector</h2>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">library</span>(quanteda)</a>
-<a class="sourceLine" id="cb42-2" data-line-number="2"><span class="kw">library</span>(readtext)</a>
-<a class="sourceLine" id="cb42-3" data-line-number="3"><span class="kw">library</span>(tidytext)</a>
-<a class="sourceLine" id="cb42-4" data-line-number="4"><span class="kw">library</span>(dplyr)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(quanteda)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(readtext)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">library</span>(tidytext)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">library</span>(dplyr)</a></code></pre></div>
 <p>To demonstrate a typical corpus analytic example with texts, I will be using a pre-loaded corpus that comes with the <code>quanteda</code> package, <code>data_corpus_inaugural</code>. This is a corpus of US presidential inaugural address texts, and metadata for the corpus from 1789 to present.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1">data_corpus_inaugural</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">data_corpus_inaugural</a></code></pre></div>
 <pre><code>## Corpus consisting of 58 documents and 4 docvars.
 ## 1789-Washington :
 ## &quot;Fellow-Citizens of the Senate and of the House of Representa...&quot;
@@ -366,41 +361,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## &quot;Unwilling to depart from examples of the most revered author...&quot;
 ## 
 ## [ reached max_ndoc ... 52 more documents ]</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1"><span class="kw">class</span>(data_corpus_inaugural)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">class</span>(data_corpus_inaugural)</a></code></pre></div>
 <pre><code>## [1] &quot;corpus&quot;</code></pre>
 <p>We create a <code>corpus()</code> object with the pre-loaded <code>corpus</code> in <code>quanteda</code>– <code>data_corpus_inaugural</code>:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1">corp_us &lt;-<span class="st"> </span><span class="kw">corpus</span>(data_corpus_inaugural) <span class="co"># save the `corpus` to a short obj name</span></a>
-<a class="sourceLine" id="cb47-2" data-line-number="2"><span class="kw">summary</span>(corp_us)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">corp_us &lt;-<span class="st"> </span><span class="kw">corpus</span>(data_corpus_inaugural) <span class="co"># save the `corpus` to a short obj name</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">summary</span>(corp_us)</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Text"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Types"],"name":[2],"type":["int"],"align":["right"]},{"label":["Tokens"],"name":[3],"type":["int"],"align":["right"]},{"label":["Sentences"],"name":[4],"type":["int"],"align":["right"]},{"label":["Year"],"name":[5],"type":["int"],"align":["right"]},{"label":["President"],"name":[6],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[7],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[8],"type":["fctr"],"align":["left"]}],"data":[{"1":"1789-Washington","2":"625","3":"1537","4":"23","5":"1789","6":"Washington","7":"George","8":"none","_rn_":"1"},{"1":"1793-Washington","2":"96","3":"147","4":"4","5":"1793","6":"Washington","7":"George","8":"none","_rn_":"2"},{"1":"1797-Adams","2":"826","3":"2577","4":"37","5":"1797","6":"Adams","7":"John","8":"Federalist","_rn_":"3"},{"1":"1801-Jefferson","2":"717","3":"1923","4":"41","5":"1801","6":"Jefferson","7":"Thomas","8":"Democratic-Republican","_rn_":"4"},{"1":"1805-Jefferson","2":"804","3":"2380","4":"45","5":"1805","6":"Jefferson","7":"Thomas","8":"Democratic-Republican","_rn_":"5"},{"1":"1809-Madison","2":"535","3":"1261","4":"21","5":"1809","6":"Madison","7":"James","8":"Democratic-Republican","_rn_":"6"},{"1":"1813-Madison","2":"541","3":"1302","4":"33","5":"1813","6":"Madison","7":"James","8":"Democratic-Republican","_rn_":"7"},{"1":"1817-Monroe","2":"1040","3":"3677","4":"121","5":"1817","6":"Monroe","7":"James","8":"Democratic-Republican","_rn_":"8"},{"1":"1821-Monroe","2":"1259","3":"4886","4":"129","5":"1821","6":"Monroe","7":"James","8":"Democratic-Republican","_rn_":"9"},{"1":"1825-Adams","2":"1003","3":"3147","4":"74","5":"1825","6":"Adams","7":"John Quincy","8":"Democratic-Republican","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>After the <code>corpus</code> is loaded, we can use <code>summary()</code> to get the metadata of each text in the corpus, including word types and tokens as well. This allows us to have a quick look at the size of the addressess made by all presidents.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="kw">require</span>(ggplot2)</a>
-<a class="sourceLine" id="cb48-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb48-3" data-line-number="3">corp_us <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-4" data-line-number="4"><span class="st">  </span>summary <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-5" data-line-number="5"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Year, <span class="dt">y =</span> Tokens, <span class="dt">group =</span> <span class="dv">1</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb48-6" data-line-number="6"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb48-7" data-line-number="7"><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb48-8" data-line-number="8"><span class="st">    </span><span class="kw">theme_bw</span>()</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">require</span>(ggplot2)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">corp_us <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">  </span>summary <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Year, <span class="dt">y =</span> Tokens, <span class="dt">group =</span> <span class="dv">1</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="st">    </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.1  </strong></span>Could you reproduce the above line plot and add information of <code>President</code> to the plot as labels of the dots?</p>
+<p><span id="exr:unnamed-chunk-7" class="exercise"><strong>Exercise 4.1  </strong></span>Could you reproduce the above line plot and add information of <code>President</code> to the plot as labels of the dots?</p>
 Hints: Please check <code>ggplot2::geom_text()</code> or more advanced one, <code>ggrepel::geom_text_repel()</code>
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <hr />
 </div>
 <div id="keyword-in-context-kwic" class="section level2">
 <h2><span class="header-section-number">4.3</span> Keyword-in-Context (KWIC)</h2>
 <p>Keyword-in-Context (KWIC), or <em>concordances</em>, are the most frequently used method in corpus linguistics. The idea is very intuitive: we get to know more about the semantics of a word by examing how it is being used in a wider context.</p>
 <p>We can use <code>kwic()</code> to perform a search for a word and retrieve its concordances from the corpus:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror&quot;</span>)</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["docname"],"name":[1],"type":["chr"],"align":["left"]},{"label":["from"],"name":[2],"type":["int"],"align":["right"]},{"label":["to"],"name":[3],"type":["int"],"align":["right"]},{"label":["pre"],"name":[4],"type":["chr"],"align":["left"]},{"label":["keyword"],"name":[5],"type":["chr"],"align":["left"]},{"label":["post"],"name":[6],"type":["chr"],"align":["left"]},{"label":["pattern"],"name":[7],"type":["fctr"],"align":["left"]}],"data":[{"1":"1797-Adams","2":"1324","3":"1324","4":"fraud or violence , by","5":"terror","6":", intrigue , or venality","7":"terror","_rn_":"1"},{"1":"1933-Roosevelt","2":"111","3":"111","4":"nameless , unreasoning , unjustified","5":"terror","6":"which paralyzes needed efforts to","7":"terror","_rn_":"2"},{"1":"1941-Roosevelt","2":"285","3":"285","4":"seemed frozen by a fatalistic","5":"terror","6":", we proved that this","7":"terror","_rn_":"3"},{"1":"1961-Kennedy","2":"848","3":"848","4":"alter that uncertain balance of","5":"terror","6":"that stays the hand of","7":"terror","_rn_":"4"},{"1":"1981-Reagan","2":"811","3":"811","4":"freeing all Americans from the","5":"terror","6":"of runaway living costs .","7":"terror","_rn_":"5"},{"1":"1997-Clinton","2":"1047","3":"1047","4":"They fuel the fanaticism of","5":"terror","6":". And they torment the","7":"terror","_rn_":"6"},{"1":"1997-Clinton","2":"1647","3":"1647","4":"maintain a strong defense against","5":"terror","6":"and destruction . Our children","7":"terror","_rn_":"7"},{"1":"2009-Obama","2":"1619","3":"1619","4":"advance their aims by inducing","5":"terror","6":"and slaughtering innocents , we","7":"terror","_rn_":"8"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -416,14 +411,14 @@ Please note that <code>kwic()</code>, when taking a <code>corpus</code> object a
 <div id="kwic-with-regular-expressions" class="section level2">
 <h2><span class="header-section-number">4.4</span> KWIC with Regular Expressions</h2>
 <p>For more complex searches, we can use regular expressions as well in <code>kwic()</code>. For example, if you want to include <code>terror</code> and all its other related word forms, such as <code>terrorist</code>, <code>terrorism</code>, <code>terrors</code>, you can do a regular expression search.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror.*&quot;</span>, <span class="dt">valuetype =</span> <span class="st">&quot;regex&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="st">&quot;terror.*&quot;</span>, <span class="dt">valuetype =</span> <span class="st">&quot;regex&quot;</span>)</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["docname"],"name":[1],"type":["chr"],"align":["left"]},{"label":["from"],"name":[2],"type":["int"],"align":["right"]},{"label":["to"],"name":[3],"type":["int"],"align":["right"]},{"label":["pre"],"name":[4],"type":["chr"],"align":["left"]},{"label":["keyword"],"name":[5],"type":["chr"],"align":["left"]},{"label":["post"],"name":[6],"type":["chr"],"align":["left"]},{"label":["pattern"],"name":[7],"type":["fctr"],"align":["left"]}],"data":[{"1":"1797-Adams","2":"1324","3":"1324","4":"fraud or violence , by","5":"terror","6":", intrigue , or venality","7":"terror.*","_rn_":"1"},{"1":"1933-Roosevelt","2":"111","3":"111","4":"nameless , unreasoning , unjustified","5":"terror","6":"which paralyzes needed efforts to","7":"terror.*","_rn_":"2"},{"1":"1941-Roosevelt","2":"285","3":"285","4":"seemed frozen by a fatalistic","5":"terror","6":", we proved that this","7":"terror.*","_rn_":"3"},{"1":"1961-Kennedy","2":"848","3":"848","4":"alter that uncertain balance of","5":"terror","6":"that stays the hand of","7":"terror.*","_rn_":"4"},{"1":"1961-Kennedy","2":"970","3":"970","4":"of science instead of its","5":"terrors","6":". Together let us explore","7":"terror.*","_rn_":"5"},{"1":"1981-Reagan","2":"811","3":"811","4":"freeing all Americans from the","5":"terror","6":"of runaway living costs .","7":"terror.*","_rn_":"6"},{"1":"1981-Reagan","2":"2186","3":"2186","4":"understood by those who practice","5":"terrorism","6":"and prey upon their neighbors","7":"terror.*","_rn_":"7"},{"1":"1997-Clinton","2":"1047","3":"1047","4":"They fuel the fanaticism of","5":"terror","6":". And they torment the","7":"terror.*","_rn_":"8"},{"1":"1997-Clinton","2":"1647","3":"1647","4":"maintain a strong defense against","5":"terror","6":"and destruction . Our children","7":"terror.*","_rn_":"9"},{"1":"2009-Obama","2":"1619","3":"1619","4":"advance their aims by inducing","5":"terror","6":"and slaughtering innocents , we","7":"terror.*","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>By default, the <code>kwic()</code> is word-based. If you like to look up a multiword combination, use <code>phrase()</code>:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="kw">phrase</span>(<span class="st">&quot;our country&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">kwic</span>(corp_us, <span class="kw">phrase</span>(<span class="st">&quot;our country&quot;</span>))</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["docname"],"name":[1],"type":["chr"],"align":["left"]},{"label":["from"],"name":[2],"type":["int"],"align":["right"]},{"label":["to"],"name":[3],"type":["int"],"align":["right"]},{"label":["pre"],"name":[4],"type":["chr"],"align":["left"]},{"label":["keyword"],"name":[5],"type":["chr"],"align":["left"]},{"label":["post"],"name":[6],"type":["chr"],"align":["left"]},{"label":["pattern"],"name":[7],"type":["fctr"],"align":["left"]}],"data":[{"1":"1801-Jefferson","2":"18","3":"19","4":"the first executive office of","5":"our country","6":", I avail myself of","7":"our country","_rn_":"1"},{"1":"1805-Jefferson","2":"1898","3":"1899","4":"course , I offer to","5":"our country","6":"sincere congratulations . With those","7":"our country","_rn_":"2"},{"1":"1809-Madison","2":"322","3":"323","4":"from this prosperous condition of","5":"our country","6":"to the scene which has","7":"our country","_rn_":"3"},{"1":"1813-Madison","2":"1033","3":"1034","4":"and an intelligent people .","5":"Our country","6":"abounds in the necessaries ,","7":"our country","_rn_":"4"},{"1":"1813-Madison","2":"1226","3":"1227","4":"arms now may long preserve","5":"our country","6":"from the necessity of another","7":"our country","_rn_":"5"},{"1":"1817-Monroe","2":"1217","3":"1218","4":"the highly favored condition of","5":"our country","6":", it is the interest","7":"our country","_rn_":"6"},{"1":"1817-Monroe","2":"2328","3":"2329","4":"among which the improvement of","5":"our country","6":"by roads and canals ,","7":"our country","_rn_":"7"},{"1":"1821-Monroe","2":"265","3":"266","4":", prosperity and happiness of","5":"our country","6":"will always be the object","7":"our country","_rn_":"8"},{"1":"1821-Monroe","2":"1203","3":"1204","4":"citizens from that destruction and","5":"our country","6":"from that devastation which are","7":"our country","_rn_":"9"},{"1":"1821-Monroe","2":"4028","3":"4029","4":"to the internal concerns of","5":"our country","6":", and more especially to","7":"our country","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -433,10 +428,10 @@ Please note that <code>kwic()</code>, when taking a <code>corpus</code> object a
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-50" class="exercise"><strong>Exercise 4.2  </strong></span>Please create a bar plot, showing the number of uses of the word <em>country</em> in each president’s address. Please include different variants of the word, e.g., <em>countries</em>, <em>Countries</em>, <em>Country</em>, in your <code>kwic()</code> search.
+<span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercise 4.2  </strong></span>Please create a bar plot, showing the number of uses of the word <em>country</em> in each president’s address. Please include different variants of the word, e.g., <em>countries</em>, <em>Countries</em>, <em>Country</em>, in your <code>kwic()</code> search.
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <hr />
 </div>
 <div id="tidy-text-format-of-the-corpus" class="section level2">
@@ -451,9 +446,9 @@ Please note that <code>kwic()</code>, when taking a <code>corpus</code> object a
 <p>In computational text analytics, the token (i.e., each row in the data frame) is most often a single <em>word</em>, but can also be an <em>n-gram</em>, <em>sentence</em>, or <em>paragraph</em>. The <code>tidytext</code> package in R is made for the handling of the tidy text format of the corpus data.</p>
 <p>Tidy datasets allow manipulation with a standard set of <em>tidy</em> tools, including popular packages such as <code>dplyr</code>, <code>tidyr</code>, and <code>ggplot2</code>.</p>
 <p>The <code>tidytext</code> package includes functions to <code>tidy()</code> objects from <code>quanteda</code>.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="kw">library</span>(tidytext)</a>
-<a class="sourceLine" id="cb52-2" data-line-number="2">corp_us_tidy &lt;-<span class="st"> </span><span class="kw">tidy</span>(corp_us) <span class="co"># convert `corpus` to `data.frame`</span></a>
-<a class="sourceLine" id="cb52-3" data-line-number="3"><span class="kw">class</span>(corp_us_tidy)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">library</span>(tidytext)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">corp_us_tidy &lt;-<span class="st"> </span><span class="kw">tidy</span>(corp_us) <span class="co"># convert `corpus` to `data.frame`</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="kw">class</span>(corp_us_tidy)</a></code></pre></div>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -465,10 +460,10 @@ Please note that <code>kwic()</code>, when taking a <code>corpus</code> object a
 <h2><span class="header-section-number">4.6</span> Frequency Lists</h2>
 <p>To get a frequency list of words, word tokenization is an important step for corpus analysis because words are a meaningful linguistic unit in language. Also, word frequency lists are often indicative of many important messages.</p>
 <p>The <code>tidytext</code> provides a powerful function, <code>unnest_tokens()</code> to tokenize a data frame with larger linguistic units (e.g., <em>texts</em>) into one with smaller units (e.g., <em>words</em>).</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1">corp_us_words &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb54-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(<span class="dt">output =</span> word, <span class="dt">input =</span> text, <span class="dt">token =</span> <span class="st">&quot;words&quot;</span>) <span class="co"># tokenize the `text` column into `word`</span></a>
-<a class="sourceLine" id="cb54-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb54-4" data-line-number="4">corp_us_words</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">corp_us_words &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(<span class="dt">output =</span> word, <span class="dt">input =</span> text, <span class="dt">token =</span> <span class="st">&quot;words&quot;</span>) <span class="co"># tokenize the `text` column into `word`</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">corp_us_words</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["Year"],"name":[1],"type":["int"],"align":["right"]},{"label":["President"],"name":[2],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["word"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1789","2":"Washington","3":"George","4":"none","5":"fellow"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"citizens"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"the"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"senate"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"and"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"the"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"house"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -480,68 +475,68 @@ The <code>unnest_tokens()</code> is optimized for English tokenization of other 
 </p>
 </div>
 <p>Now we can count the word frequencies:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1">corp_us_words_freq &lt;-<span class="st"> </span>corp_us_words <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb55-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(word, <span class="dt">sort=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb55-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb55-4" data-line-number="4">corp_us_words_freq</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">corp_us_words_freq &lt;-<span class="st"> </span>corp_us_words <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(word, <span class="dt">sort=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">corp_us_words_freq</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["word"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"the","2":"10082"},{"1":"of","2":"7103"},{"1":"and","2":"5310"},{"1":"to","2":"4534"},{"1":"in","2":"2785"},{"1":"a","2":"2246"},{"1":"our","2":"2181"},{"1":"that","2":"1789"},{"1":"we","2":"1739"},{"1":"be","2":"1482"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>Frequency lists can be generated for bigrams or any other multiword combinations as well:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1">corp_us_bigrams &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb56-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(bigram, text, <span class="dt">token =</span> <span class="st">&quot;ngrams&quot;</span>, <span class="dt">n =</span> <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb56-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb56-4" data-line-number="4">corp_us_bigrams</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">corp_us_bigrams &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(bigram, text, <span class="dt">token =</span> <span class="st">&quot;ngrams&quot;</span>, <span class="dt">n =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4">corp_us_bigrams</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["Year"],"name":[1],"type":["int"],"align":["right"]},{"label":["President"],"name":[2],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["bigram"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1789","2":"Washington","3":"George","4":"none","5":"fellow citizens"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"citizens of"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of the"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"the senate"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"senate and"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"and of"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of the"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"the house"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"house of"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"of representatives"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>To create bigram frequency list:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">corp_us_bigrams_freq &lt;-<span class="st"> </span>corp_us_bigrams <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb57-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(bigram, <span class="dt">sort=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb57-3" data-line-number="3">corp_us_bigrams_freq</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">corp_us_bigrams_freq &lt;-<span class="st"> </span>corp_us_bigrams <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(bigram, <span class="dt">sort=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">corp_us_bigrams_freq</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["bigram"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"of the","2":"1766"},{"1":"in the","2":"812"},{"1":"to the","2":"720"},{"1":"of our","2":"619"},{"1":"and the","2":"471"},{"1":"it is","2":"323"},{"1":"by the","2":"318"},{"1":"for the","2":"312"},{"1":"to be","2":"311"},{"1":"the people","2":"265"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="kw">sum</span>(corp_us_words_freq<span class="op">$</span>n) <span class="co"># size of unigrams</span></a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">sum</span>(corp_us_words_freq<span class="op">$</span>n) <span class="co"># size of unigrams</span></a></code></pre></div>
 <pre><code>## [1] 135562</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1"><span class="kw">sum</span>(corp_us_bigrams_freq<span class="op">$</span>n) <span class="co"># size of bigrams</span></a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">sum</span>(corp_us_bigrams_freq<span class="op">$</span>n) <span class="co"># size of bigrams</span></a></code></pre></div>
 <pre><code>## [1] 135504</code></pre>
 </div>
 <div id="word-cloud" class="section level2">
 <h2><span class="header-section-number">4.7</span> Word Cloud</h2>
 <p>With frequency data, we can visualize important words in the corpus with a <strong>Word Cloud</strong>. It is a novel but intuitive visual representation of text data. It allows us to quickly perceive the most prominent words from a large collection of texts.</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1"><span class="kw">library</span>(wordcloud)</a>
-<a class="sourceLine" id="cb62-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
-<a class="sourceLine" id="cb62-3" data-line-number="3"><span class="kw">with</span>(corp_us_words_freq, <span class="kw">wordcloud</span>(word, n, </a>
-<a class="sourceLine" id="cb62-4" data-line-number="4">                                   <span class="dt">max.words =</span> <span class="dv">400</span>,</a>
-<a class="sourceLine" id="cb62-5" data-line-number="5">                                   <span class="dt">min.freq =</span> <span class="dv">10</span>,</a>
-<a class="sourceLine" id="cb62-6" data-line-number="6">                                   <span class="dt">scale =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="fl">0.5</span>),</a>
-<a class="sourceLine" id="cb62-7" data-line-number="7">                                   <span class="dt">color =</span> <span class="kw">brewer.pal</span>(<span class="dv">8</span>, <span class="st">&quot;Dark2&quot;</span>),</a>
-<a class="sourceLine" id="cb62-8" data-line-number="8">                                   <span class="dt">vfont=</span><span class="kw">c</span>(<span class="st">&quot;serif&quot;</span>,<span class="st">&quot;plain&quot;</span>)))</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">library</span>(wordcloud)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="kw">with</span>(corp_us_words_freq, <span class="kw">wordcloud</span>(word, n, </a>
+<a class="sourceLine" id="cb22-4" data-line-number="4">                                   <span class="dt">max.words =</span> <span class="dv">400</span>,</a>
+<a class="sourceLine" id="cb22-5" data-line-number="5">                                   <span class="dt">min.freq =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb22-6" data-line-number="6">                                   <span class="dt">scale =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb22-7" data-line-number="7">                                   <span class="dt">color =</span> <span class="kw">brewer.pal</span>(<span class="dv">8</span>, <span class="st">&quot;Dark2&quot;</span>),</a>
+<a class="sourceLine" id="cb22-8" data-line-number="8">                                   <span class="dt">vfont=</span><span class="kw">c</span>(<span class="st">&quot;serif&quot;</span>,<span class="st">&quot;plain&quot;</span>)))</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <hr />
 
 <div class="exercise">
 <span id="exr:wordcloud1" class="exercise"><strong>Exercise 4.3  </strong></span>Word cloud would be more informative if we first remove functional words. In <code>tidytext</code>, there is a preloaded data frame, <code>stop_words</code>, which contains common English stop words. Please make use of this data frame and try to re-create a word cloud with all stopwords removed. (Criteria: Frequency &gt;= 10; Max Number of Words Plotted = 400)
 </div>
 
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1"><span class="kw">require</span>(tidytext)</a>
-<a class="sourceLine" id="cb63-2" data-line-number="2">stop_words</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">require</span>(tidytext)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2">stop_words</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["word"],"name":[1],"type":["chr"],"align":["left"]},{"label":["lexicon"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"a","2":"SMART"},{"1":"a's","2":"SMART"},{"1":"able","2":"SMART"},{"1":"about","2":"SMART"},{"1":"above","2":"SMART"},{"1":"according","2":"SMART"},{"1":"accordingly","2":"SMART"},{"1":"across","2":"SMART"},{"1":"actually","2":"SMART"},{"1":"after","2":"SMART"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-61-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-24-1.png" width="100%" /></p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.4  </strong></span>Get yourself familiar with another R package for creating word clouds, <code>wordcloud2</code>, and re-create a word cloud as Exercise <a href="corpus-analysis-a-start.html#exr:wordcloud1">4.3</a> but in a fancier format, i.e., a star-shaped one. (Criteria: Frequency &gt;= 15)
+<span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercise 4.4  </strong></span>Get yourself familiar with another R package for creating word clouds, <code>wordcloud2</code>, and re-create a word cloud as Exercise <a href="corpus-analysis-a-start.html#exr:wordcloud1">4.3</a> but in a fancier format, i.e., a star-shaped one. (Criteria: Frequency &gt;= 15)
 </div>
 
 <p><img src="wc2.png" width="100%" /></p>
@@ -579,18 +574,18 @@ Figure 4.2: Computing Expected Frequencies
 <li><span class="math inline">\(MI = log_2\frac{O_{11}}{E_{11}}\)</span></li>
 <li><em>Log-Likelohood Ratio (LLR)</em> <span class="math inline">\(= 2 \sum_{ij}{O_{ij}log\frac{O_{ij}}{E_{ij}}}\)</span></li>
 </ul>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">corp_us_collocations &lt;-<span class="st"> </span>corp_us_bigrams_freq <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb64-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># set bigram frequency cut-off</span></a>
-<a class="sourceLine" id="cb64-3" data-line-number="3"><span class="st">  </span><span class="kw">rename</span>(<span class="dt">O11 =</span> n) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb64-4" data-line-number="4"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw">separate</span>(bigram, <span class="kw">c</span>(<span class="st">&quot;w1&quot;</span>, <span class="st">&quot;w2&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># split bigrams into two columns</span></a>
-<a class="sourceLine" id="cb64-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">R1 =</span> corp_us_words_freq<span class="op">$</span>n[<span class="kw">match</span>(w1, corp_us_words_freq<span class="op">$</span>word)],</a>
-<a class="sourceLine" id="cb64-6" data-line-number="6">         <span class="dt">C1 =</span> corp_us_words_freq<span class="op">$</span>n[<span class="kw">match</span>(w2, corp_us_words_freq<span class="op">$</span>word)]) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># retrieve w1 w2 unigram freq</span></a>
-<a class="sourceLine" id="cb64-7" data-line-number="7"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">E11 =</span> (R1<span class="op">*</span>C1)<span class="op">/</span><span class="kw">sum</span>(O11)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># compute expected freq of bigrams</span></a>
-<a class="sourceLine" id="cb64-8" data-line-number="8"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MI =</span> <span class="kw">log2</span>(O11<span class="op">/</span>E11),</a>
-<a class="sourceLine" id="cb64-9" data-line-number="9">         <span class="dt">t =</span> (O11 <span class="op">-</span><span class="st"> </span>E11)<span class="op">/</span><span class="kw">sqrt</span>(E11)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># compute associations</span></a>
-<a class="sourceLine" id="cb64-10" data-line-number="10"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(MI)) <span class="co"># sorting</span></a>
-<a class="sourceLine" id="cb64-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb64-12" data-line-number="12">corp_us_collocations</a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">corp_us_collocations &lt;-<span class="st"> </span>corp_us_bigrams_freq <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># set bigram frequency cut-off</span></a>
+<a class="sourceLine" id="cb24-3" data-line-number="3"><span class="st">  </span><span class="kw">rename</span>(<span class="dt">O11 =</span> n) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb24-4" data-line-number="4"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw">separate</span>(bigram, <span class="kw">c</span>(<span class="st">&quot;w1&quot;</span>, <span class="st">&quot;w2&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># split bigrams into two columns</span></a>
+<a class="sourceLine" id="cb24-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">R1 =</span> corp_us_words_freq<span class="op">$</span>n[<span class="kw">match</span>(w1, corp_us_words_freq<span class="op">$</span>word)],</a>
+<a class="sourceLine" id="cb24-6" data-line-number="6">         <span class="dt">C1 =</span> corp_us_words_freq<span class="op">$</span>n[<span class="kw">match</span>(w2, corp_us_words_freq<span class="op">$</span>word)]) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># retrieve w1 w2 unigram freq</span></a>
+<a class="sourceLine" id="cb24-7" data-line-number="7"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">E11 =</span> (R1<span class="op">*</span>C1)<span class="op">/</span><span class="kw">sum</span>(O11)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># compute expected freq of bigrams</span></a>
+<a class="sourceLine" id="cb24-8" data-line-number="8"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">MI =</span> <span class="kw">log2</span>(O11<span class="op">/</span>E11),</a>
+<a class="sourceLine" id="cb24-9" data-line-number="9">         <span class="dt">t =</span> (O11 <span class="op">-</span><span class="st"> </span>E11)<span class="op">/</span><span class="kw">sqrt</span>(E11)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># compute associations</span></a>
+<a class="sourceLine" id="cb24-10" data-line-number="10"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(MI)) <span class="co"># sorting</span></a>
+<a class="sourceLine" id="cb24-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb24-12" data-line-number="12">corp_us_collocations</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["w1"],"name":[1],"type":["chr"],"align":["left"]},{"label":["w2"],"name":[2],"type":["chr"],"align":["left"]},{"label":["O11"],"name":[3],"type":["int"],"align":["right"]},{"label":["R1"],"name":[4],"type":["int"],"align":["right"]},{"label":["C1"],"name":[5],"type":["int"],"align":["right"]},{"label":["E11"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["MI"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"indian","2":"tribes","3":"6","4":"8","5":"6","6":"0.0009108505","7":"12.685461","8":"198.77500"},{"1":"twenty","2":"five","3":"6","4":"16","5":"10","6":"0.0030361684","7":"10.948495","8":"108.83498"},{"1":"chief","2":"magistrate","3":"10","4":"36","5":"11","6":"0.0075145167","7":"10.378032","8":"115.27178"},{"1":"president","2":"bush","3":"6","4":"89","5":"6","6":"0.0101332119","7":"9.209727","8":"59.50365"},{"1":"move","2":"forward","3":"6","4":"15","5":"36","6":"0.0102470682","7":"9.193607","8":"59.17103"},{"1":"vice","2":"president","3":"16","4":"18","5":"89","6":"0.0303996357","7":"9.039802","8":"91.59249"},{"1":"two","2":"centuries","3":"7","4":"47","5":"15","6":"0.0133781168","7":"9.031336","8":"60.40456"},{"1":"interstate","2":"commerce","3":"6","4":"11","5":"64","6":"0.0133591408","7":"8.810991","8":"51.79573"},{"1":"domestic","2":"concerns","3":"7","4":"49","5":"17","6":"0.0158070515","7":"8.790643","8":"55.55086"},{"1":"god","2":"bless","3":"15","4":"92","5":"20","6":"0.0349159361","7":"8.746861","8":"80.08798"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -609,7 +604,7 @@ How to compute lexical assoications is a non-trivial issue. There are many more 
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-68" class="exercise"><strong>Exercise 4.5  </strong></span>Sort the collocation data frame <code>corp_us_collocations</code> according to the <code>t-score</code> and compare the results sorted by MI scores.
+<span id="exr:unnamed-chunk-31" class="exercise"><strong>Exercise 4.5  </strong></span>Sort the collocation data frame <code>corp_us_collocations</code> according to the <code>t-score</code> and compare the results sorted by MI scores.
 </div>
 
 <div data-pagedtable="false">
@@ -644,7 +639,7 @@ After solving the above overflow issue, you may still have a few bigrams with <c
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.7  </strong></span></p>
+<p><span id="exr:unnamed-chunk-35" class="exercise"><strong>Exercise 4.7  </strong></span></p>
 <ol style="list-style-type: upper-alpha">
 <li><p>Find the top FIVE bigrams ranked according to MI values for each president. The result would be a data frame as shown below.</p></li>
 <li>Create a plot as shown below to visualize your results.
@@ -655,9 +650,93 @@ After solving the above overflow issue, you may still have a few bigrams with <c
 {"columns":[{"label":["Year_President"],"name":[1],"type":["chr"],"align":["left"]},{"label":["w1"],"name":[2],"type":["chr"],"align":["left"]},{"label":["w2"],"name":[3],"type":["chr"],"align":["left"]},{"label":["n"],"name":[4],"type":["int"],"align":["right"]},{"label":["w1freq"],"name":[5],"type":["int"],"align":["right"]},{"label":["w2freq"],"name":[6],"type":["int"],"align":["right"]},{"label":["w12freq_exp"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["MI"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1789_Washington","2":"assure","3":"myself","4":"2","5":"12","6":"33","7":"1.061349e-02","8":"7.5579568","9":"1.4067087"},{"1":"1789_Washington","2":"executive","3":"department","4":"2","5":"97","6":"24","7":"6.239447e-02","8":"5.0024381","9":"1.3700940"},{"1":"1789_Washington","2":"how","3":"far","4":"2","5":"45","6":"87","7":"1.049288e-01","8":"4.2525168","9":"1.3400177"},{"1":"1789_Washington","2":"retreat","3":"which","4":"2","5":"8","6":"1006","7":"2.157005e-01","8":"3.2128988","9":"1.2616903"},{"1":"1789_Washington","2":"i","3":"dare","4":"2","5":"838","6":"10","7":"2.245986e-01","8":"3.1545789","9":"1.2553983"},{"1":"1793_Washington","2":"i","3":"am","4":"2","5":"838","6":"65","7":"1.459891e+00","8":"0.4541392","9":"0.3819146"},{"1":"1793_Washington","2":"it","3":"shall","4":"2","5":"1389","6":"314","7":"1.168947e+01","8":"-2.5471382","9":"-6.8514934"},{"1":"1793_Washington","2":"by","3":"the","4":"2","5":"1083","6":"10082","7":"2.926431e+02","8":"-7.1929984","9":"-205.5156936"},{"1":"1793_Washington","2":"of","3":"the","4":"4","5":"7103","6":"10082","7":"1.919339e+03","8":"-8.9063936","9":"-957.6693468"},{"1":"1793_Washington","2":"to","3":"the","4":"2","5":"4534","6":"10082","7":"1.225156e+03","8":"-9.2587495","9":"-864.9017596"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-73-1.png" width="110%" /></p>
-
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-36-1.png" width="110%" /></p>
 </div>
+</div>
+<div id="constructions" class="section level2">
+<h2><span class="header-section-number">4.9</span> Constructions</h2>
+<p>We are often interested in the use of linguistic patterns, which are beyond the lexical boundaries. My experience is that usually it is better to work with the corpus on a sentential level.</p>
+<p>We can use the same tokenization function, <code>unnest_tokens()</code> to convert our text-based corpus data frame, <code>corpus_us_tidy</code>, into a sentence-based tidy structure:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">corp_us_sents &lt;-<span class="st"> </span>corp_us_tidy <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="st">  </span><span class="kw">unnest_tokens</span>(<span class="dt">output =</span> sentence, <span class="dt">input =</span> text, <span class="dt">token =</span> <span class="st">&quot;sentences&quot;</span>) <span class="co"># tokenize the `text` column into `sentence`</span></a>
+<a class="sourceLine" id="cb25-3" data-line-number="3">corp_us_sents</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Year"],"name":[1],"type":["int"],"align":["right"]},{"label":["President"],"name":[2],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["sentence"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1789","2":"Washington","3":"George","4":"none","5":"fellow-citizens of the senate and of the house of representatives:  among the vicissitudes incident to life no event could have filled me with greater anxieties than that of which the notification was transmitted by your order, and received on the 14th day of the present month."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"on the one hand, i was summoned by my country, whose voice i can never hear but with veneration and love, from a retreat which i had chosen with the fondest predilection, and, in my flattering hopes, with an immutable decision, as the asylum of my declining years -- a retreat which was rendered every day more necessary as well as more dear to me by the addition of habit to inclination, and of frequent interruptions in my health to the gradual waste committed on it by time."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"on the other hand, the magnitude and difficulty of the trust to which the voice of my country called me, being sufficient to awaken in the wisest and most experienced of her citizens a distrustful scrutiny into his qualifications, could not but overwhelm with despondence one who (inheriting inferior endowments from nature and unpracticed in the duties of civil administration) ought to be peculiarly conscious of his own deficiencies."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"in this conflict of emotions all i dare aver is that it has been my faithful study to collect my duty from a just appreciation of every circumstance by which it might be affected."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"all i dare hope is that if, in executing this task, i have been too much swayed by a grateful remembrance of former instances, or by an affectionate sensibility to this transcendent proof of the confidence of my fellow citizens, and have thence too little consulted my incapacity as well as disinclination for the weighty and untried cares before me, my error will be palliated by the motives which mislead me, and its consequences be judged by my country with some share of the partiality in which they originated."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"such being the impressions under which i have, in obedience to the public summons, repaired to the present station, it would be peculiarly improper to omit in this first official act my fervent supplications to that almighty being who rules over the universe, who presides in the councils of nations, and whose providential aids can supply every human defect, that his benediction may consecrate to the liberties and happiness of the people of the united states a government instituted by themselves for these essential purposes, and may enable every instrument employed in its administration to execute with success the functions allotted to his charge."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"in tendering this homage to the great author of every public and private good, i assure myself that it expresses your sentiments not less than my own, nor those of my fellow citizens at large less than either."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"no people can be bound to acknowledge and adore the invisible hand which conducts the affairs of men more than those of the united states."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"every step by which they have advanced to the character of an independent nation seems to have been distinguished by some token of providential agency; and in the important revolution just accomplished in the system of their united government the tranquil deliberations and voluntary consent of so many distinct communities from which the event has resulted can not be compared with the means by which most governments have been established without some return of pious gratitude, along with an humble anticipation of the future blessings which the past seem to presage."},{"1":"1789","2":"Washington","3":"George","4":"none","5":"these reflections, arising out of the present crisis, have forced themselves too strongly on my mind to be suppressed."}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>With each sentence, we can investigate particular constructions in more detail. Let’s assume that we are interested in the use of <em>Perfect</em> aspect in English by different presidents. We can try to extract Perfect constructions (including Present/Past Perfect) from each sentence using the regular expression.</p>
+<p>Here we make a simple naive assumption: Perfect constructions include all <code>have/has/had + VERB-en/ed</code> tokens from the sentences.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">require</span>(stringr)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="co"># Perfect</span></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">corp_us_sents <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">pattern =</span> <span class="kw">str_extract_all</span>(sentence, <span class="st">&quot;ha[d|ve|s] </span><span class="ch">\\</span><span class="st">w+(en|ed)&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="st">  </span><span class="kw">unnest_tokens</span>(perfect, pattern,<span class="dt">token =</span> c) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-6" data-line-number="6"><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>sentence) -&gt;<span class="st"> </span>result_perfect</a>
+<a class="sourceLine" id="cb26-7" data-line-number="7">result_perfect</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Year"],"name":[1],"type":["int"],"align":["right"]},{"label":["President"],"name":[2],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["perfect"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1789","2":"Washington","3":"George","4":"none","5":"had chosen"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"has been"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"has resulted"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"has ordained"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"has given"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"has been"},{"1":"1793","2":"Washington","3":"George","4":"none","5":"has been"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"had contributed"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"has been"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"has equaled"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>And of course we can do an exploratory analysis of the frequencies of Perfect constructions by different presidents:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">require</span>(tidyr)</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="co"># table</span></a>
+<a class="sourceLine" id="cb27-3" data-line-number="3">result_perfect <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="st">  </span><span class="kw">group_by</span>(President) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-5" data-line-number="5"><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">TOKEN_FREQ =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb27-6" data-line-number="6">            <span class="dt">TYPE_FREQ =</span> <span class="kw">n_distinct</span>(perfect))</a></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["President"],"name":[1],"type":["chr"],"align":["left"]},{"label":["TOKEN_FREQ"],"name":[2],"type":["int"],"align":["right"]},{"label":["TYPE_FREQ"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Adams","2":"26","3":"14"},{"1":"Buchanan","2":"13","3":"9"},{"1":"Bush","2":"10","3":"8"},{"1":"Carter","2":"7","3":"7"},{"1":"Cleveland","2":"2","3":"2"},{"1":"Clinton","2":"5","3":"3"},{"1":"Coolidge","2":"16","3":"10"},{"1":"Eisenhower","2":"5","3":"5"},{"1":"Garfield","2":"18","3":"13"},{"1":"Grant","2":"4","3":"2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="co"># graph</span></a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">result_perfect <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(President) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-4" data-line-number="4"><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">TOKEN_FREQ =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb28-5" data-line-number="5">            <span class="dt">TYPE_FREQ =</span> <span class="kw">n_distinct</span>(perfect)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-6" data-line-number="6"><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="kw">c</span>(<span class="st">&quot;TOKEN_FREQ&quot;</span>, <span class="st">&quot;TYPE_FREQ&quot;</span>), <span class="dt">names_to =</span> <span class="st">&quot;STATISTIC&quot;</span>, <span class="dt">values_to =</span> <span class="st">&quot;NUMBER&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-7" data-line-number="7"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(President, NUMBER, <span class="dt">fill =</span> STATISTIC)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb28-8" data-line-number="8"><span class="st">           </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>,<span class="dt">position =</span> <span class="kw">position_dodge</span>()) <span class="op">+</span></a>
+<a class="sourceLine" id="cb28-9" data-line-number="9"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle=</span><span class="dv">90</span>))</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>There are quite a few things we need to take care of more thoroughly:</p>
+<ol style="list-style-type: decimal">
+<li><p>The auxilliary <em>HAVE</em> and the past participle do not necessarily have to stand next to each other for Perfect constructions.</p></li>
+<li><p>We now lose track of one important information: from which sentence of the Presidental addressess did we collect each Perfect constructional token?</p></li>
+</ol>
+<p>Any ideas how to solve all these issues?</p>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-40" class="exercise"><strong>Exercise 4.8  </strong></span>Please create a better regular expression to retrieve more tokens of English Perfect constructions, where the auxilliary and participle may not stand together.</p>
+</div>
+
+<div id="htmlwidget-26ec631b2698538f700c" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26ec631b2698538f700c">{"x":{"html":"<ul>\n  <li>When it was first perceived, in early times, that no middle course for America remained between unlimited submission to a foreign legislature and a total independence of its claims, men of reflection were less apprehensive of danger from the formidable power of fleets and armies they must determine to resist than from those contests and dissensions which would certainly arise concerning the forms of government to be instituted over the whole and over the parts of this extensive country. Relying, however, on the purity of their intentions, the justice of their cause, and the integrity and intelligence of the people, under an overruling Providence which <span class='match'>had so signally protected<\/span> this country from the first, the representatives of this nation, then consisting of little more than half its present number, not only broke to pieces the chains which were forging and the rod of iron that was lifted up, but frankly cut asunder the ties which had bound them, and launched into an ocean of uncertainty.\n\nThe zeal and ardor of the people during the Revolutionary war, supplying the place of government, commanded a degree of order sufficient at least for the temporary preservation of society. The Confederation which was early felt to be necessary was prepared from the models of the Batavian and Helvetic confederacies, the only examples which remain with any detail and precision in history, and certainly the only ones which the people at large <span class='match'>had ever considered<\/span>. But reflecting on the striking difference in so many particulars between this country and those where a courier may go from the seat of government to the frontier in a single day, it was then certainly foreseen by some who assisted in Congress at the formation of it that it could not be durable.\n\nNegligence of its regulations, inattention to its recommendations, if not disobedience to its authority, not only in individuals but in States, soon appeared with their melancholy consequences -- universal languor, jealousies and rivalries of States, decline of navigation and commerce, discouragement of necessary manufactures, universal fall in the value of lands and their produce, contempt of public and private faith, loss of consideration and credit with foreign nations, and at length in discontents, animosities, combinations, partial conventions, and insurrection, threatening some great national calamity.\n\nIn this dangerous crisis the people of America were not abandoned by their usual good sense, presence of mind, resolution, or integrity. Measures were pursued to concert a plan to form a more perfect union, establish justice, insure domestic tranquillity, provide for the common defense, promote the general welfare, and secure the blessings of liberty. The public disquisitions, discussions, and deliberations issued in the present happy Constitution of Government.\n\nEmployed in the service of my country abroad during the whole course of these transactions, I first saw the Constitution of the United States in a foreign country. Irritated by no literary altercation, animated by no public debate, heated by no party animosity, I read it with great satisfaction, as the result of good heads prompted by good hearts, as an experiment better adapted to the genius, character, situation, and relations of this nation and country than any which <span class='match'>had ever been proposed<\/span> or suggested. In its general principles and great outlines it was conformable to such a system of government as I <span class='match'>had ever most esteemed<\/span>, and in some States, my own native State in particular, had contributed to establish. Claiming a right of suffrage, in common with my fellow-citizens, in the adoption or rejection of a constitution which was to rule me and my posterity, as well as them and theirs, I did not hesitate to express my approbation of it on all occasions, in public and in private. It was not then, nor has been since, any objection to it in my mind that the Executive and Senate were not more permanent. Nor have I ever entertained a thought of promoting any alteration in it but such as the people themselves, in the course of their experience, should see and feel to be necessary or expedient, and by their representatives in Congress and the State legislatures, according to the Constitution itself, adopt and ordain.\n\nReturning to the bosom of my country after a painful separation from it for ten years, I had the honor to be elected to a station under the new order of things, and I have repeatedly laid myself under the most serious obligations to support the Constitution. The operation of it has equaled the most sanguine expectations of its friends, and from an habitual attention to it, satisfaction in its administration, and delight in its effects upon the peace, order, prosperity, and happiness of the nation I have acquired an habitual attachment to it and veneration for it.\n\nWhat other form of government, indeed, can so well deserve our esteem and love?\n\nThere may be little solidity in an ancient idea that congregations of men into cities and nations are the most pleasing objects in the sight of superior intelligences, but this is very certain, that to a benevolent human mind there can be no spectacle presented by any nation more pleasing, more noble, majestic, or august, than an assembly like that which <span class='match'>has so often been seen<\/span> in this and the other Chamber of Congress, of a Government in which the Executive authority, as well as that of all the branches of the Legislature, are exercised by citizens selected at regular periods by their neighbors to make and execute laws for the general good. Can anything essential, anything more than mere ornament and decoration, be added to this by robes and diamonds? Can authority be more amiable and respectable when it descends from accidents or institutions established in remote antiquity than when it springs fresh from the hearts and judgments of an honest and enlightened people? For it is the people only that are represented. It is their power and majesty that is reflected, and only for their good, in every legitimate government, under whatever form it may appear. The existence of such a government as ours for any length of time is a full proof of a general dissemination of knowledge and virtue throughout the whole body of the people. And what object or consideration more pleasing than this can be presented to the human mind? If national pride is ever justifiable or excusable it is when it springs, not from power or riches, grandeur or glory, but from conviction of national innocence, information, and benevolence.\n\nIn the midst of these pleasing ideas we should be unfaithful to ourselves if we should ever lose sight of the danger to our liberties if anything partial or extraneous should infect the purity of our free, fair, virtuous, and independent elections. If an election is to be determined by a majority of a single vote, and that can be procured by a party through artifice or corruption, the Government may be the choice of a party for its own ends, not of the nation for the national good. If that solitary suffrage can be obtained by foreign nations by flattery or menaces, by fraud or violence, by terror, intrigue, or venality, the Government may not be the choice of the American people, but of foreign nations. It may be foreign nations who govern us, and not we, the people, who govern ourselves; and candid men will acknowledge that in such cases choice would have little advantage to boast of over lot or chance.\n\nSuch is the amiable and interesting system of government (and such are some of the abuses to which it may be exposed) which the people of America have exhibited to the admiration and anxiety of the wise and virtuous of all nations for eight years under the administration of a citizen who, by a long course of great actions, regulated by prudence, justice, temperance, and fortitude, conducting a people inspired with the same virtues and animated with the same ardent patriotism and love of liberty to indep<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<hr />
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-42" class="exercise"><strong>Exercise 4.9  </strong></span>Re-generate a <code>result_perfect</code> data frame, where you can keep track of:</p>
+<ul>
+<li>From the N-th sentence of the address did the Perfect come?</li>
+<li>From which address did the Perfect come?</li>
+</ul>
+You may have a data frame as shown below.
+</div>
+
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Year"],"name":[1],"type":["int"],"align":["right"]},{"label":["President"],"name":[2],"type":["chr"],"align":["left"]},{"label":["FirstName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Party"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["INDEX"],"name":[5],"type":["chr"],"align":["left"]},{"label":["SENT_ID"],"name":[6],"type":["int"],"align":["right"]},{"label":["perfect"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"2","7":"had chosen"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"4","7":"has been"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"9","7":"has resulted"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"16","7":"has ordained"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"17","7":"has given"},{"1":"1789","2":"Washington","3":"George","4":"none","5":"1789-Washington","6":"23","7":"has been"},{"1":"1793","2":"Washington","3":"George","4":"none","5":"1793-Washington","6":"2","7":"has been"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"1797-Adams","6":"12","7":"had contributed"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"1797-Adams","6":"14","7":"has been"},{"1":"1797","2":"Adams","3":"John","4":"Federalist","5":"1797-Adams","6":"17","7":"has equaled"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.10  </strong></span>Re-create the above bar plot in a way that the type and token frequencies are computed based on each address and the x axis should be arranged accordingly. Your resulting graph should look similar to the one below.
+</div>
+
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-45-1.png" width="960" /></p>
+
 </div>
 </div>
 <h3> References</h3>
