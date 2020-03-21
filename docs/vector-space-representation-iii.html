@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-03-18" />
+<meta name="date" content="2020-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,7 @@
 <script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
 <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
 <script src="libs/wordcloud2-0.0.1/hover.js"></script>
@@ -195,13 +196,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a><ul>
 <li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#installing-the-package"><i class="fa fa-check"></i><b>5.1</b> Installing the Package</a></li>
 <li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-text"><i class="fa fa-check"></i><b>5.3</b> Parsing Your Text</a></li>
-<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.4</b> Metalingusitic Analysis</a></li>
-<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.5</b> Construction Analysis</a></li>
-<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.6</b> Saving POS-tagged Texts</a></li>
-<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.7</b> Finalize spaCy</a></li>
+<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.3</b> Working Pipeline</a></li>
+<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-text"><i class="fa fa-check"></i><b>5.4</b> Parsing Your Text</a></li>
+<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.5</b> Metalingusitic Analysis</a></li>
+<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.6</b> Construction Analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.7</b> Issues on Pattern Retrieval</a></li>
+<li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.8</b> Saving POS-tagged Texts</a></li>
+<li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.9</b> Finalize spaCy</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#about-keywords"><i class="fa fa-check"></i><b>6.1</b> About Keywords</a></li>
+<li class="chapter" data-level="6.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#statistics-for-keyness"><i class="fa fa-check"></i><b>6.2</b> Statistics for Keyness</a></li>
+<li class="chapter" data-level="6.3" data-path="keyword-analysis.html"><a href="keyword-analysis.html#implementation"><i class="fa fa-check"></i><b>6.3</b> Implementation</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>7</b> Constructions and Idioms</a><ul>
 <li class="chapter" data-level="7.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#chinese-four-character-idioms"><i class="fa fa-check"></i><b>7.1</b> Chinese Four-character Idioms</a></li>
 <li class="chapter" data-level="7.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#dictionary-entries"><i class="fa fa-check"></i><b>7.2</b> Dictionary Entries</a></li>
@@ -219,9 +226,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminder"><i class="fa fa-check"></i><b>8.1.7</b> Reminder</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>8.2</b> Chinese Text Analytics Pipeline</a></li>
-<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.3</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.4</b> Case Study 2: Patterns</a></li>
-<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.5</b> Case Study 3: Lexical Bundles</a></li>
+<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>8.3</b> Loading Text Data</a></li>
+<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.4</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.5</b> Case Study 2: Patterns</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#define-own-tokenization-functions"><i class="fa fa-check"></i><b>8.5.1</b> Define Own Tokenization Functions</a></li>
+<li class="chapter" data-level="8.5.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#transform-text-based-to-token-based-data-frame"><i class="fa fa-check"></i><b>8.5.2</b> Transform Text-Based to Token-Based Data Frame</a></li>
+<li class="chapter" data-level="8.5.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>8.5.3</b> BEI Construction</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.6</b> Case Study 3: Lexical Bundles</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>8.6.1</b> N-grams Extraction</a></li>
+<li class="chapter" data-level="8.6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>8.6.2</b> Frequency and Dispersion</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a><ul>
 <li class="chapter" data-level="9.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>9.1</b> Installation</a></li>
@@ -331,65 +346,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This tutorial is based on <a href="http://text2vec.org/glove.html">Dmitriy Selivanov’s website</a>.</p>
 <div id="library" class="section level2">
 <h2><span class="header-section-number">14.1</span> Library</h2>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">library</span>(text2vec)</a></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb300-1" data-line-number="1"><span class="kw">library</span>(text2vec)</a></code></pre></div>
 </div>
 <div id="text-collection" class="section level2">
 <h2><span class="header-section-number">14.2</span> Text Collection</h2>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" data-line-number="1"><span class="kw">library</span>(text2vec)</a>
-<a class="sourceLine" id="cb261-2" data-line-number="2">wikitext &lt;-<span class="st"> &quot;demo_data/corp-wikipedia&quot;</span></a>
-<a class="sourceLine" id="cb261-3" data-line-number="3">wiki &lt;-<span class="st"> </span><span class="kw">readLines</span>(wikitext, <span class="dt">n =</span> <span class="dv">1</span>, <span class="dt">warn =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb261-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb261-5" data-line-number="5"><span class="kw">substr</span>(wiki, <span class="dv">1</span>, <span class="dv">400</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb301-1" data-line-number="1"><span class="kw">library</span>(text2vec)</a>
+<a class="sourceLine" id="cb301-2" data-line-number="2">wikitext &lt;-<span class="st"> &quot;demo_data/corp-wikipedia&quot;</span></a>
+<a class="sourceLine" id="cb301-3" data-line-number="3">wiki &lt;-<span class="st"> </span><span class="kw">readLines</span>(wikitext, <span class="dt">n =</span> <span class="dv">1</span>, <span class="dt">warn =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb301-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb301-5" data-line-number="5"><span class="kw">substr</span>(wiki, <span class="dv">1</span>, <span class="dv">400</span>)</a></code></pre></div>
 <pre><code>## [1] &quot; anarchism originated as a term of abuse first used against early working class radicals including the diggers of the english revolution and the sans culottes of the french revolution whilst the term is still used in a pejorative way to describe any act that used violent means to destroy the organization of society it has also been taken up as a positive label by self defined anarchists the word a&quot;</code></pre>
 </div>
 <div id="tokenization-and-vocabulary" class="section level2">
 <h2><span class="header-section-number">14.3</span> Tokenization and Vocabulary</h2>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" data-line-number="1"><span class="co"># Create iterator over tokens</span></a>
-<a class="sourceLine" id="cb263-2" data-line-number="2">tokens &lt;-<span class="st"> </span><span class="kw">space_tokenizer</span>(wiki)</a>
-<a class="sourceLine" id="cb263-3" data-line-number="3"><span class="co"># Create vocabulary. Terms will be unigrams (simple words).</span></a>
-<a class="sourceLine" id="cb263-4" data-line-number="4">it &lt;-<span class="st"> </span><span class="kw">itoken</span>(tokens, <span class="dt">progressbar =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb263-5" data-line-number="5">vocab &lt;-<span class="st"> </span><span class="kw">create_vocabulary</span>(it)</a></code></pre></div>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb303-1" data-line-number="1"><span class="co"># Create iterator over tokens</span></a>
+<a class="sourceLine" id="cb303-2" data-line-number="2">tokens &lt;-<span class="st"> </span><span class="kw">space_tokenizer</span>(wiki)</a>
+<a class="sourceLine" id="cb303-3" data-line-number="3"><span class="co"># Create vocabulary. Terms will be unigrams (simple words).</span></a>
+<a class="sourceLine" id="cb303-4" data-line-number="4">it &lt;-<span class="st"> </span><span class="kw">itoken</span>(tokens, <span class="dt">progressbar =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb303-5" data-line-number="5">vocab &lt;-<span class="st"> </span><span class="kw">create_vocabulary</span>(it)</a></code></pre></div>
 </div>
 <div id="pruning" class="section level2">
 <h2><span class="header-section-number">14.4</span> Pruning</h2>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" data-line-number="1">vocab &lt;-<span class="st"> </span><span class="kw">prune_vocabulary</span>(vocab, <span class="dt">term_count_min =</span> 5L)</a></code></pre></div>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb304-1" data-line-number="1">vocab &lt;-<span class="st"> </span><span class="kw">prune_vocabulary</span>(vocab, <span class="dt">term_count_min =</span> 5L)</a></code></pre></div>
 </div>
 <div id="term-cooccurrence-matrix" class="section level2">
 <h2><span class="header-section-number">14.5</span> Term-Cooccurrence Matrix</h2>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" data-line-number="1"><span class="co"># Use our filtered vocabulary</span></a>
-<a class="sourceLine" id="cb265-2" data-line-number="2">vectorizer &lt;-<span class="st"> </span><span class="kw">vocab_vectorizer</span>(vocab)</a>
-<a class="sourceLine" id="cb265-3" data-line-number="3"><span class="co"># use window of 5 for context words</span></a>
-<a class="sourceLine" id="cb265-4" data-line-number="4">tcm &lt;-<span class="st"> </span><span class="kw">create_tcm</span>(it, vectorizer, <span class="dt">skip_grams_window =</span> 5L)</a></code></pre></div>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb305-1" data-line-number="1"><span class="co"># Use our filtered vocabulary</span></a>
+<a class="sourceLine" id="cb305-2" data-line-number="2">vectorizer &lt;-<span class="st"> </span><span class="kw">vocab_vectorizer</span>(vocab)</a>
+<a class="sourceLine" id="cb305-3" data-line-number="3"><span class="co"># use window of 5 for context words</span></a>
+<a class="sourceLine" id="cb305-4" data-line-number="4">tcm &lt;-<span class="st"> </span><span class="kw">create_tcm</span>(it, vectorizer, <span class="dt">skip_grams_window =</span> 5L)</a></code></pre></div>
 </div>
 <div id="fitting-model" class="section level2">
 <h2><span class="header-section-number">14.6</span> Fitting Model</h2>
-<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" data-line-number="1">glove &lt;-<span class="st"> </span>GlobalVectors<span class="op">$</span><span class="kw">new</span>(<span class="dt">rank =</span>  <span class="dv">50</span>, <span class="dt">x_max =</span> <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb266-2" data-line-number="2">wv_main &lt;-<span class="st"> </span>glove<span class="op">$</span><span class="kw">fit_transform</span>(tcm, <span class="dt">n_iter =</span> <span class="dv">10</span>, <span class="dt">convergence_tol =</span> <span class="fl">0.01</span>, <span class="dt">n_threads =</span> <span class="dv">8</span>) <span class="co"># main words vectors</span></a>
-<a class="sourceLine" id="cb266-3" data-line-number="3"><span class="kw">dim</span>(wv_main)</a></code></pre></div>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" data-line-number="1">wv_context &lt;-<span class="st"> </span>glove<span class="op">$</span>components</a>
-<a class="sourceLine" id="cb267-2" data-line-number="2"><span class="kw">dim</span>(wv_context)</a></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb306-1" data-line-number="1">glove &lt;-<span class="st"> </span>GlobalVectors<span class="op">$</span><span class="kw">new</span>(<span class="dt">rank =</span>  <span class="dv">50</span>, <span class="dt">x_max =</span> <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb306-2" data-line-number="2">wv_main &lt;-<span class="st"> </span>glove<span class="op">$</span><span class="kw">fit_transform</span>(tcm, <span class="dt">n_iter =</span> <span class="dv">10</span>, <span class="dt">convergence_tol =</span> <span class="fl">0.01</span>, <span class="dt">n_threads =</span> <span class="dv">8</span>) <span class="co"># main words vectors</span></a>
+<a class="sourceLine" id="cb306-3" data-line-number="3"><span class="kw">dim</span>(wv_main)</a></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb307-1" data-line-number="1">wv_context &lt;-<span class="st"> </span>glove<span class="op">$</span>components</a>
+<a class="sourceLine" id="cb307-2" data-line-number="2"><span class="kw">dim</span>(wv_context)</a></code></pre></div>
 </div>
 <div id="averaging-word-vectors" class="section level2">
 <h2><span class="header-section-number">14.7</span> Averaging Word Vectors</h2>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" data-line-number="1">word_vectors &lt;-<span class="st"> </span>wv_main <span class="op">+</span><span class="st"> </span><span class="kw">t</span>(wv_context)</a></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb308-1" data-line-number="1">word_vectors &lt;-<span class="st"> </span>wv_main <span class="op">+</span><span class="st"> </span><span class="kw">t</span>(wv_context)</a></code></pre></div>
 </div>
 <div id="semantic-space" class="section level2">
 <h2><span class="header-section-number">14.8</span> Semantic Space</h2>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" data-line-number="1">berlin =<span class="st"> </span>word_vectors[<span class="st">&quot;paris&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>] <span class="op">-</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb269-2" data-line-number="2"><span class="st">  </span>word_vectors[<span class="st">&quot;france&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>] <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb269-3" data-line-number="3"><span class="st">  </span>word_vectors[<span class="st">&quot;germany&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>]</a>
-<a class="sourceLine" id="cb269-4" data-line-number="4">cos_sim =<span class="st"> </span><span class="kw">sim2</span>(<span class="dt">x =</span> word_vectors, <span class="dt">y =</span> berlin, <span class="dt">method =</span> <span class="st">&quot;cosine&quot;</span>, <span class="dt">norm =</span> <span class="st">&quot;l2&quot;</span>)</a>
-<a class="sourceLine" id="cb269-5" data-line-number="5"><span class="kw">head</span>(<span class="kw">sort</span>(cos_sim[,<span class="dv">1</span>], <span class="dt">decreasing =</span> <span class="ot">TRUE</span>), <span class="dv">5</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb309-1" data-line-number="1">berlin =<span class="st"> </span>word_vectors[<span class="st">&quot;paris&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>] <span class="op">-</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb309-2" data-line-number="2"><span class="st">  </span>word_vectors[<span class="st">&quot;france&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>] <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb309-3" data-line-number="3"><span class="st">  </span>word_vectors[<span class="st">&quot;germany&quot;</span>, , drop =<span class="st"> </span><span class="ot">FALSE</span>]</a>
+<a class="sourceLine" id="cb309-4" data-line-number="4">cos_sim =<span class="st"> </span><span class="kw">sim2</span>(<span class="dt">x =</span> word_vectors, <span class="dt">y =</span> berlin, <span class="dt">method =</span> <span class="st">&quot;cosine&quot;</span>, <span class="dt">norm =</span> <span class="st">&quot;l2&quot;</span>)</a>
+<a class="sourceLine" id="cb309-5" data-line-number="5"><span class="kw">head</span>(<span class="kw">sort</span>(cos_sim[,<span class="dv">1</span>], <span class="dt">decreasing =</span> <span class="ot">TRUE</span>), <span class="dv">5</span>)</a></code></pre></div>
 <pre><code>##    berlin     paris   germany    munich   leipzig 
 ## 0.7791436 0.7701525 0.6789727 0.6365748 0.6265751</code></pre>
 </div>
 <div id="visualizing-multi-dimensional-space" class="section level2">
 <h2><span class="header-section-number">14.9</span> Visualizing Multi-dimensional Space</h2>
 <p>Please read <a href="https://distill.pub/2016/misread-tsne/">How to Use t-SNE Effectively</a> for more information.</p>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" data-line-number="1"><span class="co"># TSNE</span></a>
-<a class="sourceLine" id="cb271-2" data-line-number="2"><span class="kw">library</span>(Rtsne)</a>
-<a class="sourceLine" id="cb271-3" data-line-number="3"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb271-4" data-line-number="4"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb311-1" data-line-number="1"><span class="co"># TSNE</span></a>
+<a class="sourceLine" id="cb311-2" data-line-number="2"><span class="kw">library</span>(Rtsne)</a>
+<a class="sourceLine" id="cb311-3" data-line-number="3"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb311-4" data-line-number="4"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
 <ul>
 <li>Visualizae the semantic distances of the top 100 content words in corpus</li>
 </ul>
@@ -400,17 +415,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>We use t-SNE for multidimensional scaling.</li>
 <li>We obtain two-dimensional cordinates from t-SNE for visualization</li>
 </ol>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" data-line-number="1"><span class="kw">require</span>(stringr)</a>
-<a class="sourceLine" id="cb272-2" data-line-number="2">google_analogy &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="st">&quot;http://download.tensorflow.org/data/questions-words.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb272-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb272-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb272-5" data-line-number="5">google_analogy[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb312-1" data-line-number="1"><span class="kw">require</span>(stringr)</a>
+<a class="sourceLine" id="cb312-2" data-line-number="2">google_analogy &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="st">&quot;http://download.tensorflow.org/data/questions-words.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb312-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb312-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb312-5" data-line-number="5">google_analogy[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>##  [1] &quot;: capital-common-countries&quot;       &quot;Athens Greece Baghdad Iraq&quot;      
 ##  [3] &quot;Athens Greece Bangkok Thailand&quot;   &quot;Athens Greece Beijing China&quot;     
 ##  [5] &quot;Athens Greece Berlin Germany&quot;     &quot;Athens Greece Bern Switzerland&quot;  
 ##  [7] &quot;Athens Greece Cairo Egypt&quot;        &quot;Athens Greece Canberra Australia&quot;
 ##  [9] &quot;Athens Greece Hanoi Vietnam&quot;      &quot;Athens Greece Havana Cuba&quot;</code></pre>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" data-line-number="1">google_analogy[<span class="kw">str_starts</span>(google_analogy,<span class="st">&quot;</span><span class="ch">\\</span><span class="st">:&quot;</span>)]</a></code></pre></div>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb314-1" data-line-number="1">google_analogy[<span class="kw">str_starts</span>(google_analogy,<span class="st">&quot;</span><span class="ch">\\</span><span class="st">:&quot;</span>)]</a></code></pre></div>
 <pre><code>##  [1] &quot;: capital-common-countries&quot;    &quot;: capital-world&quot;              
 ##  [3] &quot;: currency&quot;                    &quot;: city-in-state&quot;              
 ##  [5] &quot;: family&quot;                      &quot;: gram1-adjective-to-adverb&quot;  
@@ -418,40 +433,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  [9] &quot;: gram4-superlative&quot;           &quot;: gram5-present-participle&quot;   
 ## [11] &quot;: gram6-nationality-adjective&quot; &quot;: gram7-past-tense&quot;           
 ## [13] &quot;: gram8-plural&quot;                &quot;: gram9-plural-verbs&quot;</code></pre>
-<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb276-1" data-line-number="1">google_analogy_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">analogy =</span> <span class="kw">str_to_lower</span>(google_analogy)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">str_detect</span>(analogy,<span class="st">&quot;^[^</span><span class="ch">\\</span><span class="st">:]&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-3" data-line-number="3"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw">separate</span>(analogy, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;w1&quot;</span>,<span class="st">&quot;w2&quot;</span>,<span class="st">&quot;w3&quot;</span>,<span class="st">&quot;w4&quot;</span>))</a>
-<a class="sourceLine" id="cb276-4" data-line-number="4"> </a>
-<a class="sourceLine" id="cb276-5" data-line-number="5"><span class="co"># random sample</span></a>
-<a class="sourceLine" id="cb276-6" data-line-number="6"><span class="kw">set.seed</span>(<span class="dv">12</span>)</a>
-<a class="sourceLine" id="cb276-7" data-line-number="7">words &lt;-<span class="st"> </span>google_analogy_df <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-8" data-line-number="8"><span class="st">  </span><span class="kw">sample_n</span>(<span class="dv">20</span>,<span class="dt">replace =</span> F) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-9" data-line-number="9"><span class="st">  </span>unlist <span class="op">%&gt;%</span><span class="st"> </span>as.vector</a>
-<a class="sourceLine" id="cb276-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb276-11" data-line-number="11"><span class="co"># Include only seen cases</span></a>
-<a class="sourceLine" id="cb276-12" data-line-number="12">words_seen &lt;-words[words <span class="op">%in%</span><span class="st"> </span><span class="kw">row.names</span>(word_vectors)] <span class="op">%&gt;%</span><span class="st"> </span>unique</a>
-<a class="sourceLine" id="cb276-13" data-line-number="13">tsne &lt;-<span class="st"> </span><span class="kw">Rtsne</span>(word_vectors[words_seen,], <span class="dt">perplexity =</span> (<span class="kw">length</span>(words_seen)<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">3</span> , <span class="dt">pca =</span> <span class="ot">FALSE</span>) <span class="co">#</span></a>
-<a class="sourceLine" id="cb276-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb276-15" data-line-number="15">tsne_df &lt;-<span class="st"> </span>tsne<span class="op">$</span>Y <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-16" data-line-number="16"><span class="st">    </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb276-17" data-line-number="17"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">word =</span> words_seen)</a>
-<a class="sourceLine" id="cb276-18" data-line-number="18">  </a>
-<a class="sourceLine" id="cb276-19" data-line-number="19">tsne_df</a></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb316-1" data-line-number="1">google_analogy_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">analogy =</span> <span class="kw">str_to_lower</span>(google_analogy)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">str_detect</span>(analogy,<span class="st">&quot;^[^</span><span class="ch">\\</span><span class="st">:]&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-3" data-line-number="3"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw">separate</span>(analogy, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;w1&quot;</span>,<span class="st">&quot;w2&quot;</span>,<span class="st">&quot;w3&quot;</span>,<span class="st">&quot;w4&quot;</span>))</a>
+<a class="sourceLine" id="cb316-4" data-line-number="4"> </a>
+<a class="sourceLine" id="cb316-5" data-line-number="5"><span class="co"># random sample</span></a>
+<a class="sourceLine" id="cb316-6" data-line-number="6"><span class="kw">set.seed</span>(<span class="dv">12</span>)</a>
+<a class="sourceLine" id="cb316-7" data-line-number="7">words &lt;-<span class="st"> </span>google_analogy_df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-8" data-line-number="8"><span class="st">  </span><span class="kw">sample_n</span>(<span class="dv">20</span>,<span class="dt">replace =</span> F) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-9" data-line-number="9"><span class="st">  </span>unlist <span class="op">%&gt;%</span><span class="st"> </span>as.vector</a>
+<a class="sourceLine" id="cb316-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb316-11" data-line-number="11"><span class="co"># Include only seen cases</span></a>
+<a class="sourceLine" id="cb316-12" data-line-number="12">words_seen &lt;-words[words <span class="op">%in%</span><span class="st"> </span><span class="kw">row.names</span>(word_vectors)] <span class="op">%&gt;%</span><span class="st"> </span>unique</a>
+<a class="sourceLine" id="cb316-13" data-line-number="13">tsne &lt;-<span class="st"> </span><span class="kw">Rtsne</span>(word_vectors[words_seen,], <span class="dt">perplexity =</span> (<span class="kw">length</span>(words_seen)<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">3</span> , <span class="dt">pca =</span> <span class="ot">FALSE</span>) <span class="co">#</span></a>
+<a class="sourceLine" id="cb316-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb316-15" data-line-number="15">tsne_df &lt;-<span class="st"> </span>tsne<span class="op">$</span>Y <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-16" data-line-number="16"><span class="st">    </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb316-17" data-line-number="17"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">word =</span> words_seen)</a>
+<a class="sourceLine" id="cb316-18" data-line-number="18">  </a>
+<a class="sourceLine" id="cb316-19" data-line-number="19">tsne_df</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["V1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["V2"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["word"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1.0320202","2":"-2.78923344","3":"tirana"},{"1":"-2.8723453","2":"-4.70793107","3":"color"},{"1":"-3.2592041","2":"1.13127626","3":"hard"},{"1":"0.8016131","2":"-1.91677944","3":"hanoi"},{"1":"-0.7613320","2":"-1.83449888","3":"smart"},{"1":"-5.7372332","2":"1.33359568","3":"most"},{"1":"2.1897991","2":"-0.54602990","3":"bucharest"},{"1":"1.2418407","2":"-2.61182348","3":"accra"},{"1":"-0.1338725","2":"-0.94719512","3":"banana"},{"1":"3.7153647","2":"-2.71522140","3":"kingston"},{"1":"-1.5818750","2":"0.23645491","3":"cool"},{"1":"2.4199788","2":"-0.04963245","3":"toledo"},{"1":"5.1786498","2":"2.06864178","3":"austria"},{"1":"-2.3348593","2":"-0.97501612","3":"generate"},{"1":"1.3754313","2":"1.62885136","3":"baltimore"},{"1":"-2.0357411","2":"2.21270527","3":"read"},{"1":"3.5573735","2":"3.53077572","3":"australia"},{"1":"-4.3296993","2":"3.70348120","3":"child"},{"1":"3.2448563","2":"-0.55503143","3":"madrid"},{"1":"-5.8994714","2":"-0.84088253","3":"high"},{"1":"4.9386610","2":"0.20698101","3":"albania"},{"1":"-2.8488490","2":"-4.64861235","3":"colors"},{"1":"-3.1567144","2":"-0.82267780","3":"harder"},{"1":"5.6205876","2":"-0.79986511","3":"vietnam"},{"1":"-0.7444330","2":"-3.13032777","3":"smarter"},{"1":"-4.9747232","2":"0.93048700","3":"mostly"},{"1":"5.6985853","2":"1.21086295","3":"romania"},{"1":"4.6563494","2":"-0.34669563","3":"ghana"},{"1":"0.5468968","2":"-4.28233947","3":"bananas"},{"1":"3.8021915","2":"-2.63717084","3":"jamaica"},{"1":"-2.1193576","2":"-2.47223822","3":"cooler"},{"1":"2.2269052","2":"0.91376895","3":"ohio"},{"1":"1.8499708","2":"3.88611851","3":"austrian"},{"1":"-1.8488363","2":"-1.16533758","3":"generates"},{"1":"1.6823424","2":"1.54232799","3":"maryland"},{"1":"-2.0084245","2":"2.17298860","3":"reading"},{"1":"2.7796803","2":"4.08230835","3":"australian"},{"1":"-4.2753476","2":"3.62315858","3":"children"},{"1":"4.8062188","2":"2.13836681","3":"spain"},{"1":"-5.5224621","2":"-1.71960792","3":"highest"},{"1":"3.6631570","2":"0.51329782","3":"athens"},{"1":"-0.3867733","2":"-1.13278859","3":"rat"},{"1":"-1.5931627","2":"0.33720947","3":"cold"},{"1":"1.7779520","2":"-0.64553248","3":"ottawa"},{"1":"-5.4299930","2":"0.47569655","3":"small"},{"1":"-3.3715738","2":"0.04868309","3":"slow"},{"1":"0.1740041","2":"-2.92594288","3":"harare"},{"1":"1.5913115","2":"-1.36189507","3":"algiers"},{"1":"-3.8526794","2":"2.06164590","3":"hand"},{"1":"0.9642661","2":"-0.29910227","3":"montevideo"},{"1":"-2.7397469","2":"3.72524753","3":"great"},{"1":"1.8200928","2":"-3.93090229","3":"tacoma"},{"1":"3.7926106","2":"2.75225634","3":"england"},{"1":"-1.1512803","2":"2.64568693","3":"speak"},{"1":"2.4692174","2":"-2.01765568","3":"anchorage"},{"1":"-2.9153016","2":"-1.37026330","3":"decrease"},{"1":"4.6704190","2":"1.08277472","3":"greece"},{"1":"3.5664564","2":"2.00159504","3":"rome"},{"1":"-4.4848115","2":"-3.05453974","3":"big"},{"1":"-0.1924767","2":"-1.81055566","3":"rats"},{"1":"-2.0243858","2":"-2.60291039","3":"colder"},{"1":"3.6387974","2":"3.53503099","3":"canada"},{"1":"-5.3559406","2":"0.37177005","3":"smaller"},{"1":"-3.3651634","2":"-0.54969450","3":"slowly"},{"1":"4.3169531","2":"-1.50255074","3":"zimbabwe"},{"1":"4.3331379","2":"-0.55272881","3":"algeria"},{"1":"-3.8444442","2":"2.07193832","3":"hands"},{"1":"1.1049886","2":"0.05625685","3":"uruguay"},{"1":"-4.2445747","2":"-1.06564383","3":"greater"},{"1":"1.8211156","2":"2.11661802","3":"washington"},{"1":"-0.4090396","2":"4.08608613","3":"english"},{"1":"-0.7999700","2":"1.85294770","3":"speaks"},{"1":"2.5398527","2":"-1.88624774","3":"alaska"},{"1":"-3.1879350","2":"-1.42351950","3":"decreasing"},{"1":"0.2436583","2":"4.16250767","3":"greek"},{"1":"4.7992463","2":"2.11365417","3":"italy"},{"1":"-4.8585201","2":"-1.91743276","3":"biggest"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" data-line-number="1">tsne_df <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb277-2" data-line-number="2"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> V1, <span class="dt">y =</span> V2, <span class="dt">label =</span> word)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb277-3" data-line-number="3"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="fl">0.7</span>, <span class="dt">alpha =</span> <span class="fl">0.7</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb277-4" data-line-number="4"><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">family =</span> <span class="st">&quot;Arial Unicode MS&quot;</span>, <span class="dt">vjust =</span> <span class="fl">1.4</span>, <span class="dt">angle =</span> <span class="dv">0</span>) <span class="op">+</span><span class="st"> </span><span class="co"># </span></a>
-<a class="sourceLine" id="cb277-5" data-line-number="5"><span class="st">    </span><span class="co">#scale_x_continuous(expand= expansion(add=10)) +</span></a>
-<a class="sourceLine" id="cb277-6" data-line-number="6"><span class="st">    </span><span class="co">#scale_y_continuous(expand= expansion(add=50)) +</span></a>
-<a class="sourceLine" id="cb277-7" data-line-number="7"><span class="st">    </span><span class="kw">scale_color_discrete</span>(<span class="dt">guide=</span>F) <span class="op">+</span></a>
-<a class="sourceLine" id="cb277-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>()-&gt;<span class="st"> </span>tsne_plot</a>
-<a class="sourceLine" id="cb277-9" data-line-number="9">tsne_plot</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-279-1.png" width="672" /></p>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1">tsne_df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb317-2" data-line-number="2"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> V1, <span class="dt">y =</span> V2, <span class="dt">label =</span> word)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb317-3" data-line-number="3"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="fl">0.7</span>, <span class="dt">alpha =</span> <span class="fl">0.7</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb317-4" data-line-number="4"><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">family =</span> <span class="st">&quot;Arial Unicode MS&quot;</span>, <span class="dt">vjust =</span> <span class="fl">1.4</span>, <span class="dt">angle =</span> <span class="dv">0</span>) <span class="op">+</span><span class="st"> </span><span class="co"># </span></a>
+<a class="sourceLine" id="cb317-5" data-line-number="5"><span class="st">    </span><span class="co">#scale_x_continuous(expand= expansion(add=10)) +</span></a>
+<a class="sourceLine" id="cb317-6" data-line-number="6"><span class="st">    </span><span class="co">#scale_y_continuous(expand= expansion(add=50)) +</span></a>
+<a class="sourceLine" id="cb317-7" data-line-number="7"><span class="st">    </span><span class="kw">scale_color_discrete</span>(<span class="dt">guide=</span>F) <span class="op">+</span></a>
+<a class="sourceLine" id="cb317-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>()-&gt;<span class="st"> </span>tsne_plot</a>
+<a class="sourceLine" id="cb317-9" data-line-number="9">tsne_plot</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-319-1.png" width="672" /></p>
 <div class="info">
 <p>
 An overview of tasks in Chinese NLP: See <a href="https://chinesenlp.xyz/">Chinese NLP</a>
@@ -460,11 +475,11 @@ An overview of tasks in Chinese NLP: See <a href="https://chinesenlp.xyz/">Chine
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-281" class="exercise"><strong>Exercise 14.1  </strong></span>Use the <code>word_vectors</code> trained in this chapter and visualize the semantic distances of the words included in <code>country</code> below with the t-SNE multi-dimensional scaling techique. (Parameters: <code>perplexity = 2.5</code>)
+<span id="exr:unnamed-chunk-321" class="exercise"><strong>Exercise 14.1  </strong></span>Use the <code>word_vectors</code> trained in this chapter and visualize the semantic distances of the words included in <code>country</code> below with the t-SNE multi-dimensional scaling techique. (Parameters: <code>perplexity = 2.5</code>)
 </div>
 
-<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb278-1" data-line-number="1">country &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;germany&quot;</span>, <span class="st">&quot;berlin&quot;</span>, <span class="st">&quot;france&quot;</span>, <span class="st">&quot;paris&quot;</span>, <span class="st">&quot;china&quot;</span>, <span class="st">&quot;beijing&quot;</span>, <span class="st">&quot;taiwan&quot;</span>,<span class="st">&quot;taipei&quot;</span>, <span class="st">&quot;england&quot;</span>,<span class="st">&quot;london&quot;</span>, <span class="st">&quot;netherlands&quot;</span>,<span class="st">&quot;amsterdam&quot;</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-283-1.png" width="672" /></p>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1">country &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;germany&quot;</span>, <span class="st">&quot;berlin&quot;</span>, <span class="st">&quot;france&quot;</span>, <span class="st">&quot;paris&quot;</span>, <span class="st">&quot;china&quot;</span>, <span class="st">&quot;beijing&quot;</span>, <span class="st">&quot;taiwan&quot;</span>,<span class="st">&quot;taipei&quot;</span>, <span class="st">&quot;england&quot;</span>,<span class="st">&quot;london&quot;</span>, <span class="st">&quot;netherlands&quot;</span>,<span class="st">&quot;amsterdam&quot;</span>)</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-323-1.png" width="672" /></p>
 
 </div>
 </div>

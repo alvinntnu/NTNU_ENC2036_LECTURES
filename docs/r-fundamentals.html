@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-03-18" />
+<meta name="date" content="2020-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,7 @@
 <script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
 <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
 <script src="libs/wordcloud2-0.0.1/hover.js"></script>
@@ -195,13 +196,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a><ul>
 <li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#installing-the-package"><i class="fa fa-check"></i><b>5.1</b> Installing the Package</a></li>
 <li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-text"><i class="fa fa-check"></i><b>5.3</b> Parsing Your Text</a></li>
-<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.4</b> Metalingusitic Analysis</a></li>
-<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.5</b> Construction Analysis</a></li>
-<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.6</b> Saving POS-tagged Texts</a></li>
-<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.7</b> Finalize spaCy</a></li>
+<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.3</b> Working Pipeline</a></li>
+<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-text"><i class="fa fa-check"></i><b>5.4</b> Parsing Your Text</a></li>
+<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.5</b> Metalingusitic Analysis</a></li>
+<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.6</b> Construction Analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.7</b> Issues on Pattern Retrieval</a></li>
+<li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.8</b> Saving POS-tagged Texts</a></li>
+<li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.9</b> Finalize spaCy</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#about-keywords"><i class="fa fa-check"></i><b>6.1</b> About Keywords</a></li>
+<li class="chapter" data-level="6.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#statistics-for-keyness"><i class="fa fa-check"></i><b>6.2</b> Statistics for Keyness</a></li>
+<li class="chapter" data-level="6.3" data-path="keyword-analysis.html"><a href="keyword-analysis.html#implementation"><i class="fa fa-check"></i><b>6.3</b> Implementation</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>7</b> Constructions and Idioms</a><ul>
 <li class="chapter" data-level="7.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#chinese-four-character-idioms"><i class="fa fa-check"></i><b>7.1</b> Chinese Four-character Idioms</a></li>
 <li class="chapter" data-level="7.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#dictionary-entries"><i class="fa fa-check"></i><b>7.2</b> Dictionary Entries</a></li>
@@ -219,9 +226,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminder"><i class="fa fa-check"></i><b>8.1.7</b> Reminder</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>8.2</b> Chinese Text Analytics Pipeline</a></li>
-<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.3</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.4</b> Case Study 2: Patterns</a></li>
-<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.5</b> Case Study 3: Lexical Bundles</a></li>
+<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>8.3</b> Loading Text Data</a></li>
+<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.4</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.5</b> Case Study 2: Patterns</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#define-own-tokenization-functions"><i class="fa fa-check"></i><b>8.5.1</b> Define Own Tokenization Functions</a></li>
+<li class="chapter" data-level="8.5.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#transform-text-based-to-token-based-data-frame"><i class="fa fa-check"></i><b>8.5.2</b> Transform Text-Based to Token-Based Data Frame</a></li>
+<li class="chapter" data-level="8.5.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>8.5.3</b> BEI Construction</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.6</b> Case Study 3: Lexical Bundles</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>8.6.1</b> N-grams Extraction</a></li>
+<li class="chapter" data-level="8.6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>8.6.2</b> Frequency and Dispersion</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a><ul>
 <li class="chapter" data-level="9.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>9.1</b> Installation</a></li>
