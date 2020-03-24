@@ -117,8 +117,8 @@ div.color-theme-2 .book-body .page-wrapper .page-inner section.normal strong cod
 }
 
 .warning {
-  background-image: url("images/alerts/warning.svg");
-  background-color: hsla(49, 87%, 70%, .1);
+  background-image: url("images/alerts/exclamation-triangle-solid.svg");
+  background-color: #FFFBB5;/*hsla(49, 87%, 70%, .1);*/
   border: 1px solid var(--yellow);
 }
 
