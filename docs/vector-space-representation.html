@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Vector Space Representation | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Vector Space Representation | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-03-25" />
+<meta name="date" content="2020-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,18 +52,10 @@
 
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.5/grViz.js"></script>
-<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
-<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
-<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
-<script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -198,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#installing-the-package"><i class="fa fa-check"></i><b>5.1</b> Installing the Package</a></li>
 <li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a></li>
 <li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.3</b> Working Pipeline</a></li>
-<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-text"><i class="fa fa-check"></i><b>5.4</b> Parsing Your Text</a></li>
+<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-texts"><i class="fa fa-check"></i><b>5.4</b> Parsing Your Texts</a></li>
 <li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalingusitic-analysis"><i class="fa fa-check"></i><b>5.5</b> Metalingusitic Analysis</a></li>
 <li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.6</b> Construction Analysis</a></li>
 <li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.7</b> Issues on Pattern Retrieval</a></li>
@@ -236,15 +228,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>8.2</b> Chinese Text Analytics Pipeline</a></li>
 <li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>8.3</b> Loading Text Data</a></li>
-<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.4</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.5</b> Case Study 2: Patterns</a><ul>
-<li class="chapter" data-level="8.5.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#define-own-tokenization-functions"><i class="fa fa-check"></i><b>8.5.1</b> Define Own Tokenization Functions</a></li>
-<li class="chapter" data-level="8.5.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#transform-text-based-to-token-based-data-frame"><i class="fa fa-check"></i><b>8.5.2</b> Transform Text-Based to Token-Based Data Frame</a></li>
-<li class="chapter" data-level="8.5.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>8.5.3</b> BEI Construction</a></li>
+<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quantedatokens-vs.-jiebarsegment"><i class="fa fa-check"></i><b>8.4</b> <code>quanteda::tokens()</code> vs. <code>jiebaR::segment()</code></a></li>
+<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.5</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="8.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.6</b> Case Study 2: Patterns</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#define-own-tokenization-functions"><i class="fa fa-check"></i><b>8.6.1</b> Define Own Tokenization Functions</a></li>
+<li class="chapter" data-level="8.6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#transform-text-based-to-token-based-data-frame"><i class="fa fa-check"></i><b>8.6.2</b> Transform Text-Based to Token-Based Data Frame</a></li>
+<li class="chapter" data-level="8.6.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>8.6.3</b> BEI Construction</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.6</b> Case Study 3: Lexical Bundles</a><ul>
-<li class="chapter" data-level="8.6.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>8.6.1</b> N-grams Extraction</a></li>
-<li class="chapter" data-level="8.6.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>8.6.2</b> Frequency and Dispersion</a></li>
+<li class="chapter" data-level="8.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.7</b> Case Study 3: Lexical Bundles</a><ul>
+<li class="chapter" data-level="8.7.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>8.7.1</b> N-grams Extraction</a></li>
+<li class="chapter" data-level="8.7.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>8.7.2</b> Frequency and Dispersion</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a><ul>
@@ -287,25 +280,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>11.3.1</b> Text Metadata</a></li>
 <li class="chapter" data-level="11.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>11.3.2</b> Speaker Metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>11.4</b> BNC2014 for Socialinguistic Variation</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>11.4.1</b> Word Frequency vs. Gender</a></li>
-<li class="chapter" data-level="11.4.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>11.4.2</b> Degree ADV + ADJ</a></li>
-<li class="chapter" data-level="11.4.3" data-path="xml.html"><a href="xml.html#trigrams"><i class="fa fa-check"></i><b>11.4.3</b> Trigrams</a></li>
+<li class="chapter" data-level="11.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>11.4</b> BNC2014 for Socialinguistic Variation</a></li>
+<li class="chapter" data-level="11.5" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>11.5</b> Word Frequency vs. Gender</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="xml.html"><a href="xml.html#preprocessing"><i class="fa fa-check"></i><b>11.5.1</b> Preprocessing</a></li>
+<li class="chapter" data-level="11.5.2" data-path="xml.html"><a href="xml.html#target-structures"><i class="fa fa-check"></i><b>11.5.2</b> Target Structures</a></li>
+<li class="chapter" data-level="11.5.3" data-path="xml.html"><a href="xml.html#analysis"><i class="fa fa-check"></i><b>11.5.3</b> Analysis</a></li>
 </ul></li>
+<li class="chapter" data-level="11.6" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>11.6</b> Degree ADV + ADJ</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>12</b> Vector Space Representation</a><ul>
 <li class="chapter" data-level="12.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>12.1</b> Data Processing Flowchart</a></li>
 <li class="chapter" data-level="12.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>12.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#defining-feature-in-dfm"><i class="fa fa-check"></i><b>12.3</b> Defining <code>Feature</code> in <code>dfm</code></a></li>
-<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.4</b> Feature Selection</a><ul>
-<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>12.4.1</b> Determining Linguistic Granularity</a></li>
-<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>12.4.2</b> Stopwords</a></li>
-<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>12.4.3</b> Distributional Cut-offs for Features</a></li>
+<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#corpus"><i class="fa fa-check"></i><b>12.3</b> Corpus</a></li>
+<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm-1"><i class="fa fa-check"></i><b>12.4</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
+<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-hypothesis-and-distancesimilarity-metrics"><i class="fa fa-check"></i><b>12.5</b> Distributional Hypothesis and Distance/Similarity Metrics</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distance-based-metrics"><i class="fa fa-check"></i><b>12.5.1</b> Distance-based Metrics</a></li>
+<li class="chapter" data-level="12.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#similarity-based-metrics"><i class="fa fa-check"></i><b>12.5.2</b> Similarity-based Metrics</a></li>
+<li class="chapter" data-level="12.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#interim-summary"><i class="fa fa-check"></i><b>12.5.3</b> Interim Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>12.5</b> Applying DFM</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>12.5.1</b> Wordcloud</a></li>
-<li class="chapter" data-level="12.5.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.5.2</b> Document Similarity</a></li>
-<li class="chapter" data-level="12.5.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>12.5.3</b> Feature Similarity</a></li>
+<li class="chapter" data-level="12.6" data-path="vector-space-representation.html"><a href="vector-space-representation.html#multidimensiona-space"><i class="fa fa-check"></i><b>12.6</b> Multidimensiona Space</a></li>
+<li class="chapter" data-level="12.7" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.7</b> Feature Selection</a><ul>
+<li class="chapter" data-level="12.7.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#determining-linguistic-granularity"><i class="fa fa-check"></i><b>12.7.1</b> Determining Linguistic Granularity</a></li>
+<li class="chapter" data-level="12.7.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#stopwords-1"><i class="fa fa-check"></i><b>12.7.2</b> Stopwords</a></li>
+<li class="chapter" data-level="12.7.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-cut-offs-for-features"><i class="fa fa-check"></i><b>12.7.3</b> Distributional Cut-offs for Features</a></li>
+</ul></li>
+<li class="chapter" data-level="12.8" data-path="vector-space-representation.html"><a href="vector-space-representation.html#applying-dfm"><i class="fa fa-check"></i><b>12.8</b> Applying DFM</a><ul>
+<li class="chapter" data-level="12.8.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#wordcloud"><i class="fa fa-check"></i><b>12.8.1</b> Wordcloud</a></li>
+<li class="chapter" data-level="12.8.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.8.2</b> Document Similarity</a></li>
+<li class="chapter" data-level="12.8.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-similarity"><i class="fa fa-check"></i><b>12.8.3</b> Feature Similarity</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="vector-space-representation-ii.html"><a href="vector-space-representation-ii.html"><i class="fa fa-check"></i><b>13</b> Vector Space Representation II</a><ul>
@@ -353,40 +355,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="vector-space-representation" class="section level1">
 <h1><span class="header-section-number">Chapter 12</span> Vector Space Representation</h1>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb277-2" data-line-number="2"><span class="kw">library</span>(quanteda)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(quanteda)</a></code></pre></div>
+<p>In this chapter, I would like to talk about the idea of <strong>distributional semantics</strong>, which features the hypothesis that the meaning of a linguistic unit is closely connected to its co-occurring contexts (co-texts). I will show you how this idea can be operationalized and quantified using the distributional data of the linguistic units in the corpus.</p>
+<p>Because English and Chinese text processing requires slightly different procedures, this chapter will first focus on English texts.</p>
 <div id="data-processing-flowchart" class="section level2">
 <h2><span class="header-section-number">12.1</span> Data Processing Flowchart</h2>
+<p>In Chapter <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">5</a>, I have provided a data processing flowchart for the English texts. Here I would like to add to the flowchart several follow-up steps with respect to the vector-based representation of semantic.</p>
+<p>Most importantly, a new object class is introduced in Figure <a href="vector-space-representation.html#fig:engnlp2">12.1</a>, i.e., the <code>dfm</code> object in <code>quanteda</code>. It stands for <strong>Document-Feature-Matrix</strong>. It’s a two-dimensional co-occurrence table, with the rows being the documents in the corpus, and columns being the features used to characterizing the documents. The cells in the matrix often refer to the <em>co-occurrence statistics</em> between each document and the feature.</p>
+<p>Different ways of operationalizing the <strong>features</strong> and the <strong>cell values</strong> may lead to different types of <code>dfm</code>. In this chapter, I would like to show you how we create a <code>dfm</code> of a corpus and what are the common ways to define <strong>features</strong> and <strong>cell valus</strong> for the analysis of semantics via vector space representation.</p>
 <hr />
-<p><img src="images/r-nlp-workflow.png" width="90%" /></p>
+<div class="figure"><span id="fig:engnlp2"></span>
+<div id="htmlwidget-9f6c20754794af525d51" style="width:100%;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9f6c20754794af525d51">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()/dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\n\n\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\nb -> b2 -> b21\nb -> b3 -> b31\n\nb -> b4 -> e -> e1 -> f\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 12.1: English Text Analytics Flowchart (v2)
+</p>
+</div>
 <hr />
 </div>
 <div id="document-feature-matrix-dfm" class="section level2">
 <h2><span class="header-section-number">12.2</span> Document-Feature Matrix (<code>dfm</code>)</h2>
-<p>Two ways to create <strong>D</strong>cument-<strong>F</strong>eature-<strong>M</strong>atrix:</p>
+<p>To create a <code>dfm</code>, i.e., <strong>D</strong>cument-<strong>F</strong>eature-<strong>M</strong>atrix, <code>quanteda</code> provides two alterantives:</p>
 <ul>
 <li>create <code>dfm</code> based on an <code>corpus</code> object</li>
 <li>create <code>dfm</code> based on an <code>token</code> object</li>
 </ul>
-<p>For English data, <code>quanteda</code> can take care of the word tokenization fairly well so you can create <code>dfm</code> directly from <code>corpus</code>.</p>
-<p>However, for Chinese data, it is suggested to create your own corpus <code>token</code> object first, and then feed it to <code>dfm()</code> to create <code>dfm</code> for your corpus.</p>
-<p>In this section, we demonstrate the document-feature-matrix using the English data we discussed in Chapter <a href="#tokenization"><strong>??</strong></a>, the <code>data_corpus_inaugural</code> preloaded in the library <code>quanteda</code>.</p>
-<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb278-1" data-line-number="1">corp_us &lt;-<span class="st"> </span>data_corpus_inaugural</a>
-<a class="sourceLine" id="cb278-2" data-line-number="2">corp_us_dfm &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span>dfm</a></code></pre></div>
+<p>For English data, <code>quanteda</code> can take care of the word tokenization fairly well so you can create <code>dfm</code> directly from <code>corpus</code> (See Figure <a href="vector-space-representation.html#fig:engnlp2">12.1</a>)</p>
+<div class="danger">
+<p>
+In Chapter <span class="citation">(<span class="citeproc-not-found" data-reference-id="ref"><strong>???</strong></span>)</span>(chinese-text-processing), we stress that the default tokenization method in <code>quanteda</code> with Chinese data may be limited in several ways. In order to create a <code>dfm</code> that takes into account the appropriateness of the Chinese word segmentation, I would highly recommend you to first create a<code>tokens</code> object using the self-defined word segmentation methods, and then feed it to <code>dfm()</code> to create the <code>dfm</code> for your corpus. In this way, the <code>dfm</code> will use the segmented results defined by your word segmenter.
+</p>
+<p>
+In other words, with Chinese data, probably it is not really necessary to have a <code>corpus</code> object; rather, a <code>token</code> object of the corpus might be more useful/practical. (In <code>quanteda</code>, most of the functions for <code>corpus</code> can be applied to <code>tokens</code> as well, e.g., <code>kwic()</code>, <code>dfm()</code>)
+</p>
+</div>
+</div>
+<div id="corpus" class="section level2">
+<h2><span class="header-section-number">12.3</span> Corpus</h2>
+<p>In this chapter, I will use the same English dataset we discussed in Chapter <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">5</a>, the <code>data_corpus_inaugural</code> preloaded in the package <code>quanteda</code>.</p>
 <p>For English data, the process is simple: we first load the corpus and create a <code>dfm</code> object of the corpus using <code>dfm()</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">corp_us &lt;-<span class="st"> </span>data_corpus_inaugural</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">corp_us_dfm &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span>dfm</a></code></pre></div>
 <div class="danger">
 <p>
 Please note that the default <code>data_corpus_inaugural</code> preloaded with <code>quanteda</code> is a <code>corpus</code> object already.
 </p>
 </div>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb279-1" data-line-number="1"><span class="kw">class</span>(data_corpus_inaugural)</a></code></pre></div>
-<pre><code>## [1] &quot;corpus&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">class</span>(data_corpus_inaugural)</a></code></pre></div>
+<pre><code>## [1] &quot;corpus&quot;    &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">class</span>(corp_us)</a></code></pre></div>
+<pre><code>## [1] &quot;corpus&quot;    &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">class</span>(corp_us_dfm)</a></code></pre></div>
+<pre><code>## [1] &quot;dfm&quot;
+## attr(,&quot;package&quot;)
+## [1] &quot;quanteda&quot;</code></pre>
 </div>
-<div id="defining-feature-in-dfm" class="section level2">
-<h2><span class="header-section-number">12.3</span> Defining <code>Feature</code> in <code>dfm</code></h2>
+<div id="document-feature-matrix-dfm-1" class="section level2">
+<h2><span class="header-section-number">12.4</span> Document-Feature Matrix (<code>dfm</code>)</h2>
 <p>What is <code>dfm</code> anyway? A document-feature-matrix is no different from a spead-sheet like table. In a <code>dfm</code>, each row refers to a document in the corpus, and the column refers to a linguistic unit that occurs in the document(s). If the linguistic unit you are interested in is a word, then this is a document-word-matrix, with the columns referring to all the words observed in the corpus, i.e., the <em>vocabulary</em> of the corpus. If the linguistic unit you are interested in is an n-gram, then this is a document-ngram-matrix, with the columns referring to all the n-grams observed in the corpus.</p>
 <p>What about the cells? What values are usually stored in the matrix? The most intuitive values in the cells are the co-occurrence frequencies, i.e., the number of occurrences of the linguistic unit (i.e., column) in a particular document (i.e., row). For example, in the following example, we can see that in the first document, i.e., <em>1789-Washington</em>, there are <em>2</em> occurrences of <em>representatives</em>, <em>48</em> occurrences of <em>and</em></p>
-<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb281-1" data-line-number="1">corp_us_dfm[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">corp_us_dfm[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## Document-feature matrix of: 10 documents, 10 features (43.0% sparse) and 4 docvars.
 ##                  features
 ## docs              fellow-citizens  of the senate and house representatives :
@@ -405,6 +434,12 @@ Please note that the default <code>data_corpus_inaugural</code> preloaded with <
 ##   1805-Jefferson      7            0
 ##   1809-Madison        0            0
 ## [ reached max_ndoc ... 4 more documents ]</code></pre>
+<p>A <code>dfm</code> with words as the features is the simplest way to characterize the texts in the corpus, namely, to analyze the semantics of the documents by looking at the words occurring in the documents. This document-by-word matrix treats each text as <strong>bags of words</strong>. In other words, how the words are arranged relative to each other is ignored (i.e., the morphosyntactic relationships between words in texts are greatly ignored). Therefore, this document-by-word <code>dfm</code> should be a naive characterization of the texts.</p>
+<p>In many computational tasks, however, it turns out that this simple <strong>bag-of-words</strong> model is very effective in modeling the semantics of the documents.</p>
+</div>
+<div id="distributional-hypothesis-and-distancesimilarity-metrics" class="section level2">
+<h2><span class="header-section-number">12.5</span> Distributional Hypothesis and Distance/Similarity Metrics</h2>
+<p>The effectiveness of the <code>dfm</code> in semantic analysis lies in one important hypoethesis shared in the corpus linguistic community: distributional hypothesis.</p>
 <p>Distributional properties like co-occurrences are very important information in corpus linguistics. Most of the studies in corpus linguistics adopt an implicit distributional hypothesis, which can be illustrated by a few famous quotes:</p>
 <blockquote>
 <p>You shall know a word by the comany it keeps. <span> (Firth, 1957, p.11) </span></p>
@@ -415,16 +450,77 @@ Please note that the default <code>data_corpus_inaugural</code> preloaded with <
 <blockquote>
 <p>The meaning of a [construction] in the network is represented by how it is linked to other words and how these are interlinked themselves <span>(De Deyne et al. 2016)</span></p>
 </blockquote>
-<p>So in our current context, the idea is that if two documents have similar sets of linguistic units popping up in them, they are more likely to be similar in meaning as well. The advantage of creating a document-feature-matrix is that now each document is not only a series of character strings, but also a list of numeric values (i.e., a row of co-occurring frequencies), which can be compared mathematically with other documents (i.e., other rows). This is essentially a vector computation (cf. Figure <a href="vector-space-representation.html#fig:dfmdemo">12.1</a>): the document in each row is represented as a vector of <em>N</em> dimensional space. The size of <em>N</em> depends on the number of linguistic units that are included in the analysis.</p>
+<p>So in our current context, the idea is that if two documents have similar sets of linguistic units popping up in them, they are more likely to be similar in their semantics as well.</p>
+<p>The advantage of creating a document-feature-matrix is that now each document is not only a series of <strong>character</strong> strings, but also a list of <strong>numeric</strong> values (i.e., a row of co-occurring frequencies), which can be compared mathematically with other documents (i.e., other rows).</p>
+<p>Take a two-dimensional space for instance. If we have vectors on this space, we can compute their distance/similarity mathematically:</p>
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-9-1.png" alt="Vector Representation" width="672" />
+<p class="caption">
+Figure 12.2: Vector Representation
+</p>
+</div>
+<p>In Math, there are in general two types of metrics to measure the relationship between vectors: <strong>distance</strong>-based vs. <strong>similarity</strong>-based metrics.</p>
+<div id="distance-based-metrics" class="section level3">
+<h3><span class="header-section-number">12.5.1</span> Distance-based Metrics</h3>
+<p>Many distance measures of vectors are based on the following formula and differ in individual parameter settings.</p>
+<p><span class="math display">\[\big( \sum_{i = 1}^{n}{|x_i - y_i|^y}\big)^{\frac{1}{y}}\]</span></p>
+<p>The <em>n</em> in the above formula refers to the number of dimensions of the vectors. (In other words, all the concepts we discuss here can be easily extended to vectors in multidimensional spaces.)</p>
+<p>When <em>y</em> is set to 2, it computes the famous <strong>Euclidean distance</strong> of two vectors, i.e., the direct spatial distance between two points on the <em>n</em>-dimensional space.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">9</span>)</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw">sum</span>(<span class="kw">abs</span>(x<span class="op">-</span>y)<span class="op">^</span><span class="dv">2</span>)<span class="op">^</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>) <span class="co"># XY distance</span></a></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">sum</span>(<span class="kw">abs</span>(y<span class="op">-</span>z)<span class="op">^</span><span class="dv">2</span>)<span class="op">^</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>) <span class="co"># YZ distnace</span></a></code></pre></div>
+<pre><code>## [1] 4.472136</code></pre>
+<p>The geometrical meanings of the Euclidean distance are easy to conceptualize (c.f., the dashed lines in Figure <a href="vector-space-representation.html#fig:distance">12.3</a>)</p>
+<div class="figure"><span id="fig:distance"></span>
+<img src="CorpusLinguistics_bookdown_files/figure-html/distance-1.png" alt="Distance-based Metric: Euclidean Distance" width="100%" />
+<p class="caption">
+Figure 12.3: Distance-based Metric: Euclidean Distance
+</p>
+</div>
+</div>
+<div id="similarity-based-metrics" class="section level3">
+<h3><span class="header-section-number">12.5.2</span> Similarity-based Metrics</h3>
+<p>In addition to distance-based metrics, the other type is similarity-based metric, which often utilizes the idea of correlations. The most commonly used one is <strong>Cosine Similarity</strong>, which can be computed as follows:</p>
+<p><span class="math display">\[cos(\vec{x},\vec{y}) = \frac{\sum_{i=1}^{n}{x_i\times y_i}}{\sqrt{\sum_{i=1}^{n}x_i^2}\times \sqrt{\sum_{i=1}^{n}y_i^2}}\]</span></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">sum</span>(x<span class="op">*</span>y)<span class="op">/</span>(<span class="kw">sqrt</span>(<span class="kw">sum</span>(x<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sqrt</span>(<span class="kw">sum</span>(y<span class="op">^</span><span class="dv">2</span>))) <span class="co"># xy</span></a></code></pre></div>
+<pre><code>## [1] 0.9778024</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">sum</span>(y<span class="op">*</span>z)<span class="op">/</span>(<span class="kw">sqrt</span>(<span class="kw">sum</span>(y<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sqrt</span>(<span class="kw">sum</span>(z<span class="op">^</span><span class="dv">2</span>))) <span class="co"># yz</span></a></code></pre></div>
+<pre><code>## [1] 0.4961389</code></pre>
+<p>The geometric meanings of cosines of two vectors are connected to the arcs between the vectors: the great their cosine similarity, the smaller the arcs, the closer they are.</p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-12-1.png" width="100%" /></p>
+</div>
+<div id="interim-summary" class="section level3">
+<h3><span class="header-section-number">12.5.3</span> Interim Summary</h3>
+<p>The <strong>Euclidean Distance</strong> metric is a distance-based metric: the larger the value, the more distant the two vectors.</p>
+<p>The <strong>Cosine Similarity</strong> metric is a similatiry-based metric: the larger the value, the closer the two vectors.</p>
+<p>Based on our computations of the metrics for the three vectors, now in terms of the <strong>Euclidean Distance</strong>, <em>y</em> and <em>z</em> are closer; in terms of <strong>Cosine Similarity</strong>, <em>x</em> and <em>y</em> are closer.</p>
+<p>Therefore, it should now be clear that the analyst needs to decide which metric to use, or more importantly, which metric is more relevant. The key is which of the following is more important in the semantic representation of the linguistic units:</p>
+<ul>
+<li>The absolute value differences that the vectors have on each dimension (i.e., the lengths of the vectors)</li>
+<li>The relative increase/decrease of the values on ecah dimension (i.e., the curvatures of vectors)</li>
+</ul>
+<div class="info">
+<p>
+There are many other distance-based or similarity-based metrics available. For more detail, please see <span class="citation"><span class="citation">Manning and Schütze (<a href="#ref-manning1999">1999</a>)</span></span> Ch15.2.2. and <span class="citation"><span class="citation">Jurafsky and Martin (<a href="#ref-jurafsky2020">2020</a>)</span></span> <a href="https://web.stanford.edu/~jurafsky/slp3/">Ch6: Vector Semantics and Embeddings</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="multidimensiona-space" class="section level2">
+<h2><span class="header-section-number">12.6</span> Multidimensiona Space</h2>
+<p>Back to our example of <code>dfm</code>, it is essentially the same vector representation, but in a multidimensional verson (cf. Figure <a href="vector-space-representation.html#fig:dfmdemo">12.4</a>). The document in each row is represented as a vector of <em>N</em> dimensional space. The size of <em>N</em> depends on the number of linguistic units that are included in the <code>analysis</code>dfm`.</p>
 <div class="figure"><span id="fig:dfmdemo"></span>
 <img src="images/dfm.png" alt="Example of Document-Feature Matrix" width="90%" />
 <p class="caption">
-Figure 12.1: Example of Document-Feature Matrix
+Figure 12.4: Example of Document-Feature Matrix
 </p>
 </div>
 </div>
 <div id="feature-selection" class="section level2">
-<h2><span class="header-section-number">12.4</span> Feature Selection</h2>
+<h2><span class="header-section-number">12.7</span> Feature Selection</h2>
 <p>A <code>dfm</code> may be as informative as we have expected. To better capture the documental semantic similarity, there are several important factors that need to be more carefully considered when creating a <code>dfm</code>:</p>
 <ul>
 <li>The granularity of the linguistic unit</li>
@@ -432,7 +528,7 @@ Figure 12.1: Example of Document-Feature Matrix
 <li>The distributional cut-offs of the linguistic unit</li>
 </ul>
 <div id="determining-linguistic-granularity" class="section level3">
-<h3><span class="header-section-number">12.4.1</span> Determining Linguistic Granularity</h3>
+<h3><span class="header-section-number">12.7.1</span> Determining Linguistic Granularity</h3>
 <p>In our previous example, we include only words, i.e., unigrams, as our features in the <code>dfm</code>. We can in fact include linguistic units at multiple granularities:</p>
 <ul>
 <li>words</li>
@@ -440,8 +536,8 @@ Figure 12.1: Example of Document-Feature Matrix
 <li>lemmas/stems</li>
 </ul>
 <p>For example, if you want to include bigrams, not unigrams, as features in the <code>dfm</code>, you can do the following:</p>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb283-1" data-line-number="1">corp_us_dfm_ngram &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">ngrams =</span> <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb283-2" data-line-number="2">corp_us_dfm_ngram[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">corp_us_dfm_ngram &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">ngrams =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">corp_us_dfm_ngram[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## Document-feature matrix of: 10 documents, 10 features (43.0% sparse) and 4 docvars.
 ##                  features
 ## docs              fellow-citizens  of the senate and house representatives :
@@ -461,8 +557,8 @@ Figure 12.1: Example of Document-Feature Matrix
 ##   1809-Madison        0            0
 ## [ reached max_ndoc ... 4 more documents ]</code></pre>
 <p>Or for English data, if you want to ignore the stem variations between words (i.e., <em>house</em> and <em>houses</em> may not be differ so much), you can do it this way:</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb285-1" data-line-number="1">corp_us_dfm_stem &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">stem =</span> T)</a>
-<a class="sourceLine" id="cb285-2" data-line-number="2">corp_us_dfm_stem[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">corp_us_dfm_stem &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">stem =</span> T)</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">corp_us_dfm_stem[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## Document-feature matrix of: 10 documents, 10 features (38.0% sparse) and 4 docvars.
 ##                  features
 ## docs              fellow-citizen  of the senat and hous repres : among
@@ -485,7 +581,7 @@ Figure 12.1: Example of Document-Feature Matrix
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-314" class="exercise"><strong>Exercise 12.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
+<span id="exr:unnamed-chunk-16" class="exercise"><strong>Exercise 12.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
 </div>
 
 <div data-pagedtable="false">
@@ -496,15 +592,15 @@ Figure 12.1: Example of Document-Feature Matrix
 <hr />
 </div>
 <div id="stopwords-1" class="section level3">
-<h3><span class="header-section-number">12.4.2</span> Stopwords</h3>
+<h3><span class="header-section-number">12.7.2</span> Stopwords</h3>
 <p>There are words that are not so informative in telling us the similarity and difference between the documents because they almost occur in every document of the corpus, but carray little (refential) semantic contents. These words are usually the function words, such as <em>and</em>, <em>the</em>, <em>of</em>. Also, there are tokens that usually carry limited semantic contents, such as <em>numbers</em> and <em>punctuation</em>. Therefore, it is not uncommon that analysts sometimes create a list of words to be removed from the <code>dfm</code>. These words are referred to as <em>stopwords</em>.</p>
 <p>The library <code>quanteda</code> has determined a default English stopword list, i.e., <code>stopwords(&quot;en&quot;)</code>. When creating the <code>dfm</code> object, we can further specify a few parameters:</p>
 <ul>
 <li><code>remove_punct</code>: remove all punctuation tokens</li>
 <li><code>remove</code>: remove all words specified in the character vector here</li>
 </ul>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb287-1" data-line-number="1">corp_us_dfm_stp &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">remove_punct =</span> T, <span class="dt">remove =</span> <span class="kw">stopwords</span>(<span class="st">&quot;en&quot;</span>))</a>
-<a class="sourceLine" id="cb287-2" data-line-number="2">corp_us_dfm_stp[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">corp_us_dfm_stp &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm</span>(<span class="dt">remove_punct =</span> T, <span class="dt">remove =</span> <span class="kw">stopwords</span>(<span class="st">&quot;en&quot;</span>))</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2">corp_us_dfm_stp[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## Document-feature matrix of: 10 documents, 10 features (60.0% sparse) and 4 docvars.
 ##                  features
 ## docs              fellow-citizens senate house representatives among
@@ -524,17 +620,17 @@ Figure 12.1: Example of Document-Feature Matrix
 ##   1809-Madison               0        0    1     0      1
 ## [ reached max_ndoc ... 4 more documents ]</code></pre>
 <p>We can see that the number of features drops significantly after we remove <code>stopwords</code>:</p>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb289-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm)</a></code></pre></div>
-<pre><code>## [1] 9399</code></pre>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb291-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_ngram)</a></code></pre></div>
-<pre><code>## [1] 9399</code></pre>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb293-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_stem)</a></code></pre></div>
-<pre><code>## [1] 5584</code></pre>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb295-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_stp)</a></code></pre></div>
-<pre><code>## [1] 9248</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm)</a></code></pre></div>
+<pre><code>## [1] 9360</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_ngram)</a></code></pre></div>
+<pre><code>## [1] 9360</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_stem)</a></code></pre></div>
+<pre><code>## [1] 5544</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">nfeat</span>(corp_us_dfm_stp)</a></code></pre></div>
+<pre><code>## [1] 9210</code></pre>
 </div>
 <div id="distributional-cut-offs-for-features" class="section level3">
-<h3><span class="header-section-number">12.4.3</span> Distributional Cut-offs for Features</h3>
+<h3><span class="header-section-number">12.7.3</span> Distributional Cut-offs for Features</h3>
 <p>Depending on the granularity of the linguistic units you consider, you may get a considerable number (e.g., thousands of ngrams) of features in your <code>dfm</code> matrix. Another criteria relating to the distinctiveness of the features are their distributional properties. These can be very complicated but here we simplify these distributional criteria into three types:</p>
 <ul>
 <li>Frequency
@@ -561,12 +657,12 @@ Figure 12.1: Example of Document-Feature Matrix
 <li>we remove words whose freqency &lt; 10, docfreq &lt;= 3, docfreq = ndoc(CORPUS)</li>
 <li></li>
 </ul>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb297-1" data-line-number="1">corp_us_dfm_trimmed &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb297-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm</span>(<span class="dt">remove =</span> <span class="kw">stopwords</span>(<span class="st">&quot;en&quot;</span>), <span class="dt">remove_punct =</span> T) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb297-3" data-line-number="3"><span class="st">  </span><span class="kw">dfm_trim</span>(<span class="dt">min_termfreq =</span> <span class="dv">10</span>, <span class="dt">termfreq_type =</span> <span class="st">&quot;count&quot;</span>,</a>
-<a class="sourceLine" id="cb297-4" data-line-number="4">           <span class="dt">min_docfreq =</span> <span class="dv">3</span>, <span class="dt">max_docfreq =</span> <span class="kw">ndoc</span>(corp_us)<span class="op">-</span><span class="dv">1</span>,</a>
-<a class="sourceLine" id="cb297-5" data-line-number="5">           <span class="dt">docfreq_type =</span> <span class="st">&quot;count&quot;</span>) </a>
-<a class="sourceLine" id="cb297-6" data-line-number="6">corp_us_dfm_trimmed[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">corp_us_dfm_trimmed &lt;-<span class="st"> </span>corp_us <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="st">  </span><span class="kw">dfm</span>(<span class="dt">remove =</span> <span class="kw">stopwords</span>(<span class="st">&quot;en&quot;</span>), <span class="dt">remove_punct =</span> T) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb33-3" data-line-number="3"><span class="st">  </span><span class="kw">dfm_trim</span>(<span class="dt">min_termfreq =</span> <span class="dv">10</span>, <span class="dt">termfreq_type =</span> <span class="st">&quot;count&quot;</span>,</a>
+<a class="sourceLine" id="cb33-4" data-line-number="4">           <span class="dt">min_docfreq =</span> <span class="dv">3</span>, <span class="dt">max_docfreq =</span> <span class="kw">ndoc</span>(corp_us)<span class="op">-</span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb33-5" data-line-number="5">           <span class="dt">docfreq_type =</span> <span class="st">&quot;count&quot;</span>) </a>
+<a class="sourceLine" id="cb33-6" data-line-number="6">corp_us_dfm_trimmed[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## Document-feature matrix of: 10 documents, 10 features (52.0% sparse) and 4 docvars.
 ##                  features
 ## docs              fellow-citizens senate house representatives among life event
@@ -588,55 +684,64 @@ Figure 12.1: Example of Document-Feature Matrix
 </div>
 </div>
 <div id="applying-dfm" class="section level2">
-<h2><span class="header-section-number">12.5</span> Applying DFM</h2>
+<h2><span class="header-section-number">12.8</span> Applying DFM</h2>
 <div id="wordcloud" class="section level3">
-<h3><span class="header-section-number">12.5.1</span> Wordcloud</h3>
+<h3><span class="header-section-number">12.8.1</span> Wordcloud</h3>
 <p>With a <code>dfm</code> of a corpus, we can quickly explore the nature of this corpus by examining the top features of this corpus:</p>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb299-1" data-line-number="1"><span class="kw">topfeatures</span>(corp_us_dfm_trimmed)</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">topfeatures</span>(corp_us_dfm_trimmed)</a></code></pre></div>
 <pre><code>##     people government         us        can       upon       must      great 
-##        574        564        478        471        371        366        340 
+##        575        564        478        471        371        366        340 
 ##        may     states      shall 
 ##        338        333        314</code></pre>
 <p>Or we can visualize the distrubtion of these top features using the wordcloud:</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb301-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
-<a class="sourceLine" id="cb301-2" data-line-number="2">corp_us_dfm_trimmed <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb301-3" data-line-number="3"><span class="st">  </span><span class="kw">textplot_wordcloud</span>(<span class="dt">min_count =</span> <span class="dv">60</span>, <span class="dt">rotation =</span> <span class="fl">.35</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-320-1.png" width="672" /></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb37-2" data-line-number="2">corp_us_dfm_trimmed <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb37-3" data-line-number="3"><span class="st">  </span><span class="kw">textplot_wordcloud</span>(<span class="dt">min_count =</span> <span class="dv">60</span>, <span class="dt">rotation =</span> <span class="fl">.35</span>)</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 <div id="document-similarity" class="section level3">
-<h3><span class="header-section-number">12.5.2</span> Document Similarity</h3>
-<p>As shown in <a href="vector-space-representation.html#fig:dfmdemo">12.1</a>, with the <em>N</em>-dimensional vector representation of each document, we can easily compute the mathematical similarities between two documents. Based on the similarities, we can further examine how different documents may cluster together in terms of their lexical similarities.</p>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb302-1" data-line-number="1">corp_us_dist &lt;-<span class="st"> </span>corp_us_dfm_trimmed <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm_weight</span>(<span class="dt">scheme =</span> <span class="st">&quot;prop&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">textstat_dist</span>()</a>
-<a class="sourceLine" id="cb302-2" data-line-number="2">corp_us_hist &lt;-<span class="st"> </span>corp_us_dist <span class="op">%&gt;%</span><span class="st"> </span>as.dist <span class="op">%&gt;%</span><span class="st"> </span>hclust</a>
-<a class="sourceLine" id="cb302-3" data-line-number="3"><span class="kw">plot</span>(corp_us_hist,<span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-321-1.png" width="100%" /></p>
+<h3><span class="header-section-number">12.8.2</span> Document Similarity</h3>
+<p>As shown in <a href="vector-space-representation.html#fig:dfmdemo">12.4</a>, with the <em>N</em>-dimensional vector representation of each document, we can easily compute the mathematical similarities between two documents. Based on the similarities, we can further examine how different documents may cluster together in terms of their lexical similarities.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">corp_us_dist &lt;-<span class="st"> </span>corp_us_dfm_trimmed <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dfm_weight</span>(<span class="dt">scheme =</span> <span class="st">&quot;prop&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">textstat_dist</span>()</a>
+<a class="sourceLine" id="cb38-2" data-line-number="2">corp_us_hist &lt;-<span class="st"> </span>corp_us_dist <span class="op">%&gt;%</span><span class="st"> </span>as.dist <span class="op">%&gt;%</span><span class="st"> </span>hclust</a>
+<a class="sourceLine" id="cb38-3" data-line-number="3"><span class="kw">plot</span>(corp_us_hist,<span class="dt">hang =</span> <span class="dv">-1</span>, <span class="dt">cex =</span> <span class="fl">0.7</span>)</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-23-1.png" width="100%" /></p>
 </div>
 <div id="feature-similarity" class="section level3">
-<h3><span class="header-section-number">12.5.3</span> Feature Similarity</h3>
+<h3><span class="header-section-number">12.8.3</span> Feature Similarity</h3>
 <p>What if we transpose a document-feature matrix? A transposed <code>dfm</code> would be a feature-document matrix. This is an interesting structure because we then can do the same tricks with all the features in the corpus. More specifically, we get to see how features (i.e., words, n-grams etc) are connected, or to what extent words are similar.</p>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb303-1" data-line-number="1"><span class="co"># convert `dfm` to `fcm`</span></a>
-<a class="sourceLine" id="cb303-2" data-line-number="2">corp_us_fcm &lt;-<span class="st"> </span>corp_us_dfm_trimmed <span class="op">%&gt;%</span><span class="st"> </span>fcm</a>
-<a class="sourceLine" id="cb303-3" data-line-number="3"><span class="co"># select top 30 features</span></a>
-<a class="sourceLine" id="cb303-4" data-line-number="4">corp_us_topfeatures &lt;-<span class="st"> </span><span class="kw">names</span>(<span class="kw">topfeatures</span>(corp_us_fcm, <span class="dv">30</span>))</a>
-<a class="sourceLine" id="cb303-5" data-line-number="5"><span class="co"># plot network</span></a>
-<a class="sourceLine" id="cb303-6" data-line-number="6"><span class="kw">fcm_select</span>(corp_us_fcm, <span class="dt">pattern =</span> corp_us_topfeatures) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb303-7" data-line-number="7"><span class="st">    </span><span class="kw">textplot_network</span>(<span class="dt">min_freq =</span> <span class="fl">0.5</span>)</a></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-322-1.png" width="672" /></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="co"># convert `dfm` to `fcm`</span></a>
+<a class="sourceLine" id="cb39-2" data-line-number="2">corp_us_fcm &lt;-<span class="st"> </span>corp_us_dfm_trimmed <span class="op">%&gt;%</span><span class="st"> </span>fcm</a>
+<a class="sourceLine" id="cb39-3" data-line-number="3"><span class="co"># select top 30 features</span></a>
+<a class="sourceLine" id="cb39-4" data-line-number="4">corp_us_topfeatures &lt;-<span class="st"> </span><span class="kw">names</span>(<span class="kw">topfeatures</span>(corp_us_fcm, <span class="dv">30</span>))</a>
+<a class="sourceLine" id="cb39-5" data-line-number="5"><span class="co"># plot network</span></a>
+<a class="sourceLine" id="cb39-6" data-line-number="6"><span class="kw">fcm_select</span>(corp_us_fcm, <span class="dt">pattern =</span> corp_us_topfeatures) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb39-7" data-line-number="7"><span class="st">    </span><span class="kw">textplot_network</span>(<span class="dt">min_freq =</span> <span class="fl">0.5</span>)</a></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-323" class="exercise"><strong>Exercise 12.2  </strong></span>Please create a network of the top 30 bigrams based on the corpus <code>corp_us</code>. The criteria for bigrams selection are as follows:</p>
+<p><span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercise 12.2  </strong></span>Please create a network of the top 30 bigrams based on the corpus <code>corp_us</code>. The criteria for bigrams selection are as follows:</p>
 <ul>
 <li>Include bigrams that consist of alphanumeric characters only (no punctuations)</li>
 <li>Include bigrams whose frequency &gt;= 10 and docfreq &gt;= 5 but &lt;= half number of the corpus</li>
 </ul>
 </div>
 
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-324-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <hr />
 
 </div>
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-jurafsky2020">
+<p>Jurafsky, Dan, and James H. Martin. 2020. “Speech &amp; Language Processing 3rd.” Available at <a href="https://web.stanford.edu/~jurafsky/slp3/">https://web.stanford.edu/~jurafsky/slp3/</a> (Accessed on 2020/04/01).</p>
+</div>
+<div id="ref-manning1999">
+<p>Manning, Christopher D, and Hinrich Schütze. 1999. <em>Foundations of Statistical Natural Language Processing</em>. MIT press.</p>
 </div>
 </div>
 <div id="disqus_thread"></div>
