@@ -129,10 +129,10 @@ div.color-theme-2 .book-body .page-wrapper .page-inner section.normal strong cod
 }
 
 .try {
-  background-image: url("../images/alerts/rainbow.svg");
-  background-color: hsla(248, 28%, 48%, .1);
+  background-image: url("images/alerts/highlighter-solid.svg");
+  background-color: #F64C78; /*hsla(248, 28%, 48%, .1);*/
   border: 1px solid var(--purple);
-  background-position: 0.5em -.25em;
+ /* background-position: 0.5em -.25em;*/
 }
 
 
