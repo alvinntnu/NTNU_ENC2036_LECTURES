@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-05-07" />
+<meta name="date" content="2020-05-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -429,6 +429,10 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 <h2><span class="header-section-number">10.6</span> Creating Conda Environment for <code>ckiptagger</code></h2>
 <p>I would suggest to install all necessary Python modules in a conda environment and use it in R.</p>
 <p>In the following demonstration, I assume that you have created a conda environment <code>ckiptagger</code>, where all the necessary modules (i.e., <code>ckiptagger</code>, <code>tensorflow</code>) have been pip-installed.</p>
+<pre><code># isntsall in terminal
+source activate CONDA_ENVIRONMENT_NAME
+pip install -U ckiptagger
+conda deactivate</code></pre>
 </div>
 <div id="initialization" class="section level2">
 <h2><span class="header-section-number">10.7</span> Initialization</h2>
@@ -438,28 +442,28 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 <li>Import the <code>ckiptagger</code> module in R</li>
 <li>Initialize the tagger models</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Activate a specific conda env in R</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">use_condaenv</span>(<span class="st">&quot;spacy_condaenv&quot;</span>)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">## Import ckiptagger module</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">ckip &lt;-<span class="st"> </span>reticulate<span class="op">::</span><span class="kw">import</span>(<span class="dt">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">## Intialize models</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">ws &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">WS</span>(<span class="st">&quot;./data&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># Activate a specific conda env in R</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">use_condaenv</span>(<span class="st">&quot;spacy_condaenv&quot;</span>)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">## Import ckiptagger module</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">ckip &lt;-<span class="st"> </span>reticulate<span class="op">::</span><span class="kw">import</span>(<span class="dt">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">## Intialize models</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">ws &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">WS</span>(<span class="st">&quot;./data&quot;</span>)</a></code></pre></div>
 </div>
 <div id="segmenting-texts" class="section level2">
 <h2><span class="header-section-number">10.8</span> Segmenting Texts</h2>
 <p>The initialized word segmenter object, <code>ws()</code>, can tokenize any input <strong>character vectors</strong> into a list of <strong>word vectors</strong> of the same size.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">## Raw text corpus </span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">texts &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</a>
-<a class="sourceLine" id="cb5-6" data-line-number="6">              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9">words &lt;-<span class="st"> </span><span class="kw">ws</span>(texts)</a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">words</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co">## Raw text corpus </span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">texts &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">words &lt;-<span class="st"> </span><span class="kw">ws</span>(texts)</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">words</a></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot; &quot;今&quot;     &quot;將&quot;     &quot;執行&quot;   &quot;安樂死&quot; &quot;，&quot;     &quot;卻&quot;     &quot;突然&quot;  
 ##  [9] &quot;爆出&quot;   &quot;自己&quot;   &quot;20&quot;     &quot;年&quot;     &quot;前&quot;     &quot;遭&quot;     &quot;緯來&quot;   &quot;體育台&quot;
@@ -498,29 +502,29 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 <p>The performance of Chinese word segmenter depends highly on the dictionary. Texts in different disciplines may have very domain-specific vocabulary. To prioritize a set of words in a dictionary, we can further ensure the accuracy of the word segmentation.</p>
 <p>To create a dictionary for <code>ckiptagger</code>, we need a <strong>named list</strong>, i.e., to create a <code>list</code> with element <strong>names</strong> = “the new words” and element <strong>values</strong> = “the weights”.</p>
 <p>Then we use the python function <code>ckip$construct_dictionary()</code> to create the <code>dictionary</code> Python object, which is the input argument for word segmenter <code>ws(..., recommend_dictionary = ...)</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co"># Define new words in own dictionary</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">new_words &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;土地公有&quot;</span>,</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3">               <span class="st">&quot;土地公&quot;</span>,</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">               <span class="st">&quot;土地婆&quot;</span>,</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">               <span class="st">&quot;來亂的&quot;</span>,</a>
-<a class="sourceLine" id="cb7-6" data-line-number="6">               <span class="st">&quot;啦&quot;</span>,</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">               <span class="st">&quot;緯來體育台&quot;</span>)</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co"># Transform the `vector` into `list` for Python</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10">new_words_py &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.list</a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12">  <span class="co"># cf. `list(rep, 1 , length(new_words))`</span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="kw">names</span>(new_words_py) &lt;-<span class="st"> </span>new_words</a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15">  <span class="co"># To create a dictionary for `construct_dictionary()`</span></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16">  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></a>
-<a class="sourceLine" id="cb7-19" data-line-number="19">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words_py)</a>
-<a class="sourceLine" id="cb7-20" data-line-number="20"></a>
-<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co"># Segment texts using dictionary</span></a>
-<a class="sourceLine" id="cb7-22" data-line-number="22">words_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
-<a class="sourceLine" id="cb7-23" data-line-number="23">words_<span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="co"># Define new words in own dictionary</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">new_words &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;土地公有&quot;</span>,</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">               <span class="st">&quot;土地公&quot;</span>,</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">               <span class="st">&quot;土地婆&quot;</span>,</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">               <span class="st">&quot;來亂的&quot;</span>,</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">               <span class="st">&quot;啦&quot;</span>,</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">               <span class="st">&quot;緯來體育台&quot;</span>)</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co"># Transform the `vector` into `list` for Python</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10">new_words_py &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.list</a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12">  <span class="co"># cf. `list(rep, 1 , length(new_words))`</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="kw">names</span>(new_words_py) &lt;-<span class="st"> </span>new_words</a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15">  <span class="co"># To create a dictionary for `construct_dictionary()`</span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16">  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></a>
+<a class="sourceLine" id="cb8-19" data-line-number="19">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words_py)</a>
+<a class="sourceLine" id="cb8-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb8-21" data-line-number="21"><span class="co"># Segment texts using dictionary</span></a>
+<a class="sourceLine" id="cb8-22" data-line-number="22">words_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
+<a class="sourceLine" id="cb8-23" data-line-number="23">words_<span class="dv">1</span></a></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
 ##  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -558,11 +562,11 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 <span id="exr:unnamed-chunk-10" class="exercise"><strong>Exercise 10.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
 </div>
 
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">new_words&lt;-<span class="kw">loadDictionary</span>(<span class="dt">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </a>
-<a class="sourceLine" id="cb9-2" data-line-number="2">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words)</a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># Segment texts using dictionary</span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4">words_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
-<a class="sourceLine" id="cb9-5" data-line-number="5">words_<span class="dv">2</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">new_words&lt;-<span class="kw">loadDictionary</span>(<span class="dt">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co"># Segment texts using dictionary</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">words_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">words_<span class="dv">2</span></a></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
 ##  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -599,26 +603,26 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 <div id="beyond-word-boundaries" class="section level2">
 <h2><span class="header-section-number">10.10</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-3d36b9dc154522d37bf9" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3d36b9dc154522d37bf9">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9b7de1f45611a65c0c05" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9b7de1f45611a65c0c05">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Load the models</li>
 </ul>
 <p>To perform these additional tasks, we need to load the necessary models (pre-trained and provided by the CKIP group) first as well.</p>
 <p>They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co"># loading other necessary models</span></a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># loading other necessary models</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   5.449   1.614   5.886</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></a></code></pre></div>
+##   5.754   1.633   6.145</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   5.528   1.558   6.103</code></pre>
+##   5.649   1.680   6.632</code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="co"># Parts-of-speech Tagging</span></a>
-<a class="sourceLine" id="cb15-2" data-line-number="2">pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3">pos_words</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="co"># Parts-of-speech Tagging</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">pos_words</a></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;Nb&quot;             &quot;Nd&quot;             &quot;D&quot;              &quot;VC&quot;            
 ##  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
@@ -664,14 +668,14 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 ##  [5] &quot;P&quot;              &quot;Na&quot;             &quot;VG&quot;             &quot;Neu&quot;           
 ##  [9] &quot;PERIODCATEGORY&quot; &quot;Neu&quot;            &quot;COMMACATEGORY&quot;  &quot;D&quot;             
 ## [13] &quot;D&quot;              &quot;VHC&quot;            &quot;PERIODCATEGORY&quot;</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="co"># Named Entity Recognition</span></a>
-<a class="sourceLine" id="cb17-2" data-line-number="2">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
-<a class="sourceLine" id="cb17-3" data-line-number="3">ner</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># Named Entity Recognition</span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3">ner</a></code></pre></div>
 <pre><code>## [[1]]
-## {(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
+## {(23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
 ## 
 ## [[2]]
-## {(2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;)}
+## {(7, 9, &#39;DATE&#39;, &#39;今天&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;)}
 ## 
 ## [[3]]
 ## {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -683,15 +687,15 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 ## {(4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;), (14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;)}
 ## 
 ## [[6]]
-## {(4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;)}</code></pre>
+## {(4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;)}</code></pre>
 </div>
 <div id="tidy-up-the-results" class="section level2">
 <h2><span class="header-section-number">10.11</span> Tidy Up the Results</h2>
 <p>We can tidy up results provided by <code>ckiptagger</code> and create a word-based tidy structure of our data:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">word_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text_id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(texts)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">                        <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb19-3" data-line-number="3">                        <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</a>
-<a class="sourceLine" id="cb19-4" data-line-number="4">word_df</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">word_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text_id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(texts)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">                        <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">                        <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">word_df</a></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["words"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["pos"],"name":[3],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁","3":"Nb"},{"1":"1","2":"今","3":"Nd"},{"1":"1","2":"將","3":"D"},{"1":"1","2":"執行","3":"VC"},{"1":"1","2":"安樂死","3":"Na"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"卻","3":"D"},{"1":"1","2":"突然","3":"D"},{"1":"1","2":"爆出","3":"VJ"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"20","3":"Neu"},{"1":"1","2":"年","3":"Nf"},{"1":"1","2":"前","3":"Ng"},{"1":"1","2":"遭","3":"P"},{"1":"1","2":"緯來體育台","3":"Nc"},{"1":"1","2":"封殺","3":"VC"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"他","3":"Nh"},{"1":"1","2":"不","3":"D"},{"1":"1","2":"懂","3":"VK"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"哪裡","3":"Ncd"},{"1":"1","2":"得罪到","3":"VJ"},{"1":"1","2":"電視台","3":"Nc"},{"1":"1","2":"。","3":"PERIODCATEGORY"},{"1":"2","2":"美國","3":"Nc"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"針對","3":"P"},{"1":"2","2":"今天","3":"Nd"},{"1":"2","2":"總統","3":"Na"},{"1":"2","2":"布什","3":"Nb"},{"1":"2","2":"所","3":"D"},{"1":"2","2":"提名","3":"VC"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"勞工部長","3":"Na"},{"1":"2","2":"趙小蘭","3":"Nb"},{"1":"2","2":"展開","3":"VC"},{"1":"2","2":"認可","3":"VC"},{"1":"2","2":"聽證會","3":"Na"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"預料","3":"VE"},{"1":"2","2":"她","3":"Nh"},{"1":"2","2":"將","3":"D"},{"1":"2","2":"會","3":"D"},{"1":"2","2":"很","3":"Dfa"},{"1":"2","2":"順利","3":"VH"},{"1":"2","2":"通過","3":"VC"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"支持","3":"VC"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"成為","3":"VG"},{"1":"2","2":"該","3":"Nes"},{"1":"2","2":"國","3":"Nc"},{"1":"2","2":"有史以來","3":"D"},{"1":"2","2":"第一","3":"Neu"},{"1":"2","2":"位","3":"Nf"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"華裔","3":"Na"},{"1":"2","2":"女性","3":"Na"},{"1":"2","2":"內閣","3":"Na"},{"1":"2","2":"成員","3":"Na"},{"1":"2","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":"土地公有","3":"VH"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"?","3":"QUESTIONCATEGORY"},{"1":"3","2":"？","3":"QUESTIONCATEGORY"},{"1":"3","2":"還是","3":"Caa"},{"1":"3","2":"土地婆","3":"Nb"},{"1":"3","2":"有","3":"V_2"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":".","3":"PERIODCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"你","3":"Nh"},{"1":"4","2":"確定","3":"VK"},{"1":"4","2":"嗎","3":"T"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"不要","3":"D"},{"1":"4","2":"再","3":"D"},{"1":"4","2":"騙","3":"VC"},{"1":"4","2":"了","3":"Di"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"他","3":"Nh"},{"1":"4","2":"來亂的","3":"VA"},{"1":"4","2":"啦","3":"T"},{"1":"5","2":"最多","3":"VH"},{"1":"5","2":"容納","3":"VJ"},{"1":"5","2":"59,000","3":"Neu"},{"1":"5","2":"個","3":"Nf"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"或","3":"Caa"},{"1":"5","2":"5.9萬","3":"Neu"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"再","3":"D"},{"1":"5","2":"多","3":"D"},{"1":"5","2":"就","3":"D"},{"1":"5","2":"不行","3":"VH"},{"1":"5","2":"了","3":"T"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"5","2":"這","3":"Nep"},{"1":"5","2":"是","3":"SHI"},{"1":"5","2":"環評","3":"Na"},{"1":"5","2":"的","3":"DE"},{"1":"5","2":"結論","3":"Na"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"6","2":"科長","3":"Na"},{"1":"6","2":"說","3":"VE"},{"1":"6","2":":1,","3":"Neu"},{"1":"6","2":"坪數","3":"Na"},{"1":"6","2":"對","3":"P"},{"1":"6","2":"人數","3":"Na"},{"1":"6","2":"為","3":"VG"},{"1":"6","2":"1:3","3":"Neu"},{"1":"6","2":"。","3":"PERIODCATEGORY"},{"1":"6","2":"2","3":"Neu"},{"1":"6","2":",","3":"COMMACATEGORY"},{"1":"6","2":"可以","3":"D"},{"1":"6","2":"再","3":"D"},{"1":"6","2":"增加","3":"VHC"},{"1":"6","2":"。","3":"PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
