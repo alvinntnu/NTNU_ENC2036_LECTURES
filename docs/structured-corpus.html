@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-05-09" />
+<meta name="date" content="2020-05-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -609,7 +609,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb18-7" data-line-number="7"><span class="st">    </span><span class="kw">filter</span>(bigrams<span class="op">!=</span><span class="st">&quot;&quot;</span>)  </a>
 <a class="sourceLine" id="cb18-8" data-line-number="8">)</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   3.623   0.038   3.738</code></pre>
+##   3.804   0.064   4.161</code></pre>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">NCCU_bigrams <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb20-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(doc_id <span class="op">==</span><span class="st"> &quot;M001.cha&quot;</span>)</a></code></pre></div>
 <div data-pagedtable="false">
@@ -714,7 +714,7 @@ How do we get dispersion statistics like this? Please show the top frequent 100 
 <a class="sourceLine" id="cb24-8" data-line-number="8"><span class="st">    </span><span class="kw">filter</span>(ngram <span class="op">!=</span><span class="st"> &quot;&quot;</span>) <span class="co"># remove empty tokens (due to the short lines)  </span></a>
 <a class="sourceLine" id="cb24-9" data-line-number="9">)</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   3.191   0.011   3.207</code></pre>
+##   3.261   0.022   3.474</code></pre>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">NCCU_ngrams <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(ngram, doc_id) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(ngram) <span class="op">%&gt;%</span></a>
@@ -885,10 +885,10 @@ How do we get dispersion statistics like this? Please show the top frequent 100 
 <p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercise 11.6  </strong></span>Please analyze the bigram variations in terms of speaker relations.</p>
+<p><span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercise 11.6  </strong></span>Please analyze the bigram variations in terms of speaker relations and present your findings/observations in your own way.</p>
+In NCCU Corpus, speaker relations include 14 different relations. You may consider collapsing these levels into larger categories in order to identify the general tendencies.
 </div>
 
-<p>```</p>
 
 </div>
 </div>
