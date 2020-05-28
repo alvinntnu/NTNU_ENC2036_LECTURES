@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-05-25" />
+<meta name="date" content="2020-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -621,7 +621,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb18-7" data-line-number="7"><span class="st">    </span><span class="kw">filter</span>(bigrams<span class="op">!=</span><span class="st">&quot;&quot;</span>)  </a>
 <a class="sourceLine" id="cb18-8" data-line-number="8">)</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   2.482   0.016   2.500</code></pre>
+##   2.641   0.027   2.669</code></pre>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">NCCU_bigrams <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb20-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(doc_id <span class="op">==</span><span class="st"> &quot;M001.cha&quot;</span>)</a></code></pre></div>
 <div data-pagedtable="false">
@@ -727,7 +727,7 @@ How do we get dispersion statistics like this? Please show the top frequent 100 
 <a class="sourceLine" id="cb24-8" data-line-number="8"><span class="st">    </span><span class="kw">filter</span>(ngram <span class="op">!=</span><span class="st"> &quot;&quot;</span>) <span class="co"># remove empty tokens (due to the short lines)  </span></a>
 <a class="sourceLine" id="cb24-9" data-line-number="9">)</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   2.436   0.013   2.449</code></pre>
+##   2.518   0.008   2.526</code></pre>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">NCCU_ngrams <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="st">  </span><span class="kw">count</span>(ngram, doc_id) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(ngram) <span class="op">%&gt;%</span></a>
