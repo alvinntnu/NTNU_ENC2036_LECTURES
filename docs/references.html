@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 References | Corpus Linguistics</title>
+  <title>Chapter 15 References | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 References | Corpus Linguistics" />
+  <meta property="og:title" content="Chapter 15 References | Corpus Linguistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 References | Corpus Linguistics" />
+  <meta name="twitter:title" content="Chapter 15 References | Corpus Linguistics" />
   
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-05-31" />
+<meta name="date" content="2020-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="vector-space-representation.html"/>
+<link rel="prev" href="final-exam.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -60,6 +60,10 @@
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -306,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>12.3.1</b> Text Metadata</a></li>
 <li class="chapter" data-level="12.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>12.3.2</b> Speaker Metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socialinguistic Variation</a></li>
+<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socio-linguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socio-linguistic Variation</a></li>
 <li class="chapter" data-level="12.5" data-path="xml.html"><a href="xml.html#lexical-analysis"><i class="fa fa-check"></i><b>12.5</b> Lexical Analysis</a><ul>
 <li class="chapter" data-level="12.5.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>12.5.1</b> Word Frequency vs. Gender</a></li>
 <li class="chapter" data-level="12.5.2" data-path="xml.html"><a href="xml.html#frequency-and-keyword-analysis"><i class="fa fa-check"></i><b>12.5.2</b> Frequency and Keyword Analysis</a></li>
@@ -334,13 +338,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>13.4</b> Vector Space Model for Words</a><ul>
 <li class="chapter" data-level="13.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>13.4.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
 <li class="chapter" data-level="13.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-corpustokens-to-fcm"><i class="fa fa-check"></i><b>13.4.2</b> From <code>corpus/tokens</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fmc"><i class="fa fa-check"></i><b>13.4.3</b> From <code>dfm</code> to <code>fmc</code></a></li>
+<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fcm"><i class="fa fa-check"></i><b>13.4.3</b> From <code>dfm</code> to <code>fcm</code></a></li>
 <li class="chapter" data-level="13.4.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#which-method-to-choose"><i class="fa fa-check"></i><b>13.4.4</b> Which method to choose?</a></li>
 <li class="chapter" data-level="13.4.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>13.4.5</b> Lexical Similarity</a></li>
 </ul></li>
 <li class="chapter" data-level="13.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>13.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="14" data-path="final-exam.html"><a href="final-exam.html"><i class="fa fa-check"></i><b>14</b> Final Exam</a><ul>
+<li class="chapter" data-level="14.1" data-path="final-exam.html"><a href="final-exam.html#important-instructions-1"><i class="fa fa-check"></i><b>14.1</b> Important Instructions</a></li>
+<li class="chapter" data-level="14.2" data-path="final-exam.html"><a href="final-exam.html#part-i-bnc2014-xml-processing"><i class="fa fa-check"></i><b>14.2</b> Part I: BNC2014 XML Processing</a></li>
+<li class="chapter" data-level="14.3" data-path="final-exam.html"><a href="final-exam.html#part-ii-nccu-corpus-analysis"><i class="fa fa-check"></i><b>14.3</b> Part II: NCCU Corpus Analysis</a></li>
+<li class="chapter" data-level="14.4" data-path="final-exam.html"><a href="final-exam.html#part-iii-mandarin-song-lyrics-analysis"><i class="fa fa-check"></i><b>14.4</b> Part III: Mandarin Song Lyrics Analysis</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="final-exam.html"><a href="final-exam.html#scraping-mojim-lyrics"><i class="fa fa-check"></i><b>14.4.1</b> Scraping Mojim Lyrics</a></li>
+<li class="chapter" data-level="14.4.2" data-path="final-exam.html"><a href="final-exam.html#analysis-of-lyrics"><i class="fa fa-check"></i><b>14.4.2</b> Analysis of Lyrics</a></li>
+<li class="chapter" data-level="14.4.3" data-path="final-exam.html"><a href="final-exam.html#word-segmentation-1"><i class="fa fa-check"></i><b>14.4.3</b> Word Segmentation</a></li>
+<li class="chapter" data-level="14.4.4" data-path="final-exam.html"><a href="final-exam.html#collostruction-analysis"><i class="fa fa-check"></i><b>14.4.4</b> Collostruction Analysis</a></li>
+<li class="chapter" data-level="14.4.5" data-path="final-exam.html"><a href="final-exam.html#keyword-analysis-1"><i class="fa fa-check"></i><b>14.4.5</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="14.4.6" data-path="final-exam.html"><a href="final-exam.html#tokens-and-concordance-lines"><i class="fa fa-check"></i><b>14.4.6</b> Tokens and Concordance Lines</a></li>
+<li class="chapter" data-level="14.4.7" data-path="final-exam.html"><a href="final-exam.html#dfm-and-word-cloud"><i class="fa fa-check"></i><b>14.4.7</b> DFM and Word Cloud</a></li>
+<li class="chapter" data-level="14.4.8" data-path="final-exam.html"><a href="final-exam.html#cosine-similarity-of-songs"><i class="fa fa-check"></i><b>14.4.8</b> Cosine Similarity of Songs</a></li>
+<li class="chapter" data-level="14.4.9" data-path="final-exam.html"><a href="final-exam.html#lexical-bundles"><i class="fa fa-check"></i><b>14.4.9</b> Lexical Bundles</a></li>
+<li class="chapter" data-level="14.4.10" data-path="final-exam.html"><a href="final-exam.html#artist-based-analysis"><i class="fa fa-check"></i><b>14.4.10</b> Artist-based Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="final-exam.html"><a href="final-exam.html#afterwords-1"><i class="fa fa-check"></i><b>14.5</b> Afterwords</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -363,7 +385,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="references" class="section level1">
-<h1><span class="header-section-number">Chapter 14</span> References</h1>
+<h1><span class="header-section-number">Chapter 15</span> References</h1>
 
 <div id="refs" class="references">
 <div>
@@ -374,6 +396,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div>
 <p>Damerau, Fred J. 1993. “Generating and Evaluating Domain-Oriented Multi-Word Terms from Texts.” <em>Information Processing &amp; Management</em> 29 (4). Elsevier: 433–47.</p>
+</div>
+<div>
+<p>De Deyne, Simon, Steven Verheyen, and Gert Storms. 2016. “Structure and Organization of the Mental Lexicon: A Network Approach Derived from Syntactic Dependency Relations and Word Associations.” Book Section. In <em>Towards a Theoretical Framework for Analyzing Complex Linguistic Networks</em>, edited by Alexander Mehler, Andy Lücking, Sven Banisch, Philippe Blanchard, and Barbara Job, 47–79. Berlin, Germany: Springer. <a href="https://doi.org/10.1007/978-3-662-47238-5_3">https://doi.org/10.1007/978-3-662-47238-5_3</a>.</p>
 </div>
 <div>
 <p>Dunning, Ted. 1993. “Accurate Methods for the Statistics of Surprise and Coincidence.” <em>Computational Linguistics</em> 19 (1): 61–74. <a href="https://www.aclweb.org/anthology/J93-1003">https://www.aclweb.org/anthology/J93-1003</a>.</p>
@@ -392,6 +417,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div>
 <p>Harris, Z. 1954. “Distributional Structure.” <em>Word</em> 10 (2/3): 146–62.</p>
+</div>
+<div>
+<p>Harris, Zellig S. 1970. <em>Papers in Structural and Transformational Linguistics</em>. Book. Dordrecht: Reidel.</p>
 </div>
 <div>
 <p>Jurafsky, Dan, and James H. Martin. 2020. “Speech &amp; Language Processing 3rd.” Available at <a href="https://web.stanford.edu/~jurafsky/slp3/">https://web.stanford.edu/~jurafsky/slp3/</a> (Accessed on 2020/04/01).</p>
@@ -467,7 +495,7 @@ s.setAttribute('data-timestamp', +new Date());
           </div>
         </div>
       </div>
-<a href="vector-space-representation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-exam.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

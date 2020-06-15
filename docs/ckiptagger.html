@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-05-31" />
+<meta name="date" content="2020-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -60,6 +60,10 @@
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -306,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>12.3.1</b> Text Metadata</a></li>
 <li class="chapter" data-level="12.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>12.3.2</b> Speaker Metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socialinguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socialinguistic Variation</a></li>
+<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socio-linguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socio-linguistic Variation</a></li>
 <li class="chapter" data-level="12.5" data-path="xml.html"><a href="xml.html#lexical-analysis"><i class="fa fa-check"></i><b>12.5</b> Lexical Analysis</a><ul>
 <li class="chapter" data-level="12.5.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>12.5.1</b> Word Frequency vs. Gender</a></li>
 <li class="chapter" data-level="12.5.2" data-path="xml.html"><a href="xml.html#frequency-and-keyword-analysis"><i class="fa fa-check"></i><b>12.5.2</b> Frequency and Keyword Analysis</a></li>
@@ -334,13 +338,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>13.4</b> Vector Space Model for Words</a><ul>
 <li class="chapter" data-level="13.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>13.4.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
 <li class="chapter" data-level="13.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-corpustokens-to-fcm"><i class="fa fa-check"></i><b>13.4.2</b> From <code>corpus/tokens</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fmc"><i class="fa fa-check"></i><b>13.4.3</b> From <code>dfm</code> to <code>fmc</code></a></li>
+<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fcm"><i class="fa fa-check"></i><b>13.4.3</b> From <code>dfm</code> to <code>fcm</code></a></li>
 <li class="chapter" data-level="13.4.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#which-method-to-choose"><i class="fa fa-check"></i><b>13.4.4</b> Which method to choose?</a></li>
 <li class="chapter" data-level="13.4.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>13.4.5</b> Lexical Similarity</a></li>
 </ul></li>
 <li class="chapter" data-level="13.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>13.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="14" data-path="final-exam.html"><a href="final-exam.html"><i class="fa fa-check"></i><b>14</b> Final Exam</a><ul>
+<li class="chapter" data-level="14.1" data-path="final-exam.html"><a href="final-exam.html#important-instructions-1"><i class="fa fa-check"></i><b>14.1</b> Important Instructions</a></li>
+<li class="chapter" data-level="14.2" data-path="final-exam.html"><a href="final-exam.html#part-i-bnc2014-xml-processing"><i class="fa fa-check"></i><b>14.2</b> Part I: BNC2014 XML Processing</a></li>
+<li class="chapter" data-level="14.3" data-path="final-exam.html"><a href="final-exam.html#part-ii-nccu-corpus-analysis"><i class="fa fa-check"></i><b>14.3</b> Part II: NCCU Corpus Analysis</a></li>
+<li class="chapter" data-level="14.4" data-path="final-exam.html"><a href="final-exam.html#part-iii-mandarin-song-lyrics-analysis"><i class="fa fa-check"></i><b>14.4</b> Part III: Mandarin Song Lyrics Analysis</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="final-exam.html"><a href="final-exam.html#scraping-mojim-lyrics"><i class="fa fa-check"></i><b>14.4.1</b> Scraping Mojim Lyrics</a></li>
+<li class="chapter" data-level="14.4.2" data-path="final-exam.html"><a href="final-exam.html#analysis-of-lyrics"><i class="fa fa-check"></i><b>14.4.2</b> Analysis of Lyrics</a></li>
+<li class="chapter" data-level="14.4.3" data-path="final-exam.html"><a href="final-exam.html#word-segmentation-1"><i class="fa fa-check"></i><b>14.4.3</b> Word Segmentation</a></li>
+<li class="chapter" data-level="14.4.4" data-path="final-exam.html"><a href="final-exam.html#collostruction-analysis"><i class="fa fa-check"></i><b>14.4.4</b> Collostruction Analysis</a></li>
+<li class="chapter" data-level="14.4.5" data-path="final-exam.html"><a href="final-exam.html#keyword-analysis-1"><i class="fa fa-check"></i><b>14.4.5</b> Keyword Analysis</a></li>
+<li class="chapter" data-level="14.4.6" data-path="final-exam.html"><a href="final-exam.html#tokens-and-concordance-lines"><i class="fa fa-check"></i><b>14.4.6</b> Tokens and Concordance Lines</a></li>
+<li class="chapter" data-level="14.4.7" data-path="final-exam.html"><a href="final-exam.html#dfm-and-word-cloud"><i class="fa fa-check"></i><b>14.4.7</b> DFM and Word Cloud</a></li>
+<li class="chapter" data-level="14.4.8" data-path="final-exam.html"><a href="final-exam.html#cosine-similarity-of-songs"><i class="fa fa-check"></i><b>14.4.8</b> Cosine Similarity of Songs</a></li>
+<li class="chapter" data-level="14.4.9" data-path="final-exam.html"><a href="final-exam.html#lexical-bundles"><i class="fa fa-check"></i><b>14.4.9</b> Lexical Bundles</a></li>
+<li class="chapter" data-level="14.4.10" data-path="final-exam.html"><a href="final-exam.html#artist-based-analysis"><i class="fa fa-check"></i><b>14.4.10</b> Artist-based Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="final-exam.html"><a href="final-exam.html#afterwords-1"><i class="fa fa-check"></i><b>14.5</b> Afterwords</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -591,8 +613,8 @@ conda deactivate</code></pre>
 <div id="beyond-word-boundaries" class="section level2">
 <h2><span class="header-section-number">10.10</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-dd0b62d28344d12189fe" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-dd0b62d28344d12189fe">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e119530f2e3d3625d018" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e119530f2e3d3625d018">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Load the models</li>
 </ul>
@@ -601,10 +623,10 @@ conda deactivate</code></pre>
 <div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="co"># loading other necessary models</span></a>
 <a class="sourceLine" id="cb248-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   5.153   2.332   7.354</code></pre>
+##   4.997   2.419   6.913</code></pre>
 <div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   5.083   2.203   6.520</code></pre>
+##   4.971   1.745   6.439</code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
@@ -660,10 +682,10 @@ conda deactivate</code></pre>
 <a class="sourceLine" id="cb254-2" data-line-number="2">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
 <a class="sourceLine" id="cb254-3" data-line-number="3">ner</a></code></pre></div>
 <pre><code>## [[1]]
-## {(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;)}
+## {(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
 ## 
 ## [[2]]
-## {(11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;)}
+## {(21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;)}
 ## 
 ## [[3]]
 ## {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -675,7 +697,7 @@ conda deactivate</code></pre>
 ## {(14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;), (4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;)}
 ## 
 ## [[6]]
-## {(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;)}</code></pre>
+## {(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
 </div>
 <div id="tidy-up-the-results" class="section level2">
 <h2><span class="header-section-number">10.11</span> Tidy Up the Results</h2>
