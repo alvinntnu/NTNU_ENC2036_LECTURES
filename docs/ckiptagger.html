@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 CKIP Tagger | Corpus Linguistics</title>
+  <title>Chapter 9 CKIP Tagger | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 CKIP Tagger | Corpus Linguistics" />
+  <meta property="og:title" content="Chapter 9 CKIP Tagger | Corpus Linguistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 CKIP Tagger | Corpus Linguistics" />
+  <meta name="twitter:title" content="Chapter 9 CKIP Tagger | Corpus Linguistics" />
   
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-06-13" />
+<meta name="date" content="2020-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="constructions-and-idioms.html"/>
 <link rel="next" href="structured-corpus.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -60,32 +61,29 @@
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
-<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
-<script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -94,9 +92,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -146,24 +144,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><img src="images/alerts/book-solid.svg" height = "20" width = "20"> ENC 2036 Corpus Linguistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a><ul>
+<li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#why-do-we-need-corpus-data"><i class="fa fa-check"></i><b>1.1</b> Why do we need corpus data?</a></li>
 <li class="chapter" data-level="1.2" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#what-is-corpus"><i class="fa fa-check"></i><b>1.2</b> What is corpus?</a></li>
 <li class="chapter" data-level="1.3" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#what-is-a-corpus-linguistic-study"><i class="fa fa-check"></i><b>1.3</b> What is a corpus linguistic study?</a></li>
 <li class="chapter" data-level="1.4" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html#additional-information-on-cl"><i class="fa fa-check"></i><b>1.4</b> Additional Information on CL</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="r-fundamentals.html"><a href="r-fundamentals.html"><i class="fa fa-check"></i><b>2</b> R Fundamentals</a><ul>
+<li class="chapter" data-level="2" data-path="r-fundamentals.html"><a href="r-fundamentals.html"><i class="fa fa-check"></i><b>2</b> R Fundamentals</a>
+<ul>
 <li class="chapter" data-level="" data-path="r-fundamentals.html"><a href="r-fundamentals.html#a-quick-note"><i class="fa fa-check"></i>A Quick Note</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="creating-corpus.html"><a href="creating-corpus.html"><i class="fa fa-check"></i><b>3</b> Creating Corpus</a><ul>
-<li class="chapter" data-level="3.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-structure"><i class="fa fa-check"></i><b>3.1</b> HTML Structure</a><ul>
+<li class="chapter" data-level="3" data-path="creating-corpus.html"><a href="creating-corpus.html"><i class="fa fa-check"></i><b>3</b> Creating Corpus</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-structure"><i class="fa fa-check"></i><b>3.1</b> HTML Structure</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="creating-corpus.html"><a href="creating-corpus.html#html-syntax"><i class="fa fa-check"></i><b>3.1.1</b> HTML Syntax</a></li>
 <li class="chapter" data-level="3.1.2" data-path="creating-corpus.html"><a href="creating-corpus.html#tags-and-attributes"><i class="fa fa-check"></i><b>3.1.2</b> Tags and Attributes</a></li>
 <li class="chapter" data-level="3.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>3.1.3</b> CSS</a></li>
@@ -174,27 +177,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="creating-corpus.html"><a href="creating-corpus.html#save-corpus"><i class="fa fa-check"></i><b>3.4</b> Save Corpus</a></li>
 <li class="chapter" data-level="3.5" data-path="creating-corpus.html"><a href="creating-corpus.html#additional-resources"><i class="fa fa-check"></i><b>3.5</b> Additional Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>4</b> Corpus Analysis: A Start</a><ul>
+<li class="chapter" data-level="4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html"><i class="fa fa-check"></i><b>4</b> Corpus Analysis: A Start</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#installing-quanteda"><i class="fa fa-check"></i><b>4.1</b> Installing <code>quanteda</code></a></li>
 <li class="chapter" data-level="4.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#building-a-corpus-from-character-vector"><i class="fa fa-check"></i><b>4.2</b> Building a <code>corpus</code> from character vector</a></li>
 <li class="chapter" data-level="4.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#keyword-in-context-kwic"><i class="fa fa-check"></i><b>4.3</b> Keyword-in-Context (KWIC)</a></li>
 <li class="chapter" data-level="4.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#kwic-with-regular-expressions"><i class="fa fa-check"></i><b>4.4</b> KWIC with Regular Expressions</a></li>
 <li class="chapter" data-level="4.5" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#tidy-text-format-of-the-corpus"><i class="fa fa-check"></i><b>4.5</b> Tidy Text Format of the Corpus</a></li>
-<li class="chapter" data-level="4.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>4.6</b> Frequency Lists</a><ul>
+<li class="chapter" data-level="4.6" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-lists"><i class="fa fa-check"></i><b>4.6</b> Frequency Lists</a>
+<ul>
 <li class="chapter" data-level="4.6.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-unigram"><i class="fa fa-check"></i><b>4.6.1</b> Word (Unigram)</a></li>
 <li class="chapter" data-level="4.6.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#bigrams"><i class="fa fa-check"></i><b>4.6.2</b> Bigrams</a></li>
 <li class="chapter" data-level="4.6.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#ngrams-lexical-bundles"><i class="fa fa-check"></i><b>4.6.3</b> Ngrams (Lexical Bundles)</a></li>
 <li class="chapter" data-level="4.6.4" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#frequency-and-dispersion"><i class="fa fa-check"></i><b>4.6.4</b> Frequency and Dispersion</a></li>
 </ul></li>
 <li class="chapter" data-level="4.7" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#word-cloud"><i class="fa fa-check"></i><b>4.7</b> Word Cloud</a></li>
-<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.8</b> Collocations</a><ul>
+<li class="chapter" data-level="4.8" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#collocations"><i class="fa fa-check"></i><b>4.8</b> Collocations</a>
+<ul>
 <li class="chapter" data-level="4.8.1" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#cooccurrence-table-and-observed-frequencies"><i class="fa fa-check"></i><b>4.8.1</b> Cooccurrence Table and Observed Frequencies</a></li>
 <li class="chapter" data-level="4.8.2" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#expected-frequencies"><i class="fa fa-check"></i><b>4.8.2</b> Expected Frequencies</a></li>
 <li class="chapter" data-level="4.8.3" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#association-measures"><i class="fa fa-check"></i><b>4.8.3</b> Association Measures</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="corpus-analysis-a-start.html"><a href="corpus-analysis-a-start.html#constructions"><i class="fa fa-check"></i><b>4.9</b> Constructions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a><ul>
+<li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#installing-the-package"><i class="fa fa-check"></i><b>5.1</b> Installing the Package</a></li>
 <li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a></li>
 <li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.3</b> Working Pipeline</a></li>
@@ -205,164 +212,159 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.8</b> Saving POS-tagged Texts</a></li>
 <li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.9</b> Finalize spaCy</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="midterm-exam.html"><a href="midterm-exam.html"><i class="fa fa-check"></i><b>6</b> Midterm Exam</a><ul>
-<li class="chapter" data-level="6.1" data-path="midterm-exam.html"><a href="midterm-exam.html#important-instructions"><i class="fa fa-check"></i><b>6.1</b> Important Instructions</a></li>
-<li class="chapter" data-level="6.2" data-path="midterm-exam.html"><a href="midterm-exam.html#part-i"><i class="fa fa-check"></i><b>6.2</b> Part I</a></li>
-<li class="chapter" data-level="6.3" data-path="midterm-exam.html"><a href="midterm-exam.html#part-ii"><i class="fa fa-check"></i><b>6.3</b> Part II</a></li>
-<li class="chapter" data-level="6.4" data-path="midterm-exam.html"><a href="midterm-exam.html#part-iii"><i class="fa fa-check"></i><b>6.4</b> Part III</a></li>
-<li class="chapter" data-level="6.5" data-path="midterm-exam.html"><a href="midterm-exam.html#part-iv"><i class="fa fa-check"></i><b>6.5</b> Part IV</a></li>
+<li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#about-keywords"><i class="fa fa-check"></i><b>6.1</b> About Keywords</a></li>
+<li class="chapter" data-level="6.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#statistics-for-keyness"><i class="fa fa-check"></i><b>6.2</b> Statistics for Keyness</a></li>
+<li class="chapter" data-level="6.3" data-path="keyword-analysis.html"><a href="keyword-analysis.html#implementation"><i class="fa fa-check"></i><b>6.3</b> Implementation</a></li>
+<li class="chapter" data-level="6.4" data-path="keyword-analysis.html"><a href="keyword-analysis.html#tidy-data"><i class="fa fa-check"></i><b>6.4</b> Tidy Data</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#an-long-to-wide-example"><i class="fa fa-check"></i><b>6.4.1</b> An Long-to-Wide Example</a></li>
+<li class="chapter" data-level="6.4.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#a-wide-to-long-example"><i class="fa fa-check"></i><b>6.4.2</b> A Wide-to-Long Example</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>7</b> Keyword Analysis</a><ul>
-<li class="chapter" data-level="7.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#about-keywords"><i class="fa fa-check"></i><b>7.1</b> About Keywords</a></li>
-<li class="chapter" data-level="7.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#statistics-for-keyness"><i class="fa fa-check"></i><b>7.2</b> Statistics for Keyness</a></li>
-<li class="chapter" data-level="7.3" data-path="keyword-analysis.html"><a href="keyword-analysis.html#implementation"><i class="fa fa-check"></i><b>7.3</b> Implementation</a></li>
-<li class="chapter" data-level="7.4" data-path="keyword-analysis.html"><a href="keyword-analysis.html#tidy-data"><i class="fa fa-check"></i><b>7.4</b> Tidy Data</a><ul>
-<li class="chapter" data-level="7.4.1" data-path="keyword-analysis.html"><a href="keyword-analysis.html#an-long-to-wide-example"><i class="fa fa-check"></i><b>7.4.1</b> An Long-to-Wide Example</a></li>
-<li class="chapter" data-level="7.4.2" data-path="keyword-analysis.html"><a href="keyword-analysis.html#a-wide-to-long-example"><i class="fa fa-check"></i><b>7.4.2</b> A Wide-to-Long Example</a></li>
+<li class="chapter" data-level="6.5" data-path="keyword-analysis.html"><a href="keyword-analysis.html#word-frequency-transformation"><i class="fa fa-check"></i><b>6.5</b> Word Frequency Transformation</a></li>
+<li class="chapter" data-level="6.6" data-path="keyword-analysis.html"><a href="keyword-analysis.html#computing-keynesss"><i class="fa fa-check"></i><b>6.6</b> Computing Keynesss</a></li>
+<li class="chapter" data-level="6.7" data-path="keyword-analysis.html"><a href="keyword-analysis.html#conclusion"><i class="fa fa-check"></i><b>6.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="keyword-analysis.html"><a href="keyword-analysis.html#word-frequency-transformation"><i class="fa fa-check"></i><b>7.5</b> Word Frequency Transformation</a></li>
-<li class="chapter" data-level="7.6" data-path="keyword-analysis.html"><a href="keyword-analysis.html#computing-keynesss"><i class="fa fa-check"></i><b>7.6</b> Computing Keynesss</a></li>
-<li class="chapter" data-level="7.7" data-path="keyword-analysis.html"><a href="keyword-analysis.html#conclusion"><i class="fa fa-check"></i><b>7.7</b> Conclusion</a></li>
+<li class="chapter" data-level="7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>7</b> Chinese Text Processing</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>7.1</b> Chinese Word Segmenter <code>jiebaR</code></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#start"><i class="fa fa-check"></i><b>7.1.1</b> Start</a></li>
+<li class="chapter" data-level="7.1.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#parameters-setting"><i class="fa fa-check"></i><b>7.1.2</b> Parameters Setting</a></li>
+<li class="chapter" data-level="7.1.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#user-defined-dictionary"><i class="fa fa-check"></i><b>7.1.3</b> User-defined dictionary</a></li>
+<li class="chapter" data-level="7.1.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#stopwords"><i class="fa fa-check"></i><b>7.1.4</b> Stopwords</a></li>
+<li class="chapter" data-level="7.1.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#pos-tagging"><i class="fa fa-check"></i><b>7.1.5</b> POS Tagging</a></li>
+<li class="chapter" data-level="7.1.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#default-word-lists-in-jiebar"><i class="fa fa-check"></i><b>7.1.6</b> Default Word Lists in JiebaR</a></li>
+<li class="chapter" data-level="7.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminders"><i class="fa fa-check"></i><b>7.1.7</b> Reminders</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html"><i class="fa fa-check"></i><b>8</b> Chinese Text Processing</a><ul>
-<li class="chapter" data-level="8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-word-segmenter-jiebar"><i class="fa fa-check"></i><b>8.1</b> Chinese Word Segmenter <code>jiebaR</code></a><ul>
-<li class="chapter" data-level="8.1.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#start"><i class="fa fa-check"></i><b>8.1.1</b> Start</a></li>
-<li class="chapter" data-level="8.1.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#parameters-setting"><i class="fa fa-check"></i><b>8.1.2</b> Parameters Setting</a></li>
-<li class="chapter" data-level="8.1.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#user-defined-dictionary"><i class="fa fa-check"></i><b>8.1.3</b> User-defined dictionary</a></li>
-<li class="chapter" data-level="8.1.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#stopwords"><i class="fa fa-check"></i><b>8.1.4</b> Stopwords</a></li>
-<li class="chapter" data-level="8.1.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#pos-tagging"><i class="fa fa-check"></i><b>8.1.5</b> POS Tagging</a></li>
-<li class="chapter" data-level="8.1.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#default-word-lists-in-jiebar"><i class="fa fa-check"></i><b>8.1.6</b> Default Word Lists in JiebaR</a></li>
-<li class="chapter" data-level="8.1.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#reminders"><i class="fa fa-check"></i><b>8.1.7</b> Reminders</a></li>
+<li class="chapter" data-level="7.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>7.2</b> Chinese Text Analytics Pipeline</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#creating-a-corpus-object"><i class="fa fa-check"></i><b>7.2.1</b> Creating a Corpus Object</a></li>
+<li class="chapter" data-level="7.2.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#tidy-structure-framework"><i class="fa fa-check"></i><b>7.2.2</b> Tidy Structure Framework</a></li>
+<li class="chapter" data-level="7.2.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quanteda-framework"><i class="fa fa-check"></i><b>7.2.3</b> <code>Quanteda</code> Framework</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#chinese-text-analytics-pipeline"><i class="fa fa-check"></i><b>8.2</b> Chinese Text Analytics Pipeline</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#creating-a-corpus-object"><i class="fa fa-check"></i><b>8.2.1</b> Creating a Corpus Object</a></li>
-<li class="chapter" data-level="8.2.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#tidy-structure-framework"><i class="fa fa-check"></i><b>8.2.2</b> Tidy Structure Framework</a></li>
-<li class="chapter" data-level="8.2.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quanteda-framework"><i class="fa fa-check"></i><b>8.2.3</b> <code>Quanteda</code> Framework</a></li>
+<li class="chapter" data-level="7.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#comparing-tokenization-methods"><i class="fa fa-check"></i><b>7.3</b> Comparing Tokenization Methods</a></li>
+<li class="chapter" data-level="7.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#data"><i class="fa fa-check"></i><b>7.4</b> Data</a></li>
+<li class="chapter" data-level="7.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>7.5</b> Loading Text Data</a></li>
+<li class="chapter" data-level="7.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quantedatokens-vs.-jiebarsegment"><i class="fa fa-check"></i><b>7.6</b> <code>quanteda::tokens()</code> vs. <code>jiebaR::segment()</code></a></li>
+<li class="chapter" data-level="7.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.7</b> Case Study 1: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="7.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>7.8</b> Case Study 2: Patterns</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>7.8.1</b> BEI Construction</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#comparing-tokenization-methods"><i class="fa fa-check"></i><b>8.3</b> Comparing Tokenization Methods</a></li>
-<li class="chapter" data-level="8.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#data"><i class="fa fa-check"></i><b>8.4</b> Data</a></li>
-<li class="chapter" data-level="8.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>8.5</b> Loading Text Data</a></li>
-<li class="chapter" data-level="8.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quantedatokens-vs.-jiebarsegment"><i class="fa fa-check"></i><b>8.6</b> <code>quanteda::tokens()</code> vs. <code>jiebaR::segment()</code></a></li>
-<li class="chapter" data-level="8.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>8.7</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="8.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>8.8</b> Case Study 2: Patterns</a><ul>
-<li class="chapter" data-level="8.8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>8.8.1</b> BEI Construction</a></li>
+<li class="chapter" data-level="7.9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>7.9</b> Case Study 3: Lexical Bundles</a>
+<ul>
+<li class="chapter" data-level="7.9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>7.9.1</b> N-grams Extraction</a></li>
+<li class="chapter" data-level="7.9.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>7.9.2</b> Frequency and Dispersion</a></li>
 </ul></li>
-<li class="chapter" data-level="8.9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>8.9</b> Case Study 3: Lexical Bundles</a><ul>
-<li class="chapter" data-level="8.9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>8.9.1</b> N-grams Extraction</a></li>
-<li class="chapter" data-level="8.9.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>8.9.2</b> Frequency and Dispersion</a></li>
+<li class="chapter" data-level="7.10" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#afterwords"><i class="fa fa-check"></i><b>7.10</b> Afterwords</a></li>
 </ul></li>
-<li class="chapter" data-level="8.10" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#afterwords"><i class="fa fa-check"></i><b>8.10</b> Afterwords</a></li>
+<li class="chapter" data-level="8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>8</b> Constructions and Idioms</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#collostruction"><i class="fa fa-check"></i><b>8.1</b> Collostruction</a></li>
+<li class="chapter" data-level="8.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#corpus"><i class="fa fa-check"></i><b>8.2</b> Corpus</a></li>
+<li class="chapter" data-level="8.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-segmentation"><i class="fa fa-check"></i><b>8.3</b> Word Segmentation</a></li>
+<li class="chapter" data-level="8.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#extract-constructions"><i class="fa fa-check"></i><b>8.4</b> Extract Constructions</a></li>
+<li class="chapter" data-level="8.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#distributional-information-needed-for-ca"><i class="fa fa-check"></i><b>8.5</b> Distributional Information Needed for CA</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-frequency-list"><i class="fa fa-check"></i><b>8.5.1</b> Word Frequency List</a></li>
+<li class="chapter" data-level="8.5.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#joint-frequencies"><i class="fa fa-check"></i><b>8.5.2</b> Joint Frequencies</a></li>
+<li class="chapter" data-level="8.5.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#input-for-coll.analysis.r"><i class="fa fa-check"></i><b>8.5.3</b> Input for <code>coll.analysis.r</code></a></li>
+<li class="chapter" data-level="8.5.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#other-information"><i class="fa fa-check"></i><b>8.5.4</b> Other Information</a></li>
+<li class="chapter" data-level="8.5.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#create-output-file"><i class="fa fa-check"></i><b>8.5.5</b> Create Output File</a></li>
+<li class="chapter" data-level="8.5.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#run-coll.analysis.r"><i class="fa fa-check"></i><b>8.5.6</b> Run <code>coll.analysis.r</code></a></li>
+<li class="chapter" data-level="8.5.7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>8.5.7</b> Interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>9</b> Constructions and Idioms</a><ul>
-<li class="chapter" data-level="9.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#collostruction"><i class="fa fa-check"></i><b>9.1</b> Collostruction</a></li>
-<li class="chapter" data-level="9.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#corpus"><i class="fa fa-check"></i><b>9.2</b> Corpus</a></li>
-<li class="chapter" data-level="9.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-segmentation"><i class="fa fa-check"></i><b>9.3</b> Word Segmentation</a></li>
-<li class="chapter" data-level="9.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#extract-constructions"><i class="fa fa-check"></i><b>9.4</b> Extract Constructions</a></li>
-<li class="chapter" data-level="9.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#distributional-information-needed-for-ca"><i class="fa fa-check"></i><b>9.5</b> Distributional Information Needed for CA</a><ul>
-<li class="chapter" data-level="9.5.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-frequency-list"><i class="fa fa-check"></i><b>9.5.1</b> Word Frequency List</a></li>
-<li class="chapter" data-level="9.5.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#joint-frequencies"><i class="fa fa-check"></i><b>9.5.2</b> Joint Frequencies</a></li>
-<li class="chapter" data-level="9.5.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#input-for-coll.analysis.r"><i class="fa fa-check"></i><b>9.5.3</b> Input for <code>coll.analysis.r</code></a></li>
-<li class="chapter" data-level="9.5.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#other-information"><i class="fa fa-check"></i><b>9.5.4</b> Other Information</a></li>
-<li class="chapter" data-level="9.5.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#create-output-file"><i class="fa fa-check"></i><b>9.5.5</b> Create Output File</a></li>
-<li class="chapter" data-level="9.5.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#run-coll.analysis.r"><i class="fa fa-check"></i><b>9.5.6</b> Run <code>coll.analysis.r</code></a></li>
-<li class="chapter" data-level="9.5.7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>9.5.7</b> Interpretations</a></li>
+<li class="chapter" data-level="8.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>8.6</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>9.6</b> Exercises</a></li>
+<li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>9.1</b> Installation</a></li>
+<li class="chapter" data-level="9.2" data-path="ckiptagger.html"><a href="ckiptagger.html#download-the-model-files"><i class="fa fa-check"></i><b>9.2</b> Download the Model Files</a></li>
+<li class="chapter" data-level="9.3" data-path="ckiptagger.html"><a href="ckiptagger.html#r-python-communication"><i class="fa fa-check"></i><b>9.3</b> R-Python Communication</a></li>
+<li class="chapter" data-level="9.4" data-path="ckiptagger.html"><a href="ckiptagger.html#word-segmentation-in-r"><i class="fa fa-check"></i><b>9.4</b> Word Segmentation in R</a></li>
+<li class="chapter" data-level="9.5" data-path="ckiptagger.html"><a href="ckiptagger.html#r-environment-setting"><i class="fa fa-check"></i><b>9.5</b> R Environment Setting</a></li>
+<li class="chapter" data-level="9.6" data-path="ckiptagger.html"><a href="ckiptagger.html#creating-conda-environment-for-ckiptagger"><i class="fa fa-check"></i><b>9.6</b> Creating Conda Environment for <code>ckiptagger</code></a></li>
+<li class="chapter" data-level="9.7" data-path="ckiptagger.html"><a href="ckiptagger.html#initialization"><i class="fa fa-check"></i><b>9.7</b> Initialization</a></li>
+<li class="chapter" data-level="9.8" data-path="ckiptagger.html"><a href="ckiptagger.html#segmenting-texts"><i class="fa fa-check"></i><b>9.8</b> Segmenting Texts</a></li>
+<li class="chapter" data-level="9.9" data-path="ckiptagger.html"><a href="ckiptagger.html#define-own-dictionary"><i class="fa fa-check"></i><b>9.9</b> Define Own Dictionary</a></li>
+<li class="chapter" data-level="9.10" data-path="ckiptagger.html"><a href="ckiptagger.html#beyond-word-boundaries"><i class="fa fa-check"></i><b>9.10</b> Beyond Word Boundaries</a></li>
+<li class="chapter" data-level="9.11" data-path="ckiptagger.html"><a href="ckiptagger.html#tidy-up-the-results"><i class="fa fa-check"></i><b>9.11</b> Tidy Up the Results</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>10</b> CKIP Tagger</a><ul>
-<li class="chapter" data-level="10.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>10.1</b> Installation</a></li>
-<li class="chapter" data-level="10.2" data-path="ckiptagger.html"><a href="ckiptagger.html#download-the-model-files"><i class="fa fa-check"></i><b>10.2</b> Download the Model Files</a></li>
-<li class="chapter" data-level="10.3" data-path="ckiptagger.html"><a href="ckiptagger.html#r-python-communication"><i class="fa fa-check"></i><b>10.3</b> R-Python Communication</a></li>
-<li class="chapter" data-level="10.4" data-path="ckiptagger.html"><a href="ckiptagger.html#word-segmentation-in-r"><i class="fa fa-check"></i><b>10.4</b> Word Segmentation in R</a></li>
-<li class="chapter" data-level="10.5" data-path="ckiptagger.html"><a href="ckiptagger.html#r-environment-setting"><i class="fa fa-check"></i><b>10.5</b> R Environment Setting</a></li>
-<li class="chapter" data-level="10.6" data-path="ckiptagger.html"><a href="ckiptagger.html#creating-conda-environment-for-ckiptagger"><i class="fa fa-check"></i><b>10.6</b> Creating Conda Environment for <code>ckiptagger</code></a></li>
-<li class="chapter" data-level="10.7" data-path="ckiptagger.html"><a href="ckiptagger.html#initialization"><i class="fa fa-check"></i><b>10.7</b> Initialization</a></li>
-<li class="chapter" data-level="10.8" data-path="ckiptagger.html"><a href="ckiptagger.html#segmenting-texts"><i class="fa fa-check"></i><b>10.8</b> Segmenting Texts</a></li>
-<li class="chapter" data-level="10.9" data-path="ckiptagger.html"><a href="ckiptagger.html#define-own-dictionary"><i class="fa fa-check"></i><b>10.9</b> Define Own Dictionary</a></li>
-<li class="chapter" data-level="10.10" data-path="ckiptagger.html"><a href="ckiptagger.html#beyond-word-boundaries"><i class="fa fa-check"></i><b>10.10</b> Beyond Word Boundaries</a></li>
-<li class="chapter" data-level="10.11" data-path="ckiptagger.html"><a href="ckiptagger.html#tidy-up-the-results"><i class="fa fa-check"></i><b>10.11</b> Tidy Up the Results</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>11</b> Structured Corpus</a><ul>
-<li class="chapter" data-level="11.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>11.1</b> NCCU Spoken Mandarin</a></li>
-<li class="chapter" data-level="11.2" data-path="structured-corpus.html"><a href="structured-corpus.html#childes-format"><i class="fa fa-check"></i><b>11.2</b> CHILDES Format</a></li>
-<li class="chapter" data-level="11.3" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>11.3</b> Loading the Corpus</a></li>
-<li class="chapter" data-level="11.4" data-path="structured-corpus.html"><a href="structured-corpus.html#from-text-based-to-turn-based-df"><i class="fa fa-check"></i><b>11.4</b> From Text-based to Turn-based DF</a></li>
-<li class="chapter" data-level="11.5" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.utterances"><i class="fa fa-check"></i><b>11.5</b> Metadata vs. Utterances</a></li>
-<li class="chapter" data-level="11.6" data-path="structured-corpus.html"><a href="structured-corpus.html#word-based-df-and-frequency-list"><i class="fa fa-check"></i><b>11.6</b> Word-based DF and Frequency List</a></li>
-<li class="chapter" data-level="11.7" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>11.7</b> Concordances</a></li>
-<li class="chapter" data-level="11.8" data-path="structured-corpus.html"><a href="structured-corpus.html#collocations-bigrams"><i class="fa fa-check"></i><b>11.8</b> Collocations (Bigrams)</a></li>
-<li class="chapter" data-level="11.9" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>11.9</b> N-grams (Lexical Bundles)</a></li>
-<li class="chapter" data-level="11.10" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>11.10</b> Connecting SPID to Metadata</a></li>
-<li class="chapter" data-level="11.11" data-path="structured-corpus.html"><a href="structured-corpus.html#corpus-headers"><i class="fa fa-check"></i><b>11.11</b> Corpus Headers</a></li>
-<li class="chapter" data-level="11.12" data-path="structured-corpus.html"><a href="structured-corpus.html#sociolinguistic-analyses"><i class="fa fa-check"></i><b>11.12</b> Sociolinguistic Analyses</a><ul>
-<li class="chapter" data-level="11.12.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-bigrams-distribution-by-age-groups"><i class="fa fa-check"></i><b>11.12.1</b> Check Bigrams Distribution By Age Groups</a></li>
-<li class="chapter" data-level="11.12.2" data-path="structured-corpus.html"><a href="structured-corpus.html#numbers-of-bigrams-above-cut-off-by-age"><i class="fa fa-check"></i><b>11.12.2</b> Numbers of Bigrams above Cut-off by Age</a></li>
-<li class="chapter" data-level="11.12.3" data-path="structured-corpus.html"><a href="structured-corpus.html#bigram-word-clouds-by-age"><i class="fa fa-check"></i><b>11.12.3</b> Bigram Word clouds by Age</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>12</b> XML</a><ul>
-<li class="chapter" data-level="12.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>12.1</b> BNC Spoken 2014</a></li>
-<li class="chapter" data-level="12.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>12.2</b> Process the Whole Directory of BNC2014 Sample</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>12.2.1</b> Define Function</a></li>
-<li class="chapter" data-level="12.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>12.2.2</b> Process the all files in the Directory</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>12.3</b> Metadata</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>12.3.1</b> Text Metadata</a></li>
-<li class="chapter" data-level="12.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>12.3.2</b> Speaker Metadata</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socio-linguistic-variation"><i class="fa fa-check"></i><b>12.4</b> BNC2014 for Socio-linguistic Variation</a></li>
-<li class="chapter" data-level="12.5" data-path="xml.html"><a href="xml.html#lexical-analysis"><i class="fa fa-check"></i><b>12.5</b> Lexical Analysis</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.gender"><i class="fa fa-check"></i><b>12.5.1</b> Word Frequency vs. Gender</a></li>
-<li class="chapter" data-level="12.5.2" data-path="xml.html"><a href="xml.html#frequency-and-keyword-analysis"><i class="fa fa-check"></i><b>12.5.2</b> Frequency and Keyword Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="12.6" data-path="xml.html"><a href="xml.html#constructions-analysis"><i class="fa fa-check"></i><b>12.6</b> Constructions Analysis</a><ul>
-<li class="chapter" data-level="12.6.1" data-path="xml.html"><a href="xml.html#from-token-based-to-turn-based-data-frame"><i class="fa fa-check"></i><b>12.6.1</b> From Token-based to Turn-based Data Frame</a></li>
-<li class="chapter" data-level="12.6.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>12.6.2</b> Degree ADV + ADJ</a></li>
+<li class="chapter" data-level="10" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>10</b> Structured Corpus</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="structured-corpus.html"><a href="structured-corpus.html#nccu-spoken-mandarin"><i class="fa fa-check"></i><b>10.1</b> NCCU Spoken Mandarin</a></li>
+<li class="chapter" data-level="10.2" data-path="structured-corpus.html"><a href="structured-corpus.html#childes-format"><i class="fa fa-check"></i><b>10.2</b> CHILDES Format</a></li>
+<li class="chapter" data-level="10.3" data-path="structured-corpus.html"><a href="structured-corpus.html#loading-the-corpus"><i class="fa fa-check"></i><b>10.3</b> Loading the Corpus</a></li>
+<li class="chapter" data-level="10.4" data-path="structured-corpus.html"><a href="structured-corpus.html#from-text-based-to-turn-based-df"><i class="fa fa-check"></i><b>10.4</b> From Text-based to Turn-based DF</a></li>
+<li class="chapter" data-level="10.5" data-path="structured-corpus.html"><a href="structured-corpus.html#metadata-vs.-utterances"><i class="fa fa-check"></i><b>10.5</b> Metadata vs. Utterances</a></li>
+<li class="chapter" data-level="10.6" data-path="structured-corpus.html"><a href="structured-corpus.html#word-based-df-and-frequency-list"><i class="fa fa-check"></i><b>10.6</b> Word-based DF and Frequency List</a></li>
+<li class="chapter" data-level="10.7" data-path="structured-corpus.html"><a href="structured-corpus.html#concordances"><i class="fa fa-check"></i><b>10.7</b> Concordances</a></li>
+<li class="chapter" data-level="10.8" data-path="structured-corpus.html"><a href="structured-corpus.html#collocations-bigrams"><i class="fa fa-check"></i><b>10.8</b> Collocations (Bigrams)</a></li>
+<li class="chapter" data-level="10.9" data-path="structured-corpus.html"><a href="structured-corpus.html#n-grams-lexical-bundles"><i class="fa fa-check"></i><b>10.9</b> N-grams (Lexical Bundles)</a></li>
+<li class="chapter" data-level="10.10" data-path="structured-corpus.html"><a href="structured-corpus.html#connecting-spid-to-metadata"><i class="fa fa-check"></i><b>10.10</b> Connecting SPID to Metadata</a></li>
+<li class="chapter" data-level="10.11" data-path="structured-corpus.html"><a href="structured-corpus.html#corpus-headers"><i class="fa fa-check"></i><b>10.11</b> Corpus Headers</a></li>
+<li class="chapter" data-level="10.12" data-path="structured-corpus.html"><a href="structured-corpus.html#sociolinguistic-analyses"><i class="fa fa-check"></i><b>10.12</b> Sociolinguistic Analyses</a>
+<ul>
+<li class="chapter" data-level="10.12.1" data-path="structured-corpus.html"><a href="structured-corpus.html#check-bigrams-distribution-by-age-groups"><i class="fa fa-check"></i><b>10.12.1</b> Check Bigrams Distribution By Age Groups</a></li>
+<li class="chapter" data-level="10.12.2" data-path="structured-corpus.html"><a href="structured-corpus.html#numbers-of-bigrams-above-cut-off-by-age"><i class="fa fa-check"></i><b>10.12.2</b> Numbers of Bigrams above Cut-off by Age</a></li>
+<li class="chapter" data-level="10.12.3" data-path="structured-corpus.html"><a href="structured-corpus.html#bigram-word-clouds-by-age"><i class="fa fa-check"></i><b>10.12.3</b> Bigram Word clouds by Age</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>13</b> Vector Space Representation</a><ul>
-<li class="chapter" data-level="13.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-semantics"><i class="fa fa-check"></i><b>13.1</b> Distributional Semantics</a></li>
-<li class="chapter" data-level="13.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-semantics-parameters"><i class="fa fa-check"></i><b>13.2</b> Vector Space Semantics: Parameters</a></li>
-<li class="chapter" data-level="13.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-documents"><i class="fa fa-check"></i><b>13.3</b> Vector Space Model for Documents</a><ul>
-<li class="chapter" data-level="13.3.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>13.3.1</b> Data Processing Flowchart</a></li>
-<li class="chapter" data-level="13.3.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>13.3.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="13.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#corpus-1"><i class="fa fa-check"></i><b>13.3.3</b> Corpus</a></li>
-<li class="chapter" data-level="13.3.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm-1"><i class="fa fa-check"></i><b>13.3.4</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
-<li class="chapter" data-level="13.3.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distance-similarity-metrics"><i class="fa fa-check"></i><b>13.3.5</b> Distributional Hypothesis and Distance/Similarity Metrics</a></li>
-<li class="chapter" data-level="13.3.6" data-path="vector-space-representation.html"><a href="vector-space-representation.html#multidimensiona-space"><i class="fa fa-check"></i><b>13.3.6</b> Multidimensiona Space</a></li>
-<li class="chapter" data-level="13.3.7" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-semantics-considerations"><i class="fa fa-check"></i><b>13.3.7</b> Vector Semantics Considerations</a></li>
-<li class="chapter" data-level="13.3.8" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>13.3.8</b> Feature Selection</a></li>
-<li class="chapter" data-level="13.3.9" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exploratory-analysis-of-dfm"><i class="fa fa-check"></i><b>13.3.9</b> Exploratory Analysis of <code>dfm</code></a></li>
-<li class="chapter" data-level="13.3.10" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>13.3.10</b> Document Similarity</a></li>
+<li class="chapter" data-level="11" data-path="xml.html"><a href="xml.html"><i class="fa fa-check"></i><b>11</b> XML</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="xml.html"><a href="xml.html#bnc-spoken-2014"><i class="fa fa-check"></i><b>11.1</b> BNC Spoken 2014</a></li>
+<li class="chapter" data-level="11.2" data-path="xml.html"><a href="xml.html#process-the-whole-directory-of-bnc2014-sample"><i class="fa fa-check"></i><b>11.2</b> Process the Whole Directory of BNC2014 Sample</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="xml.html"><a href="xml.html#define-function"><i class="fa fa-check"></i><b>11.2.1</b> Define Function</a></li>
+<li class="chapter" data-level="11.2.2" data-path="xml.html"><a href="xml.html#process-the-all-files-in-the-directory"><i class="fa fa-check"></i><b>11.2.2</b> Process the all files in the Directory</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>13.4</b> Vector Space Model for Words</a><ul>
-<li class="chapter" data-level="13.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>13.4.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
-<li class="chapter" data-level="13.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-corpustokens-to-fcm"><i class="fa fa-check"></i><b>13.4.2</b> From <code>corpus/tokens</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="13.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fcm"><i class="fa fa-check"></i><b>13.4.3</b> From <code>dfm</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="13.4.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#which-method-to-choose"><i class="fa fa-check"></i><b>13.4.4</b> Which method to choose?</a></li>
-<li class="chapter" data-level="13.4.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>13.4.5</b> Lexical Similarity</a></li>
+<li class="chapter" data-level="11.3" data-path="xml.html"><a href="xml.html#metadata"><i class="fa fa-check"></i><b>11.3</b> Metadata</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="xml.html"><a href="xml.html#text-metadata"><i class="fa fa-check"></i><b>11.3.1</b> Text Metadata</a></li>
+<li class="chapter" data-level="11.3.2" data-path="xml.html"><a href="xml.html#speaker-metadata"><i class="fa fa-check"></i><b>11.3.2</b> Speaker Metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>13.5</b> Exercises</a></li>
+<li class="chapter" data-level="11.4" data-path="xml.html"><a href="xml.html#bnc2014-for-socio-linguistic-variation"><i class="fa fa-check"></i><b>11.4</b> BNC2014 for Socio-linguistic Variation</a></li>
+<li class="chapter" data-level="11.5" data-path="xml.html"><a href="xml.html#lexical-analysis"><i class="fa fa-check"></i><b>11.5</b> Lexical Analysis</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="xml.html"><a href="xml.html#word-frequency-vs.-gender"><i class="fa fa-check"></i><b>11.5.1</b> Word Frequency vs. Gender</a></li>
+<li class="chapter" data-level="11.5.2" data-path="xml.html"><a href="xml.html#frequency-and-keyword-analysis"><i class="fa fa-check"></i><b>11.5.2</b> Frequency and Keyword Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="final-exam.html"><a href="final-exam.html"><i class="fa fa-check"></i><b>14</b> Final Exam</a><ul>
-<li class="chapter" data-level="14.1" data-path="final-exam.html"><a href="final-exam.html#important-instructions-1"><i class="fa fa-check"></i><b>14.1</b> Important Instructions</a></li>
-<li class="chapter" data-level="14.2" data-path="final-exam.html"><a href="final-exam.html#part-i-bnc2014-xml-processing"><i class="fa fa-check"></i><b>14.2</b> Part I: BNC2014 XML Processing</a></li>
-<li class="chapter" data-level="14.3" data-path="final-exam.html"><a href="final-exam.html#part-ii-nccu-corpus-analysis"><i class="fa fa-check"></i><b>14.3</b> Part II: NCCU Corpus Analysis</a></li>
-<li class="chapter" data-level="14.4" data-path="final-exam.html"><a href="final-exam.html#part-iii-mandarin-song-lyrics-analysis"><i class="fa fa-check"></i><b>14.4</b> Part III: Mandarin Song Lyrics Analysis</a><ul>
-<li class="chapter" data-level="14.4.1" data-path="final-exam.html"><a href="final-exam.html#scraping-mojim-lyrics"><i class="fa fa-check"></i><b>14.4.1</b> Scraping Mojim Lyrics</a></li>
-<li class="chapter" data-level="14.4.2" data-path="final-exam.html"><a href="final-exam.html#analysis-of-lyrics"><i class="fa fa-check"></i><b>14.4.2</b> Analysis of Lyrics</a></li>
-<li class="chapter" data-level="14.4.3" data-path="final-exam.html"><a href="final-exam.html#word-segmentation-1"><i class="fa fa-check"></i><b>14.4.3</b> Word Segmentation</a></li>
-<li class="chapter" data-level="14.4.4" data-path="final-exam.html"><a href="final-exam.html#collostruction-analysis"><i class="fa fa-check"></i><b>14.4.4</b> Collostruction Analysis</a></li>
-<li class="chapter" data-level="14.4.5" data-path="final-exam.html"><a href="final-exam.html#keyword-analysis-1"><i class="fa fa-check"></i><b>14.4.5</b> Keyword Analysis</a></li>
-<li class="chapter" data-level="14.4.6" data-path="final-exam.html"><a href="final-exam.html#tokens-and-concordance-lines"><i class="fa fa-check"></i><b>14.4.6</b> Tokens and Concordance Lines</a></li>
-<li class="chapter" data-level="14.4.7" data-path="final-exam.html"><a href="final-exam.html#dfm-and-word-cloud"><i class="fa fa-check"></i><b>14.4.7</b> DFM and Word Cloud</a></li>
-<li class="chapter" data-level="14.4.8" data-path="final-exam.html"><a href="final-exam.html#cosine-similarity-of-songs"><i class="fa fa-check"></i><b>14.4.8</b> Cosine Similarity of Songs</a></li>
-<li class="chapter" data-level="14.4.9" data-path="final-exam.html"><a href="final-exam.html#lexical-bundles"><i class="fa fa-check"></i><b>14.4.9</b> Lexical Bundles</a></li>
-<li class="chapter" data-level="14.4.10" data-path="final-exam.html"><a href="final-exam.html#artist-based-analysis"><i class="fa fa-check"></i><b>14.4.10</b> Artist-based Analysis</a></li>
+<li class="chapter" data-level="11.6" data-path="xml.html"><a href="xml.html#constructions-analysis"><i class="fa fa-check"></i><b>11.6</b> Constructions Analysis</a>
+<ul>
+<li class="chapter" data-level="11.6.1" data-path="xml.html"><a href="xml.html#from-token-based-to-turn-based-data-frame"><i class="fa fa-check"></i><b>11.6.1</b> From Token-based to Turn-based Data Frame</a></li>
+<li class="chapter" data-level="11.6.2" data-path="xml.html"><a href="xml.html#degree-adv-adj"><i class="fa fa-check"></i><b>11.6.2</b> Degree ADV + ADJ</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="final-exam.html"><a href="final-exam.html#afterwords-1"><i class="fa fa-check"></i><b>14.5</b> Afterwords</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
+<li class="chapter" data-level="12" data-path="vector-space-representation.html"><a href="vector-space-representation.html"><i class="fa fa-check"></i><b>12</b> Vector Space Representation</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distributional-semantics"><i class="fa fa-check"></i><b>12.1</b> Distributional Semantics</a></li>
+<li class="chapter" data-level="12.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-semantics-parameters"><i class="fa fa-check"></i><b>12.2</b> Vector Space Semantics: Parameters</a></li>
+<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-documents"><i class="fa fa-check"></i><b>12.3</b> Vector Space Model for Documents</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#data-processing-flowchart"><i class="fa fa-check"></i><b>12.3.1</b> Data Processing Flowchart</a></li>
+<li class="chapter" data-level="12.3.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm"><i class="fa fa-check"></i><b>12.3.2</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
+<li class="chapter" data-level="12.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#corpus-1"><i class="fa fa-check"></i><b>12.3.3</b> Corpus</a></li>
+<li class="chapter" data-level="12.3.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-feature-matrix-dfm-1"><i class="fa fa-check"></i><b>12.3.4</b> Document-Feature Matrix (<code>dfm</code>)</a></li>
+<li class="chapter" data-level="12.3.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distance-similarity-metrics"><i class="fa fa-check"></i><b>12.3.5</b> Distributional Hypothesis and Distance/Similarity Metrics</a></li>
+<li class="chapter" data-level="12.3.6" data-path="vector-space-representation.html"><a href="vector-space-representation.html#multidimensiona-space"><i class="fa fa-check"></i><b>12.3.6</b> Multidimensiona Space</a></li>
+<li class="chapter" data-level="12.3.7" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-semantics-considerations"><i class="fa fa-check"></i><b>12.3.7</b> Vector Semantics Considerations</a></li>
+<li class="chapter" data-level="12.3.8" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.3.8</b> Feature Selection</a></li>
+<li class="chapter" data-level="12.3.9" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exploratory-analysis-of-dfm"><i class="fa fa-check"></i><b>12.3.9</b> Exploratory Analysis of <code>dfm</code></a></li>
+<li class="chapter" data-level="12.3.10" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.3.10</b> Document Similarity</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>12.4</b> Vector Space Model for Words</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>12.4.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-corpustokens-to-fcm"><i class="fa fa-check"></i><b>12.4.2</b> From <code>corpus/tokens</code> to <code>fcm</code></a></li>
+<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fcm"><i class="fa fa-check"></i><b>12.4.3</b> From <code>dfm</code> to <code>fcm</code></a></li>
+<li class="chapter" data-level="12.4.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#which-method-to-choose"><i class="fa fa-check"></i><b>12.4.4</b> Which method to choose?</a></li>
+<li class="chapter" data-level="12.4.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>12.4.5</b> Lexical Similarity</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>12.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>13</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -384,14 +386,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ckiptagger" class="section level1">
-<h1><span class="header-section-number">Chapter 10</span> CKIP Tagger</h1>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb237-2" data-line-number="2"><span class="kw">library</span>(reticulate)</a></code></pre></div>
+<div id="ckiptagger" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> CKIP Tagger</h1>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="ckiptagger.html#cb234-1" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb234-2"><a href="ckiptagger.html#cb234-2" aria-hidden="true"></a><span class="kw">library</span>(reticulate)</span></code></pre></div>
 <p>The current state-of-art Chinese segmenter for Taiwan Mandarin available is probably the <a href="https://github.com/ckiplab/ckiptagger">CKIP tagger</a>, created by the <a href="https://ckip.iis.sinica.edu.tw/">Chinese Knowledge and Information Processing (CKIP)</a> group at the Academia Sinica.</p>
 <p>The <code>ckiptagger</code> is released as a python module. In this chpater, I will demonstrate how to use the module for Chinese word segmentation but in an R environment, i.e., how to integrate Python modules in R coherently to perform complex tasks.</p>
-<div id="installation" class="section level2">
-<h2><span class="header-section-number">10.1</span> Installation</h2>
+<div id="installation" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Installation</h2>
 <p>Because <code>ckiptagger</code> is built in python, we need to have python installed in our working environment. Please install the following applications on your own before you start:</p>
 <ul>
 <li><a href="https://www.anaconda.com/distribution/">Anaconda + Python 3.6+</a></li>
@@ -407,19 +409,19 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 </p>
 </div>
 </div>
-<div id="download-the-model-files" class="section level2">
-<h2><span class="header-section-number">10.2</span> Download the Model Files</h2>
+<div id="download-the-model-files" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Download the Model Files</h2>
 <p>All NLP applications have their models behind their fancy performances. To use the tagger provided in <code>ckiptagger</code>, we need to download their pre-trained model files.</p>
 <p>Please go to the <a href="https://github.com/ckiplab/ckiptagger">github of CKIP tagger</a> to download the model files, which is provided as a zipped file. (The file is very big. It takes a while.)</p>
 <p>After you download the zipped file, unzip it under your working directory to the <code>data/</code> directory.</p>
 </div>
-<div id="r-python-communication" class="section level2">
-<h2><span class="header-section-number">10.3</span> R-Python Communication</h2>
+<div id="r-python-communication" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> R-Python Communication</h2>
 <p>In order to call Python functions in R/Rstudio, we need to install an R library in your R. The R-Python communication is made possible through the R library <code>reticulate</code>. Please make sure that you have this library installed in your R.</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb238-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="ckiptagger.html#cb235-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</span></code></pre></div>
 </div>
-<div id="word-segmentation-in-r" class="section level2">
-<h2><span class="header-section-number">10.4</span> Word Segmentation in R</h2>
+<div id="word-segmentation-in-r" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Word Segmentation in R</h2>
 <p>Before we proceed, please check if you have everything ready (The following includes the versions of the modules used for this session):</p>
 <ul>
 <li>Anaconda + Python 3.6+ (<code>Python 3.6.10</code>)</li>
@@ -429,13 +431,13 @@ For some reasons, the module <code>ckiptagger</code> may not be found in the bas
 </ul>
 <p>If yes, then we are ready to go.</p>
 </div>
-<div id="r-environment-setting" class="section level2">
-<h2><span class="header-section-number">10.5</span> R Environment Setting</h2>
+<div id="r-environment-setting" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> R Environment Setting</h2>
 <p>We first load the library <code>reticulate</code> and specify in R which Python we will be using in the current R(It is highly likely that there is more than one Python version installed in your system). Please change the <code>path_to_python</code> to your own path, which includes the Anaconda Python you just installed.</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" data-line-number="1"><span class="kw">library</span>(reticulate)</a></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="ckiptagger.html#cb236-1" aria-hidden="true"></a><span class="kw">library</span>(reticulate)</span></code></pre></div>
 </div>
-<div id="creating-conda-environment-for-ckiptagger" class="section level2">
-<h2><span class="header-section-number">10.6</span> Creating Conda Environment for <code>ckiptagger</code></h2>
+<div id="creating-conda-environment-for-ckiptagger" class="section level2" number="9.6">
+<h2><span class="header-section-number">9.6</span> Creating Conda Environment for <code>ckiptagger</code></h2>
 <p>I would suggest to install all necessary Python modules in a conda environment and use it in R.</p>
 <p>In the following demonstration, I assume that you have created a conda environment <code>ckiptagger</code>, where all the necessary modules (i.e., <code>ckiptagger</code>, <code>tensorflow</code>) have been pip-installed.</p>
 <pre><code># isntsall in terminal
@@ -443,37 +445,37 @@ source activate CONDA_ENVIRONMENT_NAME
 pip install -U ckiptagger
 conda deactivate</code></pre>
 </div>
-<div id="initialization" class="section level2">
-<h2><span class="header-section-number">10.7</span> Initialization</h2>
+<div id="initialization" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Initialization</h2>
 <p>There are three important steps in initialization before you can perform word segmentation in R:</p>
 <ul>
 <li>Activate a specific conda environment in R</li>
 <li>Import the <code>ckiptagger</code> module in R</li>
 <li>Initialize the tagger models</li>
 </ul>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="co"># Activate a specific conda env in R</span></a>
-<a class="sourceLine" id="cb241-2" data-line-number="2"><span class="kw">use_condaenv</span>(<span class="st">&quot;spacy_condaenv&quot;</span>)</a>
-<a class="sourceLine" id="cb241-3" data-line-number="3"><span class="co">#use_condaenv(&quot;r-reticulate&quot;)</span></a>
-<a class="sourceLine" id="cb241-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb241-5" data-line-number="5"><span class="co">## Import ckiptagger module</span></a>
-<a class="sourceLine" id="cb241-6" data-line-number="6">ckip &lt;-<span class="st"> </span>reticulate<span class="op">::</span><span class="kw">import</span>(<span class="dt">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</a>
-<a class="sourceLine" id="cb241-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb241-8" data-line-number="8"><span class="co">## Intialize models</span></a>
-<a class="sourceLine" id="cb241-9" data-line-number="9">ws &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">WS</span>(<span class="st">&quot;./data&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="ckiptagger.html#cb238-1" aria-hidden="true"></a><span class="co"># Activate a specific conda env in R</span></span>
+<span id="cb238-2"><a href="ckiptagger.html#cb238-2" aria-hidden="true"></a><span class="kw">use_condaenv</span>(<span class="st">&quot;spacy_condaenv&quot;</span>)</span>
+<span id="cb238-3"><a href="ckiptagger.html#cb238-3" aria-hidden="true"></a><span class="co">#use_condaenv(&quot;r-reticulate&quot;)</span></span>
+<span id="cb238-4"><a href="ckiptagger.html#cb238-4" aria-hidden="true"></a></span>
+<span id="cb238-5"><a href="ckiptagger.html#cb238-5" aria-hidden="true"></a><span class="co">## Import ckiptagger module</span></span>
+<span id="cb238-6"><a href="ckiptagger.html#cb238-6" aria-hidden="true"></a>ckip &lt;-<span class="st"> </span>reticulate<span class="op">::</span><span class="kw">import</span>(<span class="dt">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</span>
+<span id="cb238-7"><a href="ckiptagger.html#cb238-7" aria-hidden="true"></a></span>
+<span id="cb238-8"><a href="ckiptagger.html#cb238-8" aria-hidden="true"></a><span class="co">## Intialize models</span></span>
+<span id="cb238-9"><a href="ckiptagger.html#cb238-9" aria-hidden="true"></a>ws &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">WS</span>(<span class="st">&quot;./data&quot;</span>)</span></code></pre></div>
 </div>
-<div id="segmenting-texts" class="section level2">
-<h2><span class="header-section-number">10.8</span> Segmenting Texts</h2>
+<div id="segmenting-texts" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> Segmenting Texts</h2>
 <p>The initialized word segmenter object, <code>ws()</code>, can tokenize any input <strong>character vectors</strong> into a list of <strong>word vectors</strong> of the same size.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="co">## Raw text corpus </span></a>
-<a class="sourceLine" id="cb242-2" data-line-number="2">texts &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</a>
-<a class="sourceLine" id="cb242-3" data-line-number="3">              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</a>
-<a class="sourceLine" id="cb242-4" data-line-number="4">              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</a>
-<a class="sourceLine" id="cb242-5" data-line-number="5">              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</a>
-<a class="sourceLine" id="cb242-6" data-line-number="6">              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</a>
-<a class="sourceLine" id="cb242-7" data-line-number="7">              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</a>
-<a class="sourceLine" id="cb242-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb242-9" data-line-number="9">words &lt;-<span class="st"> </span><span class="kw">ws</span>(texts)</a>
-<a class="sourceLine" id="cb242-10" data-line-number="10">words</a></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="ckiptagger.html#cb239-1" aria-hidden="true"></a><span class="co">## Raw text corpus </span></span>
+<span id="cb239-2"><a href="ckiptagger.html#cb239-2" aria-hidden="true"></a>texts &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</span>
+<span id="cb239-3"><a href="ckiptagger.html#cb239-3" aria-hidden="true"></a>              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</span>
+<span id="cb239-4"><a href="ckiptagger.html#cb239-4" aria-hidden="true"></a>              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</span>
+<span id="cb239-5"><a href="ckiptagger.html#cb239-5" aria-hidden="true"></a>              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</span>
+<span id="cb239-6"><a href="ckiptagger.html#cb239-6" aria-hidden="true"></a>              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</span>
+<span id="cb239-7"><a href="ckiptagger.html#cb239-7" aria-hidden="true"></a>              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</span>
+<span id="cb239-8"><a href="ckiptagger.html#cb239-8" aria-hidden="true"></a></span>
+<span id="cb239-9"><a href="ckiptagger.html#cb239-9" aria-hidden="true"></a>words &lt;-<span class="st"> </span><span class="kw">ws</span>(texts)</span>
+<span id="cb239-10"><a href="ckiptagger.html#cb239-10" aria-hidden="true"></a>words</span></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot; &quot;今&quot;     &quot;將&quot;     &quot;執行&quot;   &quot;安樂死&quot; &quot;，&quot;     &quot;卻&quot;     &quot;突然&quot;  
 ##  [9] &quot;爆出&quot;   &quot;自己&quot;   &quot;20&quot;     &quot;年&quot;     &quot;前&quot;     &quot;遭&quot;     &quot;緯來&quot;   &quot;體育台&quot;
@@ -507,34 +509,34 @@ conda deactivate</code></pre>
 ## [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;</code></pre>
 <p>The word segmenter <code>ws()</code> returns a <code>list</code> object, each element of which is a word-based vector of the original sentence.</p>
 </div>
-<div id="define-own-dictionary" class="section level2">
-<h2><span class="header-section-number">10.9</span> Define Own Dictionary</h2>
+<div id="define-own-dictionary" class="section level2" number="9.9">
+<h2><span class="header-section-number">9.9</span> Define Own Dictionary</h2>
 <p>The performance of Chinese word segmenter depends highly on the dictionary. Texts in different disciplines may have very domain-specific vocabulary. To prioritize a set of words in a dictionary, we can further ensure the accuracy of the word segmentation.</p>
 <p>To create a dictionary for <code>ckiptagger</code>, we need a <strong>named list</strong>, i.e., to create a <code>list</code> with element <strong>names</strong> = “the new words” and element <strong>values</strong> = “the weights”.</p>
 <p>Then we use the python function <code>ckip$construct_dictionary()</code> to create the <code>dictionary</code> Python object, which is the input argument for word segmenter <code>ws(..., recommend_dictionary = ...)</code>.</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" data-line-number="1"><span class="co"># Define new words in own dictionary</span></a>
-<a class="sourceLine" id="cb244-2" data-line-number="2">new_words &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;土地公有&quot;</span>,</a>
-<a class="sourceLine" id="cb244-3" data-line-number="3">               <span class="st">&quot;土地公&quot;</span>,</a>
-<a class="sourceLine" id="cb244-4" data-line-number="4">               <span class="st">&quot;土地婆&quot;</span>,</a>
-<a class="sourceLine" id="cb244-5" data-line-number="5">               <span class="st">&quot;來亂的&quot;</span>,</a>
-<a class="sourceLine" id="cb244-6" data-line-number="6">               <span class="st">&quot;啦&quot;</span>,</a>
-<a class="sourceLine" id="cb244-7" data-line-number="7">               <span class="st">&quot;緯來體育台&quot;</span>)</a>
-<a class="sourceLine" id="cb244-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb244-9" data-line-number="9"><span class="co"># Transform the `vector` into `list` for Python</span></a>
-<a class="sourceLine" id="cb244-10" data-line-number="10">new_words_py &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.list</a>
-<a class="sourceLine" id="cb244-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb244-12" data-line-number="12">  <span class="co"># cf. `list(rep, 1 , length(new_words))`</span></a>
-<a class="sourceLine" id="cb244-13" data-line-number="13"><span class="kw">names</span>(new_words_py) &lt;-<span class="st"> </span>new_words</a>
-<a class="sourceLine" id="cb244-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb244-15" data-line-number="15">  <span class="co"># To create a dictionary for `construct_dictionary()`</span></a>
-<a class="sourceLine" id="cb244-16" data-line-number="16">  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></a>
-<a class="sourceLine" id="cb244-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb244-18" data-line-number="18"><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></a>
-<a class="sourceLine" id="cb244-19" data-line-number="19">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words_py)</a>
-<a class="sourceLine" id="cb244-20" data-line-number="20"></a>
-<a class="sourceLine" id="cb244-21" data-line-number="21"><span class="co"># Segment texts using dictionary</span></a>
-<a class="sourceLine" id="cb244-22" data-line-number="22">words_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
-<a class="sourceLine" id="cb244-23" data-line-number="23">words_<span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="ckiptagger.html#cb241-1" aria-hidden="true"></a><span class="co"># Define new words in own dictionary</span></span>
+<span id="cb241-2"><a href="ckiptagger.html#cb241-2" aria-hidden="true"></a>new_words &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;土地公有&quot;</span>,</span>
+<span id="cb241-3"><a href="ckiptagger.html#cb241-3" aria-hidden="true"></a>               <span class="st">&quot;土地公&quot;</span>,</span>
+<span id="cb241-4"><a href="ckiptagger.html#cb241-4" aria-hidden="true"></a>               <span class="st">&quot;土地婆&quot;</span>,</span>
+<span id="cb241-5"><a href="ckiptagger.html#cb241-5" aria-hidden="true"></a>               <span class="st">&quot;來亂的&quot;</span>,</span>
+<span id="cb241-6"><a href="ckiptagger.html#cb241-6" aria-hidden="true"></a>               <span class="st">&quot;啦&quot;</span>,</span>
+<span id="cb241-7"><a href="ckiptagger.html#cb241-7" aria-hidden="true"></a>               <span class="st">&quot;緯來體育台&quot;</span>)</span>
+<span id="cb241-8"><a href="ckiptagger.html#cb241-8" aria-hidden="true"></a></span>
+<span id="cb241-9"><a href="ckiptagger.html#cb241-9" aria-hidden="true"></a><span class="co"># Transform the `vector` into `list` for Python</span></span>
+<span id="cb241-10"><a href="ckiptagger.html#cb241-10" aria-hidden="true"></a>new_words_py &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.list</span>
+<span id="cb241-11"><a href="ckiptagger.html#cb241-11" aria-hidden="true"></a></span>
+<span id="cb241-12"><a href="ckiptagger.html#cb241-12" aria-hidden="true"></a>  <span class="co"># cf. `list(rep, 1 , length(new_words))`</span></span>
+<span id="cb241-13"><a href="ckiptagger.html#cb241-13" aria-hidden="true"></a><span class="kw">names</span>(new_words_py) &lt;-<span class="st"> </span>new_words</span>
+<span id="cb241-14"><a href="ckiptagger.html#cb241-14" aria-hidden="true"></a></span>
+<span id="cb241-15"><a href="ckiptagger.html#cb241-15" aria-hidden="true"></a>  <span class="co"># To create a dictionary for `construct_dictionary()`</span></span>
+<span id="cb241-16"><a href="ckiptagger.html#cb241-16" aria-hidden="true"></a>  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></span>
+<span id="cb241-17"><a href="ckiptagger.html#cb241-17" aria-hidden="true"></a></span>
+<span id="cb241-18"><a href="ckiptagger.html#cb241-18" aria-hidden="true"></a><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></span>
+<span id="cb241-19"><a href="ckiptagger.html#cb241-19" aria-hidden="true"></a>dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words_py)</span>
+<span id="cb241-20"><a href="ckiptagger.html#cb241-20" aria-hidden="true"></a></span>
+<span id="cb241-21"><a href="ckiptagger.html#cb241-21" aria-hidden="true"></a><span class="co"># Segment texts using dictionary</span></span>
+<span id="cb241-22"><a href="ckiptagger.html#cb241-22" aria-hidden="true"></a>words_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</span>
+<span id="cb241-23"><a href="ckiptagger.html#cb241-23" aria-hidden="true"></a>words_<span class="dv">1</span></span></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
 ##  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -569,14 +571,13 @@ conda deactivate</code></pre>
 ## [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;</code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-344" class="exercise"><strong>Exercise 10.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
+<span id="exr:unnamed-chunk-310" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
 </div>
-
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" data-line-number="1">new_words&lt;-<span class="kw">loadDictionary</span>(<span class="dt">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </a>
-<a class="sourceLine" id="cb246-2" data-line-number="2">dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words)</a>
-<a class="sourceLine" id="cb246-3" data-line-number="3"><span class="co"># Segment texts using dictionary</span></a>
-<a class="sourceLine" id="cb246-4" data-line-number="4">words_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</a>
-<a class="sourceLine" id="cb246-5" data-line-number="5">words_<span class="dv">2</span></a></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="ckiptagger.html#cb243-1" aria-hidden="true"></a>new_words&lt;-<span class="kw">loadDictionary</span>(<span class="dt">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </span>
+<span id="cb243-2"><a href="ckiptagger.html#cb243-2" aria-hidden="true"></a>dictionary&lt;-ckip<span class="op">$</span><span class="kw">construct_dictionary</span>(new_words)</span>
+<span id="cb243-3"><a href="ckiptagger.html#cb243-3" aria-hidden="true"></a><span class="co"># Segment texts using dictionary</span></span>
+<span id="cb243-4"><a href="ckiptagger.html#cb243-4" aria-hidden="true"></a>words_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">ws</span>(texts, <span class="dt">recommend_dictionary =</span> dictionary)</span>
+<span id="cb243-5"><a href="ckiptagger.html#cb243-5" aria-hidden="true"></a>words_<span class="dv">2</span></span></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
 ##  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -610,29 +611,29 @@ conda deactivate</code></pre>
 ##  [1] &quot;科長&quot; &quot;說&quot;   &quot;:1,&quot;  &quot;坪數&quot; &quot;對&quot;   &quot;人數&quot; &quot;為&quot;   &quot;1:3&quot;  &quot;。&quot;   &quot;2&quot;   
 ## [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;</code></pre>
 </div>
-<div id="beyond-word-boundaries" class="section level2">
-<h2><span class="header-section-number">10.10</span> Beyond Word Boundaries</h2>
+<div id="beyond-word-boundaries" class="section level2" number="9.10">
+<h2><span class="header-section-number">9.10</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-e119530f2e3d3625d018" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e119530f2e3d3625d018">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-385a407c0a7c93c8f723" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-385a407c0a7c93c8f723">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Load the models</li>
 </ul>
 <p>To perform these additional tasks, we need to load the necessary models (pre-trained and provided by the CKIP group) first as well.</p>
-<p>They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="co"># loading other necessary models</span></a>
-<a class="sourceLine" id="cb248-2" data-line-number="2"><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></a></code></pre></div>
+<p>They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="ckiptagger.html#cb245-1" aria-hidden="true"></a><span class="co"># loading other necessary models</span></span>
+<span id="cb245-2"><a href="ckiptagger.html#cb245-2" aria-hidden="true"></a><span class="kw">system.time</span>((pos &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   4.997   2.419   6.913</code></pre>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></a></code></pre></div>
+##   5.119   2.014   6.805</code></pre>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="ckiptagger.html#cb247-1" aria-hidden="true"></a><span class="kw">system.time</span>((ner &lt;-<span class="st"> </span>ckip<span class="op">$</span><span class="kw">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   4.971   1.745   6.439</code></pre>
+##   5.098   2.189   6.519</code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1"><span class="co"># Parts-of-speech Tagging</span></a>
-<a class="sourceLine" id="cb252-2" data-line-number="2">pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb252-3" data-line-number="3">pos_words</a></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="ckiptagger.html#cb249-1" aria-hidden="true"></a><span class="co"># Parts-of-speech Tagging</span></span>
+<span id="cb249-2"><a href="ckiptagger.html#cb249-2" aria-hidden="true"></a>pos_words &lt;-<span class="st"> </span><span class="kw">pos</span>(words_<span class="dv">1</span>)</span>
+<span id="cb249-3"><a href="ckiptagger.html#cb249-3" aria-hidden="true"></a>pos_words</span></code></pre></div>
 <pre><code>## [[1]]
 ##  [1] &quot;Nb&quot;             &quot;Nd&quot;             &quot;D&quot;              &quot;VC&quot;            
 ##  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
@@ -678,14 +679,14 @@ conda deactivate</code></pre>
 ##  [5] &quot;P&quot;              &quot;Na&quot;             &quot;VG&quot;             &quot;Neu&quot;           
 ##  [9] &quot;PERIODCATEGORY&quot; &quot;Neu&quot;            &quot;COMMACATEGORY&quot;  &quot;D&quot;             
 ## [13] &quot;D&quot;              &quot;VHC&quot;            &quot;PERIODCATEGORY&quot;</code></pre>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="co"># Named Entity Recognition</span></a>
-<a class="sourceLine" id="cb254-2" data-line-number="2">ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</a>
-<a class="sourceLine" id="cb254-3" data-line-number="3">ner</a></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="ckiptagger.html#cb251-1" aria-hidden="true"></a><span class="co"># Named Entity Recognition</span></span>
+<span id="cb251-2"><a href="ckiptagger.html#cb251-2" aria-hidden="true"></a>ner &lt;-<span class="st"> </span><span class="kw">ner</span>(words_<span class="dv">1</span>, pos_words)</span>
+<span id="cb251-3"><a href="ckiptagger.html#cb251-3" aria-hidden="true"></a>ner</span></code></pre></div>
 <pre><code>## [[1]]
-## {(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
+## {(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
 ## 
 ## [[2]]
-## {(21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;)}
+## {(60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;)}
 ## 
 ## [[3]]
 ## {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -697,15 +698,15 @@ conda deactivate</code></pre>
 ## {(14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;), (4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;)}
 ## 
 ## [[6]]
-## {(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
+## {(4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;)}</code></pre>
 </div>
-<div id="tidy-up-the-results" class="section level2">
-<h2><span class="header-section-number">10.11</span> Tidy Up the Results</h2>
+<div id="tidy-up-the-results" class="section level2" number="9.11">
+<h2><span class="header-section-number">9.11</span> Tidy Up the Results</h2>
 <p>We can tidy up results provided by <code>ckiptagger</code> and create a word-based tidy structure of our data:</p>
-<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" data-line-number="1">word_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text_id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(texts)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</a>
-<a class="sourceLine" id="cb256-2" data-line-number="2">                        <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb256-3" data-line-number="3">                        <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</a>
-<a class="sourceLine" id="cb256-4" data-line-number="4">word_df</a></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="ckiptagger.html#cb253-1" aria-hidden="true"></a>word_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text_id =</span> <span class="kw">mapply</span>(rep, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(texts)), <span class="kw">sapply</span>(words_<span class="dv">1</span>, length)) <span class="op">%&gt;%</span><span class="st"> </span>unlist,</span>
+<span id="cb253-2"><a href="ckiptagger.html#cb253-2" aria-hidden="true"></a>                        <span class="dt">words =</span> <span class="kw">do.call</span>(c, words_<span class="dv">1</span>),</span>
+<span id="cb253-3"><a href="ckiptagger.html#cb253-3" aria-hidden="true"></a>                        <span class="dt">pos =</span> <span class="kw">do.call</span>(c, pos_words))</span>
+<span id="cb253-4"><a href="ckiptagger.html#cb253-4" aria-hidden="true"></a>word_df</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["words"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["pos"],"name":[3],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁","3":"Nb"},{"1":"1","2":"今","3":"Nd"},{"1":"1","2":"將","3":"D"},{"1":"1","2":"執行","3":"VC"},{"1":"1","2":"安樂死","3":"Na"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"卻","3":"D"},{"1":"1","2":"突然","3":"D"},{"1":"1","2":"爆出","3":"VJ"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"20","3":"Neu"},{"1":"1","2":"年","3":"Nf"},{"1":"1","2":"前","3":"Ng"},{"1":"1","2":"遭","3":"P"},{"1":"1","2":"緯來體育台","3":"Nc"},{"1":"1","2":"封殺","3":"VC"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"他","3":"Nh"},{"1":"1","2":"不","3":"D"},{"1":"1","2":"懂","3":"VK"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"哪裡","3":"Ncd"},{"1":"1","2":"得罪到","3":"VJ"},{"1":"1","2":"電視台","3":"Nc"},{"1":"1","2":"。","3":"PERIODCATEGORY"},{"1":"2","2":"美國","3":"Nc"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"針對","3":"P"},{"1":"2","2":"今天","3":"Nd"},{"1":"2","2":"總統","3":"Na"},{"1":"2","2":"布什","3":"Nb"},{"1":"2","2":"所","3":"D"},{"1":"2","2":"提名","3":"VC"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"勞工部長","3":"Na"},{"1":"2","2":"趙小蘭","3":"Nb"},{"1":"2","2":"展開","3":"VC"},{"1":"2","2":"認可","3":"VC"},{"1":"2","2":"聽證會","3":"Na"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"預料","3":"VE"},{"1":"2","2":"她","3":"Nh"},{"1":"2","2":"將","3":"D"},{"1":"2","2":"會","3":"D"},{"1":"2","2":"很","3":"Dfa"},{"1":"2","2":"順利","3":"VH"},{"1":"2","2":"通過","3":"VC"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"支持","3":"VC"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"成為","3":"VG"},{"1":"2","2":"該","3":"Nes"},{"1":"2","2":"國","3":"Nc"},{"1":"2","2":"有史以來","3":"D"},{"1":"2","2":"第一","3":"Neu"},{"1":"2","2":"位","3":"Nf"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"華裔","3":"Na"},{"1":"2","2":"女性","3":"Na"},{"1":"2","2":"內閣","3":"Na"},{"1":"2","2":"成員","3":"Na"},{"1":"2","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":"土地公有","3":"VH"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"?","3":"QUESTIONCATEGORY"},{"1":"3","2":"？","3":"QUESTIONCATEGORY"},{"1":"3","2":"還是","3":"Caa"},{"1":"3","2":"土地婆","3":"Nb"},{"1":"3","2":"有","3":"V_2"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":".","3":"PERIODCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"你","3":"Nh"},{"1":"4","2":"確定","3":"VK"},{"1":"4","2":"嗎","3":"T"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"不要","3":"D"},{"1":"4","2":"再","3":"D"},{"1":"4","2":"騙","3":"VC"},{"1":"4","2":"了","3":"Di"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"他","3":"Nh"},{"1":"4","2":"來亂的","3":"VA"},{"1":"4","2":"啦","3":"T"},{"1":"5","2":"最多","3":"VH"},{"1":"5","2":"容納","3":"VJ"},{"1":"5","2":"59,000","3":"Neu"},{"1":"5","2":"個","3":"Nf"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"或","3":"Caa"},{"1":"5","2":"5.9萬","3":"Neu"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"再","3":"D"},{"1":"5","2":"多","3":"D"},{"1":"5","2":"就","3":"D"},{"1":"5","2":"不行","3":"VH"},{"1":"5","2":"了","3":"T"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"5","2":"這","3":"Nep"},{"1":"5","2":"是","3":"SHI"},{"1":"5","2":"環評","3":"Na"},{"1":"5","2":"的","3":"DE"},{"1":"5","2":"結論","3":"Na"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"6","2":"科長","3":"Na"},{"1":"6","2":"說","3":"VE"},{"1":"6","2":":1,","3":"Neu"},{"1":"6","2":"坪數","3":"Na"},{"1":"6","2":"對","3":"P"},{"1":"6","2":"人數","3":"Na"},{"1":"6","2":"為","3":"VG"},{"1":"6","2":"1:3","3":"Neu"},{"1":"6","2":"。","3":"PERIODCATEGORY"},{"1":"6","2":"2","3":"Neu"},{"1":"6","2":",","3":"COMMACATEGORY"},{"1":"6","2":"可以","3":"D"},{"1":"6","2":"再","3":"D"},{"1":"6","2":"增加","3":"VHC"},{"1":"6","2":"。","3":"PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -714,10 +715,9 @@ conda deactivate</code></pre>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-351" class="exercise"><strong>Exercise 10.2  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
+<p><span id="exr:unnamed-chunk-317" class="exercise"><strong>Exercise 9.2  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
 Please convert the above <code>word_df</code> into a text-based data frame, as shown below.
 </div>
-
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["text"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁/Nb　今/Nd　將/D　執行/VC　安樂死/Na　，/COMMACATEGORY　卻/D　突然/D　爆出/VJ　自己/Nh　20/Neu　年/Nf　前/Ng　遭/P　緯來體育台/Nc　封殺/VC　，/COMMACATEGORY　他/Nh　不/D　懂/VK　自己/Nh　哪裡/Ncd　得罪到/VJ　電視台/Nc　。/PERIODCATEGORY"},{"1":"2","2":"美國/Nc　參議院/Nc　針對/P　今天/Nd　總統/Na　布什/Nb　所/D　提名/VC　的/DE　勞工部長/Na　趙小蘭/Nb　展開/VC　認可/VC　聽證會/Na　，/COMMACATEGORY　預料/VE　她/Nh　將/D　會/D　很/Dfa　順利/VH　通過/VC　參議院/Nc　支持/VC　，/COMMACATEGORY　成為/VG　該/Nes　國/Nc　有史以來/D　第一/Neu　位/Nf　的/DE　華裔/Na　女性/Na　內閣/Na　成員/Na　。/PERIODCATEGORY"},{"1":"3","2":"土地公有/VH　政策/Na　?/QUESTIONCATEGORY　？/QUESTIONCATEGORY　還是/Caa　土地婆/Nb　有/V_2　政策/Na　。/PERIODCATEGORY　./PERIODCATEGORY"},{"1":"4","2":"…/ETCCATEGORY　 /WHITESPACE　你/Nh　確定/VK　嗎/T　…/ETCCATEGORY　 /WHITESPACE　不要/D　再/D　騙/VC　了/Di　…/ETCCATEGORY　…/ETCCATEGORY　他/Nh　來亂的/VA　啦/T"},{"1":"5","2":"最多/VH　容納/VJ　59,000/Neu　個/Nf　人/Na　,/COMMACATEGORY　或/Caa　5.9萬/Neu　人/Na　,/COMMACATEGORY　再/D　多/D　就/D　不行/VH　了/T　./PERIODCATEGORY　這/Nep　是/SHI　環評/Na　的/DE　結論/Na　./PERIODCATEGORY"},{"1":"6","2":"科長/Na　說/VE　:1,/Neu　坪數/Na　對/P　人數/Na　為/VG　1:3/Neu　。/PERIODCATEGORY　2/Neu　,/COMMACATEGORY　可以/D　再/D　增加/VHC　。/PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -725,9 +725,8 @@ Please convert the above <code>word_df</code> into a text-based data frame, as s
 </div>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-353" class="exercise"><strong>Exercise 10.3  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same word-based data frame <code>word_df</code>?
+<span id="exr:unnamed-chunk-319" class="exercise"><strong>Exercise 9.3  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same word-based data frame <code>word_df</code>?
 </div>
-
 <ul>
 <li>You may need to convert the output of <code>ner</code> from ckiptagger into a data frame like this:</li>
 </ul>
@@ -789,6 +788,7 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
             </section>
 
           </div>
