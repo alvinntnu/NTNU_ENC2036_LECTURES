@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 What is Corpus Linguistics? | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 What is Corpus Linguistics? | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2020-09-08" />
+<meta name="date" content="2021-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="r-fundamentals.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,20 +53,23 @@
 
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 <link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -127,7 +130,30 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style-new.css" type="text/css" />
 </head>
 
 <body>
@@ -149,6 +175,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
 </ul></li>
@@ -386,6 +413,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<script src="https://hypothes.is/embed.js" async></script>
 <div id="what-is-corpus-linguistics" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> What is Corpus Linguistics?</h1>
 <div id="why-do-we-need-corpus-data" class="section level2" number="1.1">
@@ -410,7 +438,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>How sure can we be that other people will arrive at the same observations/patterns/conclusions using the same method?
 <ul>
 <li>Can others replicate the same logical reasoning in intuiting data?</li>
-<li>Can others make the same “grammatical judgement”?</li>
+<li>Can others make the same “grammatical judgement?”</li>
 </ul></li>
 </ul></li>
 <li>Data <strong>validity</strong>
@@ -434,7 +462,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Sociology</li>
 <li>Field Linguistics</li>
 </ul></li>
-<li><em>Linguistic Corpus</em> in corpus linguistics <span class="citation">(Stefanowitch <a href="#ref-stefanowitch2017" role="doc-biblioref">2019</a>)</span>
+<li><em>Linguistic Corpus</em> in corpus linguistics <span class="citation">(<a href="#ref-stefanowitch2017" role="doc-biblioref">Stefanowitch 2019</a>)</span>
 <ul>
 <li>Authentic</li>
 <li>Representative</li>
@@ -443,13 +471,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>A few well-received definitions</li>
 </ul>
 <blockquote>
-<p>“a collection of texts which have been selected and brought together so that language can be studied on the computer” <span class="citation">(Wynne <a href="#ref-wynne2005" role="doc-biblioref">2005</a>)</span></p>
+<p>“a collection of texts which have been selected and brought together so that language can be studied on the computer” <span class="citation">(<a href="#ref-wynne2005" role="doc-biblioref">Wynne 2005</a>)</span></p>
 </blockquote>
 <blockquote>
-<p>“A corpus is a collection of pieces of language text in electronic form, selected according to external criteria to represent, as far as possible, a language or language variety as a source of data for linguistic research.” (John Sinclair in <span class="citation">(Wynne <a href="#ref-wynne2005" role="doc-biblioref">2005</a>)</span>)</p>
+<p>“A corpus is a collection of pieces of language text in electronic form, selected according to external criteria to represent, as far as possible, a language or language variety as a source of data for linguistic research.” (John Sinclair in <span class="citation">(<a href="#ref-wynne2005" role="doc-biblioref">Wynne 2005</a>)</span>)</p>
 </blockquote>
 <blockquote>
-<p>“A corpus refers to a machine-readable collection of (spoken or written) texts that were produced in a natural communitive setting, and in which the collection of texts is compiled with the intention (1) to be representative and balanced with respect to a particular linguistic language, variety, register, or genre and (2) to be analyzed linguistically.” <span class="citation">(Gries <a href="#ref-gries2018" role="doc-biblioref">2018</a>)</span></p>
+<p>“A corpus refers to a machine-readable collection of (spoken or written) texts that were produced in a natural communitive setting, and in which the collection of texts is compiled with the intention (1) to be representative and balanced with respect to a particular linguistic language, variety, register, or genre and (2) to be analyzed linguistically.” <span class="citation">(<a href="#ref-gries2018" role="doc-biblioref">Gries 2018</a>)</span></p>
 </blockquote>
 </div>
 <div id="what-is-a-corpus-linguistic-study" class="section level2" number="1.3">
@@ -466,7 +494,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Interactional linguistics, cognitive linguistics, functional syntax, usage-based grammar etc.</li>
 <li>Stylometry, computational linguistics, NLP, digital humanities, text mining, sentiment analysis</li>
 </ul></li>
-<li>Corpus-based vs. Corpus-driven <span class="citation">(cf. Tognini-Bonelli <a href="#ref-tognini2001" role="doc-biblioref">2001</a>)</span>
+<li>Corpus-based vs. Corpus-driven <span class="citation">(cf. <a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli 2001</a>)</span>
 <ul>
 <li>Corpus-based studies:
 <ul>
@@ -477,10 +505,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Typically reject the characterization of corpus linguistics as a method</li>
 <li>Claim instead that the corpus itself should be the sole source of our hypotheses about language</li>
-<li>It is thus claimed that the corpus itself embodies a theory of language <span class="citation">(Tognini-Bonelli <a href="#ref-tognini2001" role="doc-biblioref">2001</a>, 84–85)</span></li>
+<li>It is thus claimed that the corpus itself embodies a theory of language <span class="citation">(<a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli 2001, 84–85</a>)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="citation">Stefanowitch (<a href="#ref-stefanowitch2017" role="doc-biblioref">2019</a>)</span> defines <em>Corpus Linguistics</em> as follows:</li>
+<li><span class="citation"><a href="#ref-stefanowitch2017" role="doc-biblioref">Stefanowitch</a> (<a href="#ref-stefanowitch2017" role="doc-biblioref">2019</a>)</span> defines <em>Corpus Linguistics</em> as follows:</li>
 </ul>
 <blockquote>
 <p>Corpus linguistics is the investigation of linguistic research questions that have been framed in terms of the conditional distribution of linguistic phenomena in a linguistic corpus</p>
@@ -512,7 +540,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>When do English speakers use the complementizer that?</li>
 <li>What are the differences between small and little?</li>
-<li>When do English speaker choose “He picked up the book” vs. “He picked the book up”?</li>
+<li>When do English speaker choose “He picked up the book” vs. “He picked the book up?”</li>
 <li>When do English speaker place the adverbial clauses before the matrix clause?</li>
 <li>Do speakers use different phrases in different genres?</li>
 <li>Is the word “gay” used differently across different time periods?</li>
@@ -546,18 +574,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <h3> References</h3>
-<div id="refs" class="references">
-<div id="ref-gries2018">
-<p>Gries, Stefan Th. 2018. <em>Quantitative Corpus Linguistics with R: A Practical Introduction</em>. 2nd ed. Routledge.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-gries2018" class="csl-entry">
+———. 2018. <em>Quantitative Corpus Linguistics with r: A Practical Introduction</em>. 2nd ed. Routledge.
 </div>
-<div id="ref-stefanowitch2017">
-<p>Stefanowitch, Anatol. 2019. <em>Corpus Linguistics: A Guide to the Methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>.</p>
+<div id="ref-stefanowitch2017" class="csl-entry">
+Stefanowitch, Anatol. 2019. <em>Corpus Linguistics: A Guide to the Methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>.
 </div>
-<div id="ref-tognini2001">
-<p>Tognini-Bonelli, E. 2001. <em>Corpus Linguistics at Work</em>. John Benjamins.</p>
+<div id="ref-tognini2001" class="csl-entry">
+Tognini-Bonelli, E. 2001. <em>Corpus Linguistics at Work</em>. John Benjamins.
 </div>
-<div id="ref-wynne2005">
-<p>Wynne, Martin. 2005. <em>Developing Linguistic Corpora: A Guide to Good Practice (Ahds Guides to Good Practice</em>. Oxbow Books.</p>
+<div id="ref-wynne2005" class="csl-entry">
+Wynne, Martin. 2005. <em>Developing Linguistic Corpora: A Guide to Good Practice (AHDS Guides to Good Practice</em>. Oxbow Books.
 </div>
 </div>
 <div id="disqus_thread"></div>
