@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Chen" />
 
 
-<meta name="date" content="2021-07-18" />
+<meta name="date" content="2022-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="ckiptagger.html"/>
 <link rel="next" href="xml.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -656,7 +656,7 @@ div.csl-indent {
 <span id="cb270-7"><a href="structured-corpus.html#cb270-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(bigrams<span class="sc">!=</span><span class="st">&quot;&quot;</span>)  </span>
 <span id="cb270-8"><a href="structured-corpus.html#cb270-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   2.351   0.008   2.359</code></pre>
+##   2.465   0.024   2.509</code></pre>
 <div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="structured-corpus.html#cb272-1" aria-hidden="true" tabindex="-1"></a>NCCU_bigrams <span class="sc">%&gt;%</span></span>
 <span id="cb272-2"><a href="structured-corpus.html#cb272-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(doc_id <span class="sc">==</span> <span class="st">&quot;M001.cha&quot;</span>)</span></code></pre></div>
 <div data-pagedtable="false">
@@ -760,7 +760,7 @@ How do we get dispersion statistics like this? Please show the top frequent 100 
 <span id="cb276-8"><a href="structured-corpus.html#cb276-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ngram <span class="sc">!=</span> <span class="st">&quot;&quot;</span>) <span class="co"># remove empty tokens (due to the short lines)  </span></span>
 <span id="cb276-9"><a href="structured-corpus.html#cb276-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   1.826   0.002   1.827</code></pre>
+##   2.174   0.004   2.180</code></pre>
 <div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="structured-corpus.html#cb278-1" aria-hidden="true" tabindex="-1"></a>NCCU_ngrams <span class="sc">%&gt;%</span></span>
 <span id="cb278-2"><a href="structured-corpus.html#cb278-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(ngram, doc_id) <span class="sc">%&gt;%</span></span>
 <span id="cb278-3"><a href="structured-corpus.html#cb278-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ngram) <span class="sc">%&gt;%</span></span>
