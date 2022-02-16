@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
 
-<meta name="author" content="Alvin Chen" />
+<meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-01-05" />
+<meta name="date" content="2022-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,8 @@
 
 <link rel="next" href="what-is-corpus-linguistics.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,85 +51,12 @@
 
 
 
-
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
-<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
-<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -173,11 +101,16 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#reading-materials"><i class="fa fa-check"></i>Reading Materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-requirement"><i class="fa fa-check"></i>Course Requirement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#exams"><i class="fa fa-check"></i>Exams</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i>Academic Integrity</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#house-keeping-guidelines"><i class="fa fa-check"></i>House-keeping Guidelines</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#environment-settings"><i class="fa fa-check"></i>Environment Settings</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a>
 <ul>
@@ -416,13 +349,13 @@ div.csl-indent {
 <script src="https://hypothes.is/embed.js" async></script>
 <div id="header">
 <h1 class="title">Corpus Linguistics</h1>
-<p class="author"><em>Alvin Chen</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-01-05</em></p>
+<p class="author"><em>Alvin Cheng-Hsien Chen</em></p>
+<p class="date"><em>2022-02-16</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
 <p>Welcome to ENC2036. This is a grad-level course, which is devoted to one of the most active sub-fields of applied linguistics, i.e., Corpus Linguistics. Have you decided to embark on a digital journey to your future career, there are a series of courses provided in the <a href="http://www.eng.ntnu.edu.tw/en/main.php">Department of English, NTNU, Taiwan</a>, offering necessary inter-disciplinary skills and knowledge for quantitative and computational analysis of language.</p>
-<p>This course requires as prerequisite basic level knowledge of coding skills. Students are expected to have taken ENC2055 or other equivalents of introductory programming courses before taking this course. Please see the <a href="https://alvinntnu.github.io/NTNU_ENC2036/FAQ.html">FAQ</a> of the course website for more information about the prerequisite.</p>
+<p>This course requires as prerequisite basic-level knowledge of coding skills. Students are expected to have taken ENC2055 or other equivalents of introductory programming courses before taking this course. Please see the <a href="https://alvinntnu.github.io/NTNU_ENC2036/FAQ.html">FAQ</a> of the course website for more information about the prerequisite.</p>
 <div id="course-objective" class="section level2 unnumbered">
 <h2>Course Objective</h2>
 <p>This course aims to introduce theories and practices of Corpus Linguistics as a scientific discipline of its own. Corpus Linguistics has now been considered an interdisciplinary subject, requiring knowledge of linguistic theories, quantitative statistics and data processing. Therefore, this course aims to provide the necessary foundation as well as computational skills for students who are interested in conducting corpus-based linguistic research or language-related research. Students are expected to learn:</p>
@@ -449,26 +382,100 @@ div.csl-indent {
 <li>vector-space representation of words and texts</li>
 </ul></li>
 </ul>
-<p>This course is extremely hands-on and will lead the students through classic examples of these corpus-based applications via in-class tutorial sessions and take-home assignments. The main objective of this course is to provide students enough computational skills to perform similar corpus-based analyses on their own data or research questions. Also, it will provide specific hands-on tutorials to equip students with the necessary skills of text and statistical processing. This course will be a prerequisite for more advanced courses such as Computational Linguistics and Quantitative Corpus Linguistics.</p>
+<p>This course is extremely hands-on and will guide the students through classic examples of these corpus-based applications via in-class tutorial sessions and take-home assignments. The main objective of this course is to provide students enough computational skills to perform similar corpus-based analyses on their own data or research questions. Also, it will provide specific hands-on tutorials to equip students with the necessary skills of text and statistical processing. This course will be a prerequisite for more advanced courses such as Computational Linguistics and Quantitative Corpus Linguistics.</p>
 </div>
-<div id="textbook" class="section level2 unnumbered">
-<h2>Textbook</h2>
-<p>We will be using <span class="citation"><a href="#ref-stefanowitch2017" role="doc-biblioref">Stefanowitch</a> (<a href="#ref-stefanowitch2017" role="doc-biblioref">2019</a>)</span> as our reference material for the course. However, we will stress the hands-on implementation of the ideas and methods covered in the book.</p>
-<p><img src="images/stefanowitch-book.png" width="35%" /></p>
-<p>Also, there are a few more reference books listed at the end of the section, which I would highly recommend (e.g., <span class="citation"><a href="#ref-gries2018" role="doc-biblioref">Gries</a> (<a href="#ref-gries2018" role="doc-biblioref">2018</a>)</span>, <span class="citation"><a href="#ref-baayen2008" role="doc-biblioref">Baayen</a> (<a href="#ref-baayen2008" role="doc-biblioref">2008</a>)</span>, <span class="citation"><a href="#ref-brezina2018" role="doc-biblioref">Brezina</a> (<a href="#ref-brezina2018" role="doc-biblioref">2018</a>)</span>, <span class="citation"><a href="#ref-mcenery2011" role="doc-biblioref">McEnery and Hardie</a> (<a href="#ref-mcenery2011" role="doc-biblioref">2011</a>)</span>).</p>
+<div id="reading-materials" class="section level2 unnumbered">
+<h2>Reading Materials</h2>
+<p>The course lectures will follow the materials provided on the course website. Please preview the lecture notes before the class.</p>
+<p>Also, for each topic, please review the assigned readings on your own. These readings will be part of the midterm and final exams as well.</p>
+<p>In particular, we will be referring to two useful reference books as our main reading materials– <span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span>, <span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p><img src="images/stefanowitch-book.png" width="50%" /></p>
+<p><img src="images/qclwr-cover.jpg" width="50%" /></p>
+<p>In addition, there are a few more reference books listed at the end of the section (See <a href="references.html#references">References</a>), which we will refer to for specific topics, including <span class="citation"><a href="#ref-gries2021" role="doc-biblioref">Gries</a> (<a href="#ref-gries2021" role="doc-biblioref">2021</a>)</span>, <span class="citation"><a href="#ref-baayen2008" role="doc-biblioref">Baayen</a> (<a href="#ref-baayen2008" role="doc-biblioref">2008</a>)</span>, <span class="citation"><a href="#ref-brezina2018" role="doc-biblioref">Brezina</a> (<a href="#ref-brezina2018" role="doc-biblioref">2018</a>)</span>, <span class="citation"><a href="#ref-mcenery2011" role="doc-biblioref">McEnery &amp; Hardie</a> (<a href="#ref-mcenery2011" role="doc-biblioref">2011</a>)</span>, <span class="citation"><a href="#ref-wynne2006" role="doc-biblioref">Wynne</a> (<a href="#ref-wynne2006" role="doc-biblioref">2006</a>)</span>, <span class="citation"><a href="#ref-winter2020" role="doc-biblioref">Winter</a> (<a href="#ref-winter2020" role="doc-biblioref">2020</a>)</span>, <span class="citation"><a href="#ref-hunston2022" role="doc-biblioref">Hunston</a> (<a href="#ref-hunston2022" role="doc-biblioref">2022</a>)</span>, <span class="citation"><a href="#ref-nltk" role="doc-biblioref">Bird et al.</a> (<a href="#ref-nltk" role="doc-biblioref">2009</a>)</span>.</p>
+<p>In particular, assigned readings for each chapter are listed as shown below.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="86%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Chapter</th>
+<th align="right">Assigned Readings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="right"><span class="citation"><a href="#ref-gries2021" role="doc-biblioref">Gries</a> (<a href="#ref-gries2021" role="doc-biblioref">2021</a>)</span>, ch1; <span class="citation"><a href="#ref-mcenery2011" role="doc-biblioref">McEnery &amp; Hardie</a> (<a href="#ref-mcenery2011" role="doc-biblioref">2011</a>)</span>, ch1; <span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span>, ch1-2</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="right">Check <a href="https://alvinntnu.github.io/NTNU_ENC2055_LECTURES/">ENC2055</a>; <span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham &amp; Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="right"><span class="citation"><a href="#ref-wynne2006" role="doc-biblioref">Wynne</a> (<a href="#ref-wynne2006" role="doc-biblioref">2006</a>)</span>, ch1-2; <span class="citation"><a href="#ref-munzert2014" role="doc-biblioref">Munzert et al.</a> (<a href="#ref-munzert2014" role="doc-biblioref">2014</a>)</span>, ch2&amp;9</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="right"><span class="citation"><a href="#ref-hunston2022" role="doc-biblioref">Hunston</a> (<a href="#ref-hunston2022" role="doc-biblioref">2022</a>)</span>, Ch2-3; <span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span>, Ch4; <span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, Ch3; <span class="citation"><a href="#ref-evert2007" role="doc-biblioref">Evert</a> (<a href="#ref-evert2007" role="doc-biblioref">2007</a>)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="right"><span class="citation"><a href="#ref-nltk" role="doc-biblioref">Bird et al.</a> (<a href="#ref-nltk" role="doc-biblioref">2009</a>)</span>, ch3&amp;5; <span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, Ch3; <span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span>, Ch7-8</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="right"><span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span>, Ch10</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="right">Lecture Notes Only</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="right"><span class="citation"><a href="#ref-stefanowitsch2003" role="doc-biblioref">Stefanowitsch &amp; Gries</a> (<a href="#ref-stefanowitsch2003" role="doc-biblioref">2003</a>)</span>; <span class="citation"><a href="#ref-stefanowitsch2005" role="doc-biblioref">Stefanowitsch &amp; Gries</a> (<a href="#ref-stefanowitsch2005" role="doc-biblioref">2005</a>)</span>; <span class="citation"><a href="#ref-gries2004" role="doc-biblioref">Gries &amp; Stefanowitsch</a> (<a href="#ref-gries2004" role="doc-biblioref">2004</a>)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="right">Lecture Notes Only</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="right"><span class="citation"><a href="#ref-wynne2006" role="doc-biblioref">Wynne</a> (<a href="#ref-wynne2006" role="doc-biblioref">2006</a>)</span>, ch3,4,6;</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="right"><span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, ch3; <span class="citation"><a href="#ref-munzert2014" role="doc-biblioref">Munzert et al.</a> (<a href="#ref-munzert2014" role="doc-biblioref">2014</a>)</span>, ch3-4</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="right"><span class="citation"><a href="#ref-jurafsky2022" role="doc-biblioref">Jurafsky &amp; Martin</a> (<a href="#ref-jurafsky2022" role="doc-biblioref">2022</a>)</span>, ch6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="course-requirement" class="section level2 unnumbered">
+<h2>Course Requirement</h2>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="exams" class="section level2 unnumbered">
+<h2>Exams</h2>
+<p>The midterm and final exams will be a timed in-class open-book examination. Questions will include both coding exercises as well as essay questions (on the course materials). All exams will be considered individual work with no inter-personal communication. Please see <a href="index.html#academic-integrity">Academic Integrity</a> below.</p>
 </div>
 <div id="course-website" class="section level2 unnumbered">
 <h2>Course Website</h2>
-<p>We have a <a href="https://alvinntnu.github.io/NTNU_ENC2036">course website</a>. You may need a password to access the course materials. If you are an officially enrolled student, please ask the instructor for the passcode.</p>
+<p>We have a <a href="https://alvinntnu.github.io/NTNU_ENC2036">course website</a>. You may need a password to access the course materials (i.e., the data sets). If you are an officially enrolled student, please ask the instructor for the pass code.</p>
 <p>Please read the FAQ of the course website before course registration.</p>
 </div>
 <div id="contributing-to-the-lecture-notes" class="section level2 unnumbered">
 <h2>Contributing to the Lecture Notes</h2>
-<p>Although I have tried every possible way to make sure that the contents are correct, I may still accidentally make mistakes in the materials. If you spot any errors and would like make suggestions for better solutions, I would be more than happy to hear from you.</p>
-<p>To contribute your ideas, let’s use <a href="https://web.hypothes.is/">Hypothes.is</a>, which is an amazing tool for website annotations.</p>
+<p>Although I have tried every possible way to make sure that the contents are correct, I may still accidentally make mistakes in the materials. If you spot any errors and would like make suggestions for better solutions, I would really appreciate it.</p>
+<p>To contribute your ideas, you can annotate the lecture notes using <a href="https://web.hypothes.is/">Hypothes.is</a>, which is an amazing tool for website annotations.</p>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a href="https://web.hypothes.is/">Hypothes.is</a>, and click the “<strong>get-started</strong>” on the top-right corner of the homepage.</p></li>
-<li><p>Install the the add-on for chrome, or other browser.</p></li>
+<li><p>Install the the add-on for chrome, or other browser. (Optional!)</p></li>
 <li><p>To add an annotation, select some text and then click the <span class="svg-icon--inline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="annotator-adder-actions__icon"><path fill="currentColor" fill-rule="nonzero" d="M15 0c.27 0 .505.099.703.297A.961.961 0 0116 1v15l-4-3H1a.974.974 0 01-.703-.29A.953.953 0 010 12V1C0 .719.096.482.29.29A.966.966 0 011 0h14zM7 3l-.469.063c-.312.041-.656.187-1.031.437-.375.25-.719.646-1.031 1.188C4.156 5.229 4 6 4 7l.002.063.006.062a.896.896 0 01.008.11l-.002.074-.006.066a1.447 1.447 0 00.43 1.188C4.729 8.854 5.082 9 5.5 9c.417 0 .77-.146 1.063-.438C6.854 8.271 7 7.918 7 7.5c0-.417-.146-.77-.438-1.063A1.447 1.447 0 005.5 6c-.073 0-.146.005-.219.016-.073.01-.14.026-.203.046.177-1.03.542-1.632 1.094-1.804L7 4V3zm5 0l-.469.063c-.312.041-.656.187-1.031.437-.375.25-.719.646-1.031 1.188C9.156 5.229 9 6 9 7l.002.063.006.062a.896.896 0 01.008.11l-.002.074-.006.066a1.447 1.447 0 00.43 1.188c.291.291.645.437 1.062.437.417 0 .77-.146 1.063-.438.291-.291.437-.645.437-1.062 0-.417-.146-.77-.438-1.063A1.447 1.447 0 0010.5 6c-.073 0-.146.005-.219.016-.073.01-.14.026-.203.046.177-1.03.542-1.632 1.094-1.804L12 4V3z"></path></svg></span> on the pop-up menu. To see the annotations of others, click the <span class="svg-icon--inline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><g fill-rule="evenodd"><rect fill="none" stroke="none" x="0" y="0" width="16" height="16"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12L6 8l4-4"></path></g></svg>
 </span> in the upper right-hand corner of the page.</p></li>
 </ol>
@@ -480,7 +487,21 @@ div.csl-indent {
 </div>
 <div id="course-demo-data" class="section level2 unnumbered">
 <h2>Course Demo Data</h2>
-<p><a href="https://www.dropbox.com/sh/fvd5lnggsly553b/AAAGshg3qxfRKFzQL3CcFm4Ta?dl=0">Dropbox Demo Data Directory</a></p>
+<p><a href="https://www.dropbox.com/sh/fvd5lnggsly553b/AAAGshg3qxfRKFzQL3CcFm4Ta?dl=0">Dropbox Demo Data Directory</a> (Password protected)</p>
+</div>
+<div id="academic-integrity" class="section level2 unnumbered">
+<h2>Academic Integrity</h2>
+<p>All coding assignments are to be individual work, but discussion or collaboration with others is allowed. However, direct copying of others’ codes is absolutely forbidden. Any incidents of academic misconduct such as cheating, plagiarism, copying others’ work, or other inappropriate assistance on projects or examinations will be treated with zero tolerance and will result in a grade of “F” for the course. In particular, the midterm and final exams are taken seriously as individual work with absolutely no outside help or assistance. Breaches of academic integrity may also result in other action being taken by the University.</p>
+</div>
+<div id="house-keeping-guidelines" class="section level2 unnumbered">
+<h2>House-keeping Guidelines</h2>
+<ol style="list-style-type: decimal">
+<li>Please direct all your course-related questions to the Discussion Forum on Moodle. Do not send your coding questions to the TA via email. By posting all the questions on Moodle, we can also make sure that those with similar questions would get proper assistance as well.</li>
+<li>If you need to consult TA (<a href="mailto:jacksugood@gmail.com">Howard Su</a>) for technical help, please make an appointment with TA first. A recommended session is the hour after each week’s meeting.</li>
+<li>Please submit your coding assignments on time. Late submissions are subject to points deduction as a late penalty.</li>
+<li>All assignments must be submitted via Moodle.</li>
+<li>Please make sure that your access to Moodle is active. It is the student’s responsiblity to keep themselves posted of the most recent announcements.</li>
+</ol>
 </div>
 <div id="necessary-packages" class="section level2 unnumbered">
 <h2>Necessary Packages</h2>
@@ -511,50 +532,74 @@ library(tidytext)
 library(tidyverse)
 library(wordcloud)
 library(wordcloud2)</code></pre>
+</div>
+<div id="environment-settings" class="section level2 unnumbered">
+<h2>Environment Settings</h2>
+<p>The R Version to produce the lecture notes: R version 4.1.2 (2021-11-01)</p>
+<div class="try">
+<p>If your R version is older than the above one, please consider updating your R. Details about updating R can be found in:</p>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/3-methods-update-r-rstudio-windows-mac-woratana-ngarmtrakulchol">3 Methods to Update R &amp; Rstudio (For Windows &amp; Mac)</a></li>
+<li><a href="https://bookdown.org/pdr_higgins/rmrwr/updating-r-rstudio-and-your-packages.html">Updating R, Rstudio, and Your Packages</a></li>
+</ul>
+</div>
 
 </div>
 </div>
 <h3> References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 <div id="ref-baayen2008" class="csl-entry">
-Baayen, R. H. 2008. <em>Analyzing Linguistic Data: A Practical Introduction to Statistics Using <span>R</span></em>. Cambridge University Press.
+Baayen, R. H. (2008). <em>Analyzing linguistic data: A practical introduction to statistics using <span>R</span></em>. Cambridge University Press.
+</div>
+<div id="ref-nltk" class="csl-entry">
+Bird, S., Klein, E., &amp; Loper, E. (2009). <em>Natural language processing with python: Analyzing text with the natural language toolkit</em>. " O’Reilly Media, Inc.". <a href="https://www.nltk.org/book/">https://www.nltk.org/book/</a>
 </div>
 <div id="ref-brezina2018" class="csl-entry">
-Brezina, Vaclav. 2018. <em>Statistics in Corpus Linguistics: A Practical Guide</em>. Cambridge University Press.
+Brezina, V. (2018). <em>Statistics in corpus linguistics: A practical guide</em>. Cambridge University Press.
 </div>
-<div id="ref-gries2018" class="csl-entry">
-———. 2018. <em>Quantitative Corpus Linguistics with r: A Practical Introduction</em>. 2nd ed. Routledge.
+<div id="ref-evert2007" class="csl-entry">
+Evert, S. (2007). <em>Corpora and collocations</em>. <a href="https://stephanie-evert.de/PUB/Evert2007HSK_extended_manuscript.pdf">https://stephanie-evert.de/PUB/Evert2007HSK_extended_manuscript.pdf</a>
+</div>
+<div id="ref-gries2016" class="csl-entry">
+Gries, S. T. (2016). <em>Quantitative corpus linguistics with <span>R</span>: A practical introduction</em> (2nd ed.). Routledge.
+</div>
+<div id="ref-gries2021" class="csl-entry">
+Gries, S. T. (2021). <em>Statistics for linguistics with <span>R</span>: A practical introduction. 3rd edition.</em> (3rd ed.). Walter de Gruyter.
+</div>
+<div id="ref-gries2004" class="csl-entry">
+Gries, S. T., &amp; Stefanowitsch, A. (2004). Extending collostructional analysis: A corpus-based perspective onalternations’. <em>International Journal of Corpus Linguistics</em>, <em>9</em>(1), 97–129.
+</div>
+<div id="ref-hunston2022" class="csl-entry">
+Hunston, S. (2022). <em>Corpora in applied linguistics</em> (2nd ed.). Cambridge University Press.
+</div>
+<div id="ref-jurafsky2022" class="csl-entry">
+Jurafsky, D., &amp; Martin, J. H. (2022). <em>Speech and language processing</em>. " O’Reilly Media, Inc.". <a href="https://web.stanford.edu/~jurafsky/slp3/">https://web.stanford.edu/~jurafsky/slp3/</a>
 </div>
 <div id="ref-mcenery2011" class="csl-entry">
-McEnery, Tony, and Andrew Hardie. 2011. <em>Corpus Linguistics: Method, Theory and Practice</em>. Cambridge University Press.
+McEnery, T., &amp; Hardie, A. (2011). <em>Corpus linguistics: Method, theory and practice</em>. Cambridge University Press.
 </div>
-<div id="ref-stefanowitch2017" class="csl-entry">
-Stefanowitch, Anatol. 2019. <em>Corpus Linguistics: A Guide to the Methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>.
+<div id="ref-munzert2014" class="csl-entry">
+Munzert, S., Rubba, C., Meißner, P., &amp; Nyhuis, D. (2014). <em>Automated data collection with <span>R</span>: A practical guide to web scraping and text mining</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-stefanowitsch2019" class="csl-entry">
+Stefanowitsch, A. (2019). <em>Corpus linguistics: A guide to the methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>
+</div>
+<div id="ref-stefanowitsch2003" class="csl-entry">
+Stefanowitsch, A., &amp; Gries, S. T. (2003). Collostructions: Investigating the interaction of words and constructions. <em>International Journal of Corpus Linguistics</em>, <em>8</em>(2), 209–243.
+</div>
+<div id="ref-stefanowitsch2005" class="csl-entry">
+Stefanowitsch, A., &amp; Gries, S. T. (2005). Covarying collexemes. <em>Corpus Linguistics and Linguistic Theory</em>, <em>1</em>, 1–43.
+</div>
+<div id="ref-hadley2017" class="csl-entry">
+Wickham, H., &amp; Grolemund, G. (2017). <em>R for data science: Import, tidy, transform, visualize, and model data</em> (1st ed.). O’Reilly Media, Inc.
+</div>
+<div id="ref-winter2020" class="csl-entry">
+Winter, B. (2020). <em>Statistics for linguists: An introduction using <span>R</span></em>. Routledge.
+</div>
+<div id="ref-wynne2006" class="csl-entry">
+Wynne, M. (Ed.). (2006). <em>Developing linguistic corpora—a guide to good practice</em>. EADH: The European Association for Digital Humanities. <a href="https://users.ox.ac.uk/~martinw/dlc/index.htm">https://users.ox.ac.uk/~martinw/dlc/index.htm</a>
 </div>
 </div>
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https:\/\/alvinntnu.github.io" + location.pathname;  // Replace PAGE_URL with your page's canonical URL variable
-/*
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-*/
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://enc2036.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
             </section>
 
           </div>
@@ -565,7 +610,6 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -595,6 +639,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }
@@ -602,20 +650,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

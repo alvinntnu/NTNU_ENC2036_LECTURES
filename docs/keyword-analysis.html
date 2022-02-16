@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Keyword Analysis | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Keyword Analysis | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
 
-<meta name="author" content="Alvin Chen" />
+<meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-01-05" />
+<meta name="date" content="2022-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,8 @@
 <link rel="prev" href="parts-of-speech-tagging.html"/>
 <link rel="next" href="chinese-text-processing.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,12 +51,11 @@
 
 
 
-
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
@@ -173,11 +173,16 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#reading-materials"><i class="fa fa-check"></i>Reading Materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-requirement"><i class="fa fa-check"></i>Course Requirement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#exams"><i class="fa fa-check"></i>Exams</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i>Academic Integrity</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#house-keeping-guidelines"><i class="fa fa-check"></i>House-keeping Guidelines</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#environment-settings"><i class="fa fa-check"></i>Environment Settings</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a>
 <ul>
@@ -426,13 +431,13 @@ div.csl-indent {
 <ul>
 <li>Qualitative Approach</li>
 </ul>
-<p>Keywords are important for research on language and ideology. Most researchers draw inspiration from Raymond Williams’s idea of <em>keywords</em>, which he defines as terms presumably carrying socio-cultural meanings characteristic of (Western capitalist) ideologies <span class="citation">(<a href="#ref-williams1976" role="doc-biblioref">Williams 1976</a>)</span>.</p>
+<p>Keywords are important for research on language and ideology. Most researchers draw inspiration from Raymond Williams’s idea of <em>keywords</em>, which he defines as terms presumably carrying socio-cultural meanings characteristic of (Western capitalist) ideologies <span class="citation">(<a href="#ref-williams1976" role="doc-biblioref">Williams, 1976</a>)</span>.</p>
 <p>Keywords in Williams’ study were determined based on the subjective judgement of the socio-cultural meanings of the predefined list of words.</p>
 <ul>
 <li>Quantitative Approach</li>
 </ul>
 <p>In contrast to William’s intuition-based approach, recent studies have promoted a <strong>bottom-up corpus-based</strong> method to discover key terms reflecting the ideological undercurrents of particular text collections.</p>
-<p>This data-driven approach to keywords is sympathetic to the notion of <strong>statistical keywords</strong> popularized by Michael Stubbs <span class="citation">(<a href="#ref-stubbs1996" role="doc-biblioref">Stubbs 1996</a>, <a href="#ref-stubbs2003" role="doc-biblioref">2003</a>)</span> (with his famous toolkit, <em>Wordsmith</em>)</p>
+<p>This data-driven approach to keywords is sympathetic to the notion of <strong>statistical keywords</strong> popularized by Michael Stubbs <span class="citation">(<a href="#ref-stubbs1996" role="doc-biblioref">Stubbs, 1996</a>, <a href="#ref-stubbs2003" role="doc-biblioref">2003</a>)</span> (with his famous toolkit, <em>Wordsmith</em>)</p>
 <p>For a comprehensive discussion on the statistical nature of keyword analysis, please see <span class="citation"><a href="#ref-gabrielatos2018" role="doc-biblioref">Gabrielatos</a> (<a href="#ref-gabrielatos2018" role="doc-biblioref">2018</a>)</span>.</p>
 </div>
 <div id="statistics-for-keyness" class="section level2" number="6.2">
@@ -440,7 +445,7 @@ div.csl-indent {
 <p>To compute the keyness of a word <em>w</em>, we need two frequency numbers: the frequency of <em>w</em> in the target corpus vs. the frequency of <em>w</em> in the reference corpus.</p>
 <p>These frequencies are often included in a contingency table as shown in Figure <a href="keyword-analysis.html#fig:keyness">6.1</a>:</p>
 <hr />
-<div class="figure"><span id="fig:keyness"></span>
+<div class="figure"><span style="display:block;" id="fig:keyness"></span>
 <img src="images/keyword-contingency-table.png" alt="Frequency distributions of a *word* and all other words in two corpora" width="650" />
 <p class="caption">
 Figure 6.1: Frequency distributions of a <em>word</em> and all other words in two corpora
@@ -455,21 +460,21 @@ Figure 6.1: Frequency distributions of a <em>word</em> and all other words in tw
 <p>In other words, the <strong>marginal frequencies</strong> of the contingency table are crucial to determining the significance of the word frequencies in two corpora.</p>
 <p>Different keyness statistics may have different ways to evaluate the relative importance of the co-occurrences of the word <em>w</em> with the <em>target</em> and the <em>reference</em> corpus (i.e., <em>a</em> and <em>b</em> in Figure <a href="keyword-analysis.html#fig:keyness">6.1</a>) and statistically determine which connection is stronger.</p>
 <hr />
-<p>In this chapter, I would like to discuss three common statistics used in keyness analysis. This tutorial is based on <span class="citation"><a href="#ref-gries2018" role="doc-biblioref">Gries</a> (<a href="#ref-gries2018" role="doc-biblioref">2018</a>)</span>, Ch. 5.2.6.</p>
+<p>In this chapter, I would like to discuss three common statistics used in keyness analysis. This tutorial is based on <span class="citation">(<a href="#ref-gries2018" role="doc-biblioref"><strong>gries2018?</strong></a>)</span>, Ch. 5.2.6.</p>
 <ul>
-<li>Log-likelihood Ratio (<em>G</em><sup>2</sup>) <span class="citation">(<a href="#ref-dunning1993" role="doc-biblioref">Dunning 1993</a>)</span>;</li>
+<li>Log-likelihood Ratio (<em>G</em><sup>2</sup>) <span class="citation">(<a href="#ref-dunning1993" role="doc-biblioref">Dunning, 1993</a>)</span>;</li>
 </ul>
 <p><span class="math display">\[
 G^2 = 2 \sum_{i=1}^4 obs \times ln \frac{obs}{exp} 
 \]</span></p>
 <ul>
-<li>Difference Coefficient <span class="citation">(<a href="#ref-leech1992" role="doc-biblioref">Leech and Fallon 1992</a>)</span>;</li>
+<li>Difference Coefficient <span class="citation">(<a href="#ref-leech1992" role="doc-biblioref">Leech &amp; Fallon, 1992</a>)</span>;</li>
 </ul>
 <p><span class="math display">\[
 difference\;coefficient = \frac{a - b}{a + b}
 \]</span></p>
 <ul>
-<li>Relative Frequency Ratio <span class="citation">(<a href="#ref-damerau1993" role="doc-biblioref">Damerau 1993</a>)</span></li>
+<li>Relative Frequency Ratio <span class="citation">(<a href="#ref-damerau1993" role="doc-biblioref">Damerau, 1993</a>)</span></li>
 </ul>
 <p><span class="math display">\[
 rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
@@ -477,7 +482,7 @@ rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
 </div>
 <div id="implementation" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Implementation</h2>
-<p>In this tutorial we will use two documents as our mini reference and target corpus. These two documents are old Wikipedia entries (provided in <span class="citation"><a href="#ref-gries2018" role="doc-biblioref">Gries</a> (<a href="#ref-gries2018" role="doc-biblioref">2018</a>)</span>) on Perl and Python respectively.</p>
+<p>In this tutorial we will use two documents as our mini reference and target corpus. These two documents are old Wikipedia entries (provided in <span class="citation">(<a href="#ref-gries2018" role="doc-biblioref"><strong>gries2018?</strong></a>)</span>) on Perl and Python respectively.</p>
 <ul>
 <li>First we initialize necessary packages in R</li>
 </ul>
@@ -513,7 +518,7 @@ rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
 </div>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-150" class="exercise"><strong>Exercise 6.1  </strong></span>We mentioned this before. It is always good to keep track of the relative positions of the word in the original text. Please create a column in <code>corpus_word</code>, indicating the the relative position of each word in the text with unique <code>word_id</code>.
+<span id="exr:unnamed-chunk-152" class="exercise"><strong>Exercise 6.1  </strong></span>We mentioned this before. It is always good to keep track of the relative positions of the word in the original text. Please create a column in <code>corpus_word</code>, indicating the the relative position of each word in the text with unique <code>word_id</code>.
 </div>
 <p>(NB: Only the first 100 rows are shown here.)</p>
 <div data-pagedtable="false">
@@ -540,7 +545,7 @@ rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
 </div>
 <div id="tidy-data" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Tidy Data</h2>
-<p>Now I would like to talk about the idea of <em>tidy dataset</em> before we move on. <span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham and Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span> suggests that a tidy dataset needs to satisfy the following three interrelated principles:</p>
+<p>Now I would like to talk about the idea of <em>tidy dataset</em> before we move on. <span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham &amp; Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span> suggests that a tidy dataset needs to satisfy the following three interrelated principles:</p>
 <ul>
 <li>Each variable must have its own column.</li>
 <li>Each observation must have its own row.</li>
@@ -557,7 +562,7 @@ rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
 <p>This is the real life: we often encounter datasets that are NOT tidy at all.</p>
 <p>Instead of expecting others to always provide you a perfect tidy dataset for analysis (which is very unlikely), we might as well learn how to deal with messy dataset.</p>
 <hr />
-<p><span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham and Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span> suggest two common strategies that data scientists often apply:</p>
+<p><span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham &amp; Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span> suggest two common strategies that data scientists often apply:</p>
 <ul>
 <li><p><strong>Long-to-Wide</strong>:</p>
 <ul>
@@ -572,7 +577,7 @@ rfr = \frac{(a\div b)}{(a+c)\div(b+d)}
 </ul>
 <div id="an-long-to-wide-example" class="section level3" number="6.4.1">
 <h3><span class="header-section-number">6.4.1</span> An Long-to-Wide Example</h3>
-<p>Here I would like to illustrate the idea of <strong>Long-to-Wide</strong> transformation with a simple dataset from <span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham and Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span>, Chapter 12.</p>
+<p>Here I would like to illustrate the idea of <strong>Long-to-Wide</strong> transformation with a simple dataset from <span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Wickham &amp; Grolemund</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span>, Chapter 12.</p>
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="keyword-analysis.html#cb114-1" aria-hidden="true" tabindex="-1"></a>people <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
 <span id="cb114-2"><a href="keyword-analysis.html#cb114-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>name,             <span class="sc">~</span>profile,  <span class="sc">~</span>values,</span>
 <span id="cb114-3"><a href="keyword-analysis.html#cb114-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#-----------------|--------|------</span></span>
@@ -605,7 +610,7 @@ One variable might be spread across multiple columns
 <li><code>values_from = ...</code>: The column from which we take values for new columns. Here it’s <code>values</code>.</li>
 </ul>
 <hr />
-<div class="figure"><span id="fig:long2wide"></span>
+<div class="figure"><span style="display:block;" id="fig:long2wide"></span>
 <img src="images/tidy-2.png" alt="From Long to Wide: `pivot_wider()`" width="90%" />
 <p class="caption">
 Figure 6.2: From Long to Wide: <code>pivot_wider()</code>
@@ -662,7 +667,7 @@ One observation might be scattered across multiple rows.
 <li><code>values_to = ...</code>: The name of the new column for values of level combinations. Here it is <code>count</code>.</li>
 </ul>
 <hr />
-<div class="figure"><span id="fig:wide2long"></span>
+<div class="figure"><span style="display:block;" id="fig:wide2long"></span>
 <img src="images/tidy-3.png" alt="From Wide to Long: `pivot_longer()`" width="90%" />
 <p class="caption">
 Figure 6.3: From Wide to Long: <code>pivot_longer()</code>
@@ -714,7 +719,7 @@ One variable might be spread across multiple columns
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-164" class="exercise"><strong>Exercise 6.2  </strong></span>In the above <strong>Long-to-Wide</strong> transformation, there is still one problem. There are quite a few words that occur in one corpus but not the other. For these words, their frequencies would be a <code>NA</code> because R cannot allocate proper values for these unseen cases.</p>
+<p><span id="exr:unnamed-chunk-166" class="exercise"><strong>Exercise 6.2  </strong></span>In the above <strong>Long-to-Wide</strong> transformation, there is still one problem. There are quite a few words that occur in one corpus but not the other. For these words, their frequencies would be a <code>NA</code> because R cannot allocate proper values for these unseen cases.</p>
 <p>Could you fix this problem by assigning these unseen cases a 0 when transforming the data frame?</p>
 <p>Please name the updated wide version of the word frequency data frame as <code>contingency_table</code>.</p>
 Hint: Please check the argument <code>pivot_wider(..., values_fill = ...)</code>
@@ -806,7 +811,7 @@ Hint: Please check the argument <code>pivot_wider(..., values_fill = ...)</code>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-171" class="exercise"><strong>Exercise 6.3  </strong></span>The CSV in <code>demo_data/data-movie-reviews.csv</code> is the IMDB dataset with 50,000 movie reviews and their sentiment tags (source: <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">Kaggle</a>).</p>
+<p><span id="exr:unnamed-chunk-173" class="exercise"><strong>Exercise 6.3  </strong></span>The CSV in <code>demo_data/data-movie-reviews.csv</code> is the IMDB dataset with 50,000 movie reviews and their sentiment tags (source: <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">Kaggle</a>).</p>
 <p>The CSV has two columns—the first column <code>review</code> includes the raw texts of each movie review; the second column <code>sentiment</code> provides the sentiment tag for the review. Each review is either positive or negative.</p>
 <p>We can treat the dataset as two separate corpora: negative and positive corpora. Please find the top 10 keywords for each corpus ranked by the G<sup>2</sup> statistics.</p>
 <p>In the data preprocessing, please use the default tokenization in <code>unnest_tokens(..., token = "words")</code>. When computing the keyness, please exclude:</p>
@@ -836,58 +841,32 @@ The expected results are provided below for your reference.
 </div>
 </div>
 <h3> References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 <div id="ref-damerau1993" class="csl-entry">
-Damerau, Fred J. 1993. <span>“Generating and Evaluating Domain-Oriented Multi-Word Terms from Texts.”</span> <em>Information Processing &amp; Management</em> 29 (4): 433–47.
+Damerau, F. J. (1993). Generating and evaluating domain-oriented multi-word terms from texts. <em>Information Processing &amp; Management</em>, <em>29</em>(4), 433–447.
 </div>
 <div id="ref-dunning1993" class="csl-entry">
-Dunning, Ted. 1993. <span>“Accurate Methods for the Statistics of Surprise and Coincidence.”</span> <em>Computational Linguistics</em> 19 (1): 61–74. <a href="https://www.aclweb.org/anthology/J93-1003">https://www.aclweb.org/anthology/J93-1003</a>.
+Dunning, T. (1993). Accurate methods for the statistics of surprise and coincidence. <em>Computational Linguistics</em>, <em>19</em>(1), 61–74. <a href="https://www.aclweb.org/anthology/J93-1003">https://www.aclweb.org/anthology/J93-1003</a>
 </div>
 <div id="ref-gabrielatos2018" class="csl-entry">
-Gabrielatos, Costas. 2018. <span>“Keyness Analysis: Nature, Metrics and Techniques.”</span> In <em>Corpus Approaches to Discourse</em>, 225–58. Routledge.
-</div>
-<div id="ref-gries2018" class="csl-entry">
-———. 2018. <em>Quantitative Corpus Linguistics with r: A Practical Introduction</em>. 2nd ed. Routledge.
+Gabrielatos, C. (2018). Keyness analysis: Nature, metrics and techniques. In <em>Corpus approaches to discourse</em> (pp. 225–258). Routledge.
 </div>
 <div id="ref-leech1992" class="csl-entry">
-Leech, Geoffrey, and Roger Fallon. 1992. <span>“Computer Corpora–What Do They Tell Us about Culture.”</span> <em>ICAME Journal</em> 16.
+Leech, G., &amp; Fallon, R. (1992). Computer corpora–what do they tell us about culture. <em>ICAME Journal</em>, <em>16</em>.
 </div>
 <div id="ref-stubbs1996" class="csl-entry">
-Stubbs, Michael. 1996. <em>Text and Corpus Analysis</em>. Blackwell.
+Stubbs, M. (1996). <em>Text and corpus analysis</em>. Blackwell.
 </div>
 <div id="ref-stubbs2003" class="csl-entry">
-———. 2003. <em>Words and Phrases</em>. Blackwell.
+Stubbs, M. (2003). <em>Words and phrases</em>. Blackwell.
 </div>
 <div id="ref-hadley2017" class="csl-entry">
-Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 1st ed. O’Reilly Media, Inc.
+Wickham, H., &amp; Grolemund, G. (2017). <em>R for data science: Import, tidy, transform, visualize, and model data</em> (1st ed.). O’Reilly Media, Inc.
 </div>
 <div id="ref-williams1976" class="csl-entry">
-Williams, Raymond. 1976. <em>Keywords</em>. Oxford University Press.
+Williams, R. (1976). <em>Keywords</em>. Oxford University Press.
 </div>
 </div>
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https:\/\/alvinntnu.github.io" + location.pathname;  // Replace PAGE_URL with your page's canonical URL variable
-/*
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-*/
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://enc2036.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
             </section>
 
           </div>
@@ -898,7 +877,6 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -928,6 +906,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }

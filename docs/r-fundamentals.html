@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 R Fundamentals | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 R Fundamentals | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
 
-<meta name="author" content="Alvin Chen" />
+<meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-01-05" />
+<meta name="date" content="2022-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,8 @@
 <link rel="prev" href="what-is-corpus-linguistics.html"/>
 <link rel="next" href="creating-corpus.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,12 +51,11 @@
 
 
 
-
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
@@ -173,11 +173,16 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#reading-materials"><i class="fa fa-check"></i>Reading Materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-requirement"><i class="fa fa-check"></i>Course Requirement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#exams"><i class="fa fa-check"></i>Exams</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i>Academic Integrity</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#house-keeping-guidelines"><i class="fa fa-check"></i>House-keeping Guidelines</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#environment-settings"><i class="fa fa-check"></i>Environment Settings</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a>
 <ul>
@@ -416,10 +421,10 @@ div.csl-indent {
 <script src="https://hypothes.is/embed.js" async></script>
 <div id="r-fundamentals" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> R Fundamentals</h1>
-<div id="a-quick-note" class="section level2 unnumbered">
+<div id="a-quick-note" class="section level2 unnumbered try">
 <h2>A Quick Note</h2>
-<p>This course assumes that students have a certain level of background knowledge of R. We will have a quick overview of several fundamental concepts relating to the R language. These topics will be covered in more detail in my other course, ENC2055.</p>
-<p>Therefore, in the following weeks, we will go over (or review) some of the important chapters in the <a href="https://alvinntnu.github.io/NTNU_ENC2055_LECTURES/">Lecture Notes of ENC2055</a>, including:</p>
+<p>In this course, we assume that students have a certain level of background knowledge of R. Please review fundamental concepts relating to the R language on your own. Important topics are covered in more detail in my other course, ENC2055.</p>
+<p>In particular, we assume that students have working knowledge on the following topics covered in the <a href="https://alvinntnu.github.io/NTNU_ENC2055_LECTURES/">Lecture Notes of ENC2055</a>:</p>
 <ul>
 <li>Chapter 2: R Fundamentals</li>
 <li>Chapter 3: Code Format Convention</li>
@@ -428,41 +433,21 @@ div.csl-indent {
 <li>Chapter 7: Data Import</li>
 <li>Chapter 8: String Manipulation</li>
 <li>Chapter 9: Conditions and Loops</li>
-<li>Chpater 10: Iterations</li>
+<li>Chapter 10: Iterations</li>
 </ul>
-<p>Please refer <span class="citation"><a href="#ref-winter2020" role="doc-biblioref">Winter</a> (<a href="#ref-winter2020" role="doc-biblioref">2020</a>)</span> Chapter 1 and Chapter 2 for a comprehensive overview of R fundamentals.</p>
-
+<p>Please refer <span class="citation"><a href="#ref-winter2020" role="doc-biblioref">Winter</a> (<a href="#ref-winter2020" role="doc-biblioref">2020</a>)</span>, Ch1-2 and <span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, Ch3 for a comprehensive overview of R fundamentals.</p>
 </div>
+
 </div>
 <h3> References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-gries2016" class="csl-entry">
+Gries, S. T. (2016). <em>Quantitative corpus linguistics with <span>R</span>: A practical introduction</em> (2nd ed.). Routledge.
+</div>
 <div id="ref-winter2020" class="csl-entry">
-Winter, Bodo. 2020. <em>Statistics for Linguists: An Introduction Using r</em>. Routledge.
+Winter, B. (2020). <em>Statistics for linguists: An introduction using <span>R</span></em>. Routledge.
 </div>
 </div>
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https:\/\/alvinntnu.github.io" + location.pathname;  // Replace PAGE_URL with your page's canonical URL variable
-/*
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-*/
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://enc2036.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
             </section>
 
           </div>
@@ -473,7 +458,6 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -503,6 +487,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }

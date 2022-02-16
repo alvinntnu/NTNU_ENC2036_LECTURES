@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 What is Corpus Linguistics? | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 What is Corpus Linguistics? | Corpus Linguistics" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
 
-<meta name="author" content="Alvin Chen" />
+<meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-01-05" />
+<meta name="date" content="2022-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,8 @@
 <link rel="prev" href="index.html"/>
 <link rel="next" href="r-fundamentals.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,85 +51,12 @@
 
 
 
-
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
-<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
-<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -173,11 +101,16 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#reading-materials"><i class="fa fa-check"></i>Reading Materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-requirement"><i class="fa fa-check"></i>Course Requirement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#exams"><i class="fa fa-check"></i>Exams</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i>Academic Integrity</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#house-keeping-guidelines"><i class="fa fa-check"></i>House-keeping Guidelines</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#necessary-packages"><i class="fa fa-check"></i>Necessary Packages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#environment-settings"><i class="fa fa-check"></i>Environment Settings</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="what-is-corpus-linguistics.html"><a href="what-is-corpus-linguistics.html"><i class="fa fa-check"></i><b>1</b> What is Corpus Linguistics?</a>
 <ul>
@@ -462,7 +395,7 @@ div.csl-indent {
 <li>Sociology</li>
 <li>Field Linguistics</li>
 </ul></li>
-<li><em>Linguistic Corpus</em> in corpus linguistics <span class="citation">(<a href="#ref-stefanowitch2017" role="doc-biblioref">Stefanowitch 2019</a>)</span>
+<li><em>Linguistic Corpus</em> in corpus linguistics <span class="citation">(<a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch, 2019</a>)</span>
 <ul>
 <li>Authentic</li>
 <li>Representative</li>
@@ -471,13 +404,13 @@ div.csl-indent {
 <li>A few well-received definitions</li>
 </ul>
 <blockquote>
-<p>“a collection of texts which have been selected and brought together so that language can be studied on the computer” <span class="citation">(<a href="#ref-wynne2005" role="doc-biblioref">Wynne 2005</a>)</span></p>
+<p>“a collection of texts which have been selected and brought together so that language can be studied on the computer” <span class="citation">(<a href="#ref-wynne2006" role="doc-biblioref">Wynne, 2006</a>)</span></p>
 </blockquote>
 <blockquote>
-<p>“A corpus is a collection of pieces of language text in electronic form, selected according to external criteria to represent, as far as possible, a language or language variety as a source of data for linguistic research.” (John Sinclair in <span class="citation">(<a href="#ref-wynne2005" role="doc-biblioref">Wynne 2005</a>)</span>)</p>
+<p>“A corpus is a collection of pieces of language text in electronic form, selected according to external criteria to represent, as far as possible, a language or language variety as a source of data for linguistic research.” (John Sinclair in <span class="citation">(<a href="#ref-wynne2006" role="doc-biblioref">Wynne, 2006</a>)</span>)</p>
 </blockquote>
 <blockquote>
-<p>“A corpus refers to a machine-readable collection of (spoken or written) texts that were produced in a natural communitive setting, and in which the collection of texts is compiled with the intention (1) to be representative and balanced with respect to a particular linguistic language, variety, register, or genre and (2) to be analyzed linguistically.” <span class="citation">(<a href="#ref-gries2018" role="doc-biblioref">Gries 2018</a>)</span></p>
+<p>“A corpus refers to a machine-readable collection of (spoken or written) texts that were produced in a natural communitive setting, and in which the collection of texts is compiled with the intention (1) to be representative and balanced with respect to a particular linguistic language, variety, register, or genre and (2) to be analyzed linguistically.” <span class="citation">(<a href="#ref-gries2016" role="doc-biblioref">Gries, 2016</a>)</span></p>
 </blockquote>
 </div>
 <div id="what-is-a-corpus-linguistic-study" class="section level2" number="1.3">
@@ -486,7 +419,7 @@ div.csl-indent {
 <li>CL characteristics
 <ul>
 <li>No general agreement as to what it is</li>
-<li>Not a very homogenous methodological framework</li>
+<li>Not a very homogeneous methodological framework</li>
 <li>(Compared to other sub-disciplines in linguistics) It’s quite new</li>
 </ul></li>
 <li>Intertwined with many linguistic fields
@@ -494,21 +427,21 @@ div.csl-indent {
 <li>Interactional linguistics, cognitive linguistics, functional syntax, usage-based grammar etc.</li>
 <li>Stylometry, computational linguistics, NLP, digital humanities, text mining, sentiment analysis</li>
 </ul></li>
-<li>Corpus-based vs. Corpus-driven <span class="citation">(cf. <a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli 2001</a>)</span>
+<li>Corpus-based vs. Corpus-driven <span class="citation">(cf. <a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli, 2001</a>)</span>
 <ul>
-<li>Corpus-based studies:
+<li><strong>Corpus-based</strong> studies:
 <ul>
 <li>Typically use corpus data in order to explore a theory or hypothesis, aiming to validate it, refute it or refine it.</li>
 <li>Take corpus linguistics as a method</li>
 </ul></li>
-<li>Corpus-driven studies:
+<li><strong>Corpus-driven</strong> studies:
 <ul>
 <li>Typically reject the characterization of corpus linguistics as a method</li>
 <li>Claim instead that the corpus itself should be the sole source of our hypotheses about language</li>
-<li>It is thus claimed that the corpus itself embodies a theory of language <span class="citation">(<a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli 2001, 84–85</a>)</span></li>
+<li>It is thus claimed that the corpus itself embodies a theory of language <span class="citation">(<a href="#ref-tognini2001" role="doc-biblioref">Tognini-Bonelli, 2001, pp. 84–85</a>)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="citation"><a href="#ref-stefanowitch2017" role="doc-biblioref">Stefanowitch</a> (<a href="#ref-stefanowitch2017" role="doc-biblioref">2019</a>)</span> defines <em>Corpus Linguistics</em> as follows:</li>
+<li><span class="citation"><a href="#ref-stefanowitsch2019" role="doc-biblioref">Stefanowitsch</a> (<a href="#ref-stefanowitsch2019" role="doc-biblioref">2019</a>)</span> defines <em>Corpus Linguistics</em> as follows:</li>
 </ul>
 <blockquote>
 <p>Corpus linguistics is the investigation of linguistic research questions that have been framed in terms of the conditional distribution of linguistic phenomena in a linguistic corpus</p>
@@ -538,11 +471,11 @@ div.csl-indent {
 </ul></li>
 <li>Examples
 <ul>
-<li>When do English speakers use the complementizer that?</li>
-<li>What are the differences between small and little?</li>
-<li>When do English speaker choose “He picked up the book” vs. “He picked the book up?”</li>
-<li>When do English speaker place the adverbial clauses before the matrix clause?</li>
-<li>Do speakers use different phrases in different genres?</li>
+<li>When do English speakers use the complementizer <em>that</em>?</li>
+<li>What are the differences between <em>small</em> and <em>little</em>?</li>
+<li>When do English speakers choose “<em>He picked up the book</em>” vs. “<em>He picked the book up</em>?”</li>
+<li>When do English speakers place the adverbial clauses before the matrix clause?</li>
+<li>Do speakers use different linguistic forms in different genres?</li>
 <li>Is the word “gay” used differently across different time periods?</li>
 <li>Do L2 learners use similar collocation patterns as do L1 speakers?</li>
 <li>Do speakers of different socio-economic classes talk differently?</li>
@@ -574,43 +507,20 @@ div.csl-indent {
 </div>
 </div>
 <h3> References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-gries2018" class="csl-entry">
-———. 2018. <em>Quantitative Corpus Linguistics with r: A Practical Introduction</em>. 2nd ed. Routledge.
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-gries2016" class="csl-entry">
+Gries, S. T. (2016). <em>Quantitative corpus linguistics with <span>R</span>: A practical introduction</em> (2nd ed.). Routledge.
 </div>
-<div id="ref-stefanowitch2017" class="csl-entry">
-Stefanowitch, Anatol. 2019. <em>Corpus Linguistics: A Guide to the Methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>.
+<div id="ref-stefanowitsch2019" class="csl-entry">
+Stefanowitsch, A. (2019). <em>Corpus linguistics: A guide to the methodology.</em> Language Science Press. <a href="http://langsci-press.org/catalog/book/148">http://langsci-press.org/catalog/book/148</a>
 </div>
 <div id="ref-tognini2001" class="csl-entry">
-Tognini-Bonelli, E. 2001. <em>Corpus Linguistics at Work</em>. John Benjamins.
+Tognini-Bonelli, E. (2001). <em>Corpus linguistics at work</em>. John Benjamins.
 </div>
-<div id="ref-wynne2005" class="csl-entry">
-Wynne, Martin. 2005. <em>Developing Linguistic Corpora: A Guide to Good Practice (AHDS Guides to Good Practice</em>. Oxbow Books.
+<div id="ref-wynne2006" class="csl-entry">
+Wynne, M. (Ed.). (2006). <em>Developing linguistic corpora—a guide to good practice</em>. EADH: The European Association for Digital Humanities. <a href="https://users.ox.ac.uk/~martinw/dlc/index.htm">https://users.ox.ac.uk/~martinw/dlc/index.htm</a>
 </div>
 </div>
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https:\/\/alvinntnu.github.io" + location.pathname;  // Replace PAGE_URL with your page's canonical URL variable
-/*
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-*/
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://enc2036.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
             </section>
 
           </div>
@@ -621,7 +531,6 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -651,6 +560,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }
@@ -658,20 +571,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
