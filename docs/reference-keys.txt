@@ -247,3 +247,11 @@ which-method-to-choose
 lexical-similarity
 exercises-1
 references
+exr:unnamed-chunk-37
+exr:unnamed-chunk-36
+exr:unnamed-chunk-39
+exr:unlabeled-div-1
+extract_art_links
+extract_article_push_tables
+streamline-the-codes
+final-remarks
