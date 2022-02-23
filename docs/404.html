@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-02-22" />
+<meta name="date" content="2022-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,14 @@
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -241,6 +249,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.7</b> Issues on Pattern Retrieval</a></li>
 <li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.8</b> Saving POS-tagged Texts</a></li>
 <li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.9</b> Finalize spaCy</a></li>
+<li class="chapter" data-level="5.10" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#notes-on-chinese-processing"><i class="fa fa-check"></i><b>5.10</b> Notes on Chinese Processing</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a>
 <ul>
@@ -395,6 +404,12 @@ div.csl-indent {
 <li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>12.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>13</b> References</a></li>
+<li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i>Python Environment</a>
+<ul>
+<li><a href="python-environment.html#install-the-python-with-anaconda">Install the python with <span>Anaconda</span></a></li>
+<li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#create-conda-environment"><i class="fa fa-check"></i>Create Conda Environment</a></li>
+<li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-python-modules"><i class="fa fa-check"></i>Install Python Modules</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -473,6 +488,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
