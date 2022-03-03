@@ -257,3 +257,15 @@ lexical-similarity
 exercises-1
 python-environment
 references
+exr:unnamed-chunk-42
+exr:unnamed-chunk-11
+exr:unnamed-chunk-18
+exr:unnamed-chunk-29
+exr:unnamed-chunk-33
+exr:unnamed-chunk-36
+exr:unnamed-chunk-41
+exr:unnamed-chunk-46
+exr:unnamed-chunk-50
+exr:unnamed-chunk-54
+exr:unnamed-chunk-62
+exr:unnamed-chunk-64
