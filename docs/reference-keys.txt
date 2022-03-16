@@ -284,3 +284,6 @@ exr:unnamed-chunk-53
 exr:unnamed-chunk-57
 exr:unnamed-chunk-63
 exr:unnamed-chunk-65
+exr:unnamed-chunk-27
+exr:unnamed-chunk-44
+useful-information

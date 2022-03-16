@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-03-02" />
+<meta name="date" content="2022-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,14 +55,6 @@
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
-<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
-<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -435,49 +427,62 @@ div.csl-indent {
 <script src="https://hypothes.is/embed.js" async></script>
 <div id="python-environment" class="section level1" number="13">
 <h1><span class="header-section-number">Chapter 13</span> Python Environment</h1>
-<p>In this course, we use the Anaconda python version. Necessary installation steps include:</p>
-<div id="install-the-python-with-anaconda" class="section level2 unnumbered">
-<h2>Install the python with <a href="https://www.anaconda.com/products/individual">Anaconda</a></h2>
-<p>Please go to the official website of <a href="https://www.anaconda.com/products/individual">Anaconda</a> for more information.</p>
-</div>
-<div id="create-conda-environment" class="section level2 unnumbered">
-<h2>Create Conda Environment</h2>
 <div class="warning">
-<p>The following codes should be run in the terminal.</p>
-</div>
-<div class="info">
+<p>All the codes starting with <code>$</code> should be run in the terminal or Anaconda Prompt.</p>
 <p>For Windows users, we assume that you run the following steps in Anaconda Powershell Prompt.</p>
 <p>For Mac users, we assume that you run the following steps in Mac terminal.</p>
 </div>
+<p>In this course, we use the Anaconda Python version. Necessary installation steps include:</p>
+<div id="install-the-python-with-anaconda" class="section level2 unnumbered">
+<h2>Install the python with <a href="https://www.anaconda.com/products/individual">Anaconda</a></h2>
+<p>Please go to the official website of <a href="https://www.anaconda.com/products/individual">Anaconda</a> for more information.</p>
+<p>If you have installed Anaconda before, please make sure that you know where your default Anaconda Python interpreter path is. To check this:</p>
 <ul>
-<li>Create a specific conda environment with python 3.6+ to be used in R/Rstudio</li>
+<li>Windows
+<ul>
+<li>Start Anaconda Prompt</li>
+<li>Run <code>$ conda activate environment-name</code> (If you could like to check the python path of a particular conda environment)</li>
+<li>Run <code>$ where python</code></li>
+</ul></li>
+<li>macOS
+<ul>
+<li>Open a terminal window.</li>
+<li>Run <code>$ source activate environment-name</code> (If you could like to check the python path of a particular conda environment)</li>
+<li>Run <code>$ which python</code></li>
+</ul></li>
 </ul>
-<div class="sourceCode" id="cb429"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb429-1"><a href="python-environment.html#cb429-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="sc">--</span>name XXX</span></code></pre></div>
+<p>Your default path should be similar to the following formats, where <code>ALVIN</code> would be your username and <code>MYENV</code> would be your conda environment name:</p>
+<ul>
+<li>Windows default path: <code>C:\Users\ALVIN\Anaconda3\python.exe</code> or <code>C:\Users\ALVIN\Anaconda3\envs\MYENV\python.exe</code></li>
+<li>macOS default path: <code>/Users/ALVIN/anaconda/bin/python</code></li>
+</ul>
+</div>
+<div id="create-conda-environment" class="section level2 unnumbered">
+<h2>Create Conda Environment</h2>
+<p>Create a new conda environment with python 3.6+ to be used in R/Rstudio.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb1-1"><a href="python-environment.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda create <span class="sc">--</span>name XXX</span></code></pre></div>
 <p>You need to specify the conda environment name XXX on your own.</p>
 </div>
 <div id="install-python-modules" class="section level2 unnumbered">
 <h2>Install Python Modules</h2>
-<div class="warning">
-<p>The following codes should be run in the terminal.</p>
-</div>
+<p>Install all required python modules in this self-defined conda environment. There are usually two procedures:</p>
+<ol style="list-style-type: decimal">
+<li>Activate the conda environment named <code>XXX</code> in your terminal;</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb2-1"><a href="python-environment.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
+<span id="cb2-2"><a href="python-environment.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> source activate XXX</span>
+<span id="cb2-3"><a href="python-environment.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
+<span id="cb2-4"><a href="python-environment.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda activate XXX</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Install the module in the activated conda environment <code>XXX</code> in terminal.</li>
+</ol>
+<p>In this course, we will need <code>spacy</code> and also the language models of English and Chinese. Please refer to spacy’s documentations of <a href="https://spacy.io/usage/models">models</a> for more details.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb3-1"><a href="python-environment.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda install spacy</span>
+<span id="cb3-2"><a href="python-environment.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download en_core_web_sm</span>
+<span id="cb3-3"><a href="python-environment.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download zh_core_web_sm</span></code></pre></div>
 <div class="info">
-<p>For Windows users, we assume that you run the following steps in Anaconda Powershell Prompt.</p>
-<p>For Mac users, we assume that you run the following steps in Mac terminal.</p>
+<p>To deactivate the conda environment: <code>$ conda deactivate XXX</code></p>
 </div>
-<ul>
-<li>Install all required python modules in this self-defined conda environment. There are usually two procedures:</li>
-</ul>
-<ol style="list-style-type: lower-alpha">
-<li>activate the conda environment named <code>XXX</code> in your terminal;</li>
-</ol>
-<div class="sourceCode" id="cb430"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb430-1"><a href="python-environment.html#cb430-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
-<span id="cb430-2"><a href="python-environment.html#cb430-2" aria-hidden="true" tabindex="-1"></a>source activate XXX</span>
-<span id="cb430-3"><a href="python-environment.html#cb430-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
-<span id="cb430-4"><a href="python-environment.html#cb430-4" aria-hidden="true" tabindex="-1"></a>conda activate XXX</span></code></pre></div>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>install the module in the activated conda environment <code>XXX</code> in terminal.</li>
-</ol>
-<div class="sourceCode" id="cb431"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb431-1"><a href="python-environment.html#cb431-1" aria-hidden="true" tabindex="-1"></a>conda install spacy</span></code></pre></div>
 
 </div>
 </div>
@@ -531,20 +536,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
