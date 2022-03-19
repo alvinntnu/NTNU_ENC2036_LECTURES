@@ -288,3 +288,6 @@ exr:unnamed-chunk-27
 exr:unnamed-chunk-44
 useful-information
 exr:unnamed-chunk-68
+exr:unnamed-chunk-8
+exr:unnamed-chunk-22
+tidy-data-self-study
