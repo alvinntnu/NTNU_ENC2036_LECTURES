@@ -293,3 +293,8 @@ exr:unnamed-chunk-22
 tidy-data-self-study
 exr:unnamed-chunk-28
 exr:unnamed-chunk-45
+exr:unnamed-chunk-23
+quick-analysis
+exr:unnamed-chunk-24
+exr:unnamed-chunk-30
+exr:unnamed-chunk-49
