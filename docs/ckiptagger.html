@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-03-25" />
+<meta name="date" content="2022-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -63,6 +63,10 @@
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -630,7 +634,7 @@ conda deactivate</code></pre>
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-342" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
+<span id="exr:unnamed-chunk-344" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
 </div>
 <div class="sourceCode" id="cb272"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb272-1"><a href="ckiptagger.html#cb272-1" aria-hidden="true" tabindex="-1"></a>new_words<span class="ot">&lt;-</span><span class="fu">loadDictionary</span>(<span class="at">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </span>
 <span id="cb272-2"><a href="ckiptagger.html#cb272-2" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
@@ -673,8 +677,8 @@ conda deactivate</code></pre>
 <div id="beyond-word-boundaries" class="section level2" number="9.10">
 <h2><span class="header-section-number">9.10</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-9ee9ee00a829a5aad2c2" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9ee9ee00a829a5aad2c2">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fa8feaf4618f382731cd" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fa8feaf4618f382731cd">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Load the models</li>
 </ul>
@@ -683,10 +687,10 @@ conda deactivate</code></pre>
 <div class="sourceCode" id="cb274"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb274-1"><a href="ckiptagger.html#cb274-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading other necessary models</span></span>
 <span id="cb274-2"><a href="ckiptagger.html#cb274-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
-  3.492   1.977   6.397 </code></pre>
+  3.384   2.413   6.636 </code></pre>
 <div class="sourceCode" id="cb276"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb276-1"><a href="ckiptagger.html#cb276-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
-  3.382   1.623   5.096 </code></pre>
+  3.301   2.292   5.651 </code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
@@ -742,10 +746,10 @@ conda deactivate</code></pre>
 <span id="cb280-2"><a href="ckiptagger.html#cb280-2" aria-hidden="true" tabindex="-1"></a>ner <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
 <span id="cb280-3"><a href="ckiptagger.html#cb280-3" aria-hidden="true" tabindex="-1"></a>ner</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
-{(23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
+{(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
 
 [[2]]
-{(17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;)}
+{(2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;)}
 
 [[3]]
 {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -754,10 +758,10 @@ conda deactivate</code></pre>
 set()
 
 [[5]]
-{(4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;), (14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;)}
+{(14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;), (4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;)}
 
 [[6]]
-{(12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;)}</code></pre>
+{(16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;)}</code></pre>
 </div>
 <div id="tidy-up-the-results" class="section level2" number="9.11">
 <h2><span class="header-section-number">9.11</span> Tidy Up the Results</h2>
@@ -774,7 +778,7 @@ set()
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-349" class="exercise"><strong>Exercise 9.2  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
+<p><span id="exr:unnamed-chunk-351" class="exercise"><strong>Exercise 9.2  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
 Please convert the above <code>word_df</code> into a text-based data frame, as shown below.
 </div>
 <div data-pagedtable="false">
@@ -784,7 +788,7 @@ Please convert the above <code>word_df</code> into a text-based data frame, as s
 </div>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-351" class="exercise"><strong>Exercise 9.3  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same word-based data frame <code>word_df</code>?
+<span id="exr:unnamed-chunk-353" class="exercise"><strong>Exercise 9.3  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same word-based data frame <code>word_df</code>?
 </div>
 <ul>
 <li>You may need to convert the output of <code>ner</code> from ckiptagger into a data frame like this:</li>

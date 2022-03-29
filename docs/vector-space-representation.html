@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-03-25" />
+<meta name="date" content="2022-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -63,6 +63,10 @@
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -514,8 +518,8 @@ div.csl-indent {
 <p>Different ways of operationalizing the <strong>features</strong> and the <strong>cell values</strong> may lead to different types of <code>dfm</code>. In this section, I would like to show you how we create a <code>dfm</code> of a corpus and what are the common ways to define <strong>features</strong> and <strong>cell valus</strong> for the analysis of document semantics via vector space representation.</p>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:engnlp2"></span>
-<div id="htmlwidget-4534bd33ca007d438109" style="width:100%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4534bd33ca007d438109">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()/dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e -> e1 -> f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-975d5a789cbe199d6782" style="width:100%;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-975d5a789cbe199d6782">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()/dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e -> e1 -> f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 12.1: English Text Analytics Flowchart (v2)
 </p>
@@ -580,8 +584,8 @@ attr(,&quot;package&quot;)
 <p>The advantage of creating a document-feature-matrix is that now each document is not only a series of <strong>character</strong> strings, but also a list of <strong>numeric</strong> values (i.e., a row of co-occurring frequencies), which can be compared mathematically with the other documents (i.e., the other rows).</p>
 <hr />
 <p>Take a two-dimensional space for instance. If we have vectors on this space, we can compute their distance/similarity mathematically:</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-450"></span>
-<img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-450-1.png" alt="Vector Representation" width="100%" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-452"></span>
+<img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-452-1.png" alt="Vector Representation" width="100%" />
 <p class="caption">
 Figure 12.2: Vector Representation
 </p>
@@ -629,9 +633,9 @@ Figure 12.3: Distance-based Metric: Euclidean Distance
 <hr />
 <p>The geometric meanings of cosines of two vectors are connected to the arcs between the vectors: the greater their cosine similarity, the smaller the arcs, the closer they are.</p>
 <hr />
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-454-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-456-1.png" width="672" /></p>
 <hr />
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-455-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-457-1.png" width="100%" /></p>
 </div>
 <div id="computing-pairwise-distancesimilarity-using-quanteda" class="section level4" number="12.3.5.3">
 <h4><span class="header-section-number">12.3.5.3</span> Computing pairwise distance/similarity using <code>quanteda</code></h4>
@@ -765,7 +769,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-464" class="exercise"><strong>Exercise 12.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
+<span id="exr:unnamed-chunk-466" class="exercise"><strong>Exercise 12.1  </strong></span>Based on the dataset <code>corp_us</code>, can you create a <code>dfm</code>, where the features are trigrams but all the words in the trigrams are word stems not the original surface word forms? (see below)
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -845,7 +849,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <hr />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-470" class="exercise"><strong>Exercise 12.2  </strong></span>Please get familar with the following functions, provided by <code>quanteda</code> for weighting of the document-feature matrix: <code>dfm_weight()</code>, <code>dfm_tfidf()</code>.
+<span id="exr:unnamed-chunk-472" class="exercise"><strong>Exercise 12.2  </strong></span>Please get familar with the following functions, provided by <code>quanteda</code> for weighting of the document-feature matrix: <code>dfm_weight()</code>, <code>dfm_tfidf()</code>.
 </div>
 <hr />
 <p>In the following demo, we adopt a few simple distrubtional criteria:</p>
@@ -890,7 +894,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <span id="cb407-3"><a href="vector-space-representation.html#cb407-3" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_wordcloud</span>(corp_us_dfm_trimmed, <span class="at">max_words =</span> <span class="dv">200</span>, <span class="at">random_order =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb407-4"><a href="vector-space-representation.html#cb407-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">rotation =</span> .<span class="dv">25</span>,</span>
 <span id="cb407-5"><a href="vector-space-representation.html#cb407-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color =</span>  <span class="fu">c</span>(<span class="st">&#39;red&#39;</span>, <span class="st">&#39;pink&#39;</span>, <span class="st">&#39;green&#39;</span>, <span class="st">&#39;purple&#39;</span>, <span class="st">&#39;orange&#39;</span>, <span class="st">&#39;blue&#39;</span>))</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-474-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-476-1.png" width="100%" /></p>
 </div>
 <div id="document-similarity" class="section level3" number="12.3.10">
 <h3><span class="header-section-number">12.3.10</span> Document Similarity</h3>
@@ -965,11 +969,11 @@ docs                    among
 <div class="sourceCode" id="cb415"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb415-1"><a href="vector-space-representation.html#cb415-1" aria-hidden="true" tabindex="-1"></a><span class="co"># distance-based</span></span>
 <span id="cb415-2"><a href="vector-space-representation.html#cb415-2" aria-hidden="true" tabindex="-1"></a>corp_us_hist_euclidean <span class="ot">&lt;-</span> corp_us_euclidean <span class="sc">%&gt;%</span> as.dist <span class="sc">%&gt;%</span> hclust</span>
 <span id="cb415-3"><a href="vector-space-representation.html#cb415-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(corp_us_hist_euclidean,<span class="at">hang =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-480-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-482-1.png" width="100%" /></p>
 <div class="sourceCode" id="cb416"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb416-1"><a href="vector-space-representation.html#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="co"># similarity</span></span>
 <span id="cb416-2"><a href="vector-space-representation.html#cb416-2" aria-hidden="true" tabindex="-1"></a>corp_us_hist_cosine <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> corp_us_cosine) <span class="sc">%&gt;%</span> as.dist <span class="sc">%&gt;%</span> hclust</span>
 <span id="cb416-3"><a href="vector-space-representation.html#cb416-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(corp_us_hist_cosine,<span class="at">hang =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-480-2.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-482-2.png" width="100%" /></p>
 <div class="danger">
 <p>
 Please note that <code>textstat_simil()</code> gives us the <strong>similarity</strong> matrix. In other words, the numbers in the matrix indicate how <em>similar</em> the documents are. However, for hierarchical cluster analysis, the function <code>hclust()</code> expects a distance-based matrix, namely one indicating how dissimilar the documents are. Therefore, we need to use <code>(1 - corp_us_cosine)</code> in the cosine example before performing the cluster analysis.
@@ -1200,7 +1204,7 @@ features A B C E F G D
 <span id="cb444-15"><a href="vector-space-representation.html#cb444-15" aria-hidden="true" tabindex="-1"></a><span class="co"># plot network</span></span>
 <span id="cb444-16"><a href="vector-space-representation.html#cb444-16" aria-hidden="true" tabindex="-1"></a><span class="fu">fcm_select</span>(corp_fcm_win_5_select, <span class="at">pattern =</span> corp_fcm_win_5_top50) <span class="sc">%&gt;%</span></span>
 <span id="cb444-17"><a href="vector-space-representation.html#cb444-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">textplot_network</span>(<span class="at">min_freq =</span> <span class="dv">5</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-490-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-492-1.png" width="672" /></p>
 <div class="sourceCode" id="cb445"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb445-1"><a href="vector-space-representation.html#cb445-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the dendrogram</span></span>
 <span id="cb445-2"><a href="vector-space-representation.html#cb445-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb445-3"><a href="vector-space-representation.html#cb445-3" aria-hidden="true" tabindex="-1"></a><span class="do">## compute cosine similarity</span></span>
@@ -1214,7 +1218,7 @@ features A B C E F G D
 <span id="cb445-11"><a href="vector-space-representation.html#cb445-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(corp_us_fcm_win_5_top100_hclust, <span class="at">cex =</span> <span class="fl">0.8</span>,</span>
 <span id="cb445-12"><a href="vector-space-representation.html#cb445-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;Top 50 Features&quot;</span>,</span>
 <span id="cb445-13"><a href="vector-space-representation.html#cb445-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">sub=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-491-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-493-1.png" width="100%" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
 <hr />
 </div>
@@ -1223,7 +1227,7 @@ features A B C E F G D
 <h2><span class="header-section-number">12.5</span> Exercises</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-492" class="exercise"><strong>Exercise 12.3  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
+<p><span id="exr:unnamed-chunk-494" class="exercise"><strong>Exercise 12.3  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>dfm</code>, where the contextual features are the trigrams in the documents.</li>
@@ -1249,10 +1253,10 @@ features A B C E F G D
 <ul>
 <li>Example of the dendrogram based on the trigram-based <code>dfm</code>:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-495-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-497-1.png" width="100%" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-496" class="exercise"><strong>Exercise 12.4  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-498" class="exercise"><strong>Exercise 12.4  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>tokens</code> object of <code>corpus</code> by removing punctuations, symbols, and numbers first.</li>
 <li>Please create a window-based <code>fcm</code> of the corpus from the <code>tokens</code> object by including words within the window size of 5 as the contextual words</li>
@@ -1272,10 +1276,10 @@ features A B C E F G D
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 9833 columns.</p></li>
 <li><p>Example of the dendrogram of the top 50 features in <code>fcm</code>:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-499-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-501-1.png" width="100%" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-500" class="exercise"><strong>Exercise 12.5  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in bigram uses.</p>
+<p><span id="exr:unnamed-chunk-502" class="exercise"><strong>Exercise 12.5  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in bigram uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
@@ -1302,11 +1306,11 @@ features A B C E F G D
 <ul>
 <li>Example of the dendrogram:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-503-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-505-1.png" width="100%" /></p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-504" class="exercise"><strong>Exercise 12.6  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-506" class="exercise"><strong>Exercise 12.6  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
 <li>During the word-tokenization, please remove symbols by setting <code>worker(..., symbols=T)</code></li>
@@ -1327,7 +1331,7 @@ features A B C E F G D
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 4908 columns.</p></li>
 <li><p>Example of the dendrogram:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-507-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-509-1.png" width="100%" /></p>
 <hr />
 
 </div>

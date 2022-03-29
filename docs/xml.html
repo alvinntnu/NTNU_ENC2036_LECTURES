@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-03-25" />
+<meta name="date" content="2022-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -63,6 +63,10 @@
 <script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
 
 
 <style type="text/css">
@@ -534,7 +538,7 @@ div.csl-indent {
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-406" class="exercise"><strong>Exercise 11.1  </strong></span>Now we know how to extract token-level information and utterance-level annotation from each utterance.</p>
+<p><span id="exr:unnamed-chunk-408" class="exercise"><strong>Exercise 11.1  </strong></span>Now we know how to extract token-level information and utterance-level annotation from each utterance.</p>
 <p>Please come up with a way to extract all relevant linguistic data from all utterances in the file <code>S2A5-tgd.xml</code>, including their word and non-word tokens as well as their metadata.</p>
 <p>Ideally, the resulting data frame should consist of rows being the tokens of the utterances, and columns including the attributes and strings of each token.</p>
 <p>Most importantly, the data frame should include not only the strings of the tokens, but at the same time for the word tokens, it should preserve the BNC token-level annotations of part-of-speech tags, lemmas, and semantic tags (i.e., <code>usas</code>).</p>
@@ -569,7 +573,7 @@ A sample utterance-based data frame is provided below.
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-413" class="exercise"><strong>Exercise 11.2  </strong></span>Now your job is to create this function, <code>read_xml_bnc2014(xmlfile = "")</code>.</p>
+<p><span id="exr:unnamed-chunk-415" class="exercise"><strong>Exercise 11.2  </strong></span>Now your job is to create this function, <code>read_xml_bnc2014(xmlfile = "")</code>.</p>
 <p>The function should take the path to one XML file as the input and return a token-based data frame of the XML file as shown above.</p>
 </div>
 </div>
@@ -719,7 +723,7 @@ A sample utterance-based data frame is provided below.
 <span id="cb348-4"><a href="xml.html#cb348-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">100</span>,n) <span class="sc">%&gt;%</span></span>
 <span id="cb348-5"><a href="xml.html#cb348-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(lemma, n) <span class="sc">%&gt;%</span> </span>
 <span id="cb348-6"><a href="xml.html#cb348-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">wordcloud2</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">minRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>, <span class="at">maxRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-421-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-423-1.png" width="672" /></p>
 <ul>
 <li>Male wordcloud</li>
 </ul>
@@ -728,11 +732,11 @@ A sample utterance-based data frame is provided below.
 <span id="cb349-3"><a href="xml.html#cb349-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">100</span>,n) <span class="sc">%&gt;%</span></span>
 <span id="cb349-4"><a href="xml.html#cb349-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(lemma, n) <span class="sc">%&gt;%</span> </span>
 <span id="cb349-5"><a href="xml.html#cb349-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">wordcloud2</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">minRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>, <span class="at">maxRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-422-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-424-1.png" width="672" /></p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-423" class="exercise"><strong>Exercise 11.3  </strong></span>Which adjectives are more often used by male and female speakers? This should be a statistical problem. We can in fact extend our keyword analysis (cf. Chapter <a href="keyword-analysis.html#keyword-analysis">6</a>) to this question.</p>
+<p><span id="exr:unnamed-chunk-425" class="exercise"><strong>Exercise 11.3  </strong></span>Which adjectives are more often used by male and female speakers? This should be a statistical problem. We can in fact extend our keyword analysis (cf. Chapter <a href="keyword-analysis.html#keyword-analysis">6</a>) to this question.</p>
 <p>Please use the statistics of keyword analysis to find out the top 20 adjectives that are strongly attracted to female and male speakers according to <em>G</em><sup>2</sup> statistics. Please include in the analysis words whose frequencies &gt;= 20 in the entire corpus.</p>
 Also, please note the problem of the <code>NaN</code> values out of the <code>log()</code>.
 </div>
@@ -838,13 +842,13 @@ Also, please note the problem of the <code>NaN</code> values out of the <code>lo
 <span id="cb354-4"><a href="xml.html#cb354-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">100</span>, n) <span class="sc">%&gt;%</span></span>
 <span id="cb354-5"><a href="xml.html#cb354-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(pattern, n) <span class="sc">%&gt;%</span></span>
 <span id="cb354-6"><a href="xml.html#cb354-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">wordcloud2</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">minRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>, <span class="at">maxRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-428-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-430-1.png" width="672" /></p>
 <div class="sourceCode" id="cb355"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb355-1"><a href="xml.html#cb355-1" aria-hidden="true" tabindex="-1"></a>freq_pat_by_gender <span class="sc">%&gt;%</span></span>
 <span id="cb355-2"><a href="xml.html#cb355-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(gender<span class="sc">==</span><span class="st">&quot;M&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb355-3"><a href="xml.html#cb355-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">100</span>, n) <span class="sc">%&gt;%</span></span>
 <span id="cb355-4"><a href="xml.html#cb355-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(pattern, n) <span class="sc">%&gt;%</span></span>
 <span id="cb355-5"><a href="xml.html#cb355-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">wordcloud2</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">minRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>, <span class="at">maxRotation =</span> <span class="sc">-</span>pi<span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-428-2.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-430-2.png" width="672" /></p>
 <hr />
 
 <div class="exercise">
@@ -860,7 +864,7 @@ A sample has been provided below. Dispersion is defined as the number of speaker
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-430" class="exercise"><strong>Exercise 11.5  </strong></span>So far we have been looking at the constructional schema of ADV + ADJ. Now let’s examine further how adjectives that are emphasized differ among speakers of different genders.</p>
+<p><span id="exr:unnamed-chunk-432" class="exercise"><strong>Exercise 11.5  </strong></span>So far we have been looking at the constructional schema of ADV + ADJ. Now let’s examine further how adjectives that are emphasized differ among speakers of different genders.</p>
 <p>That is, do male speakers tend to emphasize adjectives that are different from those that are emphasized by females?</p>
 <p>Now it should be clear to you that which adjectives are more likely to be emphasized by ADV in male and female utterances should be a statistical question.</p>
 <p>Please use the statistics <em>G</em><sup>2</sup> from keyword analysis to find out the top 10 Adjectives that are strongly attracted to female and male speakers according to <em>G</em><sup>2</sup> statistics. Please include in the analysis adjectives whose dispersion &gt;= 2 in the respective corpus, i.e., adjectives that have been used by at least TWO different male or female speakers.</p>
@@ -893,7 +897,7 @@ Also, please note the problem of the <code>NaN</code> values out of the <code>lo
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-434" class="exercise"><strong>Exercise 11.6  </strong></span>Please analyze the verbs that co-occur with the first-person pronoun <code>I</code> in BNC2014 in terms of speakers of different genders. Please create a frequency list of the verbs that follow the first person pronoun <code>I</code> in <code>demo_data/corp-bnc-spoken2014-sample</code>. Verbs are defined as any words whose POS tag starts with <code>VV</code>.</p>
+<p><span id="exr:unnamed-chunk-436" class="exercise"><strong>Exercise 11.6  </strong></span>Please analyze the verbs that co-occur with the first-person pronoun <code>I</code> in BNC2014 in terms of speakers of different genders. Please create a frequency list of the verbs that follow the first person pronoun <code>I</code> in <code>demo_data/corp-bnc-spoken2014-sample</code>. Verbs are defined as any words whose POS tag starts with <code>VV</code>.</p>
 Also, please create the word clouds of the top 100 verbs for male and female speakers.
 </div>
 <ul>
@@ -907,14 +911,14 @@ Also, please create the word clouds of the top 100 verbs for male and female spe
 <ul>
 <li>Female Wordcloud</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-437-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-439-1.png" width="672" /></p>
 <ul>
 <li>Male Wordcloud</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-438-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-440-1.png" width="672" /></p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-439" class="exercise"><strong>Exercise 11.7  </strong></span>Please analyze the recurrent four-grams used by male and female speakers by showing the top 20 four-grams used by males and females respectively ranked according to their dispersions. Dispersion of four-grams is defined as the number of texts (i.e., XML files) where the four-gram is observed.
+<span id="exr:unnamed-chunk-441" class="exercise"><strong>Exercise 11.7  </strong></span>Please analyze the recurrent four-grams used by male and female speakers by showing the top 20 four-grams used by males and females respectively ranked according to their dispersions. Dispersion of four-grams is defined as the number of texts (i.e., XML files) where the four-gram is observed.
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
