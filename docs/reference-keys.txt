@@ -315,3 +315,10 @@ fig:unnamed-chunk-78
 exr:unnamed-chunk-57
 exr:unnamed-chunk-68
 more-exercises
+exr:unnamed-chunk-77
+fig:unnamed-chunk-79
+exr:unnamed-chunk-23
+exr:unnamed-chunk-32
+exr:unnamed-chunk-35
+exr:unnamed-chunk-38
+exr:unnamed-chunk-39
