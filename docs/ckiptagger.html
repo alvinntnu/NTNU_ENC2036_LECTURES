@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-04-08" />
+<meta name="date" content="2022-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,21 +282,22 @@ div.csl-indent {
 <li class="chapter" data-level="7.2.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#tidy-structure-framework"><i class="fa fa-check"></i><b>7.2.2</b> Tidy Structure Framework</a></li>
 <li class="chapter" data-level="7.2.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quanteda-framework"><i class="fa fa-check"></i><b>7.2.3</b> <code>Quanteda</code> Framework</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#comparing-tokenization-methods"><i class="fa fa-check"></i><b>7.3</b> Comparing Tokenization Methods</a></li>
-<li class="chapter" data-level="7.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#data"><i class="fa fa-check"></i><b>7.4</b> Data</a></li>
-<li class="chapter" data-level="7.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>7.5</b> Loading Text Data</a></li>
-<li class="chapter" data-level="7.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quantedatokens-vs.-jiebarsegment"><i class="fa fa-check"></i><b>7.6</b> <code>quanteda::tokens()</code> vs. <code>jiebaR::segment()</code></a></li>
-<li class="chapter" data-level="7.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.7</b> Case Study 1: Word Frequency and Wordcloud</a></li>
-<li class="chapter" data-level="7.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-patterns"><i class="fa fa-check"></i><b>7.8</b> Case Study 2: Patterns</a>
+<li class="chapter" data-level="7.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#data"><i class="fa fa-check"></i><b>7.3</b> Data</a></li>
+<li class="chapter" data-level="7.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>7.4</b> Loading Text Data</a></li>
+<li class="chapter" data-level="7.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#initialize-jiebar"><i class="fa fa-check"></i><b>7.5</b> Initialize <code>jiebaR</code></a></li>
+<li class="chapter" data-level="7.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-concordances-with-kwic"><i class="fa fa-check"></i><b>7.6</b> Case Study 1: Concordances with <code>kwic()</code></a></li>
+<li class="chapter" data-level="7.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.7</b> Case Study 2: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="7.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-patterns"><i class="fa fa-check"></i><b>7.8</b> Case Study 3: Patterns</a>
 <ul>
 <li class="chapter" data-level="7.8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>7.8.1</b> BEI Construction</a></li>
 </ul></li>
-<li class="chapter" data-level="7.9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-lexical-bundles"><i class="fa fa-check"></i><b>7.9</b> Case Study 3: Lexical Bundles</a>
+<li class="chapter" data-level="7.9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-4-lexical-bundles"><i class="fa fa-check"></i><b>7.9</b> Case Study 4: Lexical Bundles</a>
 <ul>
 <li class="chapter" data-level="7.9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#n-grams-extraction"><i class="fa fa-check"></i><b>7.9.1</b> N-grams Extraction</a></li>
 <li class="chapter" data-level="7.9.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-and-dispersion-1"><i class="fa fa-check"></i><b>7.9.2</b> Frequency and Dispersion</a></li>
 </ul></li>
 <li class="chapter" data-level="7.10" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#afterwords"><i class="fa fa-check"></i><b>7.10</b> Afterwords</a></li>
+<li class="chapter" data-level="7.11" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#more-exercises"><i class="fa fa-check"></i><b>7.11</b> More Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>8</b> Constructions and Idioms</a>
 <ul>
@@ -321,13 +322,11 @@ div.csl-indent {
 <li class="chapter" data-level="9.1" data-path="ckiptagger.html"><a href="ckiptagger.html#installation"><i class="fa fa-check"></i><b>9.1</b> Installation</a></li>
 <li class="chapter" data-level="9.2" data-path="ckiptagger.html"><a href="ckiptagger.html#download-the-model-files"><i class="fa fa-check"></i><b>9.2</b> Download the Model Files</a></li>
 <li class="chapter" data-level="9.3" data-path="ckiptagger.html"><a href="ckiptagger.html#r-python-communication"><i class="fa fa-check"></i><b>9.3</b> R-Python Communication</a></li>
-<li class="chapter" data-level="9.4" data-path="ckiptagger.html"><a href="ckiptagger.html#word-segmentation-in-r"><i class="fa fa-check"></i><b>9.4</b> Word Segmentation in R</a></li>
-<li class="chapter" data-level="9.5" data-path="ckiptagger.html"><a href="ckiptagger.html#r-environment-setting"><i class="fa fa-check"></i><b>9.5</b> R Environment Setting</a></li>
-<li class="chapter" data-level="9.6" data-path="ckiptagger.html"><a href="ckiptagger.html#initialization"><i class="fa fa-check"></i><b>9.6</b> Initialization</a></li>
-<li class="chapter" data-level="9.7" data-path="ckiptagger.html"><a href="ckiptagger.html#segmenting-texts"><i class="fa fa-check"></i><b>9.7</b> Segmenting Texts</a></li>
-<li class="chapter" data-level="9.8" data-path="ckiptagger.html"><a href="ckiptagger.html#define-own-dictionary"><i class="fa fa-check"></i><b>9.8</b> Define Own Dictionary</a></li>
-<li class="chapter" data-level="9.9" data-path="ckiptagger.html"><a href="ckiptagger.html#beyond-word-boundaries"><i class="fa fa-check"></i><b>9.9</b> Beyond Word Boundaries</a></li>
-<li class="chapter" data-level="9.10" data-path="ckiptagger.html"><a href="ckiptagger.html#tidy-up-the-results"><i class="fa fa-check"></i><b>9.10</b> Tidy Up the Results</a></li>
+<li class="chapter" data-level="9.4" data-path="ckiptagger.html"><a href="ckiptagger.html#environment-checking"><i class="fa fa-check"></i><b>9.4</b> Environment Checking</a></li>
+<li class="chapter" data-level="9.5" data-path="ckiptagger.html"><a href="ckiptagger.html#initialization"><i class="fa fa-check"></i><b>9.5</b> Initialization</a></li>
+<li class="chapter" data-level="9.6" data-path="ckiptagger.html"><a href="ckiptagger.html#segmenting-texts"><i class="fa fa-check"></i><b>9.6</b> Segmenting Texts</a></li>
+<li class="chapter" data-level="9.7" data-path="ckiptagger.html"><a href="ckiptagger.html#define-own-dictionary"><i class="fa fa-check"></i><b>9.7</b> Define Own Dictionary</a></li>
+<li class="chapter" data-level="9.8" data-path="ckiptagger.html"><a href="ckiptagger.html#beyond-word-boundaries"><i class="fa fa-check"></i><b>9.8</b> Beyond Word Boundaries</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="structured-corpus.html"><a href="structured-corpus.html"><i class="fa fa-check"></i><b>10</b> Structured Corpus</a>
 <ul>
@@ -434,7 +433,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 9</span> CKIP Tagger</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb1-1"><a href="ckiptagger.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="ckiptagger.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
-<p>The current state-of-art Chinese segmenter for Taiwan Mandarin available is probably the <a href="https://github.com/ckiplab/ckiptagger">CKIP tagger</a>, created by the <a href="https://ckip.iis.sinica.edu.tw/">Chinese Knowledge and Information Processing (CKIP)</a> group at the Academia Sinica.</p>
+<p>The current state-of-art Chinese segmenter for Taiwan Mandarin available is probably the <a href="https://github.com/ckiplab/ckiptagger">CKIP tagger</a>, created by <a href="https://ckip.iis.sinica.edu.tw/">Chinese Knowledge and Information Processing (CKIP)</a> group at Academia Sinica.</p>
 <p>The <code>ckiptagger</code> is released as a python module. In this chapter, I will demonstrate how to use the module for Chinese word segmentation but in an R environment, i.e., how to integrate Python modules in R coherently to perform complex tasks.</p>
 <div class="info">
 <p>Alternatively, we can run python codes directly in RStudio. In that case, we don’t need to worry about the Python-to-R interface issues. If you are familiar with Python, you are encouraged to take this option and run the <code>ckiptagger</code> word segmentation directly with Python.</p>
@@ -449,19 +448,24 @@ div.csl-indent {
 <li>Install <code>tensorflow</code> module in the conda environment</li>
 </ul>
 <p>For example, the following codes:</p>
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>create a new conda environment <code>corpling</code> (skip this step if you’ve already created a conda environment to be used in RStudio);</li>
 <li>activate the new conda environment;</li>
 <li>install <code>ckiptagger</code> in the conda environment</li>
 <li>install <code>tensorflow</code> in the conda environment</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb2-1"><a href="ckiptagger.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> corpling python=3.7</span>
-<span id="cb2-2"><a href="ckiptagger.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate corpling</span>
-<span id="cb2-3"><a href="ckiptagger.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> ckiptagger</span>
-<span id="cb2-4"><a href="ckiptagger.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span></code></pre></div>
+</ul>
+<div class="alert">
+<p>The codes for the environment setup need to be executed in the <strong>terminal</strong>.</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb2-1"><a href="ckiptagger.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Codes in terminal</span></span>
+<span id="cb2-2"><a href="ckiptagger.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> corpling python=3.7</span>
+<span id="cb2-3"><a href="ckiptagger.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate corpling</span>
+<span id="cb2-4"><a href="ckiptagger.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> ckiptagger</span>
+<span id="cb2-5"><a href="ckiptagger.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span></code></pre></div>
 <p>Check the versions of the Python modules:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb3-1"><a href="ckiptagger.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show ckiptagger</span>
-<span id="cb3-2"><a href="ckiptagger.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show tensorflow</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb3-1"><a href="ckiptagger.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Codes in terminal</span></span>
+<span id="cb3-2"><a href="ckiptagger.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show ckiptagger</span>
+<span id="cb3-3"><a href="ckiptagger.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show tensorflow</span></code></pre></div>
 <pre class="Rout"><code>Name: ckiptagger
 Version: 0.2.1
 Summary: Neural implementation of CKIP WS, POS, NER tools
@@ -469,7 +473,7 @@ Home-page: https://github.com/ckiplab/ckiptagger
 Author: Peng-Hsuan Li
 Author-email: jacobvsdanniel@gmail.com
 License: GPLv3
-Location: /Users/Alvin/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
+Location: /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
 Requires: 
 Required-by: 
 Name: tensorflow
@@ -479,8 +483,8 @@ Home-page: https://www.tensorflow.org/
 Author: Google Inc.
 Author-email: packages@tensorflow.org
 License: Apache 2.0
-Location: /Users/Alvin/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
-Requires: tensorflow-io-gcs-filesystem, flatbuffers, libclang, astunparse, opt-einsum, keras-preprocessing, setuptools, wrapt, keras, termcolor, google-pasta, six, absl-py, tensorboard, tf-estimator-nightly, gast, typing-extensions, numpy, h5py, grpcio, protobuf
+Location: /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
+Requires: protobuf, keras-preprocessing, flatbuffers, tensorboard, google-pasta, six, numpy, absl-py, setuptools, typing-extensions, tensorflow-io-gcs-filesystem, gast, grpcio, h5py, wrapt, opt-einsum, tf-estimator-nightly, astunparse, keras, libclang, termcolor
 Required-by: </code></pre>
 <div class="info">
 <p>Please consult the github of the <a href="https://github.com/ckiplab/ckiptagger"><code>ckiptagger</code></a> for more details on installation.</p>
@@ -491,30 +495,29 @@ Required-by: </code></pre>
 <p>All NLP applications have their models behind their fancy performances. To use the tagger provided in <code>ckiptagger</code>, we need to download their pre-trained model files.</p>
 <p>Please go to the <a href="https://github.com/ckiplab/ckiptagger">github of CKIP tagger</a> to download the model files, which is provided as a zipped file. (The file is very big. It takes a while.)</p>
 <p>After you download the zipped file, unzip it under your working directory to the <code>data/</code> directory.</p>
+<p>In the unzipped directory, <code>data/</code>, are the required model files for the <code>ckiptagger</code>.</p>
+<p><img src="images/ckiptagger-data.png" width="70%" /></p>
 </div>
 <div id="r-python-communication" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> R-Python Communication</h2>
 <p>In order to call Python functions in R/Rstudio, we need to install an R library in your R. The R-Python communication is made possible through the R library <code>reticulate</code>. Please make sure that you have this library installed in your R.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb5-1"><a href="ckiptagger.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</span></code></pre></div>
 </div>
-<div id="word-segmentation-in-r" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Word Segmentation in R</h2>
-<p>Before we proceed, please check if you have everything ready (The following includes the versions of the modules used for this session):</p>
+<div id="environment-checking" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Environment Checking</h2>
+<p>Before we proceed, please check if you have everything ready. The following includes the versions of the modules used for this session:</p>
 <ul>
 <li>Anaconda + Python 3.7+ (<code>Python 3.7.13</code>)</li>
 <li>Python modules: <code>ckiptagger</code> (<code>ckiptagger 0.2.1</code> + <code>tensorflow 2.8.0</code>)</li>
-<li>R library: <code>reticulate</code>(<code>1.22</code>)</li>
+<li>R library: <code>reticulate</code>(<code>1.24</code>)</li>
 <li>CKIP model files under your working directory <code>./data</code></li>
 </ul>
 <p>If yes, then we are ready to go.</p>
 </div>
-<div id="r-environment-setting" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> R Environment Setting</h2>
-<p>We first load the library <code>reticulate</code> and specify in R which Python we will be using in the current R(It is highly likely that there is more than one Python version installed in your system). Please change the <code>path_to_python</code> to your own path, which includes the Anaconda Python you just installed.</p>
+<div id="initialization" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> Initialization</h2>
+<p>We first load the library <code>reticulate</code> and specify in R which Python we will be using in the current R session using <code>path_to_python()</code> (It is highly likely that there is more than one Python environment in your system). Please change the <code>path_to_python()</code> to the target Python kernel, i.e., the conda environment you would like to use in R.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb6-1"><a href="ckiptagger.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
-</div>
-<div id="initialization" class="section level2" number="9.6">
-<h2><span class="header-section-number">9.6</span> Initialization</h2>
 <p>There are three important steps in initialization before you can perform word segmentation in R:</p>
 <ul>
 <li>Activate a specific conda environment in R</li>
@@ -522,19 +525,17 @@ Required-by: </code></pre>
 <li>Initialize the tagger models</li>
 </ul>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb7-1"><a href="ckiptagger.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate a specific conda env in R</span></span>
-<span id="cb7-2"><a href="ckiptagger.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#use_condaenv(&quot;spacy_condaenv&quot;)</span></span>
-<span id="cb7-3"><a href="ckiptagger.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#use_condaenv(&quot;r-reticulate&quot;)</span></span>
-<span id="cb7-4"><a href="ckiptagger.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;corpling&quot;</span>)</span>
-<span id="cb7-5"><a href="ckiptagger.html#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="ckiptagger.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Import ckiptagger module</span></span>
-<span id="cb7-7"><a href="ckiptagger.html#cb7-7" aria-hidden="true" tabindex="-1"></a>ckip <span class="ot">&lt;-</span> reticulate<span class="sc">::</span><span class="fu">import</span>(<span class="at">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</span>
-<span id="cb7-8"><a href="ckiptagger.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="ckiptagger.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Intialize models</span></span>
-<span id="cb7-10"><a href="ckiptagger.html#cb7-10" aria-hidden="true" tabindex="-1"></a>ws <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">WS</span>(<span class="st">&quot;./data&quot;</span>)</span></code></pre></div>
+<span id="cb7-2"><a href="ckiptagger.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;corpling&quot;</span>)</span>
+<span id="cb7-3"><a href="ckiptagger.html#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="ckiptagger.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Import ckiptagger module</span></span>
+<span id="cb7-5"><a href="ckiptagger.html#cb7-5" aria-hidden="true" tabindex="-1"></a>ckip <span class="ot">&lt;-</span> reticulate<span class="sc">::</span><span class="fu">import</span>(<span class="at">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</span>
+<span id="cb7-6"><a href="ckiptagger.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="ckiptagger.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Initialize model for word segmentation</span></span>
+<span id="cb7-8"><a href="ckiptagger.html#cb7-8" aria-hidden="true" tabindex="-1"></a>ws <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">WS</span>(<span class="st">&quot;./data&quot;</span>)</span></code></pre></div>
 </div>
-<div id="segmenting-texts" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Segmenting Texts</h2>
-<p>The initialized word segmenter object, <code>ws()</code>, can tokenize any input <strong>character vectors</strong> into a list of <strong>word vectors</strong> of the same size.</p>
+<div id="segmenting-texts" class="section level2" number="9.6">
+<h2><span class="header-section-number">9.6</span> Segmenting Texts</h2>
+<p>The initialized word segmenter object, <code>ws()</code>, can tokenize any input <strong>text-based vectors</strong> into a list of <strong>word-based vectors</strong> of the same size.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb8-1"><a href="ckiptagger.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Raw text corpus </span></span>
 <span id="cb8-2"><a href="ckiptagger.html#cb8-2" aria-hidden="true" tabindex="-1"></a>texts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</span>
 <span id="cb8-3"><a href="ckiptagger.html#cb8-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</span>
@@ -576,36 +577,30 @@ Required-by: </code></pre>
 [[6]]
  [1] &quot;科長&quot; &quot;說&quot;   &quot;:1,&quot;  &quot;坪數&quot; &quot;對&quot;   &quot;人數&quot; &quot;為&quot;   &quot;1:3&quot;  &quot;。&quot;   &quot;2&quot;   
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
-<p>The word segmenter <code>ws()</code> returns a <code>list</code> object, each element of which is a word-based vector of the original sentence.</p>
+<p>The word segmenter <code>ws()</code> returns a <code>list</code> object, each element of which is a word-based vector of the original text.</p>
 </div>
-<div id="define-own-dictionary" class="section level2" number="9.8">
-<h2><span class="header-section-number">9.8</span> Define Own Dictionary</h2>
+<div id="define-own-dictionary" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Define Own Dictionary</h2>
 <p>The performance of Chinese word segmenter depends highly on the dictionary. Texts in different disciplines may have very domain-specific vocabulary. To prioritize a set of words in a dictionary, we can further ensure the accuracy of the word segmentation.</p>
 <p>To create a dictionary for <code>ckiptagger</code>, we need a <strong>named list</strong>, i.e., to create a <code>list</code> with element <strong>names</strong> = “the new words” and element <strong>values</strong> = “the weights.”</p>
 <p>Then we use the python function <code>ckip$construct_dictionary()</code> to create the <code>dictionary</code> Python object, which is the input argument for word segmenter <code>ws(..., recommend_dictionary = ...)</code>.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb10-1"><a href="ckiptagger.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define new words in own dictionary</span></span>
-<span id="cb10-2"><a href="ckiptagger.html#cb10-2" aria-hidden="true" tabindex="-1"></a>new_words <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;土地公有&quot;</span>,</span>
-<span id="cb10-3"><a href="ckiptagger.html#cb10-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地公&quot;</span>,</span>
-<span id="cb10-4"><a href="ckiptagger.html#cb10-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地婆&quot;</span>,</span>
-<span id="cb10-5"><a href="ckiptagger.html#cb10-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;來亂的&quot;</span>,</span>
-<span id="cb10-6"><a href="ckiptagger.html#cb10-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;啦&quot;</span>,</span>
-<span id="cb10-7"><a href="ckiptagger.html#cb10-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;緯來體育台&quot;</span>)</span>
-<span id="cb10-8"><a href="ckiptagger.html#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="ckiptagger.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform the `vector` into `list` for Python</span></span>
-<span id="cb10-10"><a href="ckiptagger.html#cb10-10" aria-hidden="true" tabindex="-1"></a>new_words_py <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">%&gt;%</span> as.list</span>
+<span id="cb10-2"><a href="ckiptagger.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># To create a dictionary for `construct_dictionary()`</span></span>
+<span id="cb10-3"><a href="ckiptagger.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></span>
+<span id="cb10-4"><a href="ckiptagger.html#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="ckiptagger.html#cb10-5" aria-hidden="true" tabindex="-1"></a>new_words <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;土地公有&quot;</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb10-6"><a href="ckiptagger.html#cb10-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地公&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb10-7"><a href="ckiptagger.html#cb10-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地婆&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb10-8"><a href="ckiptagger.html#cb10-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;來亂的&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb10-9"><a href="ckiptagger.html#cb10-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;啦&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb10-10"><a href="ckiptagger.html#cb10-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;緯來體育台&quot;</span><span class="ot">=</span><span class="dv">1</span>)</span>
 <span id="cb10-11"><a href="ckiptagger.html#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="ckiptagger.html#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># cf. `list(rep, 1 , length(new_words))`</span></span>
-<span id="cb10-13"><a href="ckiptagger.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(new_words_py) <span class="ot">&lt;-</span> new_words</span>
+<span id="cb10-12"><a href="ckiptagger.html#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></span>
+<span id="cb10-13"><a href="ckiptagger.html#cb10-13" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
 <span id="cb10-14"><a href="ckiptagger.html#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-15"><a href="ckiptagger.html#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># To create a dictionary for `construct_dictionary()`</span></span>
-<span id="cb10-16"><a href="ckiptagger.html#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We need a list, with names as the words and list elements as the weights in the dictionary</span></span>
-<span id="cb10-17"><a href="ckiptagger.html#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-18"><a href="ckiptagger.html#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Python `dictionary` object, required by `ckiptagger.wc()`</span></span>
-<span id="cb10-19"><a href="ckiptagger.html#cb10-19" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words_py)</span>
-<span id="cb10-20"><a href="ckiptagger.html#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="ckiptagger.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Segment texts using dictionary</span></span>
-<span id="cb10-22"><a href="ckiptagger.html#cb10-22" aria-hidden="true" tabindex="-1"></a>words_1 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
-<span id="cb10-23"><a href="ckiptagger.html#cb10-23" aria-hidden="true" tabindex="-1"></a>words_1</span></code></pre></div>
+<span id="cb10-15"><a href="ckiptagger.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Segment texts using dictionary</span></span>
+<span id="cb10-16"><a href="ckiptagger.html#cb10-16" aria-hidden="true" tabindex="-1"></a>words_1 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
+<span id="cb10-17"><a href="ckiptagger.html#cb10-17" aria-hidden="true" tabindex="-1"></a>words_1</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -640,7 +635,7 @@ Required-by: </code></pre>
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
+<span id="exr:unnamed-chunk-14" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
 </div>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb12-1"><a href="ckiptagger.html#cb12-1" aria-hidden="true" tabindex="-1"></a>new_words<span class="ot">&lt;-</span><span class="fu">loadDictionary</span>(<span class="at">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </span>
 <span id="cb12-2"><a href="ckiptagger.html#cb12-2" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
@@ -679,30 +674,50 @@ Required-by: </code></pre>
 [[6]]
  [1] &quot;科長&quot; &quot;說&quot;   &quot;:1,&quot;  &quot;坪數&quot; &quot;對&quot;   &quot;人數&quot; &quot;為&quot;   &quot;1:3&quot;  &quot;。&quot;   &quot;2&quot;   
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 9.2  </strong></span>Use the <code>ckiptagger</code> word segmentation method to tokenize the text we discuss in Chapter 7 (as repeated below). Please use the tidytext to process the data, tokenize the data with <code>unnest_tokens()</code> and present the results as follows. Please include the following words in the user-defined dictionary: <code>被提名人</code>, <code>年終獎金</code>, <code>受訪</code>, <code>不分區</code>.</p>
+<p>Also, compare the results based on <code>jiebar</code> in Chapter 7 and <code>ckiptagger</code> and discuss their respective strengths and weaknesses.</p>
 </div>
-<div id="beyond-word-boundaries" class="section level2" number="9.9">
-<h2><span class="header-section-number">9.9</span> Beyond Word Boundaries</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb14-1"><a href="ckiptagger.html#cb14-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">&quot;綠黨桃園市議員王浩宇爆料，指民眾黨不分區被提名人蔡壁如、黃瀞瑩，在昨（6）日才請辭是為領年終獎金。台灣民眾黨主席、台北市長柯文哲7日受訪時則說，都是按流程走，不要把人家想得這麼壞。&quot;</span></span></code></pre></div>
+<pre class="Rout"><code>[[1]]
+ [1] &quot;綠黨&quot;     &quot;桃園&quot;     &quot;市議員&quot;   &quot;王浩宇&quot;   &quot;爆料&quot;     &quot;，&quot;      
+ [7] &quot;指&quot;       &quot;民眾黨&quot;   &quot;不分區&quot;   &quot;被提名人&quot; &quot;蔡壁如&quot;   &quot;、&quot;      
+[13] &quot;黃瀞瑩&quot;   &quot;，&quot;       &quot;在&quot;       &quot;昨&quot;       &quot;（6）&quot;    &quot;日&quot;      
+[19] &quot;才&quot;       &quot;請辭&quot;     &quot;是&quot;       &quot;為&quot;       &quot;領&quot;       &quot;年終獎金&quot;
+[25] &quot;。&quot;       &quot;台灣&quot;     &quot;民眾&quot;     &quot;黨主席&quot;   &quot;、&quot;       &quot;台北市長&quot;
+[31] &quot;柯文哲&quot;   &quot;7日&quot;      &quot;受訪&quot;     &quot;時&quot;       &quot;則&quot;       &quot;說&quot;      
+[37] &quot;，&quot;       &quot;都&quot;       &quot;是&quot;       &quot;按&quot;       &quot;流程&quot;     &quot;走&quot;      
+[43] &quot;，&quot;       &quot;不要&quot;     &quot;把&quot;       &quot;人家&quot;     &quot;想&quot;       &quot;得&quot;      
+[49] &quot;這麼&quot;     &quot;壞&quot;       &quot;。&quot;      </code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["word_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["word"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"綠黨"},{"1":"2","2":"桃園"},{"1":"3","2":"市議員"},{"1":"4","2":"王浩宇"},{"1":"5","2":"爆料"},{"1":"6","2":"，"},{"1":"7","2":"指"},{"1":"8","2":"民眾黨"},{"1":"9","2":"不分區"},{"1":"10","2":"被提名人"},{"1":"11","2":"蔡壁如"},{"1":"12","2":"、"},{"1":"13","2":"黃瀞瑩"},{"1":"14","2":"，"},{"1":"15","2":"在"},{"1":"16","2":"昨"},{"1":"17","2":"（6）"},{"1":"18","2":"日"},{"1":"19","2":"才"},{"1":"20","2":"請辭"},{"1":"21","2":"是"},{"1":"22","2":"為"},{"1":"23","2":"領"},{"1":"24","2":"年終獎金"},{"1":"25","2":"。"},{"1":"26","2":"台灣"},{"1":"27","2":"民眾"},{"1":"28","2":"黨主席"},{"1":"29","2":"、"},{"1":"30","2":"台北市長"},{"1":"31","2":"柯文哲"},{"1":"32","2":"7日"},{"1":"33","2":"受訪"},{"1":"34","2":"時"},{"1":"35","2":"則"},{"1":"36","2":"說"},{"1":"37","2":"，"},{"1":"38","2":"都"},{"1":"39","2":"是"},{"1":"40","2":"按"},{"1":"41","2":"流程"},{"1":"42","2":"走"},{"1":"43","2":"，"},{"1":"44","2":"不要"},{"1":"45","2":"把"},{"1":"46","2":"人家"},{"1":"47","2":"想"},{"1":"48","2":"得"},{"1":"49","2":"這麼"},{"1":"50","2":"壞"},{"1":"51","2":"。"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="beyond-word-boundaries" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-bd32930b0ca3d7a05aa5" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bd32930b0ca3d7a05aa5">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a2da9a011b9c6bdf7573" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a2da9a011b9c6bdf7573">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Load the models</li>
 </ul>
 <p>To perform these additional tasks, we need to load the necessary models (pre-trained and provided by the CKIP group) first as well.</p>
 <p>They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb14-1"><a href="ckiptagger.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading other necessary models</span></span>
-<span id="cb14-2"><a href="ckiptagger.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb16-1"><a href="ckiptagger.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading other necessary models</span></span>
+<span id="cb16-2"><a href="ckiptagger.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 詞性 6s</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
-  4.950   1.440   6.396 </code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb16-1"><a href="ckiptagger.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></span></code></pre></div>
+  4.253   3.200   8.139 </code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb18-1"><a href="ckiptagger.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="co"># 實體辨識 8s</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
-  5.109   1.443   7.933 </code></pre>
+  4.250   2.975   7.520 </code></pre>
 <ul>
 <li>POS tagging and NER</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb18-1"><a href="ckiptagger.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parts-of-speech Tagging</span></span>
-<span id="cb18-2"><a href="ckiptagger.html#cb18-2" aria-hidden="true" tabindex="-1"></a>pos_words <span class="ot">&lt;-</span> <span class="fu">pos</span>(words_1)</span>
-<span id="cb18-3"><a href="ckiptagger.html#cb18-3" aria-hidden="true" tabindex="-1"></a>pos_words</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb20-1"><a href="ckiptagger.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parts-of-speech Tagging</span></span>
+<span id="cb20-2"><a href="ckiptagger.html#cb20-2" aria-hidden="true" tabindex="-1"></a>pos_words <span class="ot">&lt;-</span> <span class="fu">pos</span>(words_1)</span>
+<span id="cb20-3"><a href="ckiptagger.html#cb20-3" aria-hidden="true" tabindex="-1"></a>pos_words</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;Nb&quot;             &quot;Nd&quot;             &quot;D&quot;              &quot;VC&quot;            
  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
@@ -748,14 +763,14 @@ Required-by: </code></pre>
  [5] &quot;P&quot;              &quot;Na&quot;             &quot;VG&quot;             &quot;Neu&quot;           
  [9] &quot;PERIODCATEGORY&quot; &quot;Neu&quot;            &quot;COMMACATEGORY&quot;  &quot;D&quot;             
 [13] &quot;D&quot;              &quot;VHC&quot;            &quot;PERIODCATEGORY&quot;</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb20-1"><a href="ckiptagger.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Named Entity Recognition</span></span>
-<span id="cb20-2"><a href="ckiptagger.html#cb20-2" aria-hidden="true" tabindex="-1"></a>ner <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
-<span id="cb20-3"><a href="ckiptagger.html#cb20-3" aria-hidden="true" tabindex="-1"></a>ner</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb22-1"><a href="ckiptagger.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Named Entity Recognition</span></span>
+<span id="cb22-2"><a href="ckiptagger.html#cb22-2" aria-hidden="true" tabindex="-1"></a>entities <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
+<span id="cb22-3"><a href="ckiptagger.html#cb22-3" aria-hidden="true" tabindex="-1"></a>entities</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
-{(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
+{(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
 
 [[2]]
-{(60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;)}
+{(2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;)}
 
 [[3]]
 {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -767,25 +782,30 @@ set()
 {(14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;), (4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;)}
 
 [[6]]
-{(12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;)}</code></pre>
+{(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;)}</code></pre>
+<!-- ## Tidy Up the Results -->
+<!-- We can tidy up results provided by `ckiptagger` and create a word-based tidy structure of our data: -->
+<!-- ```{r eval = T} -->
+<!-- word_df <- data.frame(text_id = mapply(rep, c(1:length(texts)), sapply(words_1, length)) %>% unlist, -->
+<!--                         words = do.call(c, words_1), -->
+<!--                         pos = do.call(c, pos_words)) -->
+<!-- word_df -->
+<!-- ``` -->
+<div class="exercise">
+<p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 9.3  </strong></span>Use the same <code>texts</code> in the above example and the same word tokenization method (i.e., <code>ckiptagger</code>), but please process the Chinese texts using the <code>tidytext</code> framework.</p>
+<p>That is, use the <code>ckiptagger</code> tokenization method along with the <code>unnest_tokens()</code> and present your token-based information of the corpus as shown below. Your results should include word tokens, their POS tags, and the <code>start</code> and <code>end</code> indices of each word token.</p>
+<p>Use the user-defined dictionary <code>demo_data/dict-sample.txt</code> in your word segmentation.</p>
 </div>
-<div id="tidy-up-the-results" class="section level2" number="9.10">
-<h2><span class="header-section-number">9.10</span> Tidy Up the Results</h2>
-<p>We can tidy up results provided by <code>ckiptagger</code> and create a word-based tidy structure of our data:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb22-1"><a href="ckiptagger.html#cb22-1" aria-hidden="true" tabindex="-1"></a>word_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">text_id =</span> <span class="fu">mapply</span>(rep, <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(texts)), <span class="fu">sapply</span>(words_1, length)) <span class="sc">%&gt;%</span> unlist,</span>
-<span id="cb22-2"><a href="ckiptagger.html#cb22-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">words =</span> <span class="fu">do.call</span>(c, words_1),</span>
-<span id="cb22-3"><a href="ckiptagger.html#cb22-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">pos =</span> <span class="fu">do.call</span>(c, pos_words))</span>
-<span id="cb22-4"><a href="ckiptagger.html#cb22-4" aria-hidden="true" tabindex="-1"></a>word_df</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["words"],"name":[2],"type":["chr"],"align":["left"]},{"label":["pos"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁","3":"Nb"},{"1":"1","2":"今","3":"Nd"},{"1":"1","2":"將","3":"D"},{"1":"1","2":"執行","3":"VC"},{"1":"1","2":"安樂死","3":"Na"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"卻","3":"D"},{"1":"1","2":"突然","3":"D"},{"1":"1","2":"爆出","3":"VJ"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"20","3":"Neu"},{"1":"1","2":"年","3":"Nf"},{"1":"1","2":"前","3":"Ng"},{"1":"1","2":"遭","3":"P"},{"1":"1","2":"緯來體育台","3":"Nc"},{"1":"1","2":"封殺","3":"VC"},{"1":"1","2":"，","3":"COMMACATEGORY"},{"1":"1","2":"他","3":"Nh"},{"1":"1","2":"不","3":"D"},{"1":"1","2":"懂","3":"VK"},{"1":"1","2":"自己","3":"Nh"},{"1":"1","2":"哪裡","3":"Ncd"},{"1":"1","2":"得罪到","3":"VJ"},{"1":"1","2":"電視台","3":"Nc"},{"1":"1","2":"。","3":"PERIODCATEGORY"},{"1":"2","2":"美國","3":"Nc"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"針對","3":"P"},{"1":"2","2":"今天","3":"Nd"},{"1":"2","2":"總統","3":"Na"},{"1":"2","2":"布什","3":"Nb"},{"1":"2","2":"所","3":"D"},{"1":"2","2":"提名","3":"VC"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"勞工部長","3":"Na"},{"1":"2","2":"趙小蘭","3":"Nb"},{"1":"2","2":"展開","3":"VC"},{"1":"2","2":"認可","3":"VC"},{"1":"2","2":"聽證會","3":"Na"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"預料","3":"VE"},{"1":"2","2":"她","3":"Nh"},{"1":"2","2":"將","3":"D"},{"1":"2","2":"會","3":"D"},{"1":"2","2":"很","3":"Dfa"},{"1":"2","2":"順利","3":"VH"},{"1":"2","2":"通過","3":"VC"},{"1":"2","2":"參議院","3":"Nc"},{"1":"2","2":"支持","3":"VC"},{"1":"2","2":"，","3":"COMMACATEGORY"},{"1":"2","2":"成為","3":"VG"},{"1":"2","2":"該","3":"Nes"},{"1":"2","2":"國","3":"Nc"},{"1":"2","2":"有史以來","3":"D"},{"1":"2","2":"第一","3":"Neu"},{"1":"2","2":"位","3":"Nf"},{"1":"2","2":"的","3":"DE"},{"1":"2","2":"華裔","3":"Na"},{"1":"2","2":"女性","3":"Na"},{"1":"2","2":"內閣","3":"Na"},{"1":"2","2":"成員","3":"Na"},{"1":"2","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":"土地公有","3":"VH"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"?","3":"QUESTIONCATEGORY"},{"1":"3","2":"？","3":"QUESTIONCATEGORY"},{"1":"3","2":"還是","3":"Caa"},{"1":"3","2":"土地婆","3":"Nb"},{"1":"3","2":"有","3":"V_2"},{"1":"3","2":"政策","3":"Na"},{"1":"3","2":"。","3":"PERIODCATEGORY"},{"1":"3","2":".","3":"PERIODCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"你","3":"Nh"},{"1":"4","2":"確定","3":"VK"},{"1":"4","2":"嗎","3":"T"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"","3":"WHITESPACE"},{"1":"4","2":"不要","3":"D"},{"1":"4","2":"再","3":"D"},{"1":"4","2":"騙","3":"VC"},{"1":"4","2":"了","3":"Di"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"…","3":"ETCCATEGORY"},{"1":"4","2":"他","3":"Nh"},{"1":"4","2":"來亂的","3":"VA"},{"1":"4","2":"啦","3":"T"},{"1":"5","2":"最多","3":"VH"},{"1":"5","2":"容納","3":"VJ"},{"1":"5","2":"59,000","3":"Neu"},{"1":"5","2":"個","3":"Nf"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"或","3":"Caa"},{"1":"5","2":"5.9萬","3":"Neu"},{"1":"5","2":"人","3":"Na"},{"1":"5","2":",","3":"COMMACATEGORY"},{"1":"5","2":"再","3":"D"},{"1":"5","2":"多","3":"D"},{"1":"5","2":"就","3":"D"},{"1":"5","2":"不行","3":"VH"},{"1":"5","2":"了","3":"T"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"5","2":"這","3":"Nep"},{"1":"5","2":"是","3":"SHI"},{"1":"5","2":"環評","3":"Na"},{"1":"5","2":"的","3":"DE"},{"1":"5","2":"結論","3":"Na"},{"1":"5","2":".","3":"PERIODCATEGORY"},{"1":"6","2":"科長","3":"Na"},{"1":"6","2":"說","3":"VE"},{"1":"6","2":":1,","3":"Neu"},{"1":"6","2":"坪數","3":"Na"},{"1":"6","2":"對","3":"P"},{"1":"6","2":"人數","3":"Na"},{"1":"6","2":"為","3":"VG"},{"1":"6","2":"1:3","3":"Neu"},{"1":"6","2":"。","3":"PERIODCATEGORY"},{"1":"6","2":"2","3":"Neu"},{"1":"6","2":",","3":"COMMACATEGORY"},{"1":"6","2":"可以","3":"D"},{"1":"6","2":"再","3":"D"},{"1":"6","2":"增加","3":"VHC"},{"1":"6","2":"。","3":"PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["word_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["start"],"name":[3],"type":["int"],"align":["right"]},{"label":["end"],"name":[4],"type":["int"],"align":["right"]},{"label":["word"],"name":[5],"type":["chr"],"align":["left"]},{"label":["tag"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"1","3":"0","4":"3","5":"傅達仁","6":"Nb"},{"1":"1","2":"2","3":"3","4":"4","5":"今","6":"Nd"},{"1":"1","2":"3","3":"4","4":"5","5":"將","6":"D"},{"1":"1","2":"4","3":"5","4":"7","5":"執行","6":"VC"},{"1":"1","2":"5","3":"7","4":"10","5":"安樂死","6":"Na"},{"1":"1","2":"6","3":"10","4":"11","5":"，","6":"COMMACATEGORY"},{"1":"1","2":"7","3":"11","4":"12","5":"卻","6":"D"},{"1":"1","2":"8","3":"12","4":"14","5":"突然","6":"D"},{"1":"1","2":"9","3":"14","4":"16","5":"爆出","6":"VJ"},{"1":"1","2":"10","3":"16","4":"18","5":"自己","6":"Nh"},{"1":"1","2":"11","3":"18","4":"20","5":"20","6":"Neu"},{"1":"1","2":"12","3":"20","4":"21","5":"年","6":"Nf"},{"1":"1","2":"13","3":"21","4":"22","5":"前","6":"Ng"},{"1":"1","2":"14","3":"22","4":"23","5":"遭","6":"P"},{"1":"1","2":"15","3":"23","4":"28","5":"緯來體育台","6":"Nc"},{"1":"1","2":"16","3":"28","4":"30","5":"封殺","6":"VC"},{"1":"1","2":"17","3":"30","4":"31","5":"，","6":"COMMACATEGORY"},{"1":"1","2":"18","3":"31","4":"32","5":"他","6":"Nh"},{"1":"1","2":"19","3":"32","4":"33","5":"不","6":"D"},{"1":"1","2":"20","3":"33","4":"34","5":"懂","6":"VK"},{"1":"1","2":"21","3":"34","4":"36","5":"自己","6":"Nh"},{"1":"1","2":"22","3":"36","4":"38","5":"哪裡","6":"Ncd"},{"1":"1","2":"23","3":"38","4":"41","5":"得罪到","6":"VJ"},{"1":"1","2":"24","3":"41","4":"44","5":"電視台","6":"Nc"},{"1":"1","2":"25","3":"44","4":"45","5":"。","6":"PERIODCATEGORY"},{"1":"2","2":"1","3":"0","4":"2","5":"美國","6":"Nc"},{"1":"2","2":"2","3":"2","4":"5","5":"參議院","6":"Nc"},{"1":"2","2":"3","3":"5","4":"7","5":"針對","6":"P"},{"1":"2","2":"4","3":"7","4":"9","5":"今天","6":"Nd"},{"1":"2","2":"5","3":"9","4":"11","5":"總統","6":"Na"},{"1":"2","2":"6","3":"11","4":"13","5":"布什","6":"Nb"},{"1":"2","2":"7","3":"13","4":"14","5":"所","6":"D"},{"1":"2","2":"8","3":"14","4":"16","5":"提名","6":"VC"},{"1":"2","2":"9","3":"16","4":"17","5":"的","6":"DE"},{"1":"2","2":"10","3":"17","4":"21","5":"勞工部長","6":"Na"},{"1":"2","2":"11","3":"21","4":"24","5":"趙小蘭","6":"Nb"},{"1":"2","2":"12","3":"24","4":"26","5":"展開","6":"VC"},{"1":"2","2":"13","3":"26","4":"28","5":"認可","6":"VC"},{"1":"2","2":"14","3":"28","4":"31","5":"聽證會","6":"Na"},{"1":"2","2":"15","3":"31","4":"32","5":"，","6":"COMMACATEGORY"},{"1":"2","2":"16","3":"32","4":"34","5":"預料","6":"VE"},{"1":"2","2":"17","3":"34","4":"35","5":"她","6":"Nh"},{"1":"2","2":"18","3":"35","4":"36","5":"將","6":"D"},{"1":"2","2":"19","3":"36","4":"37","5":"會","6":"D"},{"1":"2","2":"20","3":"37","4":"38","5":"很","6":"Dfa"},{"1":"2","2":"21","3":"38","4":"40","5":"順利","6":"VH"},{"1":"2","2":"22","3":"40","4":"42","5":"通過","6":"VC"},{"1":"2","2":"23","3":"42","4":"45","5":"參議院","6":"Nc"},{"1":"2","2":"24","3":"45","4":"47","5":"支持","6":"VC"},{"1":"2","2":"25","3":"47","4":"48","5":"，","6":"COMMACATEGORY"},{"1":"2","2":"26","3":"48","4":"50","5":"成為","6":"VG"},{"1":"2","2":"27","3":"50","4":"51","5":"該","6":"Nes"},{"1":"2","2":"28","3":"51","4":"52","5":"國","6":"Nc"},{"1":"2","2":"29","3":"52","4":"56","5":"有史以來","6":"D"},{"1":"2","2":"30","3":"56","4":"58","5":"第一","6":"Neu"},{"1":"2","2":"31","3":"58","4":"59","5":"位","6":"Nf"},{"1":"2","2":"32","3":"59","4":"60","5":"的","6":"DE"},{"1":"2","2":"33","3":"60","4":"62","5":"華裔","6":"Na"},{"1":"2","2":"34","3":"62","4":"64","5":"女性","6":"Na"},{"1":"2","2":"35","3":"64","4":"66","5":"內閣","6":"Na"},{"1":"2","2":"36","3":"66","4":"68","5":"成員","6":"Na"},{"1":"2","2":"37","3":"68","4":"69","5":"。","6":"PERIODCATEGORY"},{"1":"3","2":"1","3":"0","4":"4","5":"土地公有","6":"VH"},{"1":"3","2":"2","3":"4","4":"6","5":"政策","6":"Na"},{"1":"3","2":"3","3":"6","4":"7","5":"?","6":"QUESTIONCATEGORY"},{"1":"3","2":"4","3":"7","4":"8","5":"？","6":"QUESTIONCATEGORY"},{"1":"3","2":"5","3":"8","4":"10","5":"還是","6":"Caa"},{"1":"3","2":"6","3":"10","4":"13","5":"土地婆","6":"Nb"},{"1":"3","2":"7","3":"13","4":"14","5":"有","6":"V_2"},{"1":"3","2":"8","3":"14","4":"16","5":"政策","6":"Na"},{"1":"3","2":"9","3":"16","4":"17","5":"。","6":"PERIODCATEGORY"},{"1":"3","2":"10","3":"17","4":"18","5":".","6":"PERIODCATEGORY"},{"1":"4","2":"1","3":"0","4":"1","5":"…","6":"ETCCATEGORY"},{"1":"4","2":"2","3":"1","4":"2","5":"","6":"WHITESPACE"},{"1":"4","2":"3","3":"2","4":"3","5":"你","6":"Nh"},{"1":"4","2":"4","3":"3","4":"5","5":"確定","6":"VK"},{"1":"4","2":"5","3":"5","4":"6","5":"嗎","6":"T"},{"1":"4","2":"6","3":"6","4":"7","5":"…","6":"ETCCATEGORY"},{"1":"4","2":"7","3":"7","4":"8","5":"","6":"WHITESPACE"},{"1":"4","2":"8","3":"8","4":"10","5":"不要","6":"D"},{"1":"4","2":"9","3":"10","4":"11","5":"再","6":"D"},{"1":"4","2":"10","3":"11","4":"12","5":"騙","6":"VC"},{"1":"4","2":"11","3":"12","4":"13","5":"了","6":"Di"},{"1":"4","2":"12","3":"13","4":"14","5":"…","6":"ETCCATEGORY"},{"1":"4","2":"13","3":"14","4":"15","5":"…","6":"ETCCATEGORY"},{"1":"4","2":"14","3":"15","4":"16","5":"他","6":"Nh"},{"1":"4","2":"15","3":"16","4":"19","5":"來亂的","6":"VA"},{"1":"4","2":"16","3":"19","4":"20","5":"啦","6":"T"},{"1":"5","2":"1","3":"0","4":"2","5":"最多","6":"VH"},{"1":"5","2":"2","3":"2","4":"4","5":"容納","6":"VJ"},{"1":"5","2":"3","3":"4","4":"10","5":"59,000","6":"Neu"},{"1":"5","2":"4","3":"10","4":"11","5":"個","6":"Nf"},{"1":"5","2":"5","3":"11","4":"12","5":"人","6":"Na"},{"1":"5","2":"6","3":"12","4":"13","5":",","6":"COMMACATEGORY"},{"1":"5","2":"7","3":"13","4":"14","5":"或","6":"Caa"},{"1":"5","2":"8","3":"14","4":"18","5":"5.9萬","6":"Neu"},{"1":"5","2":"9","3":"18","4":"19","5":"人","6":"Na"},{"1":"5","2":"10","3":"19","4":"20","5":",","6":"COMMACATEGORY"},{"1":"5","2":"11","3":"20","4":"21","5":"再","6":"D"},{"1":"5","2":"12","3":"21","4":"22","5":"多","6":"D"},{"1":"5","2":"13","3":"22","4":"23","5":"就","6":"D"},{"1":"5","2":"14","3":"23","4":"25","5":"不行","6":"VH"},{"1":"5","2":"15","3":"25","4":"26","5":"了","6":"T"},{"1":"5","2":"16","3":"26","4":"27","5":".","6":"PERIODCATEGORY"},{"1":"5","2":"17","3":"27","4":"28","5":"這","6":"Nep"},{"1":"5","2":"18","3":"28","4":"29","5":"是","6":"SHI"},{"1":"5","2":"19","3":"29","4":"31","5":"環評","6":"Na"},{"1":"5","2":"20","3":"31","4":"32","5":"的","6":"DE"},{"1":"5","2":"21","3":"32","4":"34","5":"結論","6":"Na"},{"1":"5","2":"22","3":"34","4":"35","5":".","6":"PERIODCATEGORY"},{"1":"6","2":"1","3":"0","4":"2","5":"科長","6":"Na"},{"1":"6","2":"2","3":"2","4":"3","5":"說","6":"VE"},{"1":"6","2":"3","3":"3","4":"6","5":":1,","6":"Neu"},{"1":"6","2":"4","3":"6","4":"8","5":"坪數","6":"Na"},{"1":"6","2":"5","3":"8","4":"9","5":"對","6":"P"},{"1":"6","2":"6","3":"9","4":"11","5":"人數","6":"Na"},{"1":"6","2":"7","3":"11","4":"12","5":"為","6":"VG"},{"1":"6","2":"8","3":"12","4":"15","5":"1:3","6":"Neu"},{"1":"6","2":"9","3":"15","4":"16","5":"。","6":"PERIODCATEGORY"},{"1":"6","2":"10","3":"16","4":"17","5":"2","6":"Neu"},{"1":"6","2":"11","3":"17","4":"18","5":",","6":"COMMACATEGORY"},{"1":"6","2":"12","3":"18","4":"20","5":"可以","6":"D"},{"1":"6","2":"13","3":"20","4":"21","5":"再","6":"D"},{"1":"6","2":"14","3":"21","4":"23","5":"增加","6":"VHC"},{"1":"6","2":"15","3":"23","4":"24","5":"。","6":"PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-20" class="exercise"><strong>Exercise 9.2  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
-Please convert the above <code>word_df</code> into a text-based data frame, as shown below.
+<p><span id="exr:unnamed-chunk-23" class="exercise"><strong>Exercise 9.4  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
+Please convert the word-based data frame into a text-based data frame, as shown below. Please note that the <code>text</code> column includes an enriched version of the original texts.
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -794,41 +814,56 @@ Please convert the above <code>word_df</code> into a text-based data frame, as s
 </div>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-22" class="exercise"><strong>Exercise 9.3  </strong></span>How to tidy up the results of <code>ner</code> so that we can include the recognized named entities in the same word-based data frame <code>word_df</code>?
+<span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercise 9.5  </strong></span>The outputs of <code>ner()</code> are not very R friendly. How to tidy up the output of <code>ner()</code> by converting it into a more R-compatible data frame?
 </div>
 <ul>
-<li>You may need to convert the output of <code>ner</code> from ckiptagger into a data frame like this:</li>
+<li>For example, convert the output of <code>ner()</code> from ckiptagger into a data frame like this:</li>
 </ul>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["start"],"name":[2],"type":["chr"],"align":["left"]},{"label":["end"],"name":[3],"type":["chr"],"align":["left"]},{"label":["ner_type"],"name":[4],"type":["chr"],"align":["left"]},{"label":["string"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"0","3":"3","4":"PERSON","5":"傅達仁"},{"1":"1","2":"18","3":"22","4":"DATE","5":"20年前"},{"1":"1","2":"23","3":"28","4":"ORG","5":"緯來體育台"},{"1":"2","2":"0","3":"2","4":"GPE","5":"美國"},{"1":"2","2":"11","3":"13","4":"PERSON","5":"布什"},{"1":"2","2":"17","3":"21","4":"ORG","5":"勞工部長"},{"1":"2","2":"2","3":"5","4":"ORG","5":"參議院"},{"1":"2","2":"21","3":"24","4":"PERSON","5":"趙小蘭"},{"1":"2","2":"42","3":"45","4":"ORG","5":"參議院"},{"1":"2","2":"56","3":"58","4":"ORDINAL","5":"第一"},{"1":"2","2":"60","3":"62","4":"NORP","5":"華裔"},{"1":"2","2":"7","3":"9","4":"DATE","5":"今天"},{"1":"3","2":"10","3":"13","4":"PERSON","5":"土地婆"},{"1":"5","2":"14","3":"18","4":"CARDINAL","5":"5.9萬"},{"1":"5","2":"4","3":"10","4":"CARDINAL","5":"59,000"},{"1":"6","2":"12","3":"13","4":"CARDINAL","5":"1"},{"1":"6","2":"14","3":"15","4":"CARDINAL","5":"3"},{"1":"6","2":"16","3":"17","4":"CARDINAL","5":"2"},{"1":"6","2":"4","3":"6","4":"CARDINAL","5":"1,"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 9.6  </strong></span>Add the named entity annotations to the word-based data frame obtained in the previous exercise. That is, under the tity text framework, parse the corpus data <code>texts</code> by tokenizing the text-based data frame into a word-based data frame, with the following annotations provided for each word:</p>
 <ul>
-<li>And figure out a way to add the annotations of named entities in the word-based data frame, <code>word_df</code>, by including another column, as shown below:</li>
+<li><code>text_id</code>: text ID</li>
+<li><code>word_id</code>: word ID</li>
+<li><code>start</code>: starting character index</li>
+<li><code>end</code>: ending character index</li>
+<li><code>word</code>: word</li>
+<li><code>tag</code>: CKIP POS tag</li>
+<li><code>entity</code>: CKIP Named Entity Tag</li>
 </ul>
+</div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["word_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["words"],"name":[3],"type":["chr"],"align":["left"]},{"label":["pos"],"name":[4],"type":["chr"],"align":["left"]},{"label":["tag"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"1","3":"傅達仁","4":"Nb","5":"B-PERSON"},{"1":"1","2":"2","3":"今","4":"Nd","5":"O"},{"1":"1","2":"3","3":"將","4":"D","5":"O"},{"1":"1","2":"4","3":"執行","4":"VC","5":"O"},{"1":"1","2":"5","3":"安樂死","4":"Na","5":"O"},{"1":"1","2":"6","3":"，","4":"COMMACATEGORY","5":"O"},{"1":"1","2":"7","3":"卻","4":"D","5":"O"},{"1":"1","2":"8","3":"突然","4":"D","5":"O"},{"1":"1","2":"9","3":"爆出","4":"VJ","5":"O"},{"1":"1","2":"10","3":"自己","4":"Nh","5":"O"},{"1":"1","2":"11","3":"20","4":"Neu","5":"B-DATE"},{"1":"1","2":"12","3":"年","4":"Nf","5":"I-DATE"},{"1":"1","2":"13","3":"前","4":"Ng","5":"I-DATE"},{"1":"1","2":"14","3":"遭","4":"P","5":"O"},{"1":"1","2":"15","3":"緯來體育台","4":"Nc","5":"B-ORG"},{"1":"1","2":"16","3":"封殺","4":"VC","5":"O"},{"1":"1","2":"17","3":"，","4":"COMMACATEGORY","5":"O"},{"1":"1","2":"18","3":"他","4":"Nh","5":"O"},{"1":"1","2":"19","3":"不","4":"D","5":"O"},{"1":"1","2":"20","3":"懂","4":"VK","5":"O"},{"1":"1","2":"21","3":"自己","4":"Nh","5":"O"},{"1":"1","2":"22","3":"哪裡","4":"Ncd","5":"O"},{"1":"1","2":"23","3":"得罪到","4":"VJ","5":"O"},{"1":"1","2":"24","3":"電視台","4":"Nc","5":"O"},{"1":"1","2":"25","3":"。","4":"PERIODCATEGORY","5":"O"},{"1":"2","2":"26","3":"美國","4":"Nc","5":"B-GPE"},{"1":"2","2":"27","3":"參議院","4":"Nc","5":"B-ORG"},{"1":"2","2":"28","3":"針對","4":"P","5":"O"},{"1":"2","2":"29","3":"今天","4":"Nd","5":"B-DATE"},{"1":"2","2":"30","3":"總統","4":"Na","5":"O"},{"1":"2","2":"31","3":"布什","4":"Nb","5":"B-PERSON"},{"1":"2","2":"32","3":"所","4":"D","5":"O"},{"1":"2","2":"33","3":"提名","4":"VC","5":"O"},{"1":"2","2":"34","3":"的","4":"DE","5":"O"},{"1":"2","2":"35","3":"勞工部長","4":"Na","5":"B-ORG"},{"1":"2","2":"36","3":"趙小蘭","4":"Nb","5":"B-PERSON"},{"1":"2","2":"37","3":"展開","4":"VC","5":"O"},{"1":"2","2":"38","3":"認可","4":"VC","5":"O"},{"1":"2","2":"39","3":"聽證會","4":"Na","5":"O"},{"1":"2","2":"40","3":"，","4":"COMMACATEGORY","5":"O"},{"1":"2","2":"41","3":"預料","4":"VE","5":"O"},{"1":"2","2":"42","3":"她","4":"Nh","5":"O"},{"1":"2","2":"43","3":"將","4":"D","5":"O"},{"1":"2","2":"44","3":"會","4":"D","5":"O"},{"1":"2","2":"45","3":"很","4":"Dfa","5":"O"},{"1":"2","2":"46","3":"順利","4":"VH","5":"O"},{"1":"2","2":"47","3":"通過","4":"VC","5":"O"},{"1":"2","2":"48","3":"參議院","4":"Nc","5":"B-ORG"},{"1":"2","2":"49","3":"支持","4":"VC","5":"O"},{"1":"2","2":"50","3":"，","4":"COMMACATEGORY","5":"O"},{"1":"2","2":"51","3":"成為","4":"VG","5":"O"},{"1":"2","2":"52","3":"該","4":"Nes","5":"O"},{"1":"2","2":"53","3":"國","4":"Nc","5":"O"},{"1":"2","2":"54","3":"有史以來","4":"D","5":"O"},{"1":"2","2":"55","3":"第一","4":"Neu","5":"B-ORDINAL"},{"1":"2","2":"56","3":"位","4":"Nf","5":"O"},{"1":"2","2":"57","3":"的","4":"DE","5":"O"},{"1":"2","2":"58","3":"華裔","4":"Na","5":"B-NORP"},{"1":"2","2":"59","3":"女性","4":"Na","5":"O"},{"1":"2","2":"60","3":"內閣","4":"Na","5":"O"},{"1":"2","2":"61","3":"成員","4":"Na","5":"O"},{"1":"2","2":"62","3":"。","4":"PERIODCATEGORY","5":"O"},{"1":"3","2":"63","3":"土地公有","4":"VH","5":"O"},{"1":"3","2":"64","3":"政策","4":"Na","5":"O"},{"1":"3","2":"65","3":"?","4":"QUESTIONCATEGORY","5":"O"},{"1":"3","2":"66","3":"？","4":"QUESTIONCATEGORY","5":"O"},{"1":"3","2":"67","3":"還是","4":"Caa","5":"O"},{"1":"3","2":"68","3":"土地婆","4":"Nb","5":"B-PERSON"},{"1":"3","2":"69","3":"有","4":"V_2","5":"O"},{"1":"3","2":"70","3":"政策","4":"Na","5":"O"},{"1":"3","2":"71","3":"。","4":"PERIODCATEGORY","5":"O"},{"1":"3","2":"72","3":".","4":"PERIODCATEGORY","5":"O"},{"1":"4","2":"73","3":"…","4":"ETCCATEGORY","5":"O"},{"1":"4","2":"74","3":"","4":"WHITESPACE","5":"O"},{"1":"4","2":"75","3":"你","4":"Nh","5":"O"},{"1":"4","2":"76","3":"確定","4":"VK","5":"O"},{"1":"4","2":"77","3":"嗎","4":"T","5":"O"},{"1":"4","2":"78","3":"…","4":"ETCCATEGORY","5":"O"},{"1":"4","2":"79","3":"","4":"WHITESPACE","5":"O"},{"1":"4","2":"80","3":"不要","4":"D","5":"O"},{"1":"4","2":"81","3":"再","4":"D","5":"O"},{"1":"4","2":"82","3":"騙","4":"VC","5":"O"},{"1":"4","2":"83","3":"了","4":"Di","5":"O"},{"1":"4","2":"84","3":"…","4":"ETCCATEGORY","5":"O"},{"1":"4","2":"85","3":"…","4":"ETCCATEGORY","5":"O"},{"1":"4","2":"86","3":"他","4":"Nh","5":"O"},{"1":"4","2":"87","3":"來亂的","4":"VA","5":"O"},{"1":"4","2":"88","3":"啦","4":"T","5":"O"},{"1":"5","2":"89","3":"最多","4":"VH","5":"O"},{"1":"5","2":"90","3":"容納","4":"VJ","5":"O"},{"1":"5","2":"91","3":"59,000","4":"Neu","5":"B-CARDINAL"},{"1":"5","2":"92","3":"個","4":"Nf","5":"O"},{"1":"5","2":"93","3":"人","4":"Na","5":"O"},{"1":"5","2":"94","3":",","4":"COMMACATEGORY","5":"O"},{"1":"5","2":"95","3":"或","4":"Caa","5":"O"},{"1":"5","2":"96","3":"5.9萬","4":"Neu","5":"B-CARDINAL"},{"1":"5","2":"97","3":"人","4":"Na","5":"O"},{"1":"5","2":"98","3":",","4":"COMMACATEGORY","5":"O"},{"1":"5","2":"99","3":"再","4":"D","5":"O"},{"1":"5","2":"100","3":"多","4":"D","5":"O"},{"1":"5","2":"101","3":"就","4":"D","5":"O"},{"1":"5","2":"102","3":"不行","4":"VH","5":"O"},{"1":"5","2":"103","3":"了","4":"T","5":"O"},{"1":"5","2":"104","3":".","4":"PERIODCATEGORY","5":"O"},{"1":"5","2":"105","3":"這","4":"Nep","5":"O"},{"1":"5","2":"106","3":"是","4":"SHI","5":"O"},{"1":"5","2":"107","3":"環評","4":"Na","5":"O"},{"1":"5","2":"108","3":"的","4":"DE","5":"O"},{"1":"5","2":"109","3":"結論","4":"Na","5":"O"},{"1":"5","2":"110","3":".","4":"PERIODCATEGORY","5":"O"},{"1":"6","2":"111","3":"科長","4":"Na","5":"O"},{"1":"6","2":"112","3":"說","4":"VE","5":"O"},{"1":"6","2":"113","3":":1,","4":"Neu","5":"O"},{"1":"6","2":"114","3":"坪數","4":"Na","5":"O"},{"1":"6","2":"115","3":"對","4":"P","5":"O"},{"1":"6","2":"116","3":"人數","4":"Na","5":"O"},{"1":"6","2":"117","3":"為","4":"VG","5":"O"},{"1":"6","2":"118","3":"1:3","4":"Neu","5":"B-CARDINAL"},{"1":"6","2":"119","3":"。","4":"PERIODCATEGORY","5":"O"},{"1":"6","2":"120","3":"2","4":"Neu","5":"B-CARDINAL"},{"1":"6","2":"121","3":",","4":"COMMACATEGORY","5":"O"},{"1":"6","2":"122","3":"可以","4":"D","5":"O"},{"1":"6","2":"123","3":"再","4":"D","5":"O"},{"1":"6","2":"124","3":"增加","4":"VHC","5":"O"},{"1":"6","2":"125","3":"。","4":"PERIODCATEGORY","5":"O"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["word_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["start"],"name":[3],"type":["int"],"align":["right"]},{"label":["end"],"name":[4],"type":["int"],"align":["right"]},{"label":["word"],"name":[5],"type":["chr"],"align":["left"]},{"label":["tag"],"name":[6],"type":["chr"],"align":["left"]},{"label":["entity"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"1","3":"0","4":"3","5":"傅達仁","6":"Nb","7":"PERSON_B"},{"1":"1","2":"2","3":"3","4":"4","5":"今","6":"Nd","7":""},{"1":"1","2":"3","3":"4","4":"5","5":"將","6":"D","7":""},{"1":"1","2":"4","3":"5","4":"7","5":"執行","6":"VC","7":""},{"1":"1","2":"5","3":"7","4":"10","5":"安樂死","6":"Na","7":""},{"1":"1","2":"6","3":"10","4":"11","5":"，","6":"COMMACATEGORY","7":""},{"1":"1","2":"7","3":"11","4":"12","5":"卻","6":"D","7":""},{"1":"1","2":"8","3":"12","4":"14","5":"突然","6":"D","7":""},{"1":"1","2":"9","3":"14","4":"16","5":"爆出","6":"VJ","7":""},{"1":"1","2":"10","3":"16","4":"18","5":"自己","6":"Nh","7":""},{"1":"1","2":"11","3":"18","4":"20","5":"20","6":"Neu","7":"DATE_B"},{"1":"1","2":"12","3":"20","4":"21","5":"年","6":"Nf","7":"DATE_I"},{"1":"1","2":"13","3":"21","4":"22","5":"前","6":"Ng","7":"DATE_I"},{"1":"1","2":"14","3":"22","4":"23","5":"遭","6":"P","7":""},{"1":"1","2":"15","3":"23","4":"28","5":"緯來體育台","6":"Nc","7":"ORG_B"},{"1":"1","2":"16","3":"28","4":"30","5":"封殺","6":"VC","7":""},{"1":"1","2":"17","3":"30","4":"31","5":"，","6":"COMMACATEGORY","7":""},{"1":"1","2":"18","3":"31","4":"32","5":"他","6":"Nh","7":""},{"1":"1","2":"19","3":"32","4":"33","5":"不","6":"D","7":""},{"1":"1","2":"20","3":"33","4":"34","5":"懂","6":"VK","7":""},{"1":"1","2":"21","3":"34","4":"36","5":"自己","6":"Nh","7":""},{"1":"1","2":"22","3":"36","4":"38","5":"哪裡","6":"Ncd","7":""},{"1":"1","2":"23","3":"38","4":"41","5":"得罪到","6":"VJ","7":""},{"1":"1","2":"24","3":"41","4":"44","5":"電視台","6":"Nc","7":""},{"1":"1","2":"25","3":"44","4":"45","5":"。","6":"PERIODCATEGORY","7":""},{"1":"2","2":"1","3":"0","4":"2","5":"美國","6":"Nc","7":"GPE_B"},{"1":"2","2":"2","3":"2","4":"5","5":"參議院","6":"Nc","7":"ORG_B"},{"1":"2","2":"3","3":"5","4":"7","5":"針對","6":"P","7":""},{"1":"2","2":"4","3":"7","4":"9","5":"今天","6":"Nd","7":"DATE_B"},{"1":"2","2":"5","3":"9","4":"11","5":"總統","6":"Na","7":""},{"1":"2","2":"6","3":"11","4":"13","5":"布什","6":"Nb","7":"PERSON_B"},{"1":"2","2":"7","3":"13","4":"14","5":"所","6":"D","7":""},{"1":"2","2":"8","3":"14","4":"16","5":"提名","6":"VC","7":""},{"1":"2","2":"9","3":"16","4":"17","5":"的","6":"DE","7":""},{"1":"2","2":"10","3":"17","4":"21","5":"勞工部長","6":"Na","7":"ORG_B"},{"1":"2","2":"11","3":"21","4":"24","5":"趙小蘭","6":"Nb","7":"PERSON_B"},{"1":"2","2":"12","3":"24","4":"26","5":"展開","6":"VC","7":""},{"1":"2","2":"13","3":"26","4":"28","5":"認可","6":"VC","7":""},{"1":"2","2":"14","3":"28","4":"31","5":"聽證會","6":"Na","7":""},{"1":"2","2":"15","3":"31","4":"32","5":"，","6":"COMMACATEGORY","7":""},{"1":"2","2":"16","3":"32","4":"34","5":"預料","6":"VE","7":""},{"1":"2","2":"17","3":"34","4":"35","5":"她","6":"Nh","7":""},{"1":"2","2":"18","3":"35","4":"36","5":"將","6":"D","7":""},{"1":"2","2":"19","3":"36","4":"37","5":"會","6":"D","7":""},{"1":"2","2":"20","3":"37","4":"38","5":"很","6":"Dfa","7":""},{"1":"2","2":"21","3":"38","4":"40","5":"順利","6":"VH","7":""},{"1":"2","2":"22","3":"40","4":"42","5":"通過","6":"VC","7":""},{"1":"2","2":"23","3":"42","4":"45","5":"參議院","6":"Nc","7":"ORG_B"},{"1":"2","2":"24","3":"45","4":"47","5":"支持","6":"VC","7":""},{"1":"2","2":"25","3":"47","4":"48","5":"，","6":"COMMACATEGORY","7":""},{"1":"2","2":"26","3":"48","4":"50","5":"成為","6":"VG","7":""},{"1":"2","2":"27","3":"50","4":"51","5":"該","6":"Nes","7":""},{"1":"2","2":"28","3":"51","4":"52","5":"國","6":"Nc","7":""},{"1":"2","2":"29","3":"52","4":"56","5":"有史以來","6":"D","7":""},{"1":"2","2":"30","3":"56","4":"58","5":"第一","6":"Neu","7":"ORDINAL_B"},{"1":"2","2":"31","3":"58","4":"59","5":"位","6":"Nf","7":""},{"1":"2","2":"32","3":"59","4":"60","5":"的","6":"DE","7":""},{"1":"2","2":"33","3":"60","4":"62","5":"華裔","6":"Na","7":"NORP_B"},{"1":"2","2":"34","3":"62","4":"64","5":"女性","6":"Na","7":""},{"1":"2","2":"35","3":"64","4":"66","5":"內閣","6":"Na","7":""},{"1":"2","2":"36","3":"66","4":"68","5":"成員","6":"Na","7":""},{"1":"2","2":"37","3":"68","4":"69","5":"。","6":"PERIODCATEGORY","7":""},{"1":"3","2":"1","3":"0","4":"4","5":"土地公有","6":"VH","7":""},{"1":"3","2":"2","3":"4","4":"6","5":"政策","6":"Na","7":""},{"1":"3","2":"3","3":"6","4":"7","5":"?","6":"QUESTIONCATEGORY","7":""},{"1":"3","2":"4","3":"7","4":"8","5":"？","6":"QUESTIONCATEGORY","7":""},{"1":"3","2":"5","3":"8","4":"10","5":"還是","6":"Caa","7":""},{"1":"3","2":"6","3":"10","4":"13","5":"土地婆","6":"Nb","7":"PERSON_B"},{"1":"3","2":"7","3":"13","4":"14","5":"有","6":"V_2","7":""},{"1":"3","2":"8","3":"14","4":"16","5":"政策","6":"Na","7":""},{"1":"3","2":"9","3":"16","4":"17","5":"。","6":"PERIODCATEGORY","7":""},{"1":"3","2":"10","3":"17","4":"18","5":".","6":"PERIODCATEGORY","7":""},{"1":"4","2":"1","3":"0","4":"1","5":"…","6":"ETCCATEGORY","7":""},{"1":"4","2":"2","3":"1","4":"2","5":"","6":"WHITESPACE","7":""},{"1":"4","2":"3","3":"2","4":"3","5":"你","6":"Nh","7":""},{"1":"4","2":"4","3":"3","4":"5","5":"確定","6":"VK","7":""},{"1":"4","2":"5","3":"5","4":"6","5":"嗎","6":"T","7":""},{"1":"4","2":"6","3":"6","4":"7","5":"…","6":"ETCCATEGORY","7":""},{"1":"4","2":"7","3":"7","4":"8","5":"","6":"WHITESPACE","7":""},{"1":"4","2":"8","3":"8","4":"10","5":"不要","6":"D","7":""},{"1":"4","2":"9","3":"10","4":"11","5":"再","6":"D","7":""},{"1":"4","2":"10","3":"11","4":"12","5":"騙","6":"VC","7":""},{"1":"4","2":"11","3":"12","4":"13","5":"了","6":"Di","7":""},{"1":"4","2":"12","3":"13","4":"14","5":"…","6":"ETCCATEGORY","7":""},{"1":"4","2":"13","3":"14","4":"15","5":"…","6":"ETCCATEGORY","7":""},{"1":"4","2":"14","3":"15","4":"16","5":"他","6":"Nh","7":""},{"1":"4","2":"15","3":"16","4":"19","5":"來亂的","6":"VA","7":""},{"1":"4","2":"16","3":"19","4":"20","5":"啦","6":"T","7":""},{"1":"5","2":"1","3":"0","4":"2","5":"最多","6":"VH","7":""},{"1":"5","2":"2","3":"2","4":"4","5":"容納","6":"VJ","7":""},{"1":"5","2":"3","3":"4","4":"10","5":"59,000","6":"Neu","7":"CARDINAL_B"},{"1":"5","2":"4","3":"10","4":"11","5":"個","6":"Nf","7":""},{"1":"5","2":"5","3":"11","4":"12","5":"人","6":"Na","7":""},{"1":"5","2":"6","3":"12","4":"13","5":",","6":"COMMACATEGORY","7":""},{"1":"5","2":"7","3":"13","4":"14","5":"或","6":"Caa","7":""},{"1":"5","2":"8","3":"14","4":"18","5":"5.9萬","6":"Neu","7":"CARDINAL_B"},{"1":"5","2":"9","3":"18","4":"19","5":"人","6":"Na","7":""},{"1":"5","2":"10","3":"19","4":"20","5":",","6":"COMMACATEGORY","7":""},{"1":"5","2":"11","3":"20","4":"21","5":"再","6":"D","7":""},{"1":"5","2":"12","3":"21","4":"22","5":"多","6":"D","7":""},{"1":"5","2":"13","3":"22","4":"23","5":"就","6":"D","7":""},{"1":"5","2":"14","3":"23","4":"25","5":"不行","6":"VH","7":""},{"1":"5","2":"15","3":"25","4":"26","5":"了","6":"T","7":""},{"1":"5","2":"16","3":"26","4":"27","5":".","6":"PERIODCATEGORY","7":""},{"1":"5","2":"17","3":"27","4":"28","5":"這","6":"Nep","7":""},{"1":"5","2":"18","3":"28","4":"29","5":"是","6":"SHI","7":""},{"1":"5","2":"19","3":"29","4":"31","5":"環評","6":"Na","7":""},{"1":"5","2":"20","3":"31","4":"32","5":"的","6":"DE","7":""},{"1":"5","2":"21","3":"32","4":"34","5":"結論","6":"Na","7":""},{"1":"5","2":"22","3":"34","4":"35","5":".","6":"PERIODCATEGORY","7":""},{"1":"6","2":"1","3":"0","4":"2","5":"科長","6":"Na","7":""},{"1":"6","2":"2","3":"2","4":"3","5":"說","6":"VE","7":""},{"1":"6","2":"3","3":"3","4":"6","5":":1,","6":"Neu","7":"CARDINAL_B"},{"1":"6","2":"4","3":"6","4":"8","5":"坪數","6":"Na","7":""},{"1":"6","2":"5","3":"8","4":"9","5":"對","6":"P","7":""},{"1":"6","2":"6","3":"9","4":"11","5":"人數","6":"Na","7":""},{"1":"6","2":"7","3":"11","4":"12","5":"為","6":"VG","7":""},{"1":"6","2":"8","3":"12","4":"15","5":"1:3","6":"Neu","7":"CARDINAL_B"},{"1":"6","2":"9","3":"15","4":"16","5":"。","6":"PERIODCATEGORY","7":""},{"1":"6","2":"10","3":"16","4":"17","5":"2","6":"Neu","7":"CARDINAL_B"},{"1":"6","2":"11","3":"17","4":"18","5":",","6":"COMMACATEGORY","7":""},{"1":"6","2":"12","3":"18","4":"20","5":"可以","6":"D","7":""},{"1":"6","2":"13","3":"20","4":"21","5":"再","6":"D","7":""},{"1":"6","2":"14","3":"21","4":"23","5":"增加","6":"VHC","7":""},{"1":"6","2":"15","3":"23","4":"24","5":"。","6":"PERIODCATEGORY","7":""}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <hr />
 <div class="info">
 <p>
-The above result data frame makes use of the <strong>IOB format</strong> (short for inside, outside, beginning) for the annotations of the named entities.
+The above result data frame makes use of the <strong>I(O)B format</strong> (short for inside, outside, beginning) for the annotations of the named entities.
 </p>
 <p>
 It is a common tagging format for tagging (multiword) tokens in a chunking task in computational linguistics (e.g., NP-chunking, named entitity, semantic roles).
 </p>
 <ul>
 <li>
-The <strong>B-</strong> prefix before a tag indicates that the tag is the <em>beginning</em> of a chunk.
+<p>
+The <strong><code>_B</code></strong> suffix after a tag indicates that the tag is the <em>beginning</em> of a chunk.
+</p>
 </li>
 <li>
-The <strong>I-</strong> prefix before a tag indicates that the tag is <em>inside</em> a chunk.
+<p>
+The <strong><code>_I</code></strong> suffix after a tag indicates that the tag is <em>inside</em> a chunk. Some annotation scheme (we don’t have this in our above example) may have a third suffix:
+</p>
 </li>
 <li>
-The <strong>O</strong> tag indicates that a token belongs to no chunk (i.e., <em>outside</em> of all relevant chunks).
+<p>
+The <strong><code>_O</code></strong> tag indicates that a token belongs to no chunk (i.e., <em>outside</em> of all relevant chunks).
+</p>
 </li>
 </ul>
 </div>
