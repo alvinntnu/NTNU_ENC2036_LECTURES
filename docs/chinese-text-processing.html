@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-04-24" />
+<meta name="date" content="2022-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -317,10 +317,10 @@ div.csl-indent {
 <li class="chapter" data-level="8.5.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#input-for-coll.analysis.r"><i class="fa fa-check"></i><b>8.5.3</b> Input for <code>coll.analysis.r</code></a></li>
 <li class="chapter" data-level="8.5.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#other-information"><i class="fa fa-check"></i><b>8.5.4</b> Other Information</a></li>
 <li class="chapter" data-level="8.5.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#create-output-file"><i class="fa fa-check"></i><b>8.5.5</b> Create Output File</a></li>
-<li class="chapter" data-level="8.5.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#run-coll.analysis.r"><i class="fa fa-check"></i><b>8.5.6</b> Run <code>coll.analysis.r</code></a></li>
-<li class="chapter" data-level="8.5.7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>8.5.7</b> Interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>8.6</b> Exercises</a></li>
+<li class="chapter" data-level="8.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#running-collostructional-analysis"><i class="fa fa-check"></i><b>8.6</b> Running Collostructional Analysis</a></li>
+<li class="chapter" data-level="8.7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>8.7</b> Interpretations</a></li>
+<li class="chapter" data-level="8.8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>8.8</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a>
 <ul>
@@ -511,27 +511,40 @@ Please try to create <code>worker()</code> with different settings (e.g., <code>
 [43] &quot;壞&quot;      </code></pre>
 <div class="danger">
 <p>
-The format of the user-defined dictionary is a text file, with one word per line. Also, the default encoding of the dictionary is <strong>UTF-8</strong>.
+The format of the user-defined dictionary is a text file, with one
+word per line. Also, the default encoding of the dictionary is
+<strong>UTF-8</strong>.
 </p>
 <p>
-Please note that in Windows, the default encoding of a Chinese <code>txt</code> file created by Notepad may not be UTF-8. (Usually, it is encoded in <strong>big-5</strong>).
+Please note that in Windows, the default encoding of a Chinese
+<code>txt</code> file created by Notepad may not be UTF-8. (Usually, it
+is encoded in <strong>big-5</strong>).
 </p>
 <p>
-Also, files created by MS Office applications tend to be less transparent in terms of their encoding.
+Also, files created by MS Office applications tend to be less
+transparent in terms of their encoding.
 </p>
 </div>
 <div class="info">
 <p>
-Creating a user-defined dictionary may take a lot of time. You may consult <a href="https://pinyin.sogou.com/dict/">搜狗詞庫</a>, which includes many domain-specific dictionaries created by others.
+Creating a user-defined dictionary may take a lot of time. You may
+consult <a href="https://pinyin.sogou.com/dict/">搜狗詞庫</a>, which
+includes many domain-specific dictionaries created by others.
 </p>
 <p>
-However, it should be noted that the format of the dictionaries is <code>.scel</code>. You may need to convert the <code>.scel</code> to <code>.txt</code> before you use it in <code>jiebaR</code>.
+However, it should be noted that the format of the dictionaries is
+<code>.scel</code>. You may need to convert the <code>.scel</code> to
+<code>.txt</code> before you use it in <code>jiebaR</code>.
 </p>
 <p>
-To do the conversion automatically, please consult the library <a href="https://github.com/qinwf/cidian"><code>cidian</code></a>.
+To do the conversion automatically, please consult the library <a
+href="https://github.com/qinwf/cidian"><code>cidian</code></a>.
 </p>
 <p>
-Also, you need to do the traditional-simplified Chinese conversion as well. For this, you may consult the library <a href="https://github.com/qinwf/ropencc"><code>ropencc</code></a> in R.
+Also, you need to do the traditional-simplified Chinese conversion as
+well. For this, you may consult the library <a
+href="https://github.com/qinwf/ropencc"><code>ropencc</code></a> in
+R.
 </p>
 </div>
 </div>
@@ -603,7 +616,9 @@ Also, you need to do the traditional-simplified Chinese conversion as well. For 
 <span id="cb21-4"><a href="chinese-text-processing.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">#       what=character(),nlines=50,sep=&#39;\n&#39;,</span></span>
 <span id="cb21-5"><a href="chinese-text-processing.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       encoding=&#39;utf-8&#39;,fileEncoding=&#39;utf-8&#39;)</span></span>
 <span id="cb21-6"><a href="chinese-text-processing.html#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="chinese-text-processing.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">readLines</span>(<span class="st">&quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/jiebaRD/dict/stop_words.utf8&quot;</span>, <span class="at">n =</span> <span class="dv">200</span>)</span></code></pre></div>
+<span id="cb21-7"><a href="chinese-text-processing.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">readLines</span>(<span class="st">&quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/jiebaRD/dict/stop_words.utf8&quot;</span>, </span>
+<span id="cb21-8"><a href="chinese-text-processing.html#cb21-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>,</span>
+<span id="cb21-9"><a href="chinese-text-processing.html#cb21-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">n =</span> <span class="dv">200</span>)</span></code></pre></div>
 <pre class="Rout"><code>  [1] &quot;\&quot;&quot;     &quot;.&quot;      &quot;。&quot;     &quot;,&quot;      &quot;、&quot;     &quot;！&quot;     &quot;？&quot;     &quot;：&quot;    
   [9] &quot;；&quot;     &quot;`&quot;      &quot;﹑&quot;     &quot;•&quot;      &quot;＂&quot;     &quot;^&quot;      &quot;…&quot;      &quot;‘&quot;     
  [17] &quot;’&quot;      &quot;“&quot;      &quot;”&quot;      &quot;〝&quot;     &quot;〞&quot;     &quot;~&quot;      &quot;\\&quot;     &quot;∕&quot;     
@@ -647,18 +662,19 @@ Also, you need to do the traditional-simplified Chinese conversion as well. For 
 <div class="sourceCode" id="cb25"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb25-1"><a href="chinese-text-processing.html#cb25-1" aria-hidden="true" tabindex="-1"></a>ccts <span class="ot">=</span> <span class="fu">converter</span>(T2S)</span>
 <span id="cb25-2"><a href="chinese-text-processing.html#cb25-2" aria-hidden="true" tabindex="-1"></a>ccts[<span class="st">&quot;開放中文轉換&quot;</span>]</span></code></pre></div>
 <pre class="Rout"><code>[1] &quot;开放中文转换&quot;</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb27-1"><a href="chinese-text-processing.html#cb27-1" aria-hidden="true" tabindex="-1"></a>st_zhs <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">&quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/jiebaRD/dict/stop_words.utf8&quot;</span>)</span>
-<span id="cb27-2"><a href="chinese-text-processing.html#cb27-2" aria-hidden="true" tabindex="-1"></a>st_zht<span class="ot">&lt;-</span>ccst[st_zhs]</span>
-<span id="cb27-3"><a href="chinese-text-processing.html#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="chinese-text-processing.html#cb27-4" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">file</span>(<span class="st">&quot;demo_data/stopwords-ch-jiebar-zht.txt&quot;</span>, <span class="at">open =</span> <span class="st">&quot;w&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;utf-8&quot;</span>)</span>
-<span id="cb27-5"><a href="chinese-text-processing.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(st_zht, con)</span>
-<span id="cb27-6"><a href="chinese-text-processing.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">close</span>(con)</span>
-<span id="cb27-7"><a href="chinese-text-processing.html#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-8"><a href="chinese-text-processing.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default stopword list</span></span>
-<span id="cb27-9"><a href="chinese-text-processing.html#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-10"><a href="chinese-text-processing.html#cb27-10" aria-hidden="true" tabindex="-1"></a>seg5 <span class="ot">&lt;-</span> <span class="fu">worker</span>(<span class="at">user =</span> <span class="st">&quot;demo_data/dict-ch-user-demo.txt&quot;</span>,</span>
-<span id="cb27-11"><a href="chinese-text-processing.html#cb27-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">stop_word =</span> <span class="st">&quot;demo_data/stopwords-ch-jiebar-zht.txt&quot;</span> )</span>
-<span id="cb27-12"><a href="chinese-text-processing.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="fu">segment</span>(text, seg5)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb27-1"><a href="chinese-text-processing.html#cb27-1" aria-hidden="true" tabindex="-1"></a>st_zhs <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">&quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/jiebaRD/dict/stop_words.utf8&quot;</span>,</span>
+<span id="cb27-2"><a href="chinese-text-processing.html#cb27-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>)</span>
+<span id="cb27-3"><a href="chinese-text-processing.html#cb27-3" aria-hidden="true" tabindex="-1"></a>st_zht<span class="ot">&lt;-</span>ccst[st_zhs]</span>
+<span id="cb27-4"><a href="chinese-text-processing.html#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="chinese-text-processing.html#cb27-5" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">file</span>(<span class="st">&quot;demo_data/stopwords-ch-jiebar-zht.txt&quot;</span>, <span class="at">open =</span> <span class="st">&quot;w&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb27-6"><a href="chinese-text-processing.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(st_zht, con)</span>
+<span id="cb27-7"><a href="chinese-text-processing.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="fu">close</span>(con)</span>
+<span id="cb27-8"><a href="chinese-text-processing.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="chinese-text-processing.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default stopword list</span></span>
+<span id="cb27-10"><a href="chinese-text-processing.html#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="chinese-text-processing.html#cb27-11" aria-hidden="true" tabindex="-1"></a>seg5 <span class="ot">&lt;-</span> <span class="fu">worker</span>(<span class="at">user =</span> <span class="st">&quot;demo_data/dict-ch-user-demo.txt&quot;</span>,</span>
+<span id="cb27-12"><a href="chinese-text-processing.html#cb27-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">stop_word =</span> <span class="st">&quot;demo_data/stopwords-ch-jiebar-zht.txt&quot;</span> )</span>
+<span id="cb27-13"><a href="chinese-text-processing.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="fu">segment</span>(text, seg5)</span></code></pre></div>
 <pre class="Rout"><code> [1] &quot;綠黨&quot;     &quot;桃園市&quot;   &quot;議員&quot;     &quot;王浩宇&quot;   &quot;爆料&quot;     &quot;指&quot;      
  [7] &quot;民眾黨&quot;   &quot;不分區&quot;   &quot;提名&quot;     &quot;蔡壁如&quot;   &quot;黃瀞瑩&quot;   &quot;在昨&quot;    
 [13] &quot;日&quot;       &quot;請辭&quot;     &quot;為領&quot;     &quot;年終獎金&quot; &quot;台灣&quot;     &quot;民眾黨&quot;  
@@ -705,8 +721,8 @@ Also, you need to do the traditional-simplified Chinese conversion as well. For 
 <p>In Chapter <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">5</a>, we have talked about the pipeline for English texts processing, as shown below:</p>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:etaf2"></span>
-<div id="htmlwidget-7838ef82bb4ced55dfd2" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7838ef82bb4ced55dfd2">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb42 [label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb41 [label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\n\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1 [color=orangered, penwidth=5]\n\nbb1-> d [color=orangered, penwidth=5]\nbb1 -> c [color=orangered, penwidth=5]\nbb1 -> cc [color=orangered, penwidth=5]\nb -> b41->b42-> b2 -> b21\nb -> b3 -> b31\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e93a292ca0c57610d7ec" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e93a292ca0c57610d7ec">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb42 [label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb41 [label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\n\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1 [color=orangered, penwidth=5]\n\nbb1-> d [color=orangered, penwidth=5]\nbb1 -> c [color=orangered, penwidth=5]\nbb1 -> cc [color=orangered, penwidth=5]\nb -> b41->b42-> b2 -> b21\nb -> b3 -> b31\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 7.1: English Text Analytics Flowchart
 </p>
@@ -724,8 +740,8 @@ Figure 7.1: English Text Analytics Flowchart
 </ul>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:cpflowchart"></span>
-<div id="htmlwidget-a84fa3fe6cdb25ab9468" style="width:672px;height:960px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a84fa3fe6cdb25ab9468">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.8, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\n\n## objects\nraw_texts [label = \"Raw Texts\", shape = folder, fillcolor= \"#cccccc\"]\nquanteda [label = \"Quanteda\", shape = folder, fillcolor= \"#f981bb\"]\ntidytext [label = \"Tidytext\", shape = folder, fillcolor= \"#B0E2FC\"]\ntextdf [label = \"Text-based DF\", shape = folder, fillcolor= \"#B0E2FC\"]\nworddf [label = \"Word-based DF\", shape = folder, fillcolor= \"#B0E2FC\"]\ncorpus [label = \"Corpus Object\", shape = folder, fillcolor= \"#f981bb\"]\ntokens [label = \"Tokens Object\", shape = folder, fillcolor= \"#f981bb\"]\n\n## functions\nf_readtext [label = \"readtext()\", shape=document, fillcolor= \"#96F597\"]\nf_dataframe [label = \"data.frame()\", shape=document, fillcolor= \"#96F597\"]\nf_corpus [label = \"corpus()\", shape=document, fillcolor= \"#96F597\"]\nf_segment [label = \"segment()\", shape=document, fillcolor= \"#96F597\"]\nf_astokens [label = \"as.tokens()\", shape=document, fillcolor= \"#96F597\"]\nf_tokens [label = \"tokens()\", shape=document, fillcolor= \"#96F597\"]\nf_unnest [label = \"unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\n\n## links\nraw_texts -> tidytext -> f_readtext -> textdf\ntidytext -> f_dataframe -> textdf\n\ntextdf -> f_unnest -> worddf\nraw_texts -> quanteda -> f_segment -> f_astokens -> tokens #[color=orangered, penwidth=5]\n\nquanteda -> f_corpus -> corpus -> f_tokens -> tokens[color=grey80, penwidth = 0.4, style=\"dashed\"]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-463c0382981af03a4149" style="width:672px;height:960px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-463c0382981af03a4149">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.8, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\n\n## objects\nraw_texts [label = \"Raw Texts\", shape = folder, fillcolor= \"#cccccc\"]\nquanteda [label = \"Quanteda\", shape = folder, fillcolor= \"#f981bb\"]\ntidytext [label = \"Tidytext\", shape = folder, fillcolor= \"#B0E2FC\"]\ntextdf [label = \"Text-based DF\", shape = folder, fillcolor= \"#B0E2FC\"]\nworddf [label = \"Word-based DF\", shape = folder, fillcolor= \"#B0E2FC\"]\ncorpus [label = \"Corpus Object\", shape = folder, fillcolor= \"#f981bb\"]\ntokens [label = \"Tokens Object\", shape = folder, fillcolor= \"#f981bb\"]\n\n## functions\nf_readtext [label = \"readtext()\", shape=document, fillcolor= \"#96F597\"]\nf_dataframe [label = \"data.frame()\", shape=document, fillcolor= \"#96F597\"]\nf_corpus [label = \"corpus()\", shape=document, fillcolor= \"#96F597\"]\nf_segment [label = \"segment()\", shape=document, fillcolor= \"#96F597\"]\nf_astokens [label = \"as.tokens()\", shape=document, fillcolor= \"#96F597\"]\nf_tokens [label = \"tokens()\", shape=document, fillcolor= \"#96F597\"]\nf_unnest [label = \"unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\n\n## links\nraw_texts -> tidytext -> f_readtext -> textdf\ntidytext -> f_dataframe -> textdf\n\ntextdf -> f_unnest -> worddf\nraw_texts -> quanteda -> f_segment -> f_astokens -> tokens #[color=orangered, penwidth=5]\n\nquanteda -> f_corpus -> corpus -> f_tokens -> tokens[color=grey80, penwidth = 0.4, style=\"dashed\"]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 7.2: Chinese Text Analytics Flowchart
 </p>
@@ -822,21 +838,32 @@ Figure 7.2: Chinese Text Analytics Flowchart
 <hr />
 <div class="info">
 <p>
-It can be seen that for the <code>token</code> parameter in <code>unnest_tokens()</code>, we use an <strong>anonymous</strong> function based on <code>jieba</code> and <code>segment()</code> for self-defined Chinese word segmentation.
+It can be seen that for the <code>token</code> parameter in
+<code>unnest_tokens()</code>, we use an <strong>anonymous</strong>
+function based on <code>jieba</code> and <code>segment()</code> for
+self-defined Chinese word segmentation.
 </p>
 <p>
-This is called <strong>anonymous functions</strong> because it has not been assigned to any object name in the current R session.
+This is called <strong>anonymous functions</strong> because it has
+not been assigned to any object name in the current R session.
 </p>
 <p>
-You may check <a href="https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Writing-functions">R language documentation</a> for more detail on Writing Functions.
+You may check <a
+href="https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Writing-functions">R
+language documentation</a> for more detail on Writing Functions.
 </p>
 </div>
 <div class="danger">
 <p>
-It is important to note that when we specify a self-defined <code>unnest_tokens(…,token=…)</code> function, this function should take a character vector (i.e., a text-based vector) and return a <em>list</em> of character vectors (i.e., word-based vectors) of the same length.
+It is important to note that when we specify a self-defined
+<code>unnest_tokens(…,token=…)</code> function, this function should
+take a character vector (i.e., a text-based vector) and return a
+<em>list</em> of character vectors (i.e., word-based vectors) of the
+same length.
 </p>
 <p>
-In other words, when initializing the Chinese word segmenter, we need to specify the argument <code>worker(…, byline = TRUE)</code>.
+In other words, when initializing the Chinese word segmenter, we need
+to specify the argument <code>worker(…, byline = TRUE)</code>.
 </p>
 </div>
 <p><img src="images/unnest-tokens.png" width="80%" /></p>
@@ -940,7 +967,7 @@ In other words, when initializing the Chinese word segmenter, we need to specify
 <span id="cb47-6"><a href="chinese-text-processing.html#cb47-6" aria-hidden="true" tabindex="-1"></a>  apple_df <span class="ot">&lt;-</span> <span class="fu">readtext</span>(<span class="st">&quot;demo_data/applenews10000.tar.gz&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>)</span>
 <span id="cb47-7"><a href="chinese-text-processing.html#cb47-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="co"># time the loading process</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
-  6.511   8.571  69.678 </code></pre>
+  6.442   8.297  36.641 </code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb49-1"><a href="chinese-text-processing.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="do">## check the class of the `readtext()` output</span></span>
 <span id="cb49-2"><a href="chinese-text-processing.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(apple_df)</span></code></pre></div>
 <pre class="Rout"><code>[1] &quot;readtext&quot;   &quot;data.frame&quot;</code></pre>
@@ -1079,7 +1106,7 @@ In other words, when initializing the Chinese word segmenter, we need to specify
 <span id="cb60-7"><a href="chinese-text-processing.html#cb60-7" aria-hidden="true" tabindex="-1"></a>    as.tokens <span class="ot">-&gt;</span> apple_tokens</span>
 <span id="cb60-8"><a href="chinese-text-processing.html#cb60-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
- 15.970   0.361  16.644 </code></pre>
+ 15.828   0.390  16.633 </code></pre>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb62-1"><a href="chinese-text-processing.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add document-level variables</span></span>
 <span id="cb62-2"><a href="chinese-text-processing.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">docvars</span>(apple_tokens) <span class="ot">&lt;-</span> apple_df[<span class="fu">c</span>(<span class="st">&quot;doc_id&quot;</span>, <span class="st">&quot;filename&quot;</span>)]</span>
 <span id="cb62-3"><a href="chinese-text-processing.html#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1163,10 +1190,17 @@ In other words, when initializing the Chinese word segmenter, we need to specify
 </div>
 <div class="info">
 <p>
-Creating <strong>unique indices</strong> for your data is very important. In corpus linguistic analysis, we often need to keep track of the original <strong>context</strong> of the word, phrase or sentence in the concordances. All these unique indices (as well as the source text filenames) would make things a lot easier.
+Creating <strong>unique indices</strong> for your data is very
+important. In corpus linguistic analysis, we often need to keep track of
+the original <strong>context</strong> of the word, phrase or sentence in
+the concordances. All these unique indices (as well as the source text
+filenames) would make things a lot easier.
 </p>
 <p>
-Also, if the metadata of the source documents are available, these unique indices would allow us to connect the tokenized linguistic units to the <strong>metadata</strong> information (e.g., genres, registers, author profiles) for more interesting analysis.
+Also, if the metadata of the source documents are available, these
+unique indices would allow us to connect the tokenized linguistic units
+to the <strong>metadata</strong> information (e.g., genres, registers,
+author profiles) for more interesting analysis.
 </p>
 </div>
 <p>With a word-based data frame, we can easily create a <strong>word frequency list</strong> as well as a <strong>word cloud</strong> to have a quick overview of the word distribution of the corpus.</p>
@@ -1190,8 +1224,8 @@ Also, if the metadata of the source documents are available, these unique indice
 <span id="cb68-14"><a href="chinese-text-processing.html#cb68-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">400</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb68-15"><a href="chinese-text-processing.html#cb68-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">nchar</span>(word) <span class="sc">&gt;=</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="do">## remove monosyllabic tokens</span></span>
 <span id="cb68-16"><a href="chinese-text-processing.html#cb68-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">wordcloud2</span>(<span class="at">shape =</span> <span class="st">&quot;star&quot;</span>, <span class="at">size =</span> <span class="fl">0.3</span>)</span></code></pre></div>
-<div id="htmlwidget-4246da83109319f7c3f2" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4246da83109319f7c3f2">{"x":{"word":["報導","表示","台灣","台北","今年","中國","沒有","美國","可能","目前","市場","公司","萬元","去年","警方","億元","發現","因為","認為","問題","日本","綜合","指出","一個","希望","蘋果","工作","時間","民眾","成長","不會","政府","現在","資料","特價","無法","昨天","未來","提供","活動","影響","推出","進行","包括","要求","最後","出現","機會","國際","學生","發生","經濟","使用","造成","加上","來源","com","手機","業者","投資","表現","已經","台幣","一名","總統","全球","媒體","中心","是否","知道","國家","覺得","看到","當時","價格","tw","部分","品牌","設計","建議","透過","成為","記者","調查","持續","比賽","日前","產品","超過","小時","參加","不能","特別","現場","增加","方式","大學","醫師","一定","平均","www","過去","明年","超市","喜歡","之後","社會","銀行","醫院","男子","集團","接受","網路","不要","強調","生活","商品","相關","應該","相當","孩子","一起","不少","主要","兩人","真的","舉辦","香港","女兒","進入","民進黨","原價","決定","聯盟","發展","攝影","其實","營收","兒子","運動","前天","準備","狀況","重要","不同","政治","媽媽","很多","世界","服務","國內","原本","必須","最大","大陸","朋友","http","需求","最近","消費者","合作","台北市","比較","公布","電影","選擇","導致","需要","每天","一直","預估","人員","加入","搭配","分鐘","內容","今天","網友","維持","電話","處理","球員","國民黨","透露","獲利","預計","完全","前往","完成","非常","安全","這是","不到","感覺","擔任","英國","下午","這種","政策","預期","網站","產業","嚴重","有人","擔心","研究","男人","健康","計劃","壓力","繼續","最高","小孩","董事長","個人","員工","舉行","了解","不斷","期間","一次","消費","事件","至少","代表","冠軍","企業","身體","容易","電腦","避免","面對","提出","成功","支持","獲得","優惠","只能","女性","情況","規定","擁有","直接","學校","廠商","地方","女子","宣布","即可","母親","餐廳","電視","目標","即日起","家庭","顯示","美元","後來","教練","紀錄","立委","幾乎","投手","指數","女人","老師","公分","效果","起來","利用","老闆","照片","關係","高達","免費","明顯","雙方","年前","尤其","台中市","單位","文化","空間","父親","過程","銷售","不錯","一點","基金會","公尺","正式","億美元","技術","地區","家人","治療","韓國","選手","意外","系統","附近","外電報導","現金","系列","資訊","適合","可望","演出","協助","取得","調整","購買","營運","注意","根本","突然","規劃","客戶","改善","高雄","經營","造型","兩個","最好","之前","妻子","原因","球隊","結束","馬英九","公斤","女友","沒想到","遊戲","吸引","開放","傳統","積極","材料","歷史","告訴","結婚","選舉","每年","連續","年輕","提醒","機車","新聞","基金","上市","當天","警員","阿霞","最佳","首度","動作","售價","管理","科技","廣告","男友","環境","申請","法國","生產","金額","提升","以下","價值","功能","參與","讀者","網址","粉絲","製作","減少","第一","行動","能力","亞洲","料理","出貨","受傷","兩岸","分析","成立","一年","公開","拿下","拍攝","引發","上午","經驗","主任","法官","本季","長期","陸續","教育","法人","來看","專業","總經理","高雄市","同樣","晚上","再度","成績","爸爸","展現","自然","先生","立即","出席","人士","台股","則是","穩定","一度","幫助","整體","事業","確定","挑戰","年齡"],"freq":[6119,5563,4566,3906,3549,3177,3017,2833,2676,2520,2506,2365,2346,2293,2186,2175,2160,2137,1965,1934,1911,1859,1848,1713,1713,1692,1671,1669,1654,1645,1633,1607,1605,1603,1591,1586,1556,1537,1530,1525,1471,1434,1432,1419,1404,1397,1366,1347,1326,1325,1313,1298,1293,1290,1274,1271,1262,1210,1177,1176,1171,1153,1152,1145,1133,1132,1125,1112,1110,1105,1104,1104,1100,1092,1091,1090,1079,1077,1065,1064,1063,1062,1059,1059,1054,1048,1042,1041,1040,1012,1000,991,986,984,983,983,975,969,961,958,956,953,943,938,936,933,933,933,926,925,923,922,920,916,916,915,908,907,906,905,892,891,886,886,884,873,871,870,868,865,863,862,861,849,844,840,837,825,821,821,820,820,820,813,812,812,808,807,806,801,796,791,789,782,778,774,772,769,767,767,765,762,762,757,751,750,748,748,746,744,743,739,737,737,731,724,720,716,715,712,698,697,687,686,685,684,683,681,681,681,677,676,674,674,671,668,667,666,662,662,660,659,657,655,653,651,648,646,646,642,641,640,637,635,634,634,634,629,627,625,622,622,621,621,619,619,614,614,613,612,608,604,601,599,599,596,593,593,591,590,588,586,586,583,582,581,581,576,574,574,571,568,567,565,564,564,563,562,562,562,561,557,554,554,553,552,551,551,551,550,550,549,548,547,545,545,545,543,542,541,541,541,541,540,538,538,537,536,536,535,535,527,527,526,526,526,525,524,522,522,522,520,520,519,517,516,511,510,508,507,506,505,504,503,499,498,496,495,495,495,493,493,492,491,490,489,488,488,488,488,484,484,484,484,483,482,481,481,480,479,478,476,476,475,475,474,474,474,473,471,470,468,468,467,466,466,465,464,464,463,461,461,460,460,459,458,458,457,456,454,453,452,452,450,449,449,447,447,447,446,444,443,441,441,440,440,439,437,437,437,436,434,433,433,432,432,431,431,431,429,429,426,426,426,422,420,419,418,418,417,416,416,414,414,413,412,412,411,411,410,409,407,406,405,403,402],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.00882497140055565,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"star","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-44f306f6e963844ca9ee" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-44f306f6e963844ca9ee">{"x":{"word":["報導","表示","台灣","台北","今年","中國","沒有","美國","可能","目前","市場","公司","萬元","去年","警方","億元","發現","因為","認為","問題","日本","綜合","指出","一個","希望","蘋果","工作","時間","民眾","成長","不會","政府","現在","資料","特價","無法","昨天","未來","提供","活動","影響","推出","進行","包括","要求","最後","出現","機會","國際","學生","發生","經濟","使用","造成","加上","來源","com","手機","業者","投資","表現","已經","台幣","一名","總統","全球","媒體","中心","是否","知道","國家","覺得","看到","當時","價格","tw","部分","品牌","設計","建議","透過","成為","記者","調查","持續","比賽","日前","產品","超過","小時","參加","不能","特別","現場","增加","方式","大學","醫師","一定","平均","www","過去","明年","超市","喜歡","之後","社會","銀行","醫院","男子","集團","接受","網路","不要","強調","生活","商品","相關","應該","相當","孩子","一起","不少","主要","兩人","真的","舉辦","香港","女兒","進入","民進黨","原價","決定","聯盟","發展","攝影","其實","營收","兒子","運動","前天","準備","狀況","重要","不同","政治","媽媽","很多","世界","服務","國內","原本","必須","最大","大陸","朋友","http","需求","最近","消費者","合作","台北市","比較","公布","電影","選擇","導致","需要","每天","一直","預估","人員","加入","搭配","分鐘","內容","今天","網友","維持","電話","處理","球員","國民黨","透露","獲利","預計","完全","前往","完成","非常","安全","這是","不到","感覺","擔任","英國","下午","這種","政策","預期","網站","產業","嚴重","有人","擔心","研究","男人","健康","計劃","壓力","繼續","最高","小孩","董事長","個人","員工","舉行","了解","不斷","期間","一次","消費","事件","至少","代表","冠軍","企業","身體","容易","電腦","避免","面對","提出","成功","支持","獲得","優惠","只能","女性","情況","規定","擁有","直接","學校","廠商","地方","女子","宣布","即可","母親","餐廳","電視","目標","即日起","家庭","顯示","美元","後來","教練","紀錄","立委","幾乎","投手","指數","女人","老師","公分","效果","起來","利用","老闆","照片","關係","高達","免費","明顯","雙方","年前","尤其","台中市","單位","文化","空間","父親","過程","銷售","不錯","一點","基金會","公尺","正式","億美元","技術","地區","家人","治療","韓國","選手","意外","系統","附近","外電報導","現金","系列","資訊","適合","可望","演出","協助","取得","調整","購買","營運","注意","根本","突然","規劃","客戶","改善","高雄","經營","造型","兩個","最好","之前","妻子","原因","球隊","結束","馬英九","公斤","女友","沒想到","遊戲","吸引","開放","傳統","積極","材料","歷史","告訴","結婚","選舉","每年","連續","年輕","提醒","機車","新聞","基金","上市","當天","警員","阿霞","最佳","首度","動作","售價","管理","科技","廣告","男友","環境","申請","法國","生產","金額","提升","以下","價值","功能","參與","讀者","網址","粉絲","製作","減少","第一","行動","能力","亞洲","料理","出貨","受傷","兩岸","分析","成立","一年","公開","拿下","拍攝","引發","上午","經驗","主任","法官","本季","長期","陸續","教育","法人","來看","專業","總經理","高雄市","同樣","晚上","再度","成績","爸爸","展現","自然","先生","立即","出席","人士","台股","則是","穩定","一度","幫助","整體","事業","確定","挑戰","年齡"],"freq":[6119,5563,4566,3906,3549,3177,3017,2833,2676,2520,2506,2365,2346,2293,2186,2175,2160,2137,1965,1934,1911,1859,1848,1713,1713,1692,1671,1669,1654,1645,1633,1607,1605,1603,1591,1586,1556,1537,1530,1525,1471,1434,1432,1419,1404,1397,1366,1347,1326,1325,1313,1298,1293,1290,1274,1271,1262,1210,1177,1176,1171,1153,1152,1145,1133,1132,1125,1112,1110,1105,1104,1104,1100,1092,1091,1090,1079,1077,1065,1064,1063,1062,1059,1059,1054,1048,1042,1041,1040,1012,1000,991,986,984,983,983,975,969,961,958,956,953,943,938,936,933,933,933,926,925,923,922,920,916,916,915,908,907,906,905,892,891,886,886,884,873,871,870,868,865,863,862,861,849,844,840,837,825,821,821,820,820,820,813,812,812,808,807,806,801,796,791,789,782,778,774,772,769,767,767,765,762,762,757,751,750,748,748,746,744,743,739,737,737,731,724,720,716,715,712,698,697,687,686,685,684,683,681,681,681,677,676,674,674,671,668,667,666,662,662,660,659,657,655,653,651,648,646,646,642,641,640,637,635,634,634,634,629,627,625,622,622,621,621,619,619,614,614,613,612,608,604,601,599,599,596,593,593,591,590,588,586,586,583,582,581,581,576,574,574,571,568,567,565,564,564,563,562,562,562,561,557,554,554,553,552,551,551,551,550,550,549,548,547,545,545,545,543,542,541,541,541,541,540,538,538,537,536,536,535,535,527,527,526,526,526,525,524,522,522,522,520,520,519,517,516,511,510,508,507,506,505,504,503,499,498,496,495,495,495,493,493,492,491,490,489,488,488,488,488,484,484,484,484,483,482,481,481,480,479,478,476,476,475,475,474,474,474,473,471,470,468,468,467,466,466,465,464,464,463,461,461,460,460,459,458,458,457,456,454,453,452,452,450,449,449,447,447,447,446,444,443,441,441,440,440,439,437,437,437,436,434,433,433,432,432,431,431,431,429,429,426,426,426,422,420,419,418,418,417,416,416,414,414,413,412,412,411,411,410,409,407,406,405,403,402],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.00882497140055565,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"star","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="case-study-3-patterns" class="section level2" number="7.9">
 <h2><span class="header-section-number">7.9</span> Case Study 3: Patterns</h2>
@@ -1215,7 +1249,7 @@ Also, if the metadata of the source documents are available, these unique indice
 <span id="cb72-2"><a href="chinese-text-processing.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(apple_line <span class="sc">%&gt;%</span></span>
 <span id="cb72-3"><a href="chinese-text-processing.html#cb72-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">mutate</span>(<span class="at">line_tag =</span> <span class="fu">map_chr</span>(line, tag_text, my_seg_pos)) <span class="ot">-&gt;</span> apple_line)</span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
- 35.551   5.076  42.624 </code></pre>
+ 34.486   4.818  39.564 </code></pre>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb74-1"><a href="chinese-text-processing.html#cb74-1" aria-hidden="true" tabindex="-1"></a>apple_line <span class="sc">%&gt;%</span> head</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -1331,7 +1365,7 @@ Also, if the metadata of the source documents are available, these unique indice
 <p>1.Define a regular expression <code>\\b被/p\\s([^/]+/[^\\s]+\\s)*?[^/]+/v</code> for BEI-Construction, i.e., 被 + VERB</p>
 <p>2.Use <code>unnest_tokens()</code> and <code>str_extract_all()</code> to extract target patterns and create a <strong>pattern-based</strong> data frame.</p>
 <div class="info">
-<p>For more sophisticated uses of regular expressions in pattern retrieval, please refer to <span class="citation"><a href="#ref-gries2016" role="doc-biblioref">Gries</a> (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, Chapter 3 (very important).</p>
+<p>For more sophisticated uses of regular expressions in pattern retrieval, please refer to <span class="citation">Gries (<a href="#ref-gries2016" role="doc-biblioref">2016</a>)</span>, Chapter 3 (very important).</p>
 </div>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb75-1"><a href="chinese-text-processing.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define regex patterns</span></span>
 <span id="cb75-2"><a href="chinese-text-processing.html#cb75-2" aria-hidden="true" tabindex="-1"></a>pattern_bei <span class="ot">&lt;-</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">b被/p</span><span class="sc">\\</span><span class="st">s([^/]+/[^</span><span class="sc">\\</span><span class="st">s]+</span><span class="sc">\\</span><span class="st">s)*?[^/]+/v&quot;</span></span>
@@ -1356,7 +1390,9 @@ Also, if the metadata of the source documents are available, these unique indice
 </div>
 <div class="danger">
 <p>
-Please check <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">Chapter 5 Parts of Speech Tagging</a> on evaluating the quality of the data retrieved by a regular expression (i.e., <em>precision</em> and <em>recall</em>).
+Please check <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">Chapter 5 Parts of
+Speech Tagging</a> on evaluating the quality of the data retrieved by a
+regular expression (i.e., <em>precision</em> and <em>recall</em>).
 </p>
 </div>
 <div class="exercise">
@@ -1413,7 +1449,7 @@ Please check <a href="parts-of-speech-tagging.html#parts-of-speech-tagging">Chap
 Please (a) extract all construction tokens with these space particles and (b) at the same time identify their respective SP and LM, as shown below.
 </div>
 <div class="info">
-<p>If you are interested in a more in-depth analysis of these Chinese space particles, please refer to <span class="citation"><a href="#ref-suchen2019" role="doc-biblioref">Su &amp; Chen</a> (<a href="#ref-suchen2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>If you are interested in a more in-depth analysis of these Chinese space particles, please refer to <span class="citation">Su &amp; Chen (<a href="#ref-suchen2019" role="doc-biblioref">2019</a>)</span>.</p>
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -1703,7 +1739,7 @@ $text4
 <span id="cb96-15"><a href="chinese-text-processing.html#cb96-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="ot">-&gt;</span> apple_ngram</span>
 <span id="cb96-16"><a href="chinese-text-processing.html#cb96-16" aria-hidden="true" tabindex="-1"></a>) <span class="do">## end system.time</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
- 29.283   0.518  27.258 </code></pre>
+ 29.493   0.663  27.693 </code></pre>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb98-1"><a href="chinese-text-processing.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="do">## remove unwanted ngrams</span></span>
 <span id="cb98-2"><a href="chinese-text-processing.html#cb98-2" aria-hidden="true" tabindex="-1"></a>apple_ngram2 <span class="ot">&lt;-</span> apple_ngram <span class="sc">%&gt;%</span></span>
 <span id="cb98-3"><a href="chinese-text-processing.html#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">nzchar</span>(ngram)) <span class="sc">%&gt;%</span> <span class="do">## empty strings</span></span>
@@ -1762,7 +1798,7 @@ $text4
 </div>
 <div id="frequency-and-dispersion-1" class="section level3" number="7.10.2">
 <h3><span class="header-section-number">7.10.2</span> Frequency and Dispersion</h3>
-<p>As we have discussed in Chapter <a href="corpus-analysis-a-start.html#corpus-analysis-a-start">4</a>, a multiword unit can be defined based on at least two important distributional properties (See <span class="citation"><a href="#ref-biber2004" role="doc-biblioref">Biber et al.</a> (<a href="#ref-biber2004" role="doc-biblioref">2004</a>)</span>):</p>
+<p>As we have discussed in Chapter <a href="corpus-analysis-a-start.html#corpus-analysis-a-start">4</a>, a multiword unit can be defined based on at least two important distributional properties (See <span class="citation">Biber et al. (<a href="#ref-biber2004" role="doc-biblioref">2004</a>)</span>):</p>
 <ul>
 <li>The <strong>frequency</strong> of the whole multiword unit (i.e., <strong>frequency</strong>)</li>
 <li>The number of texts where the multiword unit is observed (i.e., <strong>dispersion</strong>)</li>
@@ -1776,7 +1812,7 @@ $text4
 <span id="cb99-5"><a href="chinese-text-processing.html#cb99-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dispersion <span class="sc">&gt;=</span> <span class="dv">5</span>)</span>
 <span id="cb99-6"><a href="chinese-text-processing.html#cb99-6" aria-hidden="true" tabindex="-1"></a>) <span class="co">#end system.time</span></span></code></pre></div>
 <pre class="Rout"><code>   user  system elapsed 
- 63.153   0.568  66.421 </code></pre>
+ 62.004   0.626  63.378 </code></pre>
 <p>Please take a look at the four-grams, arranged by frequency and dispersion respectively:</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb101-1"><a href="chinese-text-processing.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># arrange by dispersion</span></span>
 <span id="cb101-2"><a href="chinese-text-processing.html#cb101-2" aria-hidden="true" tabindex="-1"></a>apple_ngram_dist <span class="sc">%&gt;%</span></span>
@@ -1826,19 +1862,21 @@ $text4
 <div id="recaps" class="section level2" number="7.11">
 <h2><span class="header-section-number">7.11</span> Recaps</h2>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-81"></span>
-<div id="htmlwidget-50a49cf0a2acca10c9d7" style="width:672px;height:768px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-50a49cf0a2acca10c9d7">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.8, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na_text [label = \"DF (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\na_text2line [label = \"unnest_tokens(...,\ntoken=str_split())\", shape=document, fillcolor= \"#96F597\"] \na_line [label = \"DF (line-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\na_text -> a_text2line -> a_line\n\na2 [label = \"unnest_tokens(...,\ntoken=segment())\", shape=document, fillcolor= \"#96F597\"] \ne [label = \"DF (word-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\ny [label = \"Word Freqeuncy \nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->a2->e->y\n\nb1 [label = \"unnest_tokens(...,\ntoken=tokenizer_ngrams())\", shape=document, fillcolor= \"#96F597\"] \nc [label = \"DF (ngram-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nz [label = \"Multiword Exprecssion\nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->b1->c->z\n\na3[label = \"mutate(...tag_text())\", shape=document, fillcolor= \"#96F597\"]\nf [label = \"DF (line-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nf1[label = \"unnest_tokens(...,\ntoken = str_extract_all())\", shape=document, fillcolor= \"#96F597\"]\ng [label = \"DF (pattern-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nx [label = \"Construction \nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->a3->f->f1->g->x\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fafccd43ecf15c015815" style="width:672px;height:768px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fafccd43ecf15c015815">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.8, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na_text [label = \"DF (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\na_text2line [label = \"unnest_tokens(...,\ntoken=str_split())\", shape=document, fillcolor= \"#96F597\"] \na_line [label = \"DF (line-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\na_text -> a_text2line -> a_line\n\na2 [label = \"unnest_tokens(...,\ntoken=segment())\", shape=document, fillcolor= \"#96F597\"] \ne [label = \"DF (word-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\ny [label = \"Word Freqeuncy \nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->a2->e->y\n\nb1 [label = \"unnest_tokens(...,\ntoken=tokenizer_ngrams())\", shape=document, fillcolor= \"#96F597\"] \nc [label = \"DF (ngram-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nz [label = \"Multiword Exprecssion\nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->b1->c->z\n\na3[label = \"mutate(...tag_text())\", shape=document, fillcolor= \"#96F597\"]\nf [label = \"DF (line-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nf1[label = \"unnest_tokens(...,\ntoken = str_extract_all())\", shape=document, fillcolor= \"#96F597\"]\ng [label = \"DF (pattern-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nx [label = \"Construction \nAnalysis\", shape=cylinder, fillcolor=\"#F3F595\"]\n\na_line->a3->f->f1->g->x\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 7.3: Chinese Word Segmentation and POS Tagging
 </p>
 </div>
-<p>Tokenizations are complex in Chinese text processing. Many factors may need to be taken into account when determining the right tokenization method. In particular, several important questions may be relevant to Chinese text tokenization:</p>
+<p><strong>Tokenization</strong> is an important step in Chinese text processing. We may need to take into account many factors when determining the right tokenization method, including:</p>
 <ol style="list-style-type: decimal">
-<li>Do you need the <strong>parts-of-speech</strong> tags of words in your research?</li>
-<li>What is the <strong>base unit</strong> you would like to work with? Texts? Paragraphs? Chunks? Sentences? N-grams? Words?</li>
-<li>Do you need non-word tokens such as symbols, punctuation, digits, or alphabets in your analysis?</li>
+<li>What is the <strong>base unit</strong> we would like to work with? Texts? Paragraphs? Chunks? Sentences? N-grams? Words?</li>
+<li>Do we need an enriched version of the raw texts, e.g., the <strong>parts-of-speech</strong> tags of words in the later analysis?</li>
+<li>Do we need to include <strong>non-word</strong> tokens such as symbols, punctuation marks, digits, or alphabets in the analysis?</li>
+<li>Do we need to remove <strong>semantically irrelevant/unimportant</strong> words, i.e., stopwords?</li>
+<li>Do we have many <strong>domain-specific</strong> words in our corpus (e.g., terminology, proper names)?</li>
 </ol>
-<p>Your answers to the above questions should help you determine the most effective structure of the tokenization methods for your data.</p>
+<p>The answers to the above questions would give us more clues on how to determine the most effective tokenization methods for the data.</p>
 </div>
 <div id="more-exercises" class="section level2" number="7.12">
 <h2><span class="header-section-number">7.12</span> More Exercises</h2>
@@ -1876,8 +1914,8 @@ Figure 7.3: Chinese Word Segmentation and POS Tagging
 <ul>
 <li>Wordclound</li>
 </ul>
-<div id="htmlwidget-b0caed8305172f6b7eed" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b0caed8305172f6b7eed">{"x":{"word":["警察","住戶","使用","拜登","兒童","小區","業者","陳時中","高粱","上網","司機","社區","內容","公寓","用戶","重症","大陸","小朋友","錄音","俄羅斯","南韓","女子","審查","伯恩斯","指揮中心","烏克蘭","發財","官方","少女","案例","漲價","進香團","限速","駕駛","不想","中心","事情","人才","健身房","公布","合約","員工","小組","抗議","死亡","症狀","網友","繼續","開放","下載","人數","人民","價格","共有","加密","參加","口罩","孩子","專案","居民","影響","拖吊","支持","旅行社","核武","楊先生","演說","照護","物資","現場","看不到","總統","能夠","致死率","解封","貨幣","辦法","陽性","雙方","世界","了解","人員","人士","住院","個人","分享","列車","動作","北市","取消","合計","城市","強制","成本","房子","接種","提供","攻擊","新增","旅客","東西","歷史","流感","流行","流量","消費者","理由","環島","用量","男子","發展","確定","萬分之","租戶","管制","經濟","處理","行業","衛生局","討論","詢問","警力","議員","跟進","造成","過程","門號","阻止","高鐵","下跪","下降","不到","二哥","人類","仔細閱讀","兄弟","兩劑","分局","分析","原因","原本","可愛","喝酒","單位","嚴重者","回來","增加","委員會","害怕","小弟","小時","已有","常理","年輕人","建設","強調","患者","手機","拉薩","指引","接觸","損失","擋車","改口","數據","旅行團","智慧","朝鮮","李立群","板本","機會","決定","法官","相撞","看板","研究","萬能","私刑","紀元","綜合","縣市","聯合","腦子","被刪","規定","記得","警民","質疑","透過","通知","速度","部署","飯店","三針","上車","不服","不讓","中央","主張","代表","保護","偵辦","傳播","傳輸","光頭","全球","全面","出門","到案","加入","升溫","友人","合理","告訴","單日","團體","地區","壓制","外國","大學","大秦鐵路","太空","女人","學校","實在","實際","專責","居家","市府","廣告","引起","後遺症","性交","情形","房間","打人","推動","支援","散播","方案","方法","方艙","旅館","日記","時代","智障","月租費","柯文哲","歸仁","死亡率","民間","法院","注意","活動","浦東新區","減少","灌溉","火車","父母","理事長","申訴","疑慮","病人","盜竊","確認","社交","空氣","空軍","符合","精神","糧食","絕望","維持","罪嫌","義肢","老人","考慮","聯合報","行動","設備","訴求","評估","認識","調查","警車","變成","資料","起駕","足夠","路線","跳車","車庫","農民","進來","遇到","道路","違憲","酒醉","防空","降低","降級","降速","集中","集團","電話","顏色","願意","顯示","風景","高端"],"freq":[26,25,24,22,20,20,20,20,18,14,14,14,13,13,13,13,12,12,12,11,11,11,11,10,10,10,10,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":2.07692307692308,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5b3bd81da5d88a6ce9d9" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5b3bd81da5d88a6ce9d9">{"x":{"word":["警察","住戶","使用","拜登","兒童","小區","業者","陳時中","高粱","上網","司機","社區","內容","公寓","用戶","重症","大陸","小朋友","錄音","俄羅斯","南韓","女子","審查","伯恩斯","指揮中心","烏克蘭","發財","官方","少女","案例","漲價","進香團","限速","駕駛","不想","中心","事情","人才","健身房","公布","合約","員工","小組","抗議","死亡","症狀","網友","繼續","開放","下載","人數","人民","價格","共有","加密","參加","口罩","孩子","專案","居民","影響","拖吊","支持","旅行社","核武","楊先生","演說","照護","物資","現場","看不到","總統","能夠","致死率","解封","貨幣","辦法","陽性","雙方","世界","了解","人員","人士","住院","個人","分享","列車","動作","北市","取消","合計","城市","強制","成本","房子","接種","提供","攻擊","新增","旅客","東西","歷史","流感","流行","流量","消費者","理由","環島","用量","男子","發展","確定","萬分之","租戶","管制","經濟","處理","行業","衛生局","討論","詢問","警力","議員","跟進","造成","過程","門號","阻止","高鐵","下跪","下降","不到","二哥","人類","仔細閱讀","兄弟","兩劑","分局","分析","原因","原本","可愛","喝酒","單位","嚴重者","回來","增加","委員會","害怕","小弟","小時","已有","常理","年輕人","建設","強調","患者","手機","拉薩","指引","接觸","損失","擋車","改口","數據","旅行團","智慧","朝鮮","李立群","板本","機會","決定","法官","相撞","看板","研究","萬能","私刑","紀元","綜合","縣市","聯合","腦子","被刪","規定","記得","警民","質疑","透過","通知","速度","部署","飯店","三針","上車","不服","不讓","中央","主張","代表","保護","偵辦","傳播","傳輸","光頭","全球","全面","出門","到案","加入","升溫","友人","合理","告訴","單日","團體","地區","壓制","外國","大學","大秦鐵路","太空","女人","學校","實在","實際","專責","居家","市府","廣告","引起","後遺症","性交","情形","房間","打人","推動","支援","散播","方案","方法","方艙","旅館","日記","時代","智障","月租費","柯文哲","歸仁","死亡率","民間","法院","注意","活動","浦東新區","減少","灌溉","火車","父母","理事長","申訴","疑慮","病人","盜竊","確認","社交","空氣","空軍","符合","精神","糧食","絕望","維持","罪嫌","義肢","老人","考慮","聯合報","行動","設備","訴求","評估","認識","調查","警車","變成","資料","起駕","足夠","路線","跳車","車庫","農民","進來","遇到","道路","違憲","酒醉","防空","降低","降級","降速","集中","集團","電話","顏色","願意","顯示","風景","高端"],"freq":[26,25,24,22,20,20,20,20,18,14,14,14,13,13,13,13,12,12,12,11,11,11,11,10,10,10,10,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":2.07692307692308,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 7.13  </strong></span>If you look at your word frequency list, it is very likely that you will see puzzling tokens. And you may wonder why these tokens have high frequency counts and whether these high frequency numbers are due to the <strong>wrong</strong> word segmentation. For example, in my results, I have a token <code>陳</code> on the top of the frequency list. How can we check the concordance lines of one specific token so that we can decide whether to include new words in the user dictionary before word segmentation?</p>
 </div>

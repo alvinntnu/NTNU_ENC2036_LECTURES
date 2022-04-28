@@ -330,3 +330,6 @@ data-preprocessing-cleaning
 quanteda-based-exploration
 recaps
 exr:unnamed-chunk-69
+exr:unnamed-chunk-40
+exr:unnamed-chunk-41
+running-collostructional-analysis
