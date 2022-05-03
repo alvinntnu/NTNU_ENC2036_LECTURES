@@ -338,3 +338,10 @@ exr:unnamed-chunk-43
 exr:unnamed-chunk-44
 exr:unnamed-chunk-45
 processing-corpus-headers
+exr:unnamed-chunk-11
+exr:unnamed-chunk-18
+processing-one-xml-file
+apply-the-function
+exr:unnamed-chunk-30
+exr:unnamed-chunk-46
+apply-function
