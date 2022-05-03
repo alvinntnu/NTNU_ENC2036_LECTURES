@@ -39,6 +39,24 @@
   border: 1px solid var(--green);
 }
 
+.myquotes {
+  padding: 1em 1em 0.25em 3.5em;
+  margin-bottom: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: hsla(0, 0%, 100%, .1);
+  background-position: 0.5em 0.5em;
+  background-size: 2.5em;
+  background-repeat: no-repeat;
+  border-radius: 0.5em;
+}
+
+.myquotes {
+  background-image: url("images/alerts/quote-left-solid.svg");
+  background-color: #FFF8DC; /*hsla(209, 42%, 47%, .2);*/
+  border: 0px solid var(--yellow);
+}
+
 .info {
   background-image: url("images/alerts/info-circle-solid.svg");
   background-color: #B5FFFB; /*hsla(209, 42%, 47%, .2);*/
@@ -102,3 +120,4 @@
 pre code {
   white-space: pre-wrap;
 }
+

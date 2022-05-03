@@ -345,3 +345,10 @@ apply-the-function
 exr:unnamed-chunk-30
 exr:unnamed-chunk-46
 apply-function
+fig:unnamed-chunk-11
+intuition-for-dfm
+exr:unnamed-chunk-64
+exr:unnamed-chunk-62
+exr:unnamed-chunk-63
+cluster-analysis
+vector-space-model-for-words-self-study
