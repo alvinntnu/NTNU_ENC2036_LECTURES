@@ -102,6 +102,15 @@
   /*color: red !important;*/
 }
 
+
+book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code {
+  background-color: inherit;
+}
+
+book.color-theme-1 .book-body .page-wrapper .page-inner section.normal pre, .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal code {
+  background-color: inherit;
+}
+
 .Rout {
   /*background-color: #d9edf7 !important;*/
   color: white !important;
@@ -111,6 +120,10 @@
   /*font-weight: bolder;*/
   /*color: blue !important;*/
 }
+
+
+
+
 
 .csl-entry {
         padding-left: 1.5em;
