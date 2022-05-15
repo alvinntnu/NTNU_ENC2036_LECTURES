@@ -92,10 +92,10 @@ fig:distance
 fig:dfmdemo
 exr:unnamed-chunk-483
 exr:unnamed-chunk-489
-exr:unnamed-chunk-516
-exr:unnamed-chunk-520
-exr:unnamed-chunk-524
-exr:unnamed-chunk-528
+exr:unnamed-chunk-518
+exr:unnamed-chunk-522
+exr:unnamed-chunk-526
+exr:unnamed-chunk-530
 what-is-corpus-linguistics
 why-do-we-need-corpus-data
 what-is-corpus

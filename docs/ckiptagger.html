@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-05-15" />
+<meta name="date" content="2022-05-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -491,7 +491,7 @@ Author: Google Inc.
 Author-email: packages@tensorflow.org
 License: Apache 2.0
 Location: /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
-Requires: libclang, absl-py, keras, grpcio, h5py, gast, tf-estimator-nightly, protobuf, tensorflow-io-gcs-filesystem, opt-einsum, tensorboard, astunparse, typing-extensions, flatbuffers, setuptools, numpy, six, termcolor, keras-preprocessing, wrapt, google-pasta
+Requires: libclang, google-pasta, tf-estimator-nightly, typing-extensions, six, keras, keras-preprocessing, tensorflow-io-gcs-filesystem, wrapt, astunparse, flatbuffers, numpy, opt-einsum, grpcio, termcolor, tensorboard, setuptools, gast, absl-py, protobuf, h5py
 Required-by: </code></pre>
 <div class="info">
 <p>Please consult the github of the <a href="https://github.com/ckiplab/ckiptagger"><code>ckiptagger</code></a> for more details on installation.</p>
@@ -711,8 +711,8 @@ Required-by: </code></pre>
 <div id="beyond-word-boundaries" class="section level2" number="9.8">
 <h2><span class="header-section-number">9.8</span> Beyond Word Boundaries</h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-d97fcb5dc81d91710b1b" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d97fcb5dc81d91710b1b">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle,\n      color = darkslategray,fontcolor = darkslategray]     \n      edge [color = grey]\n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      tab2 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f410c455b73ed0bd04e3" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f410c455b73ed0bd04e3">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle,\n      color = darkslategray,fontcolor = darkslategray]     \n      edge [color = grey]\n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      tab2 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="load-the-models" class="section level3 unnumbered">
 <h3>Load the models</h3>
 <p>To perform these additional tasks, we need to load the necessary models (pre-trained and provided by the CKIP group) first as well.</p>
@@ -720,10 +720,10 @@ Required-by: </code></pre>
 <div class="sourceCode" id="cb302"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb302-1"><a href="ckiptagger.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading pretrained CKIP models</span></span>
 <span id="cb302-2"><a href="ckiptagger.html#cb302-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## POS Tagging Model</span></span>
 <span id="cb302-3"><a href="ckiptagger.html#cb302-3" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
-<span id="cb302-4"><a href="ckiptagger.html#cb302-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.792</span>   <span class="fl">2.819</span>   <span class="fl">7.722</span> </span>
+<span id="cb302-4"><a href="ckiptagger.html#cb302-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.647</span>   <span class="fl">2.705</span>   <span class="fl">6.718</span> </span>
 <span id="cb302-5"><a href="ckiptagger.html#cb302-5" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## Named Entity Recognition Model</span></span>
 <span id="cb302-6"><a href="ckiptagger.html#cb302-6" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
-<span id="cb302-7"><a href="ckiptagger.html#cb302-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.559</span>   <span class="fl">2.192</span>   <span class="fl">5.833</span> </span></code></pre></div>
+<span id="cb302-7"><a href="ckiptagger.html#cb302-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.830</span>   <span class="fl">2.433</span>   <span class="fl">6.671</span> </span></code></pre></div>
 </div>
 <div id="pos-tagging-and-ner" class="section level3 unnumbered">
 <h3>POS tagging and NER</h3>
@@ -779,10 +779,10 @@ Required-by: </code></pre>
 <span id="cb305-2"><a href="ckiptagger.html#cb305-2" aria-hidden="true" tabindex="-1"></a>entities <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
 <span id="cb305-3"><a href="ckiptagger.html#cb305-3" aria-hidden="true" tabindex="-1"></a>entities</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
-{(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
+{(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;)}
 
 [[2]]
-{(56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;)}
+{(11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;)}
 
 [[3]]
 {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -791,10 +791,10 @@ Required-by: </code></pre>
 set()
 
 [[5]]
-{(4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;), (14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;)}
+{(14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;), (4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;)}
 
 [[6]]
-{(12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (14, 15, &#39;CARDINAL&#39;, &#39;3&#39;)}</code></pre>
+{(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
 <!-- ## Tidy Up the Results -->
 <!-- We can tidy up results provided by `ckiptagger` and create a word-based tidy structure of our data: -->
 <!-- ```{r eval = T} -->
