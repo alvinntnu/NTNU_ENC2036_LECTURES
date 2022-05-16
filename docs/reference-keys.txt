@@ -92,10 +92,11 @@ fig:distance
 fig:dfmdemo
 exr:unnamed-chunk-483
 exr:unnamed-chunk-489
-exr:unnamed-chunk-518
-exr:unnamed-chunk-522
-exr:unnamed-chunk-526
-exr:unnamed-chunk-530
+exr:unlabeled-div-17
+exr:unnamed-chunk-519
+exr:unnamed-chunk-523
+exr:unnamed-chunk-527
+exr:unnamed-chunk-531
 what-is-corpus-linguistics
 why-do-we-need-corpus-data
 what-is-corpus
@@ -247,7 +248,6 @@ multidimensiona-space
 feature-selection
 exploratory-analysis-of-dfm
 document-similarity
-tf-idf-weighting-scheme
 cluster-analysis
 vector-space-model-for-words-self-study
 feature-coocurrence-matrix-fcm

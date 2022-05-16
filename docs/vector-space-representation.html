@@ -495,8 +495,8 @@ div.csl-indent {
 <p>Different ways of operationalizing the <strong>features</strong> and the <strong>cell values</strong> may lead to different types of <code>dfm</code>. In this section, I would like to show you how to create <code>dfm</code> of a corpus and what are the common ways to define <strong>features</strong> and <strong>cell valus</strong> for the analysis of document semantics via vector space representation.</p>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:engnlp2"></span>
-<div id="htmlwidget-62f31f8280cbadc1e2e0" style="width:100%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-62f31f8280cbadc1e2e0">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()\", shape=document, fillcolor= \"#96F597\"]\ne2 [label = \"quanteda::dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\ne3 [label = \"quanteda::dfm_wright()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e [color=orangered, penwidth=3]\ne->e1 [color=orangered, penwidth=3]\ne->e2 [color=orangered, penwidth=3]\ne->e3 [color=orangered, penwidth=3]\ne1->f [color=orangered, penwidth=3]\ne2->f [color=orangered, penwidth=3]\ne3->f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4625772708b3109c5599" style="width:100%;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4625772708b3109c5599">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()\", shape=document, fillcolor= \"#96F597\"]\ne2 [label = \"quanteda::dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\ne3 [label = \"quanteda::dfm_wright()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e [color=orangered, penwidth=3]\ne->e1 [color=orangered, penwidth=3]\ne->e2 [color=orangered, penwidth=3]\ne->e3 [color=orangered, penwidth=3]\ne1->f [color=orangered, penwidth=3]\ne2->f [color=orangered, penwidth=3]\ne3->f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 12.1: English Text Analytics Flowchart (v2)
 </p>
@@ -1038,6 +1038,11 @@ Figure 12.4: Example of Document-Feature Matrix
 <div class="info">
 <p>Before computing the document similarity/distance, we usually convert the frequency counts in <code>dfm</code> into more sophisticated metrics using normalization or weighting schemes.</p>
 <p>There are two common schemes:</p>
+<ul>
+<li>Normalized Term Frequencies</li>
+<li>TF-IDF Weighting Scheme</li>
+</ul>
+<hr />
 <div id="normalized-term-frequencies" class="section level4 unnumbered">
 <h4>Normalized Term Frequencies</h4>
 <p><img src="images/DFM-normalizedTF.gif" width="80%" /></p>
@@ -1071,9 +1076,10 @@ docs              fellow-citizens      senate       house representatives
                  features
 docs                    among
   1789-Washington 0.002427184</code></pre>
+<hr />
 </div>
-<div id="tf-idf-weighting-scheme" class="section level4" number="12.2.9.1">
-<h4><span class="header-section-number">12.2.9.1</span> TF-IDF Weighting SCheme</h4>
+<div id="tf-idf-weighting-scheme" class="section level4 unnumbered">
+<h4>TF-IDF Weighting SCheme</h4>
 <p><img src="images/DFM-TFIDF.gif" width="80%" /></p>
 <ul>
 <li>A more sophisticated weighting scheme is TF-IDF scheme. We can weight the significance of term frequencies based on the term’s IDF.</li>
@@ -1082,9 +1088,10 @@ docs                    among
 <div id="inverse-document-frequencies" class="section level4 unnumbered alert">
 <h4>Inverse Document Frequencies</h4>
 <ul>
-<li>For each contextual feature, we can also assess their distinctive power in terms of their dispersion across the entire corpus.</li>
-<li>In addition to document frequency counts, there is a more effective metric, <strong>I</strong>nverse <strong>D</strong>ocument <strong>F</strong>requency(IDF) (often used in Information Retrieval), to capture the distinctiveness of the features.</li>
-<li>The IDF of a term (<span class="math inline">\(w_i\)</span>) in a corpus (<span class="math inline">\(D\)</span>) is the log-transformed ratio of the corpus size (<span class="math inline">\(|D|\)</span>) to the term’s document frequency (<span class="math inline">\(df_i\)</span>).</li>
+<li>For each contextual feature, we can also assess their distinctive power in terms of their <strong>dispersion</strong> across the entire corpus.</li>
+<li>In addition to <strong>document frequency</strong> counts, there is a more effective metric, <strong>I</strong>nverse <strong>D</strong>ocument <strong>F</strong>requency(IDF) (often used in Information Retrieval), to capture the distinctiveness of the features.</li>
+<li>The IDF of a term (<span class="math inline">\(w_i\)</span>) in a corpus (<span class="math inline">\(D\)</span>) is defined as the log-transformed ratio of the corpus size (<span class="math inline">\(|D|\)</span>) to the term’s document frequency (<span class="math inline">\(df_i\)</span>).</li>
+<li>The more widely dispersed the contextual feature is, the higher its IDF.</li>
 </ul>
 <p><span class="math display">\[
 IDF(w_i, D) = log_{10}{\frac{|D|}{df_i}}
@@ -1191,6 +1198,7 @@ docs              fellow-citizens    senate    house representatives     among
 </div>
 <div class="try">
 <p>As we have discussed in the previous sections, different distance/similarity metrics may give very different results. As an analyst, we can go back to the original documents and evaluate these quantitative results in a qualitative way.</p>
+<p>For example, let’s manually check the document that is the most similar to <code>1789-Washington</code> according to <strong>Euclidean Distance</strong> and <strong>Cosine Similarity</strong>:</p>
 <div class="sourceCode" id="cb469"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb469-1"><a href="vector-space-representation.html#cb469-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Closest document based on euclidean</span></span>
 <span id="cb469-2"><a href="vector-space-representation.html#cb469-2" aria-hidden="true" tabindex="-1"></a><span class="fu">which.min</span>(corp_us_euclidean[<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>])</span></code></pre></div>
 <pre class="Rout"><code>1793-Washington 
@@ -1286,7 +1294,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <h2><span class="header-section-number">12.3</span> Vector Space Model for Words (Self-Study)</h2>
 <p>So far, we have been talking about applying the vector space model to study the document semantics.</p>
 <p>Now let’s take a look at how this distributional semantic approach can facilitate a lexical semantic analysis.</p>
-<p>With a corpus, we can also study the distribution, or contextual features, of words based on their <strong>co-occurring</strong> (contextual) words. Now I would like to introduce another object defined in <code>quanteda</code>, i.e., the <strong>F</strong>eature-<strong>C</strong>ooccurrence <strong>M</strong>atrix <code>fcm</code>.</p>
+<p>With a corpus, we can also study the distribution, or contextual features, of <strong>(target) words</strong> based on their <strong>co-occurring</strong> (contextual) words. Now I would like to introduce another object defined in <code>quanteda</code>, i.e., the <strong>F</strong>eature-<strong>C</strong>ooccurrence <strong>M</strong>atrix <code>fcm</code>.</p>
 <div id="feature-coocurrence-matrix-fcm" class="section level3" number="12.3.1">
 <h3><span class="header-section-number">12.3.1</span> Feature-Coocurrence Matrix (<code>fcm</code>)</h3>
 <p>A <strong>Feature-Cooccurrence Matrix</strong> is essentially a word co-occurrence matrix. There are two ways to create a <code>fcm</code>:</p>
@@ -1298,7 +1306,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <div id="from-tokens-to-fcm" class="section level3" number="12.3.2">
 <h3><span class="header-section-number">12.3.2</span> From <code>tokens</code> to <code>fcm</code></h3>
 <p>We can create a word co-occurrence matrix <code>fcm</code> from the <code>tokens</code> object.</p>
-<p>We can further operationalize our contextual features for words in two ways:</p>
+<p>We can further operationalize our contextual features for target words in two ways:</p>
 <ul>
 <li><strong>Window</strong>-based: Only words co-occurring <strong>within a defined window size</strong> of the target word will be included as its <strong>contextual features</strong></li>
 <li><strong>Document</strong>-based: All words co-occurring <strong>in the same document</strong> as the target word will be included as its contextual features.</li>
@@ -1462,12 +1470,9 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 </div>
 <div id="lexical-similarity" class="section level3" number="12.3.4">
 <h3><span class="header-section-number">12.3.4</span> Lexical Similarity</h3>
-<p><code>fcm</code> is an interesting structure because, similar to <code>dfm</code>, we can now examine the pairwise relationships between words .</p>
-<p>The feature co-occurrence matrix provides the distributional information of words in a corpus. Based on this information, we can further analyze which words tend to co-occur with similar sets of contextual words. This allows us to examine the semantic distances in-between words. In particular, with this feature co-occurrence matrix,</p>
-<ul>
-<li>We can create the <strong>semantic network</strong> of the top features</li>
-<li>We can create the dendrogram of the top features</li>
-</ul>
+<p><code>fcm</code> is an interesting structure because, similar to <code>dfm</code>, we can now examine the pairwise relationships in-between all <strong>target words</strong>.</p>
+<p>In particular, based on this FCM, we can further analyze which target words tend to co-occur with similar sets of contextual words.</p>
+<p>And based on these quantitative pairwise similarities in-between target words, we can visualize their lexical relations with a network or a cluster dendrogram.</p>
 <div class="sourceCode" id="cb501"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb501-1"><a href="vector-space-representation.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create window size 5 FCM</span></span>
 <span id="cb501-2"><a href="vector-space-representation.html#cb501-2" aria-hidden="true" tabindex="-1"></a>corp_fcm_win_5 <span class="ot">&lt;-</span> <span class="fu">fcm</span>(corp_us_tokens,</span>
 <span id="cb501-3"><a href="vector-space-representation.html#cb501-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">context =</span> <span class="st">&quot;window&quot;</span>,</span>
@@ -1478,10 +1483,12 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <span id="cb501-8"><a href="vector-space-representation.html#cb501-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fcm_remove</span>(</span>
 <span id="cb501-9"><a href="vector-space-representation.html#cb501-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">stopwords</span>(),</span>
 <span id="cb501-10"><a href="vector-space-representation.html#cb501-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">case_insensitive =</span> T</span>
-<span id="cb501-11"><a href="vector-space-representation.html#cb501-11" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb501-12"><a href="vector-space-representation.html#cb501-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb501-13"><a href="vector-space-representation.html#cb501-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Find top features</span></span>
-<span id="cb501-14"><a href="vector-space-representation.html#cb501-14" aria-hidden="true" tabindex="-1"></a>(corp_fcm_win_5_top50 <span class="ot">&lt;-</span> <span class="fu">topfeatures</span>(corp_fcm_win_5_select, <span class="dv">50</span>))</span></code></pre></div>
+<span id="cb501-11"><a href="vector-space-representation.html#cb501-11" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<ul>
+<li>We first identify a list of top 50/100 contextual feature words</li>
+</ul>
+<div class="sourceCode" id="cb502"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb502-1"><a href="vector-space-representation.html#cb502-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find top features</span></span>
+<span id="cb502-2"><a href="vector-space-representation.html#cb502-2" aria-hidden="true" tabindex="-1"></a>(corp_fcm_win_5_top50 <span class="ot">&lt;-</span> <span class="fu">topfeatures</span>(corp_fcm_win_5_select, <span class="dv">50</span>))</span></code></pre></div>
 <pre class="Rout"><code>          us         upon        peace         must      freedom    Americans 
          582          568          425          412          403          330 
        today         work        great         make       States         best 
@@ -1500,7 +1507,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
          183          183          183          181          180          178 
          man        trade 
          178          176 </code></pre>
-<div class="sourceCode" id="cb503"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb503-1"><a href="vector-space-representation.html#cb503-1" aria-hidden="true" tabindex="-1"></a>(corp_fcm_win_5_top100 <span class="ot">&lt;-</span><span class="fu">topfeatures</span>(corp_fcm_win_5_select, <span class="dv">100</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb504"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb504-1"><a href="vector-space-representation.html#cb504-1" aria-hidden="true" tabindex="-1"></a>(corp_fcm_win_5_top100 <span class="ot">&lt;-</span><span class="fu">topfeatures</span>(corp_fcm_win_5_select, <span class="dv">100</span>))</span></code></pre></div>
 <pre class="Rout"><code>            us           upon          peace           must        freedom 
            582            568            425            412            403 
      Americans          today           work          great           make 
@@ -1541,53 +1548,108 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
            133            133            133            132            132 
          women           land     protection        forward       national 
            132            131            131            131            129 </code></pre>
-<div class="sourceCode" id="cb505"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb505-1"><a href="vector-space-representation.html#cb505-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Subset fcm for plot</span></span>
-<span id="cb505-2"><a href="vector-space-representation.html#cb505-2" aria-hidden="true" tabindex="-1"></a>fcm4network <span class="ot">&lt;-</span> <span class="fu">fcm_select</span>(corp_fcm_win_5_select,</span>
-<span id="cb505-3"><a href="vector-space-representation.html#cb505-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">pattern =</span> <span class="fu">names</span>(corp_fcm_win_5_top50))</span>
-<span id="cb505-4"><a href="vector-space-representation.html#cb505-4" aria-hidden="true" tabindex="-1"></a><span class="do">## plot semantic network of top features</span></span>
-<span id="cb505-5"><a href="vector-space-representation.html#cb505-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(scales)</span>
-<span id="cb505-6"><a href="vector-space-representation.html#cb505-6" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_network</span>(</span>
-<span id="cb505-7"><a href="vector-space-representation.html#cb505-7" aria-hidden="true" tabindex="-1"></a>  fcm4network,</span>
-<span id="cb505-8"><a href="vector-space-representation.html#cb505-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_freq =</span> <span class="dv">5</span>, </span>
-<span id="cb505-9"><a href="vector-space-representation.html#cb505-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelcolor =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>),</span>
-<span id="cb505-10"><a href="vector-space-representation.html#cb505-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4network <span class="sc">+</span></span>
-<span id="cb505-11"><a href="vector-space-representation.html#cb505-11" aria-hidden="true" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
-<span id="cb505-12"><a href="vector-space-representation.html#cb505-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-514-1.png" width="672" /></p>
-<div class="sourceCode" id="cb506"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb506-1"><a href="vector-space-representation.html#cb506-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot the dendrogram</span></span>
-<span id="cb506-2"><a href="vector-space-representation.html#cb506-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb506-3"><a href="vector-space-representation.html#cb506-3" aria-hidden="true" tabindex="-1"></a><span class="do">## compute cosine similarity</span></span>
-<span id="cb506-4"><a href="vector-space-representation.html#cb506-4" aria-hidden="true" tabindex="-1"></a>fcm4newtork <span class="ot">&lt;-</span> corp_fcm_win_5_select <span class="sc">%&gt;%</span></span>
-<span id="cb506-5"><a href="vector-space-representation.html#cb506-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fcm_keep</span>(<span class="at">pattern =</span> <span class="fu">names</span>(corp_fcm_win_5_top100))</span>
-<span id="cb506-6"><a href="vector-space-representation.html#cb506-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb506-7"><a href="vector-space-representation.html#cb506-7" aria-hidden="true" tabindex="-1"></a><span class="do">## network</span></span>
-<span id="cb506-8"><a href="vector-space-representation.html#cb506-8" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_network</span>(</span>
-<span id="cb506-9"><a href="vector-space-representation.html#cb506-9" aria-hidden="true" tabindex="-1"></a>  fcm4newtork,</span>
-<span id="cb506-10"><a href="vector-space-representation.html#cb506-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_freq =</span> <span class="dv">5</span>, </span>
-<span id="cb506-11"><a href="vector-space-representation.html#cb506-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelcolor =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>),</span>
-<span id="cb506-12"><a href="vector-space-representation.html#cb506-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4newtork <span class="sc">+</span></span>
-<span id="cb506-13"><a href="vector-space-representation.html#cb506-13" aria-hidden="true" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
-<span id="cb506-14"><a href="vector-space-representation.html#cb506-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-515-1.png" width="100%" /></p>
-<div class="sourceCode" id="cb507"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb507-1"><a href="vector-space-representation.html#cb507-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Remove words with no co-occurrence data</span></span>
-<span id="cb507-2"><a href="vector-space-representation.html#cb507-2" aria-hidden="true" tabindex="-1"></a>fcm4cluster <span class="ot">&lt;-</span> corp_fcm_win_5_select[<span class="fu">names</span>(corp_fcm_win_5_top100),]</span>
-<span id="cb507-3"><a href="vector-space-representation.html#cb507-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb507-4"><a href="vector-space-representation.html#cb507-4" aria-hidden="true" tabindex="-1"></a><span class="do">## cosine</span></span>
-<span id="cb507-5"><a href="vector-space-representation.html#cb507-5" aria-hidden="true" tabindex="-1"></a>fcm4cluster_cosine <span class="ot">&lt;-</span> <span class="fu">textstat_simil</span>(fcm4cluster, <span class="at">method =</span> <span class="st">&quot;cosine&quot;</span>)</span>
-<span id="cb507-6"><a href="vector-space-representation.html#cb507-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb507-7"><a href="vector-space-representation.html#cb507-7" aria-hidden="true" tabindex="-1"></a><span class="do">## create hclust</span></span>
-<span id="cb507-8"><a href="vector-space-representation.html#cb507-8" aria-hidden="true" tabindex="-1"></a>fcm_hclust<span class="ot">&lt;-</span> <span class="fu">hclust</span>(<span class="fu">as.dist</span>((<span class="dv">1</span> <span class="sc">-</span> fcm4cluster_cosine)))</span>
-<span id="cb507-9"><a href="vector-space-representation.html#cb507-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb507-10"><a href="vector-space-representation.html#cb507-10" aria-hidden="true" tabindex="-1"></a><span class="do">## plot dendrogram v1</span></span>
-<span id="cb507-11"><a href="vector-space-representation.html#cb507-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.dendrogram</span>(fcm_hclust, <span class="at">hang =</span> <span class="fl">0.3</span>),</span>
-<span id="cb507-12"><a href="vector-space-representation.html#cb507-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">horiz =</span> T,</span>
-<span id="cb507-13"><a href="vector-space-representation.html#cb507-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-516-1.png" width="576" /></p>
-<div class="sourceCode" id="cb508"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb508-1"><a href="vector-space-representation.html#cb508-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot dendrogram v2</span></span>
-<span id="cb508-2"><a href="vector-space-representation.html#cb508-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdendrogram</span>(fcm_hclust,</span>
-<span id="cb508-3"><a href="vector-space-representation.html#cb508-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">rotate =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb508-4"><a href="vector-space-representation.html#cb508-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<ul>
+<li>We subset the FCM where the target and contextual words are on the top 50 important contextual features.</li>
+<li>We then create a network of these top 50 important features.</li>
+</ul>
+<div class="sourceCode" id="cb506"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb506-1"><a href="vector-space-representation.html#cb506-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Subset fcm for plot</span></span>
+<span id="cb506-2"><a href="vector-space-representation.html#cb506-2" aria-hidden="true" tabindex="-1"></a>fcm4network <span class="ot">&lt;-</span> <span class="fu">fcm_select</span>(corp_fcm_win_5_select,</span>
+<span id="cb506-3"><a href="vector-space-representation.html#cb506-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">pattern =</span> <span class="fu">names</span>(corp_fcm_win_5_top50), </span>
+<span id="cb506-4"><a href="vector-space-representation.html#cb506-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">selection =</span> <span class="st">&quot;keep&quot;</span>,</span>
+<span id="cb506-5"><a href="vector-space-representation.html#cb506-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">valuetype =</span> <span class="st">&quot;fixed&quot;</span>)</span>
+<span id="cb506-6"><a href="vector-space-representation.html#cb506-6" aria-hidden="true" tabindex="-1"></a>fcm4network</span></code></pre></div>
+<pre class="Rout"><code>Feature co-occurrence matrix of: 86 by 86 features.
+        features
+features Among people States Great nation free shall great world union
+  Among      0      0      0     0      0    0     0     0     0     0
+  people     0      8     30     0     10   17     8    22    14     0
+  States     0      0     10     2      3    5     3     5     1     5
+  Great      0      0      0     0      0    0     0     1     2     0
+  nation     0      0      0     0      2    4     2    19     5     1
+  free       0      0      0     0      0   32     8     6    10     1
+  shall      0      0      0     0      0    0    12     3     4     0
+  great      0      0      0     0      0    0     0    14     6     1
+  world      0      0      0     0      0    0     0     0    14     0
+  union      0      0      0     0      0    0     0     0     0     4
+[ reached max_feat ... 76 more features, reached max_nfeat ... 76 more features ]</code></pre>
+<div class="sourceCode" id="cb508"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb508-1"><a href="vector-space-representation.html#cb508-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot semantic network of top features</span></span>
+<span id="cb508-2"><a href="vector-space-representation.html#cb508-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(scales)</span>
+<span id="cb508-3"><a href="vector-space-representation.html#cb508-3" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_network</span>(</span>
+<span id="cb508-4"><a href="vector-space-representation.html#cb508-4" aria-hidden="true" tabindex="-1"></a>  fcm4network,</span>
+<span id="cb508-5"><a href="vector-space-representation.html#cb508-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_freq =</span> <span class="dv">5</span>, </span>
+<span id="cb508-6"><a href="vector-space-representation.html#cb508-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelcolor =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>),</span>
+<span id="cb508-7"><a href="vector-space-representation.html#cb508-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4network <span class="sc">+</span></span>
+<span id="cb508-8"><a href="vector-space-representation.html#cb508-8" aria-hidden="true" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
+<span id="cb508-9"><a href="vector-space-representation.html#cb508-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-515-1.png" width="672" /></p>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-17" class="exercise"><strong>Exercise 12.3  </strong></span>In the above example, our original goal was to subset the FCM by including only the target words (rows) and contextual features (columns) that are on the list of the top 50 contextual features (<code>names(corp_fcm_win_5_top50)</code>). In other words, the subset FCM should have been a 50 by 50 matrix? But it’s not. Why?</p>
+</div>
+<ul>
+<li>In addition to a network, we can also create a dendrogram showing the semantic relations in-between a set of contextual features. (For example, the following shows a cluster analysis of the top 100 contextual features.)</li>
+</ul>
+<div class="sourceCode" id="cb509"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb509-1"><a href="vector-space-representation.html#cb509-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot the dendrogram</span></span>
+<span id="cb509-2"><a href="vector-space-representation.html#cb509-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb509-3"><a href="vector-space-representation.html#cb509-3" aria-hidden="true" tabindex="-1"></a><span class="do">## compute cosine similarity</span></span>
+<span id="cb509-4"><a href="vector-space-representation.html#cb509-4" aria-hidden="true" tabindex="-1"></a>fcm4network <span class="ot">&lt;-</span> corp_fcm_win_5_select <span class="sc">%&gt;%</span></span>
+<span id="cb509-5"><a href="vector-space-representation.html#cb509-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fcm_keep</span>(<span class="at">pattern =</span> <span class="fu">names</span>(corp_fcm_win_5_top100))</span>
+<span id="cb509-6"><a href="vector-space-representation.html#cb509-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb509-7"><a href="vector-space-representation.html#cb509-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Check dimensions</span></span>
+<span id="cb509-8"><a href="vector-space-representation.html#cb509-8" aria-hidden="true" tabindex="-1"></a>fcm4network</span></code></pre></div>
+<pre class="Rout"><code>Feature co-occurrence matrix of: 163 by 163 features.
+            features
+features     Among may people States Government Great nation government new
+  Among          0   0      0      0          0     0      0          0   0
+  may            0   4      9      3          8     0      0          5   4
+  people         0   0      8     30          6     0     10         20   2
+  States         0   0      0     10         13     2      3          6   7
+  Government     0   0      0      0          4     0      2          1   6
+  Great          0   0      0      0          0     0      0          1   0
+  nation         0   0      0      0          0     0      2          3   3
+  government     0   0      0      0          0     0      0         10   9
+  new            0   0      0      0          0     0      0          0  36
+  free           0   0      0      0          0     0      0          0   0
+            features
+features     free
+  Among         0
+  may           2
+  people       17
+  States        5
+  Government    1
+  Great         0
+  nation        4
+  government   14
+  new           4
+  free         32
+[ reached max_feat ... 153 more features, reached max_nfeat ... 153 more features ]</code></pre>
+<div class="sourceCode" id="cb511"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb511-1"><a href="vector-space-representation.html#cb511-1" aria-hidden="true" tabindex="-1"></a><span class="do">## network</span></span>
+<span id="cb511-2"><a href="vector-space-representation.html#cb511-2" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_network</span>(</span>
+<span id="cb511-3"><a href="vector-space-representation.html#cb511-3" aria-hidden="true" tabindex="-1"></a>  fcm4network,</span>
+<span id="cb511-4"><a href="vector-space-representation.html#cb511-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_freq =</span> <span class="dv">5</span>, </span>
+<span id="cb511-5"><a href="vector-space-representation.html#cb511-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelcolor =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>),</span>
+<span id="cb511-6"><a href="vector-space-representation.html#cb511-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4network <span class="sc">+</span></span>
+<span id="cb511-7"><a href="vector-space-representation.html#cb511-7" aria-hidden="true" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
+<span id="cb511-8"><a href="vector-space-representation.html#cb511-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-516-1.png" width="100%" /></p>
+<div class="sourceCode" id="cb512"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb512-1"><a href="vector-space-representation.html#cb512-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Remove words with no co-occurrence data</span></span>
+<span id="cb512-2"><a href="vector-space-representation.html#cb512-2" aria-hidden="true" tabindex="-1"></a>fcm4cluster <span class="ot">&lt;-</span> corp_fcm_win_5_select[<span class="fu">names</span>(corp_fcm_win_5_top100),]</span>
+<span id="cb512-3"><a href="vector-space-representation.html#cb512-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb512-4"><a href="vector-space-representation.html#cb512-4" aria-hidden="true" tabindex="-1"></a><span class="do">## cosine</span></span>
+<span id="cb512-5"><a href="vector-space-representation.html#cb512-5" aria-hidden="true" tabindex="-1"></a>fcm4cluster_cosine <span class="ot">&lt;-</span> <span class="fu">textstat_simil</span>(fcm4cluster, <span class="at">method =</span> <span class="st">&quot;cosine&quot;</span>)</span>
+<span id="cb512-6"><a href="vector-space-representation.html#cb512-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb512-7"><a href="vector-space-representation.html#cb512-7" aria-hidden="true" tabindex="-1"></a><span class="do">## create hclust</span></span>
+<span id="cb512-8"><a href="vector-space-representation.html#cb512-8" aria-hidden="true" tabindex="-1"></a>fcm_hclust<span class="ot">&lt;-</span> <span class="fu">hclust</span>(<span class="fu">as.dist</span>((<span class="dv">1</span> <span class="sc">-</span> fcm4cluster_cosine)))</span>
+<span id="cb512-9"><a href="vector-space-representation.html#cb512-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb512-10"><a href="vector-space-representation.html#cb512-10" aria-hidden="true" tabindex="-1"></a><span class="do">## plot dendrogram v1</span></span>
+<span id="cb512-11"><a href="vector-space-representation.html#cb512-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.dendrogram</span>(fcm_hclust, <span class="at">hang =</span> <span class="fl">0.3</span>),</span>
+<span id="cb512-12"><a href="vector-space-representation.html#cb512-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">horiz =</span> T,</span>
+<span id="cb512-13"><a href="vector-space-representation.html#cb512-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code></pre></div>
 <p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-517-1.png" width="576" /></p>
+<div class="sourceCode" id="cb513"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb513-1"><a href="vector-space-representation.html#cb513-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot dendrogram v2</span></span>
+<span id="cb513-2"><a href="vector-space-representation.html#cb513-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdendrogram</span>(fcm_hclust,</span>
+<span id="cb513-3"><a href="vector-space-representation.html#cb513-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">rotate =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb513-4"><a href="vector-space-representation.html#cb513-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-518-1.png" width="576" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
 <hr />
 </div>
@@ -1596,7 +1658,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <h2><span class="header-section-number">12.4</span> Exercises</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-518" class="exercise"><strong>Exercise 12.3  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
+<p><span id="exr:unnamed-chunk-519" class="exercise"><strong>Exercise 12.4  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>dfm</code>, where the contextual features are the trigrams in the documents.</li>
@@ -1622,10 +1684,10 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <ul>
 <li>Example of the dendrogram based on the trigram-based <code>dfm</code>:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-521-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-522-1.png" width="100%" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-522" class="exercise"><strong>Exercise 12.4  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-523" class="exercise"><strong>Exercise 12.5  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>tokens</code> object of <code>corpus</code> by removing punctuations, symbols, and numbers first.</li>
 <li>Please create a window-based <code>fcm</code> of the corpus from the <code>tokens</code> object by including words within the window size of 5 as the contextual words</li>
@@ -1645,10 +1707,10 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 9833 columns.</p></li>
 <li><p>Example of the dendrogram of the top 50 features in <code>fcm</code>:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-525-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-526-1.png" width="100%" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-526" class="exercise"><strong>Exercise 12.5  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in bigram uses.</p>
+<p><span id="exr:unnamed-chunk-527" class="exercise"><strong>Exercise 12.6  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in bigram uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
@@ -1676,11 +1738,11 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <ul>
 <li>Example of the dendrogram:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-529-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-530-1.png" width="100%" /></p>
 <hr />
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-530" class="exercise"><strong>Exercise 12.6  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-531" class="exercise"><strong>Exercise 12.7  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
 <li>During the word-tokenization, please remove symbols by setting <code>worker(..., symbols=T)</code></li>
@@ -1701,7 +1763,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 4901 columns.</p></li>
 <li><p>Example of the dendrogram:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-533-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-534-1.png" width="100%" /></p>
 <hr />
 
 </div>

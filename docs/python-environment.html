@@ -471,7 +471,7 @@ div.csl-indent {
 <div id="create-conda-environment" class="section level2 unnumbered">
 <h2>Create Conda Environment</h2>
 <p>Create a new conda environment with python 3.6+ to be used in R/Rstudio.</p>
-<div class="sourceCode" id="cb510"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb510-1"><a href="python-environment.html#cb510-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda create <span class="sc">--</span>name XXX python<span class="ot">=</span><span class="fl">3.7</span></span></code></pre></div>
+<div class="sourceCode" id="cb515"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb515-1"><a href="python-environment.html#cb515-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda create <span class="sc">--</span>name XXX python<span class="ot">=</span><span class="fl">3.7</span></span></code></pre></div>
 <p>You need to specify the conda environment name XXX on your own.</p>
 </div>
 <div id="install-python-modules" class="section level2 unnumbered">
@@ -480,17 +480,17 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li>Activate the conda environment named <code>XXX</code> in your terminal;</li>
 </ol>
-<div class="sourceCode" id="cb511"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb511-1"><a href="python-environment.html#cb511-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
-<span id="cb511-2"><a href="python-environment.html#cb511-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> source activate XXX</span>
-<span id="cb511-3"><a href="python-environment.html#cb511-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
-<span id="cb511-4"><a href="python-environment.html#cb511-4" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda activate XXX</span></code></pre></div>
+<div class="sourceCode" id="cb516"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb516-1"><a href="python-environment.html#cb516-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
+<span id="cb516-2"><a href="python-environment.html#cb516-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> source activate XXX</span>
+<span id="cb516-3"><a href="python-environment.html#cb516-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
+<span id="cb516-4"><a href="python-environment.html#cb516-4" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda activate XXX</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Install the module in the activated conda environment <code>XXX</code> in terminal.</li>
 </ol>
 <p>In this course, we will need <code>spacy</code> and also the language models of English and Chinese. Please refer to spacy’s documentations of <a href="https://spacy.io/usage/models">models</a> for more details.</p>
-<div class="sourceCode" id="cb512"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb512-1"><a href="python-environment.html#cb512-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda install spacy</span>
-<span id="cb512-2"><a href="python-environment.html#cb512-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download en_core_web_sm</span>
-<span id="cb512-3"><a href="python-environment.html#cb512-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download zh_core_web_sm</span></code></pre></div>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb517-1"><a href="python-environment.html#cb517-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda install spacy</span>
+<span id="cb517-2"><a href="python-environment.html#cb517-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download en_core_web_sm</span>
+<span id="cb517-3"><a href="python-environment.html#cb517-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download zh_core_web_sm</span></code></pre></div>
 <div class="info">
 <p>To deactivate the conda environment: <code>$ conda deactivate XXX</code></p>
 </div>
