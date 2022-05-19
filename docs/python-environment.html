@@ -501,6 +501,20 @@ div.csl-indent {
 <div class="info">
 <p>To deactivate the conda environment: <code>$ conda deactivate XXX</code></p>
 </div>
+<div class="try">
+<p>This is for my reference.</p>
+<p>If you run into error messages when you try to use a specific conda environment with <code>use_condaenv()</code>, it is probably due to the issue of <code>reticulate</code> failing to find the right <code>conda</code> path.</p>
+<p>To fix this, there are two solutions:</p>
+<ul>
+<li>For temporary setting:</li>
+</ul>
+<div class="sourceCode" id="cb521"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb521-1"><a href="python-environment.html#cb521-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">reticulate.conda_binary=</span><span class="st">&quot;~/opt/anaconda3/bin/conda&quot;</span>)</span></code></pre></div>
+<ul>
+<li>For permanent setting, include the following line in the <code>.Renviron</code> of your root directory <code>~/</code>:</li>
+</ul>
+<div class="sourceCode" id="cb522"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb522-1"><a href="python-environment.html#cb522-1" aria-hidden="true" tabindex="-1"></a><span class="va">RETICULATE_CONDA</span><span class="op">=</span>~/opt/anaconda3/bin/conda</span></code></pre></div>
+<p>Also, in RStudio, we can specify the default conda environment to be used in R. For each project, we can also specify a project-specific conda. This can be useful because we don’t have to <code>use_condaenv()</code> in the project then.</p>
+</div>
 
 </div>
 </div>
