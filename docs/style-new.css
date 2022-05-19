@@ -63,6 +63,12 @@
   border: 1px solid var(--blue);
 }
 
+.infobox {
+  background-image: url("images/alerts/highlighter-solid.svg");
+  background-color: #00FFAB; /*hsla(209, 42%, 47%, .2);*/
+  border: 1px solid var(--blue);
+}
+
 .try {
   background-image: url("images/alerts/hands-wash-solid.svg");
   /*background-color: hsla(248, 28%, 48%, .1);*/
@@ -94,6 +100,9 @@
 
 
 
+div.sourceCode {
+    background-color: inherit;
+}
 
 .Rchunk{
   background-color: #e9f9ff !important;

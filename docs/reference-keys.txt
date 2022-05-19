@@ -260,3 +260,10 @@ references
 exr:unnamed-chunk-16
 exr:unnamed-chunk-24
 exr:unnamed-chunk-27
+fig:unnamed-chunk-15
+exr:unnamed-chunk-31
+exr:unnamed-chunk-37
+exr:unnamed-chunk-67
+exr:unnamed-chunk-71
+exr:unnamed-chunk-75
+exr:unnamed-chunk-79
