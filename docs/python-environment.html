@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-05-19" />
+<meta name="date" content="2022-05-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -478,7 +478,7 @@ div.csl-indent {
 <div id="create-conda-environment" class="section level2 unnumbered">
 <h2>Create Conda Environment</h2>
 <p>Create a new conda environment with python 3.6+ to be used in R/Rstudio.</p>
-<div class="sourceCode" id="cb518"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb518-1"><a href="python-environment.html#cb518-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda create <span class="sc">--</span>name XXX python<span class="ot">=</span><span class="fl">3.7</span></span></code></pre></div>
+<div class="sourceCode" id="cb522"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb522-1"><a href="python-environment.html#cb522-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda create <span class="sc">--</span>name XXX python<span class="ot">=</span><span class="fl">3.7</span></span></code></pre></div>
 <p>You need to specify the conda environment name XXX on your own.</p>
 </div>
 <div id="install-python-modules" class="section level2 unnumbered">
@@ -487,17 +487,17 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li>Activate the conda environment named <code>XXX</code> in your terminal;</li>
 </ol>
-<div class="sourceCode" id="cb519"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb519-1"><a href="python-environment.html#cb519-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
-<span id="cb519-2"><a href="python-environment.html#cb519-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> source activate XXX</span>
-<span id="cb519-3"><a href="python-environment.html#cb519-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
-<span id="cb519-4"><a href="python-environment.html#cb519-4" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda activate XXX</span></code></pre></div>
+<div class="sourceCode" id="cb523"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb523-1"><a href="python-environment.html#cb523-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Mac</span></span>
+<span id="cb523-2"><a href="python-environment.html#cb523-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> source activate XXX</span>
+<span id="cb523-3"><a href="python-environment.html#cb523-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Window</span></span>
+<span id="cb523-4"><a href="python-environment.html#cb523-4" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda activate XXX</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Install the module in the activated conda environment <code>XXX</code> in terminal.</li>
 </ol>
 <p>In this course, we will need <code>spacy</code> and also the language models of English and Chinese. Please refer to spacy’s documentations of <a href="https://spacy.io/usage/models">models</a> for more details.</p>
-<div class="sourceCode" id="cb520"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb520-1"><a href="python-environment.html#cb520-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda install spacy</span>
-<span id="cb520-2"><a href="python-environment.html#cb520-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download en_core_web_sm</span>
-<span id="cb520-3"><a href="python-environment.html#cb520-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download zh_core_web_sm</span></code></pre></div>
+<div class="sourceCode" id="cb524"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb524-1"><a href="python-environment.html#cb524-1" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> conda install spacy</span>
+<span id="cb524-2"><a href="python-environment.html#cb524-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download en_core_web_sm</span>
+<span id="cb524-3"><a href="python-environment.html#cb524-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span> python <span class="sc">-</span>m spacy download zh_core_web_sm</span></code></pre></div>
 <div class="info">
 <p>To deactivate the conda environment: <code>$ conda deactivate XXX</code></p>
 </div>
@@ -508,11 +508,11 @@ div.csl-indent {
 <ul>
 <li>For temporary setting:</li>
 </ul>
-<div class="sourceCode" id="cb521"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb521-1"><a href="python-environment.html#cb521-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">reticulate.conda_binary=</span><span class="st">&quot;~/opt/anaconda3/bin/conda&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb525-1"><a href="python-environment.html#cb525-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">reticulate.conda_binary=</span><span class="st">&quot;~/opt/anaconda3/bin/conda&quot;</span>)</span></code></pre></div>
 <ul>
 <li>For permanent setting, include the following line in the <code>.Renviron</code> of your root directory <code>~/</code>:</li>
 </ul>
-<div class="sourceCode" id="cb522"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb522-1"><a href="python-environment.html#cb522-1" aria-hidden="true" tabindex="-1"></a><span class="va">RETICULATE_CONDA</span><span class="op">=</span>~/opt/anaconda3/bin/conda</span></code></pre></div>
+<div class="sourceCode" id="cb526"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb526-1"><a href="python-environment.html#cb526-1" aria-hidden="true" tabindex="-1"></a><span class="va">RETICULATE_CONDA</span><span class="op">=</span>~/opt/anaconda3/bin/conda</span></code></pre></div>
 <p>Also, in RStudio, we can specify the default conda environment to be used in R. For each project, we can also specify a project-specific conda. This can be useful because we don’t have to <code>use_condaenv()</code> in the project then.</p>
 </div>
 
