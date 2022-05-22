@@ -25,6 +25,8 @@
   background-size: 2.5em;
   background-repeat: no-repeat;
   border-radius: 0.5em;
+  box-shadow: 4px 4px 4px #888
+
 }
 
 .exercise:not(span) {
@@ -37,6 +39,8 @@
   background-repeat: no-repeat;
   border-radius: 0.5em;
   border: 1px solid var(--green);
+  box-shadow: 4px 4px 4px #888
+
 }
 
 .myquotes {
@@ -49,6 +53,8 @@
   background-size: 2.5em;
   background-repeat: no-repeat;
   border-radius: 0.5em;
+  box-shadow: 4px 4px 4px #888
+
 }
 
 .myquotes {
