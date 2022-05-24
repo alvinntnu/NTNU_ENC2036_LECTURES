@@ -95,8 +95,8 @@ exr:unnamed-chunk-492
 exr:unlabeled-div-17
 exr:unnamed-chunk-522
 exr:unnamed-chunk-526
-exr:unnamed-chunk-530
-exr:unnamed-chunk-534
+exr:unlabeled-div-18
+exr:unlabeled-div-19
 what-is-corpus-linguistics
 why-do-we-need-corpus-data
 what-is-corpus
