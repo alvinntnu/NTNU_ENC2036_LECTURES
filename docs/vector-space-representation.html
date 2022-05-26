@@ -24,7 +24,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-05-24" />
+<meta name="date" content="2022-05-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -399,7 +399,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.2.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#intuition-for-dfm"><i class="fa fa-check"></i><b>12.2.3</b> Intuition for DFM</a></li>
 <li class="chapter" data-level="12.2.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#more-sophisticated-dfm"><i class="fa fa-check"></i><b>12.2.4</b> More sophisticated DFM</a></li>
 <li class="chapter" data-level="12.2.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#distance-similarity-metrics"><i class="fa fa-check"></i><b>12.2.5</b> Distance/Similarity Metrics</a></li>
-<li class="chapter" data-level="12.2.6" data-path="vector-space-representation.html"><a href="vector-space-representation.html#multidimensiona-space"><i class="fa fa-check"></i><b>12.2.6</b> Multidimensiona Space</a></li>
+<li class="chapter" data-level="12.2.6" data-path="vector-space-representation.html"><a href="vector-space-representation.html#multidimensional-space"><i class="fa fa-check"></i><b>12.2.6</b> Multidimensional Space</a></li>
 <li class="chapter" data-level="12.2.7" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-selection"><i class="fa fa-check"></i><b>12.2.7</b> Feature Selection</a></li>
 <li class="chapter" data-level="12.2.8" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exploratory-analysis-of-dfm"><i class="fa fa-check"></i><b>12.2.8</b> Exploratory Analysis of <code>dfm</code></a></li>
 <li class="chapter" data-level="12.2.9" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.2.9</b> Document Similarity</a></li>
@@ -504,8 +504,8 @@ div.csl-indent {
 <p>Different ways of operationalizing the <strong>features</strong> and the <strong>cell values</strong> may lead to different types of <code>dfm</code>. In this section, I would like to show you how to create <code>dfm</code> of a corpus and what are the common ways to define <strong>features</strong> and <strong>cell values</strong> for the analysis of document semantics via vector space representation.</p>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:engnlp2"></span>
-<div id="htmlwidget-5780b71396d5c1625531" style="width:100%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5780b71396d5c1625531">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()\", shape=document, fillcolor= \"#96F597\"]\ne2 [label = \"quanteda::dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\ne3 [label = \"quanteda::dfm_wright()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e [color=orangered, penwidth=3]\ne->e1 [color=orangered, penwidth=3]\ne->e2 [color=orangered, penwidth=3]\ne->e3 [color=orangered, penwidth=3]\ne1->f [color=orangered, penwidth=3]\ne2->f [color=orangered, penwidth=3]\ne3->f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7ed9f372bbac058a5964" style="width:100%;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7ed9f372bbac058a5964">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb4 [label = \"quanteda::dfm()\", shape=document, fillcolor= \"#96F597\"]\n\ne [label = \"DFM object\", shape = folder, fillcolor= \"#B0E2FC\"]\ne1 [label = \"quanteda::dfm_select()\", shape=document, fillcolor= \"#96F597\"]\ne2 [label = \"quanteda::dfm_trim()\", shape=document, fillcolor= \"#96F597\"]\ne3 [label = \"quanteda::dfm_wright()\", shape=document, fillcolor= \"#96F597\"]\n\nf [label = \"Vector-based Analysis\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\ng0[label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\ng[label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\n\nb -> g0 -> g -> b4  [color=orangered, penwidth=3]\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1\n\nbb1-> d\nbb1 -> c\nbb1 -> cc\ng -> b2 -> b21\nb -> b3 -> b31\n\nb4 -> e [color=orangered, penwidth=3]\ne->e1 [color=orangered, penwidth=3]\ne->e2 [color=orangered, penwidth=3]\ne->e3 [color=orangered, penwidth=3]\ne1->f [color=orangered, penwidth=3]\ne2->f [color=orangered, penwidth=3]\ne3->f [color=orangered, penwidth=3]\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 12.1: English Text Analytics Flowchart (v2)
 </p>
@@ -775,8 +775,8 @@ and Embeddings</a>.
 </div>
 </div>
 </div>
-<div id="multidimensiona-space" class="section level3" number="12.2.6">
-<h3><span class="header-section-number">12.2.6</span> Multidimensiona Space</h3>
+<div id="multidimensional-space" class="section level3" number="12.2.6">
+<h3><span class="header-section-number">12.2.6</span> Multidimensional Space</h3>
 <p>Back to our example of <code>corp_us_dfm</code>, it is essentially the same vector representation, but in a multidimensional space (cf. Figure <a href="vector-space-representation.html#fig:dfmdemo">12.4</a>). The document in each row is represented as a vector of <em>N</em> dimensional space. The size of <em>N</em> depends on the number of <strong>contextual features</strong> that are included in the analysis of the <code>dfm</code>.</p>
 <hr />
 <div class="figure"><span style="display:block;" id="fig:dfmdemo"></span>
@@ -1749,18 +1749,17 @@ features    incident life event filled
 </div>
 <div id="exercises-1" class="section level2" number="12.4">
 <h2><span class="header-section-number">12.4</span> Exercises</h2>
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-522" class="exercise"><strong>Exercise 12.4  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
+<p><span id="exr:unlabeled-div-18" class="exercise"><strong>Exercise 12.4  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>dfm</code>, where the contextual features are the trigrams in the documents.</li>
-<li>Please trim the <code>dfm</code> according to the following distributional criteria:</li>
+<li>After you create the <code>dfm</code>, please trim the <code>dfm</code> according to the following distributional criteria:</li>
 </ol>
 <ul>
-<li>Include only trigrams consisting of <code>\\w</code> characters</li>
-<li>Include only trigrams whose frequencies are larger than 2.</li>
-<li>Include only trigrams whose document frequencies are larger than 2 (i.e., used in at least two different presidential addresses)</li>
+<li>Include only trigrams consisting of <code>\\w</code> characters ((using <code>dfm_select()</code>)</li>
+<li>Include only trigrams whose frequencies are <span class="math inline">\(\geq\)</span> 2 (using <code>dfm_trim()</code>)</li>
+<li>Include only trigrams whose document frequencies are <span class="math inline">\(\geq\)</span> 2 (i.e., used in at least two different presidential addresses)</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li>Please use the cosine-based distance for cluster analysis</li>
@@ -1777,10 +1776,10 @@ features    incident life event filled
 <ul>
 <li>Example of the dendrogram based on the trigram-based <code>dfm</code>:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-525-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-524-1.png" width="100%" /></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-526" class="exercise"><strong>Exercise 12.5  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-525" class="exercise"><strong>Exercise 12.5  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>tokens</code> object of <code>corpus</code> by removing punctuations, symbols, and numbers first.</li>
 <li>Please create a window-based <code>fcm</code> of the corpus from the <code>tokens</code> object by including words within the window size of 5 as the contextual words</li>
@@ -1800,9 +1799,9 @@ features    incident life event filled
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 9833 columns.</p></li>
 <li><p>Example of the dendrogram of the top 50 features in <code>fcm</code>:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-529-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-528-1.png" width="100%" /></p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-18" class="exercise"><strong>Exercise 12.6  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in <strong>ngram</strong> uses.</p>
+<p><span id="exr:unlabeled-div-19" class="exercise"><strong>Exercise 12.6  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in <strong>ngram</strong> uses.</p>
 <p>Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
@@ -1843,10 +1842,10 @@ features    incident life event filled
 <ul>
 <li>Example of the dendrogram:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-533-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-532-1.png" width="100%" /></p>
 <hr />
 <div class="exercise">
-<p><span id="exr:unlabeled-div-19" class="exercise"><strong>Exercise 12.7  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unlabeled-div-20" class="exercise"><strong>Exercise 12.7  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Load the corpus data and word-tokenize the texts using <code>jiebaR</code> to create a <code>tokens</code> object of the corpus</li>
 <li>Follow the principles discussed in the previous exercise about text normalization and word segmentation.</li>
@@ -1867,12 +1866,12 @@ features    incident life event filled
 <ul>
 <li>Network of the top 50 features (Try to play with the aesthetic specifications of the network so that the node sizes reflect the total frequency of each word in the FCM):</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-536-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-535-1.png" width="672" /></p>
 <ul>
 <li><p>The dimension of the input FCM for <code>textstats_simil()</code> should be: 100 rows and 4903 columns.</p></li>
 <li><p>Example of the dendrogram:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-537-1.png" width="100%" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-536-1.png" width="100%" /></p>
 <hr />
 
 </div>

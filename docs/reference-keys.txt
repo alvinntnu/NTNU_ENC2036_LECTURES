@@ -93,10 +93,10 @@ fig:dfmdemo
 exr:unnamed-chunk-486
 exr:unnamed-chunk-492
 exr:unlabeled-div-17
-exr:unnamed-chunk-522
-exr:unnamed-chunk-526
 exr:unlabeled-div-18
+exr:unnamed-chunk-525
 exr:unlabeled-div-19
+exr:unlabeled-div-20
 what-is-corpus-linguistics
 why-do-we-need-corpus-data
 what-is-corpus
@@ -244,7 +244,7 @@ document-feature-matrix-dfm
 intuition-for-dfm
 more-sophisticated-dfm
 distance-similarity-metrics
-multidimensiona-space
+multidimensional-space
 feature-selection
 exploratory-analysis-of-dfm
 document-similarity
