@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 CKIP Tagger | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 CKIP Tagger | Corpus Linguistics" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="ENC2036 Course material first edition" />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2022-05-27" />
+<meta name="date" content="2023-03-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="constructions-and-idioms.html"/>
 <link rel="next" href="structured-corpus.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,25 +51,24 @@
 
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
-<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
-<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
 <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
 <script src="libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="libs/wordcloud2-binding-0.2.2/wordcloud2.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.20/datatables.js"></script>
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.27/datatables.js"></script>
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 
@@ -114,7 +111,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -127,7 +124,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -416,7 +413,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="13" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>13</b> Python Environment</a>
 <ul>
-<li><a href="python-environment.html#install-the-python-with-anaconda">Install the python with <span>Anaconda</span></a></li>
+<li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-the-python-with-anaconda"><i class="fa fa-check"></i>Install the python with Anaconda</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#create-conda-environment"><i class="fa fa-check"></i>Create Conda Environment</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-python-modules"><i class="fa fa-check"></i>Install Python Modules</a></li>
 </ul></li>
@@ -443,17 +440,17 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <script src="https://hypothes.is/embed.js" async></script>
-<div id="ckiptagger" class="section level1" number="9">
-<h1><span class="header-section-number">Chapter 9</span> CKIP Tagger</h1>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb287-1"><a href="ckiptagger.html#cb287-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb287-2"><a href="ckiptagger.html#cb287-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
+<div id="ckiptagger" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> CKIP Tagger<a href="ckiptagger.html#ckiptagger" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb288-1"><a href="ckiptagger.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb288-2"><a href="ckiptagger.html#cb288-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
 <p>The current state-of-art Chinese segmenter for Taiwan Mandarin available is probably the <a href="https://github.com/ckiplab/ckiptagger">CKIP tagger</a>, created by <a href="https://ckip.iis.sinica.edu.tw/">Chinese Knowledge and Information Processing (CKIP)</a> group at Academia Sinica.</p>
 <p>The <code>ckiptagger</code> is released as a python module. In this chapter, I will demonstrate how to use the module for Chinese word segmentation but in an R environment, i.e., how to integrate Python modules in R coherently to perform complex tasks.</p>
 <div class="info">
 <p>Alternatively, we can run python codes directly in RStudio. In that case, we don’t need to worry about the Python-to-R interface issues. If you are familiar with Python, you are encouraged to take this option and run the <code>ckiptagger</code> word segmentation directly with Python.</p>
 </div>
-<div id="installation" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Installation</h2>
+<div id="installation" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Installation<a href="ckiptagger.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Because <code>ckiptagger</code> is built in python, we need to have python installed in our working environment. Please install the following applications on your own before you start:</p>
 <ul>
 <li><a href="https://www.anaconda.com/distribution/">Anaconda + Python 3.7+</a></li>
@@ -471,66 +468,46 @@ div.csl-indent {
 <div class="alert">
 <p>The codes for the environment setup need to be executed in the <strong>terminal</strong>.</p>
 </div>
-<div class="sourceCode" id="cb288"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb288-1"><a href="ckiptagger.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Codes in terminal</span></span>
-<span id="cb288-2"><a href="ckiptagger.html#cb288-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> corpling python=3.7</span>
-<span id="cb288-3"><a href="ckiptagger.html#cb288-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate corpling</span>
-<span id="cb288-4"><a href="ckiptagger.html#cb288-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> ckiptagger</span>
-<span id="cb288-5"><a href="ckiptagger.html#cb288-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span></code></pre></div>
-<p>Check the versions of the Python modules:</p>
 <div class="sourceCode" id="cb289"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb289-1"><a href="ckiptagger.html#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Codes in terminal</span></span>
-<span id="cb289-2"><a href="ckiptagger.html#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show ckiptagger</span>
-<span id="cb289-3"><a href="ckiptagger.html#cb289-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show tensorflow</span></code></pre></div>
-<pre class="Rout"><code>Name: ckiptagger
-Version: 0.2.1
-Summary: Neural implementation of CKIP WS, POS, NER tools
-Home-page: https://github.com/ckiplab/ckiptagger
-Author: Peng-Hsuan Li
-Author-email: jacobvsdanniel@gmail.com
-License: GPLv3
-Location: /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
-Requires: 
-Required-by: 
-Name: tensorflow
-Version: 2.8.0
-Summary: TensorFlow is an open source machine learning framework for everyone.
-Home-page: https://www.tensorflow.org/
-Author: Google Inc.
-Author-email: packages@tensorflow.org
-License: Apache 2.0
-Location: /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages
-Requires: gast, h5py, typing-extensions, absl-py, google-pasta, tensorflow-io-gcs-filesystem, termcolor, keras-preprocessing, protobuf, flatbuffers, setuptools, astunparse, libclang, tensorboard, grpcio, keras, opt-einsum, tf-estimator-nightly, six, wrapt, numpy
-Required-by: </code></pre>
+<span id="cb289-2"><a href="ckiptagger.html#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> corpling python=3.7</span>
+<span id="cb289-3"><a href="ckiptagger.html#cb289-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate corpling</span>
+<span id="cb289-4"><a href="ckiptagger.html#cb289-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> ckiptagger</span>
+<span id="cb289-5"><a href="ckiptagger.html#cb289-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span></code></pre></div>
+<p>Check the versions of the Python modules:</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb290-1"><a href="ckiptagger.html#cb290-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Codes in terminal</span></span>
+<span id="cb290-2"><a href="ckiptagger.html#cb290-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show ckiptagger</span>
+<span id="cb290-3"><a href="ckiptagger.html#cb290-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> show tensorflow</span></code></pre></div>
 <div class="info">
 <p>Please consult the github of the <a href="https://github.com/ckiplab/ckiptagger"><code>ckiptagger</code></a> for more details on installation.</p>
 </div>
 </div>
-<div id="download-the-model-files" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Download the Model Files</h2>
+<div id="download-the-model-files" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Download the Model Files<a href="ckiptagger.html#download-the-model-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>All NLP applications have their models behind their fancy performances. To use the tagger provided in <code>ckiptagger</code>, we need to download their pre-trained model files.</p>
 <p>Please go to the <a href="https://github.com/ckiplab/ckiptagger">github of CKIP tagger</a> to download the model files, which is provided as a zipped file. (The file is very big. It takes a while.)</p>
 <p>After you download the zipped file, unzip it under your working directory to the <code>data/</code> directory.</p>
 <p>In the unzipped directory, <code>data/</code>, are the required model files for the <code>ckiptagger</code>.</p>
 <p><img src="images/ckiptagger-data.png" width="70%" /></p>
 </div>
-<div id="r-python-communication" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> R-Python Communication</h2>
+<div id="r-python-communication" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> R-Python Communication<a href="ckiptagger.html#r-python-communication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In order to call Python functions in R/Rstudio, we need to install an R library in your R. The R-Python communication is made possible through the R library <code>reticulate</code>. Please make sure that you have this library installed in your R.</p>
 <div class="sourceCode" id="cb291"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb291-1"><a href="ckiptagger.html#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;reticulate&quot;</span>)</span></code></pre></div>
 </div>
-<div id="environment-checking" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Environment Checking</h2>
+<div id="environment-checking" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Environment Checking<a href="ckiptagger.html#environment-checking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before we proceed, please check if you have everything ready. The following includes the versions of the modules used for this session:</p>
 <ul>
 <li>Anaconda + Python 3.7+ (<code>Python 3.7.13</code>)</li>
 <li>A working conda environment (<code>corpling</code>)</li>
 <li>Python modules: <code>ckiptagger</code> (<code>ckiptagger 0.2.1</code> + <code>tensorflow 2.8.0</code>)</li>
-<li>R library: <code>reticulate</code>(<code>1.22</code>)</li>
+<li>R library: <code>reticulate</code>(<code>1.28</code>)</li>
 <li>CKIP model files under your working directory <code>./data</code></li>
 </ul>
 <p>If yes, then we are ready to go.</p>
 </div>
-<div id="initialization" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Initialization</h2>
+<div id="initialization" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Initialization<a href="ckiptagger.html#initialization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We first load the library <code>reticulate</code> and specify in R which Python we will be using in the current R session using <code>path_to_python()</code> (It is highly likely that there is more than one Python environment in your system). Please change the <code>path_to_python()</code> to the target Python kernel, i.e., the conda environment you would like to use in R.</p>
 <div class="sourceCode" id="cb292"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb292-1"><a href="ckiptagger.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
 <p>There are three important steps in initialization before you can perform word segmentation in R:</p>
@@ -541,25 +518,35 @@ Required-by: </code></pre>
 </ul>
 <div class="sourceCode" id="cb293"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb293-1"><a href="ckiptagger.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Activate a specific conda env in R</span></span>
 <span id="cb293-2"><a href="ckiptagger.html#cb293-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;corpling&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb294-1"><a href="ckiptagger.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import ckiptagger module</span></span>
-<span id="cb294-2"><a href="ckiptagger.html#cb294-2" aria-hidden="true" tabindex="-1"></a>ckip <span class="ot">&lt;-</span> reticulate<span class="sc">::</span><span class="fu">import</span>(<span class="at">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</span>
-<span id="cb294-3"><a href="ckiptagger.html#cb294-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb294-4"><a href="ckiptagger.html#cb294-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Initialize model for word segmentation</span></span>
-<span id="cb294-5"><a href="ckiptagger.html#cb294-5" aria-hidden="true" tabindex="-1"></a>ws <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">WS</span>(<span class="st">&quot;./data&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb294-1"><a href="ckiptagger.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Checking Python Conda Environment</span></span>
+<span id="cb294-2"><a href="ckiptagger.html#cb294-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>() <span class="do">## check ur python environment</span></span></code></pre></div>
+<pre class="Rout"><code>python:         /Users/alvinchen/opt/anaconda3/envs/corpling/bin/python
+libpython:      /Users/alvinchen/opt/anaconda3/envs/corpling/lib/libpython3.7m.dylib
+pythonhome:     /Users/alvinchen/opt/anaconda3/envs/corpling:/Users/alvinchen/opt/anaconda3/envs/corpling
+version:        3.7.13 (default, Mar 28 2022, 07:24:34)  [Clang 12.0.0 ]
+numpy:          /Users/alvinchen/opt/anaconda3/envs/corpling/lib/python3.7/site-packages/numpy
+numpy_version:  1.21.6
+
+NOTE: Python version was forced by use_python function</code></pre>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb296-1"><a href="ckiptagger.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import ckiptagger module</span></span>
+<span id="cb296-2"><a href="ckiptagger.html#cb296-2" aria-hidden="true" tabindex="-1"></a>ckip <span class="ot">&lt;-</span> reticulate<span class="sc">::</span><span class="fu">import</span>(<span class="at">module =</span> <span class="st">&quot;ckiptagger&quot;</span>)</span>
+<span id="cb296-3"><a href="ckiptagger.html#cb296-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb296-4"><a href="ckiptagger.html#cb296-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Initialize model for word segmentation</span></span>
+<span id="cb296-5"><a href="ckiptagger.html#cb296-5" aria-hidden="true" tabindex="-1"></a>ws <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">WS</span>(<span class="st">&quot;./data&quot;</span>)</span></code></pre></div>
 </div>
-<div id="segmenting-texts" class="section level2" number="9.6">
-<h2><span class="header-section-number">9.6</span> Segmenting Texts</h2>
+<div id="segmenting-texts" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Segmenting Texts<a href="ckiptagger.html#segmenting-texts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The initialized word segmenter object, <code>ws()</code>, can tokenize any input <strong>text-based vectors</strong> into a list of <strong>word-based vectors</strong> of the same size.</p>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb295-1"><a href="ckiptagger.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Raw text corpus </span></span>
-<span id="cb295-2"><a href="ckiptagger.html#cb295-2" aria-hidden="true" tabindex="-1"></a>texts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</span>
-<span id="cb295-3"><a href="ckiptagger.html#cb295-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</span>
-<span id="cb295-4"><a href="ckiptagger.html#cb295-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</span>
-<span id="cb295-5"><a href="ckiptagger.html#cb295-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</span>
-<span id="cb295-6"><a href="ckiptagger.html#cb295-6" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</span>
-<span id="cb295-7"><a href="ckiptagger.html#cb295-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</span>
-<span id="cb295-8"><a href="ckiptagger.html#cb295-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb295-9"><a href="ckiptagger.html#cb295-9" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts)</span>
-<span id="cb295-10"><a href="ckiptagger.html#cb295-10" aria-hidden="true" tabindex="-1"></a>words</span></code></pre></div>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb297-1"><a href="ckiptagger.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Raw text corpus </span></span>
+<span id="cb297-2"><a href="ckiptagger.html#cb297-2" aria-hidden="true" tabindex="-1"></a>texts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;傅達仁今將執行安樂死，卻突然爆出自己20年前遭緯來體育台封殺，他不懂自己哪裡得罪到電視台。&quot;</span>,</span>
+<span id="cb297-3"><a href="ckiptagger.html#cb297-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;美國參議院針對今天總統布什所提名的勞工部長趙小蘭展開認可聽證會，預料她將會很順利通過參議院支持，成為該國有史以來第一位的華裔女性內閣成員。&quot;</span>,</span>
+<span id="cb297-4"><a href="ckiptagger.html#cb297-4" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;土地公有政策?？還是土地婆有政策。.&quot;</span>,</span>
+<span id="cb297-5"><a href="ckiptagger.html#cb297-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;… 你確定嗎… 不要再騙了……他來亂的啦&quot;</span>,</span>
+<span id="cb297-6"><a href="ckiptagger.html#cb297-6" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;最多容納59,000個人,或5.9萬人,再多就不行了.這是環評的結論.&quot;</span>,</span>
+<span id="cb297-7"><a href="ckiptagger.html#cb297-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;科長說:1,坪數對人數為1:3。2,可以再增加。&quot;</span>)</span>
+<span id="cb297-8"><a href="ckiptagger.html#cb297-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb297-9"><a href="ckiptagger.html#cb297-9" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts)</span>
+<span id="cb297-10"><a href="ckiptagger.html#cb297-10" aria-hidden="true" tabindex="-1"></a>words</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;傅達仁&quot; &quot;今&quot;     &quot;將&quot;     &quot;執行&quot;   &quot;安樂死&quot; &quot;，&quot;     &quot;卻&quot;     &quot;突然&quot;  
  [9] &quot;爆出&quot;   &quot;自己&quot;   &quot;20&quot;     &quot;年&quot;     &quot;前&quot;     &quot;遭&quot;     &quot;緯來&quot;   &quot;體育台&quot;
@@ -593,32 +580,32 @@ Required-by: </code></pre>
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
 <p>The word segmenter <code>ws()</code> returns a <code>list</code> object, each element of which is a word-based vector of the original text.</p>
 </div>
-<div id="define-own-dictionary" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Define Own Dictionary</h2>
+<div id="define-own-dictionary" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Define Own Dictionary<a href="ckiptagger.html#define-own-dictionary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The performance of Chinese word segmenter depends highly on the dictionary. Texts in different disciplines may have very domain-specific vocabulary. To prioritize a set of words in a dictionary, we can further ensure the accuracy of the word segmentation. To create a dictionary for <code>ckiptagger</code>, we need to:</p>
 <ol style="list-style-type: decimal">
 <li>Create a <strong>named list</strong>, i.e., a <code>list</code> with each element’s <strong>name</strong> = “the new word” and element’s <strong>value</strong> = “the weight”.</li>
 <li>Use the python function <code>ckip$construct_dictionary()</code> to create the <code>dictionary</code> Python object</li>
 <li>Use the dictionary object as the argument for the parameter <code>recommend_dictionary = ...</code> in word segmenter, i.e., <code>ws(..., recommend_dictionary = ...)</code>.</li>
 </ol>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb297-1"><a href="ckiptagger.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Define new words in own dictionary</span></span>
-<span id="cb297-2"><a href="ckiptagger.html#cb297-2" aria-hidden="true" tabindex="-1"></a>  <span class="do">## To create a dictionary for `construct_dictionary()`</span></span>
-<span id="cb297-3"><a href="ckiptagger.html#cb297-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## We need a list, </span></span>
-<span id="cb297-4"><a href="ckiptagger.html#cb297-4" aria-hidden="true" tabindex="-1"></a>  <span class="do">## consisting of pairs of `names` = `weights` in the dictionary</span></span>
-<span id="cb297-5"><a href="ckiptagger.html#cb297-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb297-6"><a href="ckiptagger.html#cb297-6" aria-hidden="true" tabindex="-1"></a>new_words <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;土地公有&quot;</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
-<span id="cb297-7"><a href="ckiptagger.html#cb297-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地公&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
-<span id="cb297-8"><a href="ckiptagger.html#cb297-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地婆&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
-<span id="cb297-9"><a href="ckiptagger.html#cb297-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;來亂的&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
-<span id="cb297-10"><a href="ckiptagger.html#cb297-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;啦&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
-<span id="cb297-11"><a href="ckiptagger.html#cb297-11" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;緯來體育台&quot;</span><span class="ot">=</span><span class="dv">1</span>)</span>
-<span id="cb297-12"><a href="ckiptagger.html#cb297-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb297-13"><a href="ckiptagger.html#cb297-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Create Python `dictionary` object, required by `ckiptagger.wc()`</span></span>
-<span id="cb297-14"><a href="ckiptagger.html#cb297-14" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
-<span id="cb297-15"><a href="ckiptagger.html#cb297-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb297-16"><a href="ckiptagger.html#cb297-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Segment texts using dictionary</span></span>
-<span id="cb297-17"><a href="ckiptagger.html#cb297-17" aria-hidden="true" tabindex="-1"></a>words_1 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
-<span id="cb297-18"><a href="ckiptagger.html#cb297-18" aria-hidden="true" tabindex="-1"></a>words_1</span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb299-1"><a href="ckiptagger.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Define new words in own dictionary</span></span>
+<span id="cb299-2"><a href="ckiptagger.html#cb299-2" aria-hidden="true" tabindex="-1"></a>  <span class="do">## To create a dictionary for `construct_dictionary()`</span></span>
+<span id="cb299-3"><a href="ckiptagger.html#cb299-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## We need a list, </span></span>
+<span id="cb299-4"><a href="ckiptagger.html#cb299-4" aria-hidden="true" tabindex="-1"></a>  <span class="do">## consisting of pairs of `names` = `weights` in the dictionary</span></span>
+<span id="cb299-5"><a href="ckiptagger.html#cb299-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb299-6"><a href="ckiptagger.html#cb299-6" aria-hidden="true" tabindex="-1"></a>new_words <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;土地公有&quot;</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb299-7"><a href="ckiptagger.html#cb299-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地公&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb299-8"><a href="ckiptagger.html#cb299-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;土地婆&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb299-9"><a href="ckiptagger.html#cb299-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;來亂的&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb299-10"><a href="ckiptagger.html#cb299-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;啦&quot;</span><span class="ot">=</span><span class="dv">1</span>,</span>
+<span id="cb299-11"><a href="ckiptagger.html#cb299-11" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;緯來體育台&quot;</span><span class="ot">=</span><span class="dv">1</span>)</span>
+<span id="cb299-12"><a href="ckiptagger.html#cb299-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb299-13"><a href="ckiptagger.html#cb299-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Create Python `dictionary` object, required by `ckiptagger.wc()`</span></span>
+<span id="cb299-14"><a href="ckiptagger.html#cb299-14" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
+<span id="cb299-15"><a href="ckiptagger.html#cb299-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb299-16"><a href="ckiptagger.html#cb299-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Segment texts using dictionary</span></span>
+<span id="cb299-17"><a href="ckiptagger.html#cb299-17" aria-hidden="true" tabindex="-1"></a>words_1 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
+<span id="cb299-18"><a href="ckiptagger.html#cb299-18" aria-hidden="true" tabindex="-1"></a>words_1</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -651,16 +638,15 @@ Required-by: </code></pre>
 [[6]]
  [1] &quot;科長&quot; &quot;說&quot;   &quot;:1,&quot;  &quot;坪數&quot; &quot;對&quot;   &quot;人數&quot; &quot;為&quot;   &quot;1:3&quot;  &quot;。&quot;   &quot;2&quot;   
 [11] &quot;,&quot;    &quot;可以&quot; &quot;再&quot;   &quot;增加&quot; &quot;。&quot;  </code></pre>
-
 <div class="exercise">
-<span id="exr:unnamed-chunk-344" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)
+<p><span id="exr:unnamed-chunk-345" class="exercise"><strong>Exercise 9.1  </strong></span>We usually have a list of new words saved in a text file. Can you write a R function, which loads the words in the <code>demo_data/dict-sample.txt</code> into a named <code>list</code>, i.e., <code>new_words</code>, which can easily serve as the input for <code>ckip$construct_dictionary()</code> to create the python <code>dictionary</code> object? (Note: All weights are default to 1)</p>
 </div>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb299-1"><a href="ckiptagger.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load external file as dictionary</span></span>
-<span id="cb299-2"><a href="ckiptagger.html#cb299-2" aria-hidden="true" tabindex="-1"></a>new_words<span class="ot">&lt;-</span><span class="fu">loadDictionary</span>(<span class="at">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </span>
-<span id="cb299-3"><a href="ckiptagger.html#cb299-3" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
-<span id="cb299-4"><a href="ckiptagger.html#cb299-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Segment texts using dictionary</span></span>
-<span id="cb299-5"><a href="ckiptagger.html#cb299-5" aria-hidden="true" tabindex="-1"></a>words_2 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
-<span id="cb299-6"><a href="ckiptagger.html#cb299-6" aria-hidden="true" tabindex="-1"></a>words_2</span></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb301-1"><a href="ckiptagger.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load external file as dictionary</span></span>
+<span id="cb301-2"><a href="ckiptagger.html#cb301-2" aria-hidden="true" tabindex="-1"></a>new_words<span class="ot">&lt;-</span><span class="fu">loadDictionary</span>(<span class="at">input =</span> <span class="st">&quot;demo_data/dict-sample.txt&quot;</span>) </span>
+<span id="cb301-3"><a href="ckiptagger.html#cb301-3" aria-hidden="true" tabindex="-1"></a>dictionary<span class="ot">&lt;-</span>ckip<span class="sc">$</span><span class="fu">construct_dictionary</span>(new_words)</span>
+<span id="cb301-4"><a href="ckiptagger.html#cb301-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Segment texts using dictionary</span></span>
+<span id="cb301-5"><a href="ckiptagger.html#cb301-5" aria-hidden="true" tabindex="-1"></a>words_2 <span class="ot">&lt;-</span> <span class="fu">ws</span>(texts, <span class="at">recommend_dictionary =</span> dictionary)</span>
+<span id="cb301-6"><a href="ckiptagger.html#cb301-6" aria-hidden="true" tabindex="-1"></a>words_2</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;傅達仁&quot;     &quot;今&quot;         &quot;將&quot;         &quot;執行&quot;       &quot;安樂死&quot;    
  [6] &quot;，&quot;         &quot;卻&quot;         &quot;突然&quot;       &quot;爆出&quot;       &quot;自己&quot;      
@@ -697,7 +683,7 @@ Required-by: </code></pre>
 <p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 9.2  </strong></span>Use the <code>ckiptagger</code> word segmentation method to tokenize the text we discuss in Chapter 7 (as repeated below). Please use the tidytext to process the data, tokenize the data with <code>unnest_tokens()</code> and present the results as follows. Please include the following words in the user-defined dictionary: <code>被提名人</code>, <code>年終獎金</code>, <code>受訪</code>, <code>不分區</code>.</p>
 <p>Also, compare the results based on <code>jiebar</code> in Chapter 7 and <code>ckiptagger</code> and discuss their respective strengths and weaknesses.</p>
 </div>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb301-1"><a href="ckiptagger.html#cb301-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">&quot;綠黨桃園市議員王浩宇爆料，指民眾黨不分區被提名人蔡壁如、黃瀞瑩，在昨（6）日才請辭是為領年終獎金。台灣民眾黨主席、台北市長柯文哲7日受訪時則說，都是按流程走，不要把人家想得這麼壞。&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb303-1"><a href="ckiptagger.html#cb303-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">&quot;綠黨桃園市議員王浩宇爆料，指民眾黨不分區被提名人蔡壁如、黃瀞瑩，在昨（6）日才請辭是為領年終獎金。台灣民眾黨主席、台北市長柯文哲7日受訪時則說，都是按流程走，不要把人家想得這麼壞。&quot;</span></span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;綠黨&quot;     &quot;桃園&quot;     &quot;市議員&quot;   &quot;王浩宇&quot;   &quot;爆料&quot;     &quot;，&quot;      
  [7] &quot;指&quot;       &quot;民眾黨&quot;   &quot;不分區&quot;   &quot;被提名人&quot; &quot;蔡壁如&quot;   &quot;、&quot;      
@@ -714,28 +700,28 @@ Required-by: </code></pre>
   </script>
 </div>
 </div>
-<div id="beyond-word-boundaries" class="section level2" number="9.8">
-<h2><span class="header-section-number">9.8</span> Beyond Word Boundaries</h2>
+<div id="beyond-word-boundaries" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> Beyond Word Boundaries<a href="ckiptagger.html#beyond-word-boundaries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In addition to primitive word segmentation, the <code>ckiptagger</code> provides also the parts-of-speech tags for words and named entity recognitions for the texts. The <code>ckiptagger</code> follows the pipeline below for text processing.</p>
-<div id="htmlwidget-e2524fbc4a75854dbfe7" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e2524fbc4a75854dbfe7">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle,\n      color = darkslategray,fontcolor = darkslategray]     \n      edge [color = grey]\n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      tab2 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<div id="load-the-models" class="section level3 unnumbered">
-<h3>Load the models</h3>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-cd385f35af1af5084aec" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-cd385f35af1af5084aec">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle,\n      color = darkslategray,fontcolor = darkslategray]     \n      edge [color = grey]\n      tab1 [label = \"Raw Texts\"]\n      tab2 [label = \"Words\"]\n      tab3 [label = \"Parts-of-Speech\"]\n      tab4 [label = \"Named Entity Recognition (NER)\"]\n\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 -> tab3 -> tab4;\n      tab2 -> tab4;\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="load-the-models" class="section level3 unnumbered hasAnchor">
+<h3>Load the models<a href="ckiptagger.html#load-the-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To perform these additional tasks, we need to load the necessary models (pre-trained and provided by the CKIP group) first as well.</p>
 <p>They should all have been included in the model directory you unzipped earlier (cf. <code>./data</code>).</p>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb303-1"><a href="ckiptagger.html#cb303-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading pretrained CKIP models</span></span>
-<span id="cb303-2"><a href="ckiptagger.html#cb303-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## POS Tagging Model</span></span>
-<span id="cb303-3"><a href="ckiptagger.html#cb303-3" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
-<span id="cb303-4"><a href="ckiptagger.html#cb303-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.732</span>   <span class="fl">2.797</span>   <span class="fl">6.998</span> </span>
-<span id="cb303-5"><a href="ckiptagger.html#cb303-5" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## Named Entity Recognition Model</span></span>
-<span id="cb303-6"><a href="ckiptagger.html#cb303-6" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
-<span id="cb303-7"><a href="ckiptagger.html#cb303-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.647</span>   <span class="fl">2.426</span>   <span class="fl">6.231</span> </span></code></pre></div>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb305-1"><a href="ckiptagger.html#cb305-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading pretrained CKIP models</span></span>
+<span id="cb305-2"><a href="ckiptagger.html#cb305-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((pos <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">POS</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## POS Tagging Model</span></span>
+<span id="cb305-3"><a href="ckiptagger.html#cb305-3" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
+<span id="cb305-4"><a href="ckiptagger.html#cb305-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.735</span>   <span class="fl">2.589</span>   <span class="fl">7.386</span> </span>
+<span id="cb305-5"><a href="ckiptagger.html#cb305-5" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>((ner <span class="ot">&lt;-</span> ckip<span class="sc">$</span><span class="fu">NER</span>(<span class="st">&quot;./data&quot;</span>))) <span class="do">## Named Entity Recognition Model</span></span>
+<span id="cb305-6"><a href="ckiptagger.html#cb305-6" aria-hidden="true" tabindex="-1"></a>   user  system elapsed </span>
+<span id="cb305-7"><a href="ckiptagger.html#cb305-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">3.643</span>   <span class="fl">2.458</span>   <span class="fl">6.339</span> </span></code></pre></div>
 </div>
-<div id="pos-tagging-and-ner" class="section level3 unnumbered">
-<h3>POS tagging and NER</h3>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb304-1"><a href="ckiptagger.html#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parts-of-speech Tagging</span></span>
-<span id="cb304-2"><a href="ckiptagger.html#cb304-2" aria-hidden="true" tabindex="-1"></a>pos_words <span class="ot">&lt;-</span> <span class="fu">pos</span>(words_1)</span>
-<span id="cb304-3"><a href="ckiptagger.html#cb304-3" aria-hidden="true" tabindex="-1"></a>pos_words</span></code></pre></div>
+<div id="pos-tagging-and-ner" class="section level3 unnumbered hasAnchor">
+<h3>POS tagging and NER<a href="ckiptagger.html#pos-tagging-and-ner" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb306-1"><a href="ckiptagger.html#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parts-of-speech Tagging</span></span>
+<span id="cb306-2"><a href="ckiptagger.html#cb306-2" aria-hidden="true" tabindex="-1"></a>pos_words <span class="ot">&lt;-</span> <span class="fu">pos</span>(words_1)</span>
+<span id="cb306-3"><a href="ckiptagger.html#cb306-3" aria-hidden="true" tabindex="-1"></a>pos_words</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
  [1] &quot;Nb&quot;             &quot;Nd&quot;             &quot;D&quot;              &quot;VC&quot;            
  [5] &quot;Na&quot;             &quot;COMMACATEGORY&quot;  &quot;D&quot;              &quot;D&quot;             
@@ -781,14 +767,14 @@ Required-by: </code></pre>
  [5] &quot;P&quot;              &quot;Na&quot;             &quot;VG&quot;             &quot;Neu&quot;           
  [9] &quot;PERIODCATEGORY&quot; &quot;Neu&quot;            &quot;COMMACATEGORY&quot;  &quot;D&quot;             
 [13] &quot;D&quot;              &quot;VHC&quot;            &quot;PERIODCATEGORY&quot;</code></pre>
-<div class="sourceCode" id="cb306"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb306-1"><a href="ckiptagger.html#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Named Entity Recognition</span></span>
-<span id="cb306-2"><a href="ckiptagger.html#cb306-2" aria-hidden="true" tabindex="-1"></a>entities <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
-<span id="cb306-3"><a href="ckiptagger.html#cb306-3" aria-hidden="true" tabindex="-1"></a>entities</span></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb308-1"><a href="ckiptagger.html#cb308-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Named Entity Recognition</span></span>
+<span id="cb308-2"><a href="ckiptagger.html#cb308-2" aria-hidden="true" tabindex="-1"></a>entities <span class="ot">&lt;-</span> <span class="fu">ner</span>(words_1, pos_words)</span>
+<span id="cb308-3"><a href="ckiptagger.html#cb308-3" aria-hidden="true" tabindex="-1"></a>entities</span></code></pre></div>
 <pre class="Rout"><code>[[1]]
-{(0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;), (18, 22, &#39;DATE&#39;, &#39;20年前&#39;)}
+{(18, 22, &#39;DATE&#39;, &#39;20年前&#39;), (0, 3, &#39;PERSON&#39;, &#39;傅達仁&#39;), (23, 28, &#39;ORG&#39;, &#39;緯來體育台&#39;)}
 
 [[2]]
-{(17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (11, 13, &#39;PERSON&#39;, &#39;布什&#39;)}
+{(11, 13, &#39;PERSON&#39;, &#39;布什&#39;), (42, 45, &#39;ORG&#39;, &#39;參議院&#39;), (0, 2, &#39;GPE&#39;, &#39;美國&#39;), (17, 21, &#39;ORG&#39;, &#39;勞工部長&#39;), (7, 9, &#39;DATE&#39;, &#39;今天&#39;), (21, 24, &#39;PERSON&#39;, &#39;趙小蘭&#39;), (2, 5, &#39;ORG&#39;, &#39;參議院&#39;), (56, 58, &#39;ORDINAL&#39;, &#39;第一&#39;), (60, 62, &#39;NORP&#39;, &#39;華裔&#39;)}
 
 [[3]]
 {(10, 13, &#39;PERSON&#39;, &#39;土地婆&#39;)}
@@ -800,7 +786,7 @@ set()
 {(4, 10, &#39;CARDINAL&#39;, &#39;59,000&#39;), (14, 18, &#39;CARDINAL&#39;, &#39;5.9萬&#39;)}
 
 [[6]]
-{(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
+{(14, 15, &#39;CARDINAL&#39;, &#39;3&#39;), (12, 13, &#39;CARDINAL&#39;, &#39;1&#39;), (16, 17, &#39;CARDINAL&#39;, &#39;2&#39;), (4, 6, &#39;CARDINAL&#39;, &#39;1,&#39;)}</code></pre>
 <!-- ## Tidy Up the Results -->
 <!-- We can tidy up results provided by `ckiptagger` and create a word-based tidy structure of our data: -->
 <!-- ```{r eval = T} -->
@@ -820,19 +806,17 @@ set()
   </script>
 </div>
 <hr />
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-353" class="exercise"><strong>Exercise 9.4  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
-Please convert the word-based data frame into a text-based data frame, as shown below. Please note that the <code>text</code> column includes an enriched version of the original texts.
+<p><span id="exr:unnamed-chunk-354" class="exercise"><strong>Exercise 9.4  </strong></span>With a word-based tidy structure of the corpus, it is easy to convert it into a text-based one with both the information of word boundaries and parts-of-speech tag.</p>
+<p>Please convert the word-based data frame into a text-based data frame, as shown below. Please note that the <code>text</code> column includes an enriched version of the original texts.</p>
 </div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["text_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["text"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"傅達仁/Nb　今/Nd　將/D　執行/VC　安樂死/Na　，/COMMACATEGORY　卻/D　突然/D　爆出/VJ　自己/Nh　20/Neu　年/Nf　前/Ng　遭/P　緯來體育台/Nc　封殺/VC　，/COMMACATEGORY　他/Nh　不/D　懂/VK　自己/Nh　哪裡/Ncd　得罪到/VJ　電視台/Nc　。/PERIODCATEGORY"},{"1":"2","2":"美國/Nc　參議院/Nc　針對/P　今天/Nd　總統/Na　布什/Nb　所/D　提名/VC　的/DE　勞工部長/Na　趙小蘭/Nb　展開/VC　認可/VC　聽證會/Na　，/COMMACATEGORY　預料/VE　她/Nh　將/D　會/D　很/Dfa　順利/VH　通過/VC　參議院/Nc　支持/VC　，/COMMACATEGORY　成為/VG　該/Nes　國/Nc　有史以來/D　第一/Neu　位/Nf　的/DE　華裔/Na　女性/Na　內閣/Na　成員/Na　。/PERIODCATEGORY"},{"1":"3","2":"土地公有/VH　政策/Na　?/QUESTIONCATEGORY　？/QUESTIONCATEGORY　還是/Caa　土地婆/Nb　有/V_2　政策/Na　。/PERIODCATEGORY　./PERIODCATEGORY"},{"1":"4","2":"…/ETCCATEGORY　 /WHITESPACE　你/Nh　確定/VK　嗎/T　…/ETCCATEGORY　 /WHITESPACE　不要/D　再/D　騙/VC　了/Di　…/ETCCATEGORY　…/ETCCATEGORY　他/Nh　來亂的/VA　啦/T"},{"1":"5","2":"最多/VH　容納/VJ　59,000/Neu　個/Nf　人/Na　,/COMMACATEGORY　或/Caa　5.9萬/Neu　人/Na　,/COMMACATEGORY　再/D　多/D　就/D　不行/VH　了/T　./PERIODCATEGORY　這/Nep　是/SHI　環評/Na　的/DE　結論/Na　./PERIODCATEGORY"},{"1":"6","2":"科長/Na　說/VE　:1,/Neu　坪數/Na　對/P　人數/Na　為/VG　1:3/Neu　。/PERIODCATEGORY　2/Neu　,/COMMACATEGORY　可以/D　再/D　增加/VHC　。/PERIODCATEGORY"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-
 <div class="exercise">
-<span id="exr:unnamed-chunk-355" class="exercise"><strong>Exercise 9.5  </strong></span>The outputs of <code>ner()</code> are not very R friendly. How to tidy up the output of <code>ner()</code> by converting it into a more R-compatible data frame?
+<p><span id="exr:unnamed-chunk-356" class="exercise"><strong>Exercise 9.5  </strong></span>The outputs of <code>ner()</code> are not very R friendly. How to tidy up the output of <code>ner()</code> by converting it into a more R-compatible data frame?</p>
 </div>
 <ul>
 <li>For example, convert the output of <code>ner()</code> from ckiptagger into a data frame like this:</li>
@@ -954,7 +938,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

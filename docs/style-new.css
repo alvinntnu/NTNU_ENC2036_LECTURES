@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&family=Prata&family=Roboto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&family=Prata&family=Roboto+Serif&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*------------- Body and header text---------------- */
+
+.book.font-family-1 {
+  font-family: 'Mulish', sans-serif;
+ }
+h1, h2, h3, h4 {
+  font-family: 'Prata', serif;
+  color: #2f5275;
+}
+
+.title {
+  font-family: 'Prata', serif;
+  font-size: 3em !important;
+  color: #5699cc;
+ }
+ 
+h1.title {
+  color: #2F5275 !important;
+}
+.subtitle {
+  font-family: 'Prata', serif;
+  color: #2c6793;
+}
+
+/*--------------blocks ------------ */
 
 /*.infobox {
   padding: 1em 1em 1em 4em;
@@ -26,7 +56,6 @@
   background-repeat: no-repeat;
   border-radius: 0.5em;
   box-shadow: 4px 4px 4px #888
-
 }
 
 .exercise:not(span) {
@@ -40,7 +69,6 @@
   border-radius: 0.5em;
   border: 1px solid var(--green);
   box-shadow: 4px 4px 4px #888
-
 }
 
 .myquotes {
@@ -54,7 +82,6 @@
   background-repeat: no-repeat;
   border-radius: 0.5em;
   box-shadow: 4px 4px 4px #888
-
 }
 
 .myquotes {
@@ -66,12 +93,6 @@
 .info {
   background-image: url("images/alerts/info-circle-solid.svg");
   background-color: #B5FFFB; /*hsla(209, 42%, 47%, .2);*/
-  border: 1px solid var(--blue);
-}
-
-.infobox {
-  background-image: url("images/alerts/highlighter-solid.svg");
-  background-color: #00FFAB; /*hsla(209, 42%, 47%, .2);*/
   border: 1px solid var(--blue);
 }
 
@@ -105,7 +126,6 @@
 }
 
 
-
 div.sourceCode {
     background-color: inherit;
 }
@@ -133,6 +153,8 @@ book.color-theme-1 .book-body .page-wrapper .page-inner section.normal pre, .boo
   background-color: inherit;
 }
 
+/* R code output format */
+
 .Rout {
   /*background-color: #d9edf7 !important;*/
   color: white !important;
@@ -142,6 +164,8 @@ book.color-theme-1 .book-body .page-wrapper .page-inner section.normal pre, .boo
   /*font-weight: bolder;*/
   /*color: blue !important;*/
 }
+
+/*H1 title style */
 
 h1.title {
     font-weight: 900;
@@ -167,7 +191,6 @@ h1 > .header-section-number {
 
 
 
-
 .csl-entry {
         padding-left: 1.5em;
         text-indent:-1.5em;
@@ -176,4 +199,62 @@ h1 > .header-section-number {
 pre code {
   white-space: pre-wrap;
 }
+
+/* The next two rules make the horizontal line go straight across in top navbar */
+
+.summary > li:first-child {
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.book .book-summary ul.summary li.divider {
+    height: 0px;
+}
+
+
+/*------------ TOC --------------*/
+
+.book .book-summary {
+  background: #F7FBFD;
+  border-right: none;
+  /*border-right: 1px #5699cc solid;*/
+}
+
+.summary{
+font-family: 'Muli', sans-serif;
+}
+
+  /* all TOC list items, basically */
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #2f5175;
+}
+
+.summary a:hover {
+  color: #50ABB2 !important; /*#778ca5 !important;*/
+} 
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #50ABB2 !important; /*#778ca5 !important;*/
+  border-left: solid 5px;
+  border-color: #50ABB2;
+  padding-left: 10px !important;
+}  
+
+/* for TOC part names */
+
+li.appendix span, li.part span { 
+  margin-top: 1em;
+  color: color: #1c3046 !important;
+  opacity: 1 !important;
+  text-transform: uppercase;
+}
+
+/* header h1*/
 
