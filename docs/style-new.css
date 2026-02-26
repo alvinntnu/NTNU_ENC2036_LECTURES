@@ -106,14 +106,14 @@ h1.title {
 .alert {
   background-image: url("images/alerts/bell-regular.svg");
   /*background-color: hsl(0,100%,50%, .3);/*hsla(315, 42%, 42%, .10); */
-  background-color: #FFCA27;
+  background-color: #FFF2D0;
   border: 1px solid var(--orange);
 }
 
 .warning {
   background-image: url("images/alerts/bomb-solid.svg");
   /*background-color: hsla(49, 87%, 70%, .1);*/
-  background-color: #FF8296;
+  background-color: #FF88BA;
   border: 1px solid var(--purple);
 }
 
@@ -121,7 +121,7 @@ h1.title {
 .danger {
   background-image: url("images/alerts/skull-crossbones-solid.svg");
   /*background-color: hsl(0,100%,50%, .3);/*hsla(315, 42%, 42%, .10); */
-  background-color: #F73250;
+  background-color: #FF4400;
   border: 1px solid var(--pink);
 }
 
