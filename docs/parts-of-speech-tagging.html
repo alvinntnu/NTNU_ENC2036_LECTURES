@@ -23,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-03-20" />
+<meta name="date" content="2026-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -465,7 +465,7 @@ div.csl-indent {
 <p>This chapter uses Python-based packages, which require a properly configured Python environment on your operating system. For more information, please see <a href="python-environment.html#python-environment">Python Environment</a>.</p>
 </div>
 <p>This chapter demonstrates how to POS tag a raw-text corpus to identify <strong>syntactic categories</strong> and explains how to utilize these annotations for sophisticated linguistic analysis.</p>
-<p>We will focus on <code>spacyr</code>, an R wrapper for the <strong>spaCy</strong> Python library, which is widely recognized as an “industrial-strength” tool for natural language processing. Beyond basic POS tagging, this package provides a suite of linguistic annotations essential for in-depth text analysis.</p>
+<p>We will focus on <code>spacyr</code>, an R wrapper for the <strong>spaCy</strong> Python library, which is widely recognized as an “industrial-strength” tool for natural language processing. Beyond basic POS tagging, this package provides a suite of <strong>linguistic annotations</strong> essential for in-depth text analysis.</p>
 <p>Because <code>spaCy</code> is <strong>multilingual</strong>, this chapter will also guide you through using <code>spacyr</code> to process both English and Chinese datasets.</p>
 <div class="info">
 <p>We will talk about Chinese text processing in a later chapter, <a href="chinese-text-processing.html#chinese-text-processing">Chinese Text Processing</a>, in a more comprehensive way.</p>
@@ -477,7 +477,7 @@ div.csl-indent {
 <p><strong>For Python:</strong></p>
 <ol style="list-style-type: decimal">
 <li><strong>Create a Python environment</strong>: Set up a dedicated Python environment (such as Miniconda, Anaconda/Conda, Virtual Environments) that you intend to use with R.</li>
-<li><strong>Install the Python module</strong>: Since <code>spacyr</code> is an R wrapper for the <code>spaCy</code> Python library, you must first install the <code>spacy</code> Python module and its language models (e.g., <code>en_core_web_sm</code>, <code>zh_core_web_sm</code>) using standard Python library installation methods.</li>
+<li><strong>Install the Python module</strong>: Since <code>spacyr</code> is an R wrapper for the <code>spaCy</code> Python library, you must first install the <code>spacy</code> Python module and its language models (e.g., <code>en_core_web_sm</code>, <code>zh_core_web_sm</code>) in the designated Python environment, using standard Python library installation methods.</li>
 </ol>
 <div class="alert">
 <p>It is recommended that you have Python 3.9+ and spacy 3+ at least in your operating system.</p>
@@ -515,14 +515,20 @@ div.csl-indent {
 <span id="cb4-6"><a href="parts-of-speech-tagging.html#cb4-6" tabindex="-1"></a><span class="do">## Initialize Spacyr</span></span>
 <span id="cb4-7"><a href="parts-of-speech-tagging.html#cb4-7" tabindex="-1"></a><span class="fu">spacy_initialize</span>(<span class="at">model =</span> <span class="st">&quot;en_core_web_sm&quot;</span>)</span></code></pre></div>
 <pre><code>successfully initialized (spaCy Version: 3.8.2, language model: en_core_web_sm)</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb6-1"><a href="parts-of-speech-tagging.html#cb6-1" tabindex="-1"></a><span class="do">## Checking</span></span>
-<span id="cb6-2"><a href="parts-of-speech-tagging.html#cb6-2" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">conda_list</span>()</span></code></pre></div>
+<div class="info">
+<p>R communicates with Python via the library <code>reticulate</code>. If you have installed the library, you can check the current Python path used in the RStudio:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb6-1"><a href="parts-of-speech-tagging.html#cb6-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
+<p>You can use the <code>reticulate</code> package to identify exactly which Conda environments are available and where they live:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb7-1"><a href="parts-of-speech-tagging.html#cb7-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">conda_list</span>()</span></code></pre></div>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb8-1"><a href="parts-of-speech-tagging.html#cb8-1" tabindex="-1"></a><span class="do">## Checking</span></span>
+<span id="cb8-2"><a href="parts-of-speech-tagging.html#cb8-2" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">conda_list</span>()</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["python"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"base","2":"/Users/alvinchen/anaconda3/bin/python"},{"1":"corpling","2":"/Users/alvinchen/anaconda3/envs/corpling/bin/python"},{"1":"doccano","2":"/Users/alvinchen/anaconda3/envs/doccano/bin/python"},{"1":"langchain","2":"/Users/alvinchen/anaconda3/envs/langchain/bin/python"},{"1":"python-notes","2":"/Users/alvinchen/anaconda3/envs/python-notes/bin/python"},{"1":"tensorflowgpu","2":"/Users/alvinchen/anaconda3/envs/tensorflowgpu/bin/python"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb7-1"><a href="parts-of-speech-tagging.html#cb7-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>() <span class="do">## check ur python environment</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb9-1"><a href="parts-of-speech-tagging.html#cb9-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>() <span class="do">## check ur python environment</span></span></code></pre></div>
 <pre class="rout"><code>python:         /Users/alvinchen/anaconda3/envs/corpling/bin/python
 libpython:      /Users/alvinchen/anaconda3/envs/corpling/lib/libpython3.9.dylib
 pythonhome:     /Users/alvinchen/anaconda3/envs/corpling:/Users/alvinchen/anaconda3/envs/corpling
@@ -531,12 +537,6 @@ numpy:          /Users/alvinchen/anaconda3/envs/corpling/lib/python3.9/site-pack
 numpy_version:  2.0.1
 
 NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
-<div class="info">
-<p>R communicates with Python via the library <code>reticulate</code>. If you have installed the library, you can check the current Python path used in the RStudio:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb9-1"><a href="parts-of-speech-tagging.html#cb9-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_config</span>()</span></code></pre></div>
-<p>You can use the <code>reticulate</code> package to identify exactly which Conda environments are available and where they live:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb10-1"><a href="parts-of-speech-tagging.html#cb10-1" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">conda_list</span>()</span></code></pre></div>
-</div>
 </div>
 <div id="quick-overview" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Quick Overview<a href="parts-of-speech-tagging.html#quick-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -638,8 +638,8 @@ NOTE: Python version was forced by RETICULATE_PYTHON</code></pre>
 <li><p>The Left Branch: Follow this workflow if you require the advanced linguistic annotations provided by <code>spacyr</code>.</p></li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:engnlp1"></span>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-e8f0d4dbbdc68170f1b6" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-e8f0d4dbbdc68170f1b6">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb42 [label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb41 [label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\n\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1 [color=orangered, penwidth=5]\n\nbb1-> d [color=orangered, penwidth=5]\nbb1 -> c [color=orangered, penwidth=5]\nbb1 -> cc [color=orangered, penwidth=5]\nb -> b41->b42-> b2 -> b21\nb -> b3 -> b31\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-4767417ce25d115f319f" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-4767417ce25d115f319f">{"x":{"diagram":"digraph {\n  \ngraph[layout = dot]\n\nnode[style=filled, color = grey90, penwidth = 0.3, fontcolor = grey30]\nedge[color= grey40, alpha = 0.2, penwidth= 0.4, arrowsize=0.8, arrowhead = normal]\n\na [label = \"Raw Texts\", shape = folder, fillcolor= \"#B0E2FC\"]\naa1[label = \"spacyr::spacy_parse()\", shape=document, fillcolor= \"#96F597\"]\nbb [label = \"word-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\nbb1[label = \"dplyr\", shape=document, fillcolor= \"#96F597\"]\n\n\ncc [label = \"construction-based DATA.FRAME\", shape = folder, fillcolor= \"#B0E2FC\"]\na1 [label = \"quanteda::corpus()\", shape=document, fillcolor= \"#96F597\"]\nb [label = \"CORPUS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb1 [label = \"tidytext::tidy()\", shape=document, fillcolor= \"#96F597\"]\n\nb2 [label = \"quanteda::kwic()\", shape=document, fillcolor= \"#96F597\"]\nb3 [label = \"quanteda::summary()\", shape=document, fillcolor= \"#96F597\"]\nb42 [label = \"TOKENS object\", shape = folder, fillcolor= \"#B0E2FC\"]\nb41 [label = \"quanteda::tokens()\", shape=document, fillcolor= \"#96F597\"]\nb21[label = \"Data Frame (KWIC)\", shape = folder, fillcolor= \"#B0E2FC\"]\nb31[label = \"Data Frame (Summary)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\n\n\nc [label = \"TIBBLE object (text-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\nc1 [label = \"tidytext::unnest_tokens()\", shape=document, fillcolor= \"#96F597\"]\nd [label = \"TIBBLE object (token-based)\", shape = folder, fillcolor= \"#B0E2FC\"]\n\n\na -> a1 -> b -> b1 -> c -> c1 -> d\na -> aa1 -> bb -> bb1 [color=orangered, penwidth=5]\n\nbb1-> d [color=orangered, penwidth=5]\nbb1 -> c [color=orangered, penwidth=5]\nbb1 -> cc [color=orangered, penwidth=5]\nb -> b41->b42-> b2 -> b21\nb -> b3 -> b31\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 5.1: English Text Analytics Flowchart
 </p>
@@ -662,7 +662,7 @@ Figure 5.1: English Text Analytics Flowchart
 <p>We can parse the whole corpus collection as well. The <code>spacy_parse()</code> can take a <strong>character vector</strong> as the input, where each element is a text/document of the corpus.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb16-1"><a href="parts-of-speech-tagging.html#cb16-1" tabindex="-1"></a><span class="fu">system.time</span>(corp_us_words <span class="ot">&lt;-</span> <span class="fu">spacy_parse</span>(data_corpus_inaugural))</span></code></pre></div>
 <pre class="rout"><code>   user  system elapsed 
-  7.538   0.780   8.369 </code></pre>
+  7.350   0.707   8.062 </code></pre>
 <div class="info">
 <p>The function <code>system.time()</code> is a useful function which gives you the CPU times that the expression in the parenthesis used. In other words, you can put any R expression in the parenthesis of <code>system.time()</code> as its argument and measure the time required for the expression.</p>
 <p>This is sometimes necessary because some of the data processing can be very time consuming. And we would like to know HOW time-consuming it is in case that we may need to run the prodecure again.</p>
@@ -713,13 +713,13 @@ Fichtner&#39;s\;C =  \frac{Number\;of\;Verbs}{Number\;of\;Sentences} \times \fra
 <span id="cb20-4"><a href="parts-of-speech-tagging.html#cb20-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>)) <span class="sc">+</span></span>
 <span id="cb20-5"><a href="parts-of-speech-tagging.html#cb20-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Syntactic Complexty&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Presidents&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Fichtner&#39;s C&quot;</span>) <span class="sc">+</span></span>
 <span id="cb20-6"><a href="parts-of-speech-tagging.html#cb20-6" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <p>It’s interesting to see a decreasing trend in syntactic complexity!</p>
 <hr />
 <div class="exercise">
 <p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 5.2  </strong></span>Please add a regression/smooth line to the above plot to indicate the downward trend?</p>
 </div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 5.3  </strong></span>Extract all the subject-predicate word token pairs from the corpus of the presidential addresses. This relationship is defined as a syntactic <strong>dependency</strong> relationship of <code>nsubj</code> between two word tokens. The subject token is the <strong>dependent</strong> and the predicate token is the <strong>head</strong>.</p>
 <p>The output includes the subject-predicate token pairs and their relevant information (e.g., From which sentence of which presidential address is the pair extracted?)</p>
@@ -859,7 +859,9 @@ Figure 5.2: Intuition for <code>token=</code> in <code>unnest_tokens()</code>
 </div>
 <hr />
 <div class="exercise">
-<p><span id="exr:eng-pp-1" class="exercise"><strong>Exercise 5.5  </strong></span>In our earlier demonstration, we made a naive assumption: Preposition Phrases include only those cases where PREP and NOUN are adjacent to each other. But there are many more tokens where words do come between the PREP and the NOUN (e.g., <em>with greater anxieties</em>, <em>by your order</em>). Please revise the regular expression to improve the retrieval of the English Preposition Phrases from the corpus data <code>corp_us_sents</code>. Specifically, we can define an English PP as a sequence of words, which start with a preposition, and end at the first word after the preposition that is tagged as NOUN, PROPN, or PRON.</p>
+<p><span id="exr:eng-pp-1" class="exercise"><strong>Exercise 5.5  </strong></span>In our earlier demonstration, we made a naive assumption: Preposition Phrases include only those cases where PREP and NOUN are adjacent to each other. But there are many more tokens where words do come between the PREP and the NOUN (e.g., <em>with greater anxieties</em>, <em>by your order</em>).</p>
+<p>Please revise the regular expression to improve the retrieval of the English Preposition Phrases from the corpus data <code>corp_us_sents</code>.</p>
+<p>Specifically, we can define an English PP as a sequence of words, which start with a preposition, and end at the first word after the preposition that is tagged as NOUN, PROPN, or PRON.</p>
 <p>The following table shows a sample of the outputs.</p>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
@@ -912,7 +914,7 @@ Figure 5.3: Manual Annotation of English PP’s in 1793-Washington
 </ul>
 <p>As shown in Figure <a href="parts-of-speech-tagging.html#fig:precision-recall">5.3</a>, manual annotations have identified 20 PP’s from the text while the regular expression identified 19 tokens. A comparison of the two results shows that:</p>
 <ul>
-<li>In the regex result, the following 5 returned tokens (rows highlighted in pink) are <em>False Positives</em>—the regular expression identified them as PP but in fact they were NOT PP according to the manual annotations.</li>
+<li>In the regex results, the five highlighted tokens (rows in pink) are <strong>False Positives</strong>. While the regular expression flagged them as PPs, manual annotation confirms that they do not belong to this category.</li>
 </ul>
 <hr />
 <table class="table" style="color: black; margin-left: auto; margin-right: auto;">
@@ -1323,8 +1325,17 @@ ceremony
 </table>
 <hr />
 <ul>
-<li>In the above manual annotation (Figure <a href="parts-of-speech-tagging.html#fig:precision-recall">5.3</a>), one PP is NOT correctly identified (i.e., incorrectly identified by the current regex query as negative, <em>False Negatives</em>).</li>
+<li>In the manual annotation shown in Figure <a href="parts-of-speech-tagging.html#fig:precision-recall">5.3</a>, there are six primary errors. In addition to the five PPs where the NP heads were misidentified, one specific PP (<em>besides incurring constitutional punishment</em>) was missed entirely. The current regex query incorrectly categorized this instance as a negative result, making it a <strong>False Negative</strong>.</li>
 </ul>
+<div class="try">
+<p>In text processing, it is essential to cultivate a <strong>debugging mindset</strong>. When your code fails to capture a target (such as the false negative <em>besides incurring constitutional punishment</em>), the most important step isn’t just to try another pattern; it’s to diagnose exactly why the failure occurred.</p>
+<p>Rather than guessing at a new solution, what practical steps can you take to identify the specific gap in your current regular expression’s coverage?</p>
+<!-- <div data-pagedtable="false">
+  <script data-pagedtable-source type="application/json">
+{"columns":[{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sentence_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["sentence_tag"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1793-Washington","2":"4","3":"This/DET oath/NOUN I/PRON am/AUX now/ADV about/ADJ to/PART take/VERB ,/PUNCT and/CCONJ in/ADP your/PRON presence/NOUN :/PUNCT That/SCONJ if/SCONJ it/PRON shall/AUX be/AUX found/VERB during/ADP my/PRON administration/NOUN of/ADP the/DET Government/PROPN I/PRON have/VERB in/ADP any/DET instance/NOUN violated/VERB willingly/ADV or/CCONJ knowingly/ADV the/DET injunctions/NOUN thereof/ADV ,/PUNCT I/PRON may/AUX (/PUNCT besides/SCONJ incurring/VERB constitutional/ADJ punishment/NOUN )/PUNCT be/AUX subject/ADJ to/ADP the/DET upbraidings/NOUN of/ADP all/PRON who/PRON are/AUX now/ADV witnesses/NOUN of/ADP the/DET present/ADJ solemn/ADJ ceremony/NOUN ./PUNCT \\n\\n /SPACE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div> -->
+</div>
 <p>We can summarize the pattern retrieval results as:</p>
 <hr />
 <p><img src="images/precision-recall-2.png" width="90%" /></p>

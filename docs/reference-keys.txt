@@ -192,3 +192,9 @@ lexical-similarity
 exercises-1
 python-environment
 references
+fig:engnlp1
+exr:spacy-sents
+fig:unnest-tokens
+exr:eng-pp-1
+exr:eng-pp-2
+fig:precision-recall
