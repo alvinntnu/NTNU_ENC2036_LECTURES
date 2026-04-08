@@ -23,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-03-20" />
+<meta name="date" content="2026-04-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -844,14 +844,14 @@ D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(
 \]</span></p>
 </div>
 <!-- ## Gries' KL Divergence based keyness -->
-<!-- ### Gries' proposal  -->
+<!-- ### Gries' proposal -->
 <!-- - Kullback-Leibler (KL) Divergence (often referred to as KL distance) -->
 <!-- $$ -->
 <!-- D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(i)} \right) -->
 <!-- $$ -->
-<!-- - @gries2024frequency argues that traditional keyness measures (like $G^2$) are problematic because they are too heavily "confounded" by frequency.  -->
+<!-- - @gries2024frequency argues that traditional keyness measures (like $G^2$) are problematic because they are too heavily "confounded" by frequency. -->
 <!-- - His proposed solution involves: -->
-<!--   - Divergence over Significance: Instead of asking if a word is statistically significant (which is almost guaranteed in large corpora), he uses Kullback-Leibler Divergence ($D_{KL}$).  -->
+<!--   - Divergence over Significance: Instead of asking if a word is statistically significant (which is almost guaranteed in large corpora), he uses Kullback-Leibler Divergence ($D_{KL}$). -->
 <!--   - This measures the distance between the observed distribution of a word in the target corpus and its expected distribution (usually based on a reference corpus). -->
 <!--   - Dispersion-Integrated Keyness: He often utilizes Signed $D_{KL}$ to indicate the direction of keyness: -->
 <!--     - Positive value: Over-represented in the target (Keyword). -->
@@ -862,19 +862,19 @@ D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(
 <!-- ### Illustration -->
 <!-- ```{r} -->
 <!-- ## from column to row -->
-<!-- contingency_table %>%  -->
+<!-- contingency_table %>% -->
 <!--   mutate(prior = (a+b)/(sum(a)+sum(b))) %>% -->
 <!--   mutate(post_target = a/sum(a), -->
 <!--          post_ref = b/sum(b)) %>% -->
 <!--   mutate(dkl_contribution = (post_target * log2(post_target / prior + 1e-10))) %>% -->
 <!--   arrange(desc(dkl_contribution)) -->
-<!-- ## from row to column   -->
+<!-- ## from row to column -->
 <!-- N_target <- sum(contingency_table$a) ## target corpus size -->
 <!-- N_ref <- sum(contingency_table$b)    ## ref corpus size -->
 <!-- ## prior distribution of words -->
 <!-- prior_target = N_target / (N_target + N_ref) -->
 <!-- prior_ref    = N_ref / (N_target + N_ref) -->
-<!-- ## keyness (row to column)   -->
+<!-- ## keyness (row to column) -->
 <!-- contingency_table %>% -->
 <!--   mutate(O11 = a, O12 = b) %>% -->
 <!--   mutate( -->
@@ -883,7 +883,7 @@ D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(
 <!--     post_ref    = O12 / (O11 + O12), -->
 <!--     # Compute Raw DKL -->
 <!--     # Formula: sum(p_obs * log2(p_obs / p_prior)) -->
-<!--     dkl_raw = (post_target * log2(post_target / prior_target + 1e-10)) +  -->
+<!--     dkl_raw = (post_target * log2(post_target / prior_target + 1e-10)) + -->
 <!--               (post_ref    * log2(post_ref / prior_ref + 1e-10)), -->
 <!--     # Normalize DKL (Gries often uses dkl / (1 + dkl)) -->
 <!--     dkl_norm = dkl_raw / (1 + dkl_raw), -->
@@ -892,7 +892,7 @@ D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(
 <!--     signed_dkl = ifelse(is_keyword, dkl_norm, -dkl_norm) -->
 <!--   ) %>% -->
 <!--   select(word, O11, O12, signed_dkl) %>% -->
-<!--   arrange(desc(signed_dkl)) -->
+<!--   arrange(desc(signed_dkl), desc(O11)) -->
 <!-- ``` -->
 <!-- ```{r} -->
 <!-- library(quanteda) -->
@@ -941,8 +941,8 @@ D_{KL}(P \parallel Q) = \sum_{i \in \mathcal{X}} P(i) \log \left( \frac{P(i)}{Q(
 <!--     is_keyword = (Target / N_target) > (Reference / N_ref), -->
 <!--     signed_dkl = ifelse(is_keyword, dkl_norm, -dkl_norm) -->
 <!--   ) %>% -->
-<!--   select(feature, Target, Reference, signed_dkl) %>% -->
-<!--   arrange(desc(signed_dkl)) -->
+<!--   select(feature, Target, Reference, signed_dkl, O11) %>% -->
+<!--   arrange(desc(signed_dkl), desc(O11)) -->
 <!-- # View Top Keywords -->
 <!-- head(trump_keyness, 10) -->
 <!-- ``` -->
