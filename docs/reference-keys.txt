@@ -224,3 +224,13 @@ exr:unnamed-chunk-79
 fig:unnamed-chunk-81
 exr:unnamed-chunk-82
 corpus-pos-tagging
+corpus-profile
+exr:unnamed-chunk-55
+exr:unnamed-chunk-57
+exr:unnamed-chunk-68
+exr:unnamed-chunk-78
+fig:unnamed-chunk-80
+exr:unnamed-chunk-81
+general-steps
+tokenizations-lines-and-words
+frequency-list-and-wordcloud
