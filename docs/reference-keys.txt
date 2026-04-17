@@ -234,3 +234,11 @@ exr:unnamed-chunk-81
 general-steps
 tokenizations-lines-and-words
 frequency-list-and-wordcloud
+exr:unnamed-chunk-11
+exr:unnamed-chunk-16
+exr:unnamed-chunk-20
+exr:unnamed-chunk-59
+exr:unnamed-chunk-70
+exr:unnamed-chunk-80
+fig:unnamed-chunk-82
+exr:unnamed-chunk-83
