@@ -269,3 +269,6 @@ collecting-word-frequency
 collecting-joint-frequencies
 preparing-data-input-file
 collecting-corpus-size
+collostructional-analysis-an-introduction
+the-four-main-methods
+important-studies-and-foundations
