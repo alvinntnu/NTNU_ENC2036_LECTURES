@@ -273,3 +273,9 @@ collostructional-analysis-an-introduction
 the-four-main-methods
 important-studies-and-foundations
 exr:unnamed-chunk-43
+fig:engnlp2
+fig:unnamed-chunk-15
+fig:distance
+fig:dfmdemo
+exr:unnamed-chunk-73
+from-feature-co-occurrence-matrices-fcm-to-collocations
