@@ -23,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-05-07" />
+<meta name="date" content="2026-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="xml.html"/>
-<link rel="next" href="python-environment.html"/>
+<link rel="next" href="semantic-representations-word-embeddings.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
@@ -437,13 +437,77 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises"><i class="fa fa-check"></i><b>12.4</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>13</b> Python Environment</a>
+<li class="chapter" data-level="13" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html"><i class="fa fa-check"></i><b>13</b> Semantic Representations: Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a-typical-data-analysis-workflow"><i class="fa fa-check"></i><b>13.1</b> A Typical Data Analysis Workflow</a></li>
+<li class="chapter" data-level="13.2" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#data-collection"><i class="fa fa-check"></i><b>13.2</b> Data Collection</a></li>
+<li class="chapter" data-level="13.3" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#data-preprocessing"><i class="fa fa-check"></i><b>13.3</b> Data Preprocessing</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#common-text-processing"><i class="fa fa-check"></i>Common Text Processing</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#word-segmentation-chinese-preprocessing"><i class="fa fa-check"></i>Word Segmentation (Chinese Preprocessing)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#how-do-we-define-the-sentiment-of-man-and-woman-concepts"><i class="fa fa-check"></i><b>13.4</b> How do we define the sentiment of “Man” and “Woman” concepts?</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-classic-approach-collocations"><i class="fa fa-check"></i>The Classic Approach: Collocations</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-deep-learning-approach-word-embeddings"><i class="fa fa-check"></i>The Deep Learning Approach: Word Embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#deep-learning-word-embeddings"><i class="fa fa-check"></i><b>13.5</b> Deep Learning “Word Embeddings”</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#what-are-the-benefits-of-word-embeddings"><i class="fa fa-check"></i><b>13.5.1</b> What are the benefits of Word Embeddings?</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a.-prepare-the-tokens"><i class="fa fa-check"></i>a. Prepare the Tokens</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#b.-training-the-model"><i class="fa fa-check"></i>b. Training the Model</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#c.-extracting-and-using-embeddings"><i class="fa fa-check"></i>c. Extracting and Using Embeddings</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#d.-finding-semantic-neighbors"><i class="fa fa-check"></i>d. Finding Semantic Neighbors</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#e.-saving-and-loading-the-model"><i class="fa fa-check"></i>e. Saving and Loading the Model</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#f.-visualization"><i class="fa fa-check"></i>f. Visualization</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#g.-key-word2vec-hyperparameters-to-consider"><i class="fa fa-check"></i>g. Key <code>word2vec</code> Hyperparameters to Consider</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#intuitions-for-word-embeddings"><i class="fa fa-check"></i><b>13.6</b> Intuitions for Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#semantic-calculation-and-lexical-distance"><i class="fa fa-check"></i>Semantic Calculation and Lexical Distance</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a-quick-example-based-on-sinca-corpus"><i class="fa fa-check"></i>A Quick Example based on Sinca Corpus</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#corpus-data-profile"><i class="fa fa-check"></i><b>13.7</b> Corpus Data Profile</a></li>
+<li class="chapter" data-level="13.8" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#embeddings-training"><i class="fa fa-check"></i><b>13.8</b> Embeddings Training</a>
+<ul>
+<li class="chapter" data-level="13.8.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#train-a-base-word-embedding-model"><i class="fa fa-check"></i><b>13.8.1</b> Train a base word embedding model</a></li>
+<li class="chapter" data-level="13.8.2" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#artist-specific-fine-tuning"><i class="fa fa-check"></i><b>13.8.2</b> Artist-Specific Fine-tuning</a></li>
+<li class="chapter" data-level="13.8.3" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#identify-nearest-neighbors"><i class="fa fa-check"></i><b>13.8.3</b> Identify nearest neighbors</a></li>
+</ul></li>
+<li class="chapter" data-level="13.9" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#sentiment-analysis"><i class="fa fa-check"></i><b>13.9</b> Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#analyzing-the-sentiment-distribution-of-neighboring-words"><i class="fa fa-check"></i>Analyzing the Sentiment Distribution of Neighboring Words</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#check-the-dictionary-sentiment-dictionary"><i class="fa fa-check"></i>Check the Dictionary! Sentiment Dictionary!</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#distribution-of-nrc-sentiment-lexicon"><i class="fa fa-check"></i>Distribution of NRC Sentiment Lexicon</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#distribution-of-nrc-emotion-lexicon"><i class="fa fa-check"></i>Distribution of NRC Emotion Lexicon</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="vector-space-representation.html"><a href="#mapping-%E7%94%B7%E4%BA%BA%E5%A5%B3%E4%BA%BA-neighbors-to-nrc-sentiment-dictionary"><i class="fa fa-check"></i><b>13.10</b> Mapping 男人/女人 Neighbors to NRC Sentiment Dictionary</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#visualization-of-results-sentiment"><i class="fa fa-check"></i>Visualization of Results: Sentiment</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-%E7%94%B7%E4%BA%BA-sentiment-relevant-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring 男人 Sentiment-relevant Neighbors</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-sentiment-relevant-%E5%A5%B3%E4%BA%BA-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring Sentiment-relevant 女人 Neighbors</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#simple-statistical-analysis-positivenegative-binary-sentiment"><i class="fa fa-check"></i>Simple Statistical Analysis (Positive/Negative Binary Sentiment)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="vector-space-representation.html"><a href="#mapping-%E7%94%B7%E4%BA%BA%E5%A5%B3%E4%BA%BA-neighbors-to-nrc-emotion-dictionary"><i class="fa fa-check"></i><b>13.11</b> Mapping 男人/女人 Neighbors to NRC Emotion Dictionary</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#visualization-of-results-emotion"><i class="fa fa-check"></i>Visualization of Results: Emotion</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-%E7%94%B7%E4%BA%BA-emotion-relevant-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring 男人 Emotion-relevant Neighbors</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-emotion-relevant-%E5%A5%B3%E4%BA%BA-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring Emotion-relevant 女人 Neighbors</a></li>
+</ul></li>
+<li class="chapter" data-level="13.12" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#conclusion-1"><i class="fa fa-check"></i><b>13.12</b> Conclusion</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#corpus-analysis-and-computer-science"><i class="fa fa-check"></i>Corpus Analysis and Computer Science</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-future-of-linguistics"><i class="fa fa-check"></i>The Future of Linguistics?</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#dont-overthink-it-just-learn-it"><i class="fa fa-check"></i>Don’t overthink it, just learn it!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>14</b> Python Environment</a>
 <ul>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-the-python-with-anaconda"><i class="fa fa-check"></i>Install the python with Anaconda</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#create-conda-environment"><i class="fa fa-check"></i>Create Conda Environment</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-python-modules"><i class="fa fa-check"></i>Install Python Modules</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -515,7 +579,7 @@ div.csl-indent {
   </script>
 </div>
 <hr />
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-6-1.png" width="95%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-6-1.png" alt="" width="95%" /></p>
 </div>
 <div class="info">
 <p>Please check <span class="citation">Baroni et al. (<a href="#ref-baroni2014don">2014</a>)</span> for a critical comparison between count-based and prediction-based distributional models, and <span class="citation">Lenci et al. (<a href="#ref-lenci2022comparative">2022</a>)</span> for a comprehensive discussion on distribtional semantics models of different generations.</p>
@@ -640,540 +704,10 @@ attr(,&quot;package&quot;)
 <p>The advantage of creating a document-feature-matrix is that now each document is not only a series of <strong>character</strong> strings, but also a list of <strong>numeric</strong> values (i.e., a row of co-occurring frequencies), which can be compared mathematically with the other documents (i.e., the other rows).</p>
 <p>For example, now the document <code>1789-Washington</code> can be represented as a series of numeric values:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb11-1"><a href="vector-space-representation.html#cb11-1" tabindex="-1"></a><span class="do">## contextual features of `1789-Washington`</span></span>
-<span id="cb11-2"><a href="vector-space-representation.html#cb11-2" tabindex="-1"></a>corp_us_dfm[<span class="dv">1</span>,] <span class="sc">%&gt;%</span> as.vector</span></code></pre></div>
-<pre class="rout"><code>   [1]   1  71 116   1  48   2   2   1   1   1   1  48   1   8   2   3  12   1
-  [19]   8  17   1   1   6  18  36   1   4   1  20   9   2  70   1  15   1   2
-  [37]   5   1  23   4   3  23   1  22   5   2   2   9   2   1   3   1   2   7
-  [55]  14   2   1   1   1   1  31   1   1  10   2   1  14   1   1   1   1   2
-  [73]   9   8   2   2   1   1   1   1   1   1   1   1   1   1  11   1   1   1
-  [91]   1   2   1   4   1   1   1   3   1   1   4   1   1   3   5   2   4   1
- [109]   1   3   1   1   1   1   3   1   1   1   2   1   4  23   2   1   2   1
- [127]  10   1   1   3   2   1   7   5   7   1   1   1   4   2   1   1   2   1
- [145]   1   1   1   1   3   1   1   1   1   2   1   5   1   1   1   1   2   2
- [163]   1   1   1   1   1  12   1   1   1   1   1  10   1   1   1   4   1   1
- [181]   3   2   1   3   1   3   2   5   1   6   1   1   2   1   1   1   2   2
- [199]   1   1   1   1   2   2   1   1   1   1   2   1   1   2   1   1   6   1
- [217]   2   3   4   4   2   8   1   2   3   1   1   1   1   1   1   2   1   1
- [235]   1   1   1   3   1   2   3   2   4   1   2   3   2   3   2   1   1   1
- [253]   1   1   1   1   1   1   1   1   1   1   2   1   1   1   1   8   1   1
- [271]   1   2   3   1   2   1   1   3   1   1   2   1   1   1   1   2   2   1
- [289]   1   1   1   2   1   2   1   1   1   1   1   1   1   1   1   1   1   1
- [307]   5   1   1   3   3   1   2   1   1   2   1   1   2   1   2   2   1   1
- [325]   2   1   1   3   2   3   1   2   2   1   1   1   1   2   1   1   1   1
- [343]   1   1   1   1   2   1   2   1   3   1   1   1   1   1   1   2   1   1
- [361]   1   1   1   1   1   1   1   1   2   1   1   1   1   1   1   1   1   1
- [379]   2   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1   1   1
- [397]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   4   1   1   1
- [415]   1   1   1   2   3   1   1   1   1   1   1   1   1   1   1   1   1   1
- [433]   1   2   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
- [451]   1   1   1   1   1   1   2   1   1   1   1   1   1   1   2   1   1   1
- [469]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1
- [487]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
- [505]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
- [523]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   2   1   1
- [541]   1   1   1   1   3   1   1   1   1   1   1   1   1   1   1   1   1   1
- [559]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
- [577]   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
- [595]   1   1   1   1   1   1   1   1   1   0   0   0   0   0   0   0   0   0
- [613]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [631]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [649]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [667]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [685]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [703]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [721]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [739]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [757]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [775]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [793]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [811]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [829]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [847]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [865]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [883]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [901]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [919]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [937]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [955]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [973]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [991]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1009]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1027]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1045]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1063]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1081]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1099]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1117]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1135]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1153]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1171]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1189]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1207]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1225]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1243]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1261]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1279]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1297]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1315]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1333]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1351]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1369]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1387]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1405]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1423]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1441]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1459]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1477]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1495]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1513]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1531]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1549]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1567]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1585]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1603]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1621]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1639]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1657]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1675]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1693]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1711]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1729]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1747]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1765]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1783]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1801]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1819]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1837]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1855]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1873]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1891]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1909]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1927]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1945]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1963]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1981]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[1999]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2017]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2035]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2053]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2071]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2089]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2107]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2125]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2143]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2161]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2179]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2197]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2215]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2233]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2251]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2269]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2287]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2305]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2323]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2341]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2359]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2377]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2395]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2413]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2431]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2449]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2467]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2485]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2503]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2521]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2539]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2557]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2575]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2593]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2611]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2629]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2647]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2665]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2683]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2701]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2719]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2737]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2755]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2773]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2791]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2809]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2827]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2845]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2863]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2881]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2899]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2917]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2935]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2953]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2971]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[2989]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3007]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3025]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3043]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3061]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3079]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3097]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3115]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3133]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3151]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3169]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3187]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3205]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3223]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3241]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3259]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3277]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3295]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3313]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3331]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3349]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3367]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3385]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3403]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3421]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3439]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3457]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3475]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3493]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3511]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3529]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3547]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3565]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3583]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3601]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3619]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3637]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3655]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3673]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3691]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3709]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3727]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3745]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3763]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3781]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3799]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3817]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3835]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3853]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3871]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3889]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3907]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3925]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3943]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3961]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3979]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[3997]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4015]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4033]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4051]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4069]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4087]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4105]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4123]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4141]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4159]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4177]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4195]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4213]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4231]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4249]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4267]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4285]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4303]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4321]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4339]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4357]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4375]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4393]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4411]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4429]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4447]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4465]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4483]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4501]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4519]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4537]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4555]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4573]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4591]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4609]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4627]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4645]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4663]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4681]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4699]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4717]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4735]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4753]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4771]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4789]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4807]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4825]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4843]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4861]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4879]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4897]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4915]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4933]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4951]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4969]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[4987]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5005]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5023]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5041]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5059]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5077]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5095]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5113]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5131]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5149]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5167]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5185]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5203]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5221]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5239]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5257]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5275]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5293]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5311]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5329]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5347]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5365]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5383]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5401]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5419]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5437]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5455]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5473]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5491]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5509]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5527]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5545]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5563]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5581]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5599]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5617]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5635]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5653]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5671]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5689]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5707]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5725]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5743]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5761]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5779]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5797]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5815]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5833]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5851]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5869]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5887]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5905]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5923]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5941]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5959]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5977]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[5995]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6013]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6031]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6049]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6067]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6085]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6103]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6121]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6139]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6157]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6175]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6193]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6211]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6229]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6247]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6265]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6283]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6301]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6319]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6337]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6355]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6373]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6391]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6409]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6427]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6445]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6463]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6481]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6499]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6517]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6535]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6553]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6571]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6589]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6607]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6625]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6643]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6661]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6679]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6697]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6715]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6733]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6751]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6769]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6787]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6805]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6823]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6841]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6859]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6877]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6895]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6913]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6931]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6949]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6967]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[6985]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7003]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7021]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7039]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7057]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7075]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7093]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7111]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7129]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7147]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7165]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7183]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7201]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7219]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7237]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7255]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7273]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7291]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7309]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7327]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7345]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7363]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7381]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7399]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7417]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7435]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7453]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7471]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7489]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7507]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7525]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7543]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7561]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7579]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7597]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7615]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7633]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7651]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7669]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7687]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7705]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7723]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7741]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7759]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7777]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7795]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7813]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7831]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7849]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7867]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7885]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7903]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7921]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7939]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7957]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7975]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[7993]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8011]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8029]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8047]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8065]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8083]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8101]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8119]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8137]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8155]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8173]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8191]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8209]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8227]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8245]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8263]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8281]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8299]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8317]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8335]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8353]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8371]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8389]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8407]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8425]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8443]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8461]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8479]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8497]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8515]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8533]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8551]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8569]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8587]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8605]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8623]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8641]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8659]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8677]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8695]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8713]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8731]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8749]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8767]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8785]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8803]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8821]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8839]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8857]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8875]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8893]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8911]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8929]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8947]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8965]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[8983]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9001]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9019]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9037]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9055]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9073]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9091]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9109]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9127]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9145]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9163]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9181]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9199]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9217]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9235]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9253]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9271]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9289]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9307]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9325]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9343]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9361]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9379]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9397]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9415]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9433]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9451]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9469]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9487]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9505]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9523]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9541]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9559]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-[9577]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0</code></pre>
+<span id="cb11-2"><a href="vector-space-representation.html#cb11-2" tabindex="-1"></a>corp_us_dfm[<span class="dv">1</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>] <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="vector-space-representation.html#cb11-3" tabindex="-1"></a>  as.vector <span class="do">## only the first 20 dimensions of the vector</span></span></code></pre></div>
+<pre class="rout"><code> [1]   1  71 116   1  48   2   2   1   1   1   1  48   1   8   2   3  12   1   8
+[20]  17</code></pre>
 <p>The idea is that if two documents co-occur with similar sets of contextual features, they are more likely to be similar in their semantics as well.</p>
 <p>And now with the numeric representation of the documents, we can <strong>quantify</strong> these similarities.</p>
 <hr />
@@ -1185,7 +719,7 @@ attr(,&quot;package&quot;)
 <p>If we visualize these <strong>document vectors</strong> in a two-dimensional space, we can compute their distance/similarity mathematically.</p>
 <p>In Math, there are in general two types of metrics to measure the relationship between vectors: <strong>distance</strong>-based vs. <strong>similarity</strong>-based metrics.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-15-1.png" alt="Vector Representation" width="50%" />
+<img src="figs/vector-space-representation-unnamed-chunk-15-1.png" alt="Vector Representation" width="50%" />
 <p class="caption">
 Figure 12.2: Vector Representation
 </p>
@@ -1221,7 +755,7 @@ Figure 12.2: Vector Representation
 <span id="cb14-12"><a href="vector-space-representation.html#cb14-12" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">8.944272</span></span></code></pre></div>
 <p>The geometrical meanings of the Euclidean distance are easy to conceptualize (c.f., the dashed lines in Figure <a href="vector-space-representation.html#fig:distance">12.3</a>)</p>
 <div class="figure"><span style="display:block;" id="fig:distance"></span>
-<img src="CorpusLinguistics_bookdown_files/figure-html/distance-1.png" alt="Distance-based Metric: Euclidean Distance" width="50%" />
+<img src="figs/vector-space-representation-distance-1.png" alt="Distance-based Metric: Euclidean Distance" width="50%" />
 <p class="caption">
 Figure 12.3: Distance-based Metric: Euclidean Distance
 </p>
@@ -1240,9 +774,9 @@ Figure 12.3: Distance-based Metric: Euclidean Distance
 <span id="cb15-7"><a href="vector-space-representation.html#cb15-7" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3032037</span></span></code></pre></div>
 <p>The Cosine Similarity ranges from -1 (= the least similar) to 1 (= the most similar).</p>
 <p>The geometric meanings of cosines of two vectors are connected to the <strong>arcs</strong> between the vectors: the greater their cosine similarity, the smaller the arcs, the closer they are.</p>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-18-1.png" width="50%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-18-1.png" alt="" width="50%" /></p>
 <hr />
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-19-1.png" width="50%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-19-1.png" alt="" width="50%" /></p>
 <div class="try">
 <p>Cosine Similarity is related to Pearson Correlation. If you would like to know more about their differences, take a look at this comprehensive blog post, <a href="https://leimao.github.io/blog/Cosine-Similarity-VS-Pearson-Correlation-Coefficient/">Cosine Similarity VS Pearson Correlation Coefficient</a>.</p>
 </div>
@@ -1311,7 +845,7 @@ Z 0.3032037 0.4961389</code></pre>
 <li>The <strong>Cosine Similarity</strong> metric is a similarity-based metric: the larger the value, the more <strong>similar</strong> the two vectors.</li>
 </ol>
 <p>Based on our computations of the metrics for the three vectors, now in terms of the <strong>Euclidean Distance</strong>, <em>y</em> and <em>z</em> are closer; in terms of <strong>Cosine Similarity</strong>, <em>x</em> and <em>y</em> are closer.</p>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-23-1.png" width="45%" /><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-23-2.png" width="45%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-23-1.png" alt="" width="45%" /><img src="figs/vector-space-representation-unnamed-chunk-23-2.png" alt="" width="45%" /></p>
 <p>Therefore, it should now be clear that the analyst needs to decide which metric to use, or more importantly, which metric is more relevant. The key is which of the following is more important in the semantic representation of the documents/words:</p>
 <ul>
 <li>The <strong>absolute</strong> value differences that the vectors have on each dimension (i.e., the lengths of the vectors)</li>
@@ -1353,6 +887,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <li>The <strong>informativeness</strong> of the features</li>
 <li>The <strong>distributional properties</strong> of the features</li>
 </ul>
+<hr />
 <div id="granularity" class="section level4 unnumbered hasAnchor">
 <h4>Granularity<a href="vector-space-representation.html#granularity" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In our previous example, we include only words, i.e., unigrams, as our contextual features in the <code>corp_us_dfm</code>. We can in fact include linguistic units at multiple granularities:</p>
@@ -1408,6 +943,7 @@ Figure 12.4: Example of Document-Feature Matrix
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["fellow-citizen_of_the"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["of_the_senat"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["the_senat_and"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["senat_and_of"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["and_of_the"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["of_the_hous"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["the_hous_of"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["hous_of_repres"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["of_repres_:"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["repres_:_among"],"name":[11],"type":["dbl"],"align":["right"]},{"label":[":_among_the"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["among_the_vicissitud"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["the_vicissitud_incid"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["vicissitud_incid_to"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["incid_to_life"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["to_life_no"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["life_no_event"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["no_event_could"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["event_could_have"],"name":[20],"type":["dbl"],"align":["right"]}],"data":[{"1":"1789-Washington","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"2","9":"2","10":"1","11":"1","12":"1","13":"1","14":"1","15":"1","16":"1","17":"1","18":"1","19":"1","20":"1","_rn_":"1"},{"1":"1793-Washington","2":"0","3":"0","4":"0","5":"0","6":"1","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"2"},{"1":"1797-Adams","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"3"},{"1":"1801-Jefferson","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"4"},{"1":"1805-Jefferson","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"5"},{"1":"1809-Madison","2":"0","3":"0","4":"0","5":"0","6":"2","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"6"},{"1":"1813-Madison","2":"0","3":"0","4":"0","5":"0","6":"1","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"7"},{"1":"1817-Monroe","2":"1","3":"0","4":"0","5":"0","6":"2","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"8"},{"1":"1821-Monroe","2":"0","3":"0","4":"0","5":"0","6":"1","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"9"},{"1":"1825-Adams","2":"0","3":"0","4":"0","5":"0","6":"1","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
+<hr />
 </div>
 <div id="informativeness" class="section level4 unnumbered hasAnchor">
 <h4>Informativeness<a href="vector-space-representation.html#informativeness" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1475,6 +1011,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <span id="cb34-9"><a href="vector-space-representation.html#cb34-9" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">59086</span></span>
 <span id="cb34-10"><a href="vector-space-representation.html#cb34-10" tabindex="-1"></a><span class="fu">nfeat</span>(corp_us_dfm_unigram_stop_punct) <span class="do">## unigram removing non-words/puncs</span></span>
 <span id="cb34-11"><a href="vector-space-representation.html#cb34-11" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">9359</span></span></code></pre></div>
+<hr />
 </div>
 <div id="distributional-properties" class="section level4 unnumbered hasAnchor">
 <h4>Distributional Properties<a href="vector-space-representation.html#distributional-properties" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1582,7 +1119,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <span id="cb39-16"><a href="vector-space-representation.html#cb39-16" tabindex="-1"></a>  <span class="at">rotation =</span> .<span class="dv">25</span>,</span>
 <span id="cb39-17"><a href="vector-space-representation.html#cb39-17" tabindex="-1"></a>  <span class="at">color =</span>  <span class="fu">brewer.pal</span>(<span class="dv">7</span>, <span class="st">&quot;Dark2&quot;</span>)</span>
 <span id="cb39-18"><a href="vector-space-representation.html#cb39-18" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-41-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-41-1.png" alt="" width="100%" /></p>
 </div>
 <div id="document-similarity" class="section level3 hasAnchor" number="12.2.9">
 <h3><span class="header-section-number">12.2.9</span> Document Similarity<a href="vector-space-representation.html#document-similarity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1604,7 +1141,7 @@ Figure 12.4: Example of Document-Feature Matrix
 <hr />
 <div id="normalized-term-frequencies" class="section level4 unnumbered hasAnchor">
 <h4>Normalized Term Frequencies<a href="vector-space-representation.html#normalized-term-frequencies" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="images/DFM-normalizedTF.gif" width="80%" /></p>
+<p><img src="images/DFM-normalizedTF.gif" alt="" width="80%" /></p>
 <ul>
 <li>We can normalize these term frequencies into percentages to reduce the <strong>impact of the document size</strong> (i.e., marginal frequencies) on the significance of the co-occurrence frequencies.</li>
 </ul>
@@ -1639,7 +1176,7 @@ docs                    among
 </div>
 <div id="tf-idf-weighting-scheme" class="section level4 unnumbered hasAnchor">
 <h4>TF-IDF Weighting SCheme<a href="vector-space-representation.html#tf-idf-weighting-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="images/DFM-TFIDF.gif" width="80%" /></p>
+<p><img src="images/DFM-TFIDF.gif" alt="" width="80%" /></p>
 <ul>
 <li>A more sophisticated weighting scheme is TF-IDF scheme. We can weight the significance of term frequencies based on the term’s IDF.</li>
 </ul>
@@ -1793,7 +1330,7 @@ docs              fellow-citizens    senate    house representatives     among
 <span id="cb74-10"><a href="vector-space-representation.html#cb74-10" tabindex="-1"></a><span class="fu">ggdendrogram</span>(corp_us_hist_euclidean, </span>
 <span id="cb74-11"><a href="vector-space-representation.html#cb74-11" tabindex="-1"></a>             <span class="at">rotate =</span> <span class="cn">TRUE</span>, </span>
 <span id="cb74-12"><a href="vector-space-representation.html#cb74-12" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-53-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-53-1.png" alt="" width="100%" /></p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb75-1"><a href="vector-space-representation.html#cb75-1" tabindex="-1"></a><span class="do">## similarity</span></span>
 <span id="cb75-2"><a href="vector-space-representation.html#cb75-2" tabindex="-1"></a>corp_us_hist_cosine <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> corp_us_cosine) <span class="sc">%&gt;%</span> <span class="do">## similarity to distance</span></span>
 <span id="cb75-3"><a href="vector-space-representation.html#cb75-3" tabindex="-1"></a>  as.dist <span class="sc">%&gt;%</span> </span>
@@ -1804,7 +1341,7 @@ docs              fellow-citizens    senate    house representatives     among
 <span id="cb75-8"><a href="vector-space-representation.html#cb75-8" tabindex="-1"></a><span class="fu">ggdendrogram</span>(corp_us_hist_cosine, </span>
 <span id="cb75-9"><a href="vector-space-representation.html#cb75-9" tabindex="-1"></a>             <span class="at">rotate =</span> <span class="cn">TRUE</span>, </span>
 <span id="cb75-10"><a href="vector-space-representation.html#cb75-10" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-53-2.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-53-2.png" alt="" width="100%" /></p>
 <div class="danger">
 <p>
 Please note that <code>textstat_simil()</code> gives us the
@@ -1856,11 +1393,7 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <p>With a corpus, we can also study the distribution, or contextual features, of <strong>(target) words</strong> based on their <strong>co-occurring</strong> (contextual) words. Now I would like to introduce another object defined in <code>quanteda</code>, i.e., the <strong>F</strong>eature-<strong>C</strong>ooccurrence <strong>M</strong>atrix <code>fcm</code>.</p>
 <div id="feature-coocurrence-matrix-fcm" class="section level3 hasAnchor" number="12.3.1">
 <h3><span class="header-section-number">12.3.1</span> Feature-Coocurrence Matrix (<code>fcm</code>)<a href="vector-space-representation.html#feature-coocurrence-matrix-fcm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A <strong>Feature-Cooccurrence Matrix</strong> is essentially a word co-occurrence matrix (i.e., a square matrix). There are two ways to create a <code>fcm</code>:</p>
-<ol style="list-style-type: decimal">
-<li>from <code>tokens</code> to <code>fcm</code></li>
-<li>from <code>dfm</code> to <code>fcm</code></li>
-</ol>
+<p>A <strong>Feature-Cooccurrence Matrix</strong> is essentially a word co-occurrence matrix (i.e., a square matrix).</p>
 </div>
 <div id="from-tokens-to-fcm" class="section level3 hasAnchor" number="12.3.2">
 <h3><span class="header-section-number">12.3.2</span> From <code>tokens</code> to <code>fcm</code><a href="vector-space-representation.html#from-tokens-to-fcm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1916,12 +1449,7 @@ features          Among vicissitudes incident
   vicissitudes        0            0        1
   incident            0            0        0
 [ reached max_nfeat ... 10,228 more features, reached max_nfeat ... 10,228 more features ]</code></pre>
-<p>A look at the <code>corp_fcm_win</code>:</p>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Fellow-Citizens"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["of"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["the"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Senate"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["and"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["House"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Representatives"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Among"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["vicissitudes"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["incident"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["to"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["life"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["no"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["event"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["could"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["have"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["filled"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["me"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["with"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["greater"],"name":[21],"type":["dbl"],"align":["right"]}],"data":[{"1":"Fellow-Citizens","2":"0","3":"2","4":"2","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","21":"0"},{"1":"of","2":"0","3":"168","4":"4918","5":"6","6":"858","7":"7","8":"4","9":"3","10":"1","11":"2","12":"145","13":"66","14":"58","15":"7","16":"4","17":"38","18":"0","19":"4","20":"38","21":"8"},{"1":"the","2":"0","3":"0","4":"208","5":"8","6":"1498","7":"10","8":"1","9":"2","10":"3","11":"4","12":"1426","13":"20","14":"7","15":"12","16":"6","17":"125","18":"2","19":"41","20":"303","21":"6"},{"1":"Senate","2":"0","3":"0","4":"0","5":"0","6":"4","7":"1","8":"0","9":"0","10":"0","11":"0","12":"5","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","21":"0"},{"1":"and","2":"0","3":"0","4":"0","5":"0","6":"296","7":"2","8":"0","9":"0","10":"2","11":"1","12":"468","13":"25","14":"28","15":"0","16":"4","17":"83","18":"0","19":"15","20":"137","21":"11"},{"1":"House","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"4","9":"0","10":"0","11":"0","12":"2","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"1","21":"0"},{"1":"Representatives","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"1","10":"0","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"1","21":"0"},{"1":"Among","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"1","11":"0","12":"0","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","21":"0"},{"1":"vicissitudes","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"1","12":"1","13":"0","14":"0","15":"0","16":"0","17":"0","18":"0","19":"1","20":"0","21":"0"},{"1":"incident","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"4","13":"1","14":"0","15":"0","16":"0","17":"0","18":"0","19":"0","20":"0","21":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<p>We can check the top N contextual features (i.e., co-occurring words) for specific lexical items:</p>
 <div class="sourceCode" id="cb78"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb78-1"><a href="vector-space-representation.html#cb78-1" tabindex="-1"></a><span class="do">## Check top 10 contextual features</span></span>
 <span id="cb78-2"><a href="vector-space-representation.html#cb78-2" tabindex="-1"></a><span class="do">## for specific target worods</span></span>
 <span id="cb78-3"><a href="vector-space-representation.html#cb78-3" tabindex="-1"></a>corp_fcm_win_2[<span class="st">&quot;our&quot;</span>,] <span class="sc">%&gt;%</span> colSums <span class="sc">%&gt;%</span> <span class="fu">sort</span>(.,<span class="at">decreasing=</span>T) <span class="sc">%&gt;%</span> .[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>]</span></code></pre></div>
@@ -2215,7 +1743,7 @@ features Among people States Great nation free shall great world union
 <span id="cb100-7"><a href="vector-space-representation.html#cb100-7" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4network <span class="sc">+</span></span>
 <span id="cb100-8"><a href="vector-space-representation.html#cb100-8" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
 <span id="cb100-9"><a href="vector-space-representation.html#cb100-9" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-65-1.png" alt="" width="672" /></p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 12.3  </strong></span>In the above example, our original goal was to subset the FCM by including only the target words (rows) and contextual features (columns) that are on the list of the top 50 contextual features (<code>names(corp_fcm_win_5_top50)</code>). In other words, the subset FCM should have been a 50 by 50 matrix? But it’s not. Why?</p>
 </div>
@@ -2264,7 +1792,7 @@ features     free
 <span id="cb103-6"><a href="vector-space-representation.html#cb103-6" tabindex="-1"></a>  <span class="at">vertex_labelsize =</span> <span class="dv">2</span> <span class="sc">*</span> scales<span class="sc">::</span><span class="fu">rescale</span>(<span class="fu">rowSums</span>(fcm4network <span class="sc">+</span></span>
 <span id="cb103-7"><a href="vector-space-representation.html#cb103-7" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
 <span id="cb103-8"><a href="vector-space-representation.html#cb103-8" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-67-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-66-1.png" alt="" width="100%" /></p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb104-1"><a href="vector-space-representation.html#cb104-1" tabindex="-1"></a><span class="do">## Remove words with no co-occurrence data</span></span>
 <span id="cb104-2"><a href="vector-space-representation.html#cb104-2" tabindex="-1"></a>fcm4cluster <span class="ot">&lt;-</span> corp_fcm_win_5_select[<span class="fu">names</span>(corp_fcm_win_5_top100),]</span>
 <span id="cb104-3"><a href="vector-space-representation.html#cb104-3" tabindex="-1"></a></span>
@@ -2306,12 +1834,12 @@ features    incident life event filled
 <span id="cb106-8"><a href="vector-space-representation.html#cb106-8" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.dendrogram</span>(fcm_hclust, <span class="at">hang =</span> <span class="fl">0.3</span>),</span>
 <span id="cb106-9"><a href="vector-space-representation.html#cb106-9" tabindex="-1"></a>     <span class="at">horiz =</span> T,</span>
 <span id="cb106-10"><a href="vector-space-representation.html#cb106-10" tabindex="-1"></a>     <span class="at">cex =</span> <span class="fl">0.6</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-68-1.png" width="576" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-67-1.png" alt="" width="576" /></p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb107-1"><a href="vector-space-representation.html#cb107-1" tabindex="-1"></a><span class="do">## plot dendrogram v2</span></span>
 <span id="cb107-2"><a href="vector-space-representation.html#cb107-2" tabindex="-1"></a><span class="fu">ggdendrogram</span>(fcm_hclust,</span>
 <span id="cb107-3"><a href="vector-space-representation.html#cb107-3" tabindex="-1"></a>             <span class="at">rotate =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb107-4"><a href="vector-space-representation.html#cb107-4" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-69-1.png" width="576" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-68-1.png" alt="" width="576" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
 <hr />
 </div>
@@ -2345,9 +1873,9 @@ features    incident life event filled
 <ul>
 <li>Example of the dendrogram based on the trigram-based <code>dfm</code>:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-72-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-71-1.png" alt="" width="100%" /></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 12.5  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
+<p><span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 12.5  </strong></span>Based on the <code>corp_us</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the <code>corp_us</code> according to their similarities in their co-occurring words. Specific steps are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>Please create a <code>tokens</code> object of <code>corpus</code> by removing punctuations, symbols, and numbers first.</li>
 <li>Please create a window-based <code>fcm</code> of the corpus from the <code>tokens</code> object by including words within the window size of 5 as the contextual words</li>
@@ -2367,7 +1895,7 @@ features    incident life event filled
 <li><p>The dimension of the input matrix for <code>textstats_simil()</code> should be: 50 rows and 9996 columns.</p></li>
 <li><p>Example of the dendrogram of the top 50 features in <code>fcm</code>:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-76-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-75-1.png" alt="" width="100%" /></p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 12.6  </strong></span>In this exercise, please create a dendrogram of the Taiwan Presidential Addresses included in <code>demo_data/TW_President.tar.gz</code> according to their similarities in <strong>ngram</strong> uses.</p>
 <p>Specific steps are as follows:</p>
@@ -2410,7 +1938,7 @@ features    incident life event filled
 <ul>
 <li>Example of the dendrogram:</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-80-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-79-1.png" alt="" width="100%" /></p>
 <hr />
 <div class="exercise">
 <p><span id="exr:unlabeled-div-4" class="exercise"><strong>Exercise 12.7  </strong></span>Based on the Taiwan Presidential Addresses Corpus included in <code>demo_data/TW_President.tar.gz</code>, we can study how words are connected to each other. In this exercise, please create a dendrogram of important words in the corpus according to their similarities in their co-occurring words. Specific steps are as follows:</p>
@@ -2434,12 +1962,12 @@ features    incident life event filled
 <ul>
 <li>Network of the top 50 features (Try to play with the aesthetic specifications of the network so that the node sizes reflect the total frequency of each word in the FCM):</li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-82-1.png" alt="" width="672" /></p>
 <ul>
 <li><p>The dimension of the input FCM for <code>textstats_simil()</code> should be: 100 rows and 5234 columns.</p></li>
 <li><p>Example of the dendrogram:</p></li>
 </ul>
-<p><img src="CorpusLinguistics_bookdown_files/figure-html/unnamed-chunk-84-1.png" width="100%" /></p>
+<p><img src="figs/vector-space-representation-unnamed-chunk-83-1.png" alt="" width="100%" /></p>
 <hr />
 
 </div>
@@ -2483,7 +2011,7 @@ Manning, C. D., &amp; Schütze, H. (1999). <em>Foundations of statistical natura
         </div>
       </div>
 <a href="xml.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python-environment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="semantic-representations-word-embeddings.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
