@@ -241,3 +241,11 @@ exr:unnamed-chunk-8
 fig:long2wide
 fig:wide2long
 exr:unnamed-chunk-22
+fig:engnlp1
+exr:spacy-sents
+fig:unnest-tokens
+exr:eng-pp-1
+exr:eng-pp-2
+fig:precision-recall
+exr:unlabeled-div-5
+exr:unlabeled-div-6
