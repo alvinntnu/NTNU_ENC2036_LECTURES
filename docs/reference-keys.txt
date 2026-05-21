@@ -266,3 +266,14 @@ fig:constructionextraction
 exr:unlabeled-div-13
 exr:unlabeled-div-14
 exr:unlabeled-div-15
+vector-space-model-for-words
+semantic-representations-supplement
+count-based-models-judging-a-word-by-its-neighbors
+prediction-based-models-learning-through-ai-and-proximity
+summary-the-intuitive-difference
+prediction-based-models-learning-through-statistical-modeling
+from-fcm-to-collocations
+fig:htmltag
+fig:htmltree
+fig:unnamed-chunk-18
+exr:wcex1

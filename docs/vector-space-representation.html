@@ -23,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-05-15" />
+<meta name="date" content="2026-05-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -428,14 +428,20 @@ div.csl-indent {
 <li class="chapter" data-level="12.2.9" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.2.9</b> Document Similarity</a></li>
 <li class="chapter" data-level="12.2.10" data-path="vector-space-representation.html"><a href="vector-space-representation.html#cluster-analysis"><i class="fa fa-check"></i><b>12.2.10</b> Cluster Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words-self-study"><i class="fa fa-check"></i><b>12.3</b> Vector Space Model for Words (Self-Study)</a>
+<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>12.3</b> Vector Space Model for Words</a>
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>12.3.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
 <li class="chapter" data-level="12.3.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-tokens-to-fcm"><i class="fa fa-check"></i><b>12.3.2</b> From <code>tokens</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="12.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-feature-co-occurrence-matrices-fcm-to-collocations"><i class="fa fa-check"></i><b>12.3.3</b> From Feature Co-occurrence Matrices (FCM) to Collocations</a></li>
+<li class="chapter" data-level="12.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-fcm-to-collocations"><i class="fa fa-check"></i><b>12.3.3</b> From FCM to Collocations</a></li>
 <li class="chapter" data-level="12.3.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>12.3.4</b> Lexical Similarity</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises"><i class="fa fa-check"></i><b>12.4</b> Exercises</a></li>
+<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#semantic-representations-supplement"><i class="fa fa-check"></i><b>12.4</b> Semantic Representations (Supplement)</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#count-based-models-judging-a-word-by-its-neighbors"><i class="fa fa-check"></i><b>12.4.1</b> Count-Based Models: “Judging a Word by its Neighbors”</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#prediction-based-models-learning-through-statistical-modeling"><i class="fa fa-check"></i><b>12.4.2</b> Prediction-Based Models: Learning through Statistical Modeling</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#summary-the-intuitive-difference"><i class="fa fa-check"></i><b>12.4.3</b> Summary: The Intuitive Difference</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises"><i class="fa fa-check"></i><b>12.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html"><i class="fa fa-check"></i><b>13</b> Semantic Representations: Word Embeddings</a>
 <ul>
@@ -535,9 +541,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb1"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb1-1"><a href="vector-space-representation.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="vector-space-representation.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(quanteda)</span>
 <span id="cb1-3"><a href="vector-space-representation.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(quanteda.textstats)</span>
-<span id="cb1-4"><a href="vector-space-representation.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots)</span>
-<span id="cb1-5"><a href="vector-space-representation.html#cb1-5" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
-<span id="cb1-6"><a href="vector-space-representation.html#cb1-6" tabindex="-1"></a><span class="fu">showtext_auto</span>(<span class="at">enable =</span> T)</span></code></pre></div>
+<span id="cb1-4"><a href="vector-space-representation.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots)</span></code></pre></div>
 <p>In this chapter, I would like to talk about the idea of <strong>distributional semantics</strong>, which features the hypothesis that the meaning of a linguistic unit is closely connected to its co-occurring contexts (co-texts).</p>
 <p>I will show you how this idea can be operationalized computationally and quantified using the distributional data of the linguistic units in the corpus.</p>
 <p>Because English and Chinese text processing requires slightly different procedures, this chapter will first focus on English texts.</p>
@@ -557,18 +561,18 @@ div.csl-indent {
 <p>In computational linguistics, this idea forms the basis of <strong>distributional semantics</strong>. The central assumption is simple: we can represent meaning by looking at patterns of co-occurrence in large corpora. In other words, words and documents gain meaning from the company they keep.</p>
 <p>This idea supports two closely related applications. First, it helps us model <strong>lexical semantics</strong>, where the focus is on word meaning. Second, it helps us model <strong>document semantics</strong>, where the focus is on topics.</p>
 <ul>
-<li><p><strong>Lexical Semantics</strong></p>
+<li><strong>Lexical Semantics (Word Level)</strong>
 <ul>
-<li>We start by selecting a <strong>target word</strong> and then collect its <strong>contextual features</strong>, which are the words that tend to appear near it in a corpus. These co-occurrence patterns form a distributional profile for the word.</li>
-<li>Once we build these profiles, we can compare them across words. If two words show similar patterns in their contextual features, we can infer that they have similar meanings. In this way, meaning emerges from usage patterns rather than fixed definitions.</li>
+<li><strong>Vector Construction:</strong> We select a <strong>target word</strong> and map its <strong>contextual features</strong> by tracking the words that frequently appear near it within a specified window. These co-occurrence frequencies form a distributional profile for that word.</li>
+<li><strong>Semantic Inference:</strong> By comparing these profiles across different words, we can quantify their semantic similarity. Words that share similar contextual environments are inferred to have similar meanings, meaning that semantic representations emerge directly from usage rather than fixed definitions.</li>
 </ul></li>
-<li><p><strong>Document Semantics / Topics</strong></p>
+<li><strong>Document Semantics (Topic Level)</strong>
 <ul>
-<li>Now we shift the focus from words to entire documents. For each document, we examine its <strong>lexical distribution</strong>, that is, the set of words that occur in it and their frequencies. This distribution forms a representation of the document.</li>
-<li>Next, we compare these distributions across documents. If two documents show similar patterns in their word usage, we can infer that they discuss similar topics.</li>
+<li><strong>Vector Construction:</strong> We shift the analytical focus from individual tokens to entire texts. Each document is represented by its <strong>lexical distribution</strong>, capturing which words appear in the text and how often.</li>
+<li><strong>Topical Inference:</strong> By comparing these word distributions across different texts, we can identify document relationships. Texts that share similar patterns of word choice are inferred to cover similar topical structures.</li>
 </ul></li>
 </ul>
-<p>In short, the same distributional logic applies at different levels. At the word level, it captures lexical meaning. At the document level, it captures topical structure. This distributional approach to meanings is sometimes referred to as <strong>Vector Space Semantics</strong>.</p>
+<p>This shared distributional logic underpins <strong>Vector Space Semantics</strong>: capturing localized lexical meaning at the word level and broader thematic topics at the document level.</p>
 <div class="info">
 <p>In short, we can represent the semantics of a linguistic unit based on its co-occurrence patterns with specific contextual features.</p>
 <p>If two words co-occur with similar sets of contextual features, they are likely to be semantically similar.</p>
@@ -1386,8 +1390,8 @@ book, <span class="citation"><span class="citation">Kaufman &amp; Rousseeuw (<a 
 <!-- For more information on vector-space semantics, I would highly recommend the [chapter of Vector Semantics and Embeddings, by Dan Jurafsky and James Martin](https://web.stanford.edu/~jurafsky/slp3/6.pdf). -->
 </div>
 </div>
-<div id="vector-space-model-for-words-self-study" class="section level2 hasAnchor" number="12.3">
-<h2><span class="header-section-number">12.3</span> Vector Space Model for Words (Self-Study)<a href="vector-space-representation.html#vector-space-model-for-words-self-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vector-space-model-for-words" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Vector Space Model for Words<a href="vector-space-representation.html#vector-space-model-for-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So far, we have been talking about applying the vector space model to study the document semantics.</p>
 <p>Now let’s take a look at how this distributional semantic approach can facilitate a lexical semantic analysis.</p>
 <p>With a corpus, we can also study the distribution, or contextual features, of <strong>(target) words</strong> based on their <strong>co-occurring</strong> (contextual) words. Now I would like to introduce another object defined in <code>quanteda</code>, i.e., the <strong>F</strong>eature-<strong>C</strong>ooccurrence <strong>M</strong>atrix <code>fcm</code>.</p>
@@ -1544,10 +1548,15 @@ features          Representatives Among vicissitudes incident
 <!-- *** -->
 </div>
 </div>
-<div id="from-feature-co-occurrence-matrices-fcm-to-collocations" class="section level3 hasAnchor" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> From Feature Co-occurrence Matrices (FCM) to Collocations<a href="vector-space-representation.html#from-feature-co-occurrence-matrices-fcm-to-collocations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="from-fcm-to-collocations" class="section level3 hasAnchor" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> From FCM to Collocations<a href="vector-space-representation.html#from-fcm-to-collocations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once we have the co-occurrence distributions of words within a fixed window, we can move beyond simple counts to calculate <strong>lexical associations</strong>. This allows us to identify meaningful collocations —- word pairs that appear together more often than would be expected by chance.</p>
 <p>In the following workflow, we transform a Feature Co-occurrence Matrix (FCM) into a tidy format to calculate association measures like <strong>Mutual Information (MI)</strong> and the <strong>t-score</strong>.</p>
+<div class="warning">
+<p><strong>Important Distraction Note: Window-Based FCM vs. Bigrams</strong></p>
+<p>It is important to distinguish this method from our previous collocation calculations using <strong>bigrams</strong>. A bigram approach restricts candidate pairs strictly to <strong>adjacent tokens</strong> (words that sit directly next to each other, like <em>social</em> + <em>media</em>).</p>
+<p>In contrast, using a <strong>Feature Co-occurrence Matrix (FCM)</strong> with a sliding window allows us to capture wider contextual associations. Words do not need to be immediately adjacent to form a pair; as long as they appear within the specified window span (e.g., two words before or after the target), they are counted as co-occurring. This window-based approach captures flexible, non-contiguous collocations that a strict bigram approach would miss entirely.</p>
+</div>
 <ul>
 <li>Step 1: Converting FCM to a Tidy Format</li>
 </ul>
@@ -1841,11 +1850,106 @@ features    incident life event filled
 <span id="cb107-4"><a href="vector-space-representation.html#cb107-4" tabindex="-1"></a>             <span class="at">theme_dendro =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
 <p><img src="figs/vector-space-representation-unnamed-chunk-68-1.png" alt="" width="576" /></p>
 <p>The <code>dfm</code> or <code>fcm</code> come with many potentials. Please refer to the <a href="https://quanteda.io/index.html"><code>quanteda</code> documentation</a> for more applications.</p>
+</div>
+</div>
+<div id="semantic-representations-supplement" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Semantic Representations (Supplement)<a href="vector-space-representation.html#semantic-representations-supplement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we want a computer to understand what a word means, we cannot just give it a dictionary definition. Instead, we represent words as numbers—specifically, as lists of numbers called <strong>vectors</strong>.</p>
+<p>In modern computational linguistics, there are two main ways to build these numerical representations: <strong>Count-Based Models</strong> and <strong>Prediction-Based Models</strong>.</p>
+<hr />
+<div id="count-based-models-judging-a-word-by-its-neighbors" class="section level3 hasAnchor" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> Count-Based Models: “Judging a Word by its Neighbors”<a href="vector-space-representation.html#count-based-models-judging-a-word-by-its-neighbors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The core idea here comes from the famous linguistic maxim: <em>“You shall know a word by the company it keeps.”</em> Count-based models look at a target word and literally <strong>count</strong> how many times other words appear near it within a text.</p>
+<ul>
+<li><strong>How it works:</strong> If you have a 5-word window, and the word <em>coffee</em> frequently appears near words like <em>drink</em>, <em>cup</em>, <em>beans</em>, and <em>morning</em>, the computer builds a profile for <em>coffee</em> based on those counts.</li>
+<li><strong>The Output:</strong> A large grid (a matrix) where rows are words and columns are the context words.</li>
+<li><strong>Pros &amp; Cons:</strong> It is highly intuitive and straightforward to calculate, but the tables can become massive and mostly filled with zeros (sparse data) because most words do not appear next to each other.</li>
+</ul>
+<hr />
+</div>
+<div id="prediction-based-models-learning-through-statistical-modeling" class="section level3 hasAnchor" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> Prediction-Based Models: Learning through Statistical Modeling<a href="vector-space-representation.html#prediction-based-models-learning-through-statistical-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Instead of simply using co-occurrence frequency counts, prediction-based models treat learning word meaning as a statistical modeling. The computer is trained to <strong>predict</strong> a target word based on its local context, or to predict the context words given a single target token.</p>
+<p>To build these representations efficiently, these models rely on <strong>dimensionality reduction</strong> or <strong>neural network architectures</strong>:</p>
+<ul>
+<li><strong>Latent Semantic Analysis (LSA):</strong> This technique takes a giant count-based table and compresses it using advanced dimensional reduction techniques/algorithms. It filters out the “noise” and uncovers the hidden (latent) structural relationships between words, resulting in much smaller, denser vectors.</li>
+<li><strong>Word2Vec (Neural Networks):</strong> This approach uses a neural network with a single hidden layer to learn word representations (i.e., embeddings). Instead of scanning entire sentences, the model moves a local sliding window across the text. It either uses the surrounding context words to predict the center target word, or uses the target word to predict the surrounding context. By calculating prediction errors across millions of tokens, the network continuously adjusts the weights of its layers. Over time, these weights become the dense vector representations, positioning words that share similar distribution profiles (like <em>cat</em> and <em>dog</em>) close together in the vector space.</li>
+</ul>
+<hr />
+</div>
+<div id="summary-the-intuitive-difference" class="section level3 hasAnchor" number="12.4.3">
+<h3><span class="header-section-number">12.4.3</span> Summary: The Intuitive Difference<a href="vector-space-representation.html#summary-the-intuitive-difference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Count-Based Models</th>
+<th>Prediction-Based Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Core Action</strong></td>
+<td>Counting frequencies in a window</td>
+<td>Predicting missing words via training</td>
+</tr>
+<tr class="even">
+<td><strong>Data Structure</strong></td>
+<td>Large, sparse matrices (lots of zeros)</td>
+<td>Compact, dense vectors (continuous numbers)</td>
+</tr>
+<tr class="odd">
+<td><strong>Typical Tool</strong></td>
+<td>Feature Co-occurrence Matrix (FCM)</td>
+<td>Word2Vec, GloVe, or LSA</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>Within prediction-based approaches, <strong>Word2Vec</strong> (Mikolov et al., 2013) is the most prominent framework. Instead of counting neighbors across a whole text, it uses a shallow neural network and a sliding window to learn word vectors through one of two training architectures: <strong>CBOW</strong> or <strong>Skip-gram</strong>.</p>
+<hr />
+<div id="continuous-bag-of-words-cbow" class="section level4 unnumbered hasAnchor">
+<h4>Continuous Bag-of-Words (CBOW)<a href="vector-space-representation.html#continuous-bag-of-words-cbow" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The CBOW model <strong>predicts a target word based on its surrounding context</strong>.</p>
+<ul>
+<li><strong>Mechanism:</strong> The network takes the surrounding words within a window and aggregates them to guess the missing word in the middle.</li>
+<li><strong>Analogy:</strong> A standard <strong>fill-in-the-blank</strong> test.</li>
+</ul>
+<blockquote>
+<p>“I drank a cup of hot ______ this morning.”</p>
+</blockquote>
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Prediction:</strong> <em>coffee</em></p>
+<ul>
+<li><strong>Strengths:</strong> Faster to train and highly effective for frequent words.</li>
+</ul>
+</div>
+<div id="skip-gram" class="section level4 unnumbered hasAnchor">
+<h4>Skip-gram<a href="vector-space-representation.html#skip-gram" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Skip-gram model does the exact opposite: it <strong>predicts the surrounding context based on a single target word</strong>.</p>
+<ul>
+<li><strong>Mechanism:</strong> The network takes one specific word and attempts to guess which words are likely to appear nearby.</li>
+<li><strong>Analogy:</strong> A word <strong>association game</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Target:</strong> <em>coffee</em></p>
+</blockquote>
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Predictions:</strong> <em>beans</em>, <em>brewed</em>, <em>morning</em></p>
+<ul>
+<li><strong>Strengths:</strong> Better at representing <strong>rare words</strong> and subtle semantic relationships, though it requires more computing power.</li>
+</ul>
+<p>We will come back to the implementation in the next Chapter.</p>
+</div>
+</div>
 <hr />
 </div>
 </div>
-<div id="exercises" class="section level2 hasAnchor" number="12.4">
-<h2><span class="header-section-number">12.4</span> Exercises<a href="vector-space-representation.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exercises" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Exercises<a href="vector-space-representation.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 12.4  </strong></span>In this exercise, please create a dendrogram of the documents included in <code>corp_us</code> according to their similarities in trigram uses.</p>
 <p>Specific steps are as follows:</p>
