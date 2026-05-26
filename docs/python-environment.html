@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Python Environment | Corpus Linguistics</title>
+  <title>Chapter 14 Python Environment | Corpus Linguistics</title>
   <meta name="description" content="ENC2036 Course material first edition" />
   <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Python Environment | Corpus Linguistics" />
+  <meta property="og:title" content="Chapter 14 Python Environment | Corpus Linguistics" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="ENC2036 Course material first edition" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Python Environment | Corpus Linguistics" />
+  <meta name="twitter:title" content="Chapter 14 Python Environment | Corpus Linguistics" />
   
   <meta name="twitter:description" content="ENC2036 Course material first edition" />
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-03-04" />
+<meta name="date" content="2026-05-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="vector-space-representation.html"/>
+<link rel="prev" href="semantic-representations-word-embeddings.html"/>
 <link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -167,12 +167,12 @@ div.csl-indent {
 <li><a href="./"><img src="images/alerts/book-solid.svg" height = "20" width = "20"> ENC 2036 Corpus Linguistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-objective"><i class="fa fa-check"></i>Course Objective</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#reading-materials"><i class="fa fa-check"></i>Reading Materials</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-requirement"><i class="fa fa-check"></i>Course Requirement</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#exams"><i class="fa fa-check"></i>Exams</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#grading-policy"><i class="fa fa-check"></i>Grading Policy</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#final-paper-requirement"><i class="fa fa-check"></i>Final Paper Requirement</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-website"><i class="fa fa-check"></i>Course Website</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing-to-the-lecture-notes"><i class="fa fa-check"></i>Contributing to the Lecture Notes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-demo-data"><i class="fa fa-check"></i>Course Demo Data</a></li>
@@ -202,7 +202,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.3" data-path="creating-corpus.html"><a href="creating-corpus.html#css"><i class="fa fa-check"></i><b>3.1.3</b> CSS</a></li>
 <li class="chapter" data-level="3.1.4" data-path="creating-corpus.html"><a href="creating-corpus.html#html-css-javascript"><i class="fa fa-check"></i><b>3.1.4</b> HTML + CSS ( + JavaScript)</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>3.2</b> Web Crawling</a></li>
+<li class="chapter" data-level="3.2" data-path="creating-corpus.html"><a href="creating-corpus.html#web-crawling"><i class="fa fa-check"></i><b>3.2</b> Web Crawling</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="creating-corpus.html"><a href="creating-corpus.html#index-pages"><i class="fa fa-check"></i><b>3.2.1</b> Index Pages</a></li>
+<li class="chapter" data-level="3.2.2" data-path="creating-corpus.html"><a href="creating-corpus.html#extract-post-texts"><i class="fa fa-check"></i><b>3.2.2</b> Extract Post Texts</a></li>
+<li class="chapter" data-level="3.2.3" data-path="creating-corpus.html"><a href="creating-corpus.html#extract-post-comments"><i class="fa fa-check"></i><b>3.2.3</b> Extract Post Comments</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="creating-corpus.html"><a href="creating-corpus.html#functional-programming"><i class="fa fa-check"></i><b>3.3</b> Functional Programming</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="creating-corpus.html"><a href="creating-corpus.html#extract_art_links"><i class="fa fa-check"></i><b>3.3.1</b> <code>extract_art_links()</code></a></li>
@@ -251,17 +256,20 @@ div.csl-indent {
 <li class="chapter" data-level="5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html"><i class="fa fa-check"></i><b>5</b> Parts-of-Speech Tagging</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#installing-the-package"><i class="fa fa-check"></i><b>5.1</b> Installing the Package</a></li>
-<li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-analysis"><i class="fa fa-check"></i><b>5.3</b> Quick Analysis</a></li>
-<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.4</b> Working Pipeline</a></li>
-<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-texts"><i class="fa fa-check"></i><b>5.5</b> Parsing Your Texts</a></li>
-<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#metalinguistic-analysis"><i class="fa fa-check"></i><b>5.6</b> Metalinguistic Analysis</a></li>
-<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.7</b> Construction Analysis</a></li>
-<li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.8</b> Issues on Pattern Retrieval</a></li>
-<li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.9</b> Saving POS-tagged Texts</a></li>
-<li class="chapter" data-level="5.10" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.10</b> Finalize spaCy</a></li>
-<li class="chapter" data-level="5.11" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#notes-on-chinese-processing"><i class="fa fa-check"></i><b>5.11</b> Notes on Chinese Processing</a></li>
-<li class="chapter" data-level="5.12" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#useful-information"><i class="fa fa-check"></i><b>5.12</b> Useful Information</a></li>
+<li class="chapter" data-level="5.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-overview"><i class="fa fa-check"></i><b>5.2</b> Quick Overview</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parse-the-corpus"><i class="fa fa-check"></i><b>5.2.1</b> Parse the corpus</a></li>
+<li class="chapter" data-level="5.2.2" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#quick-analysis"><i class="fa fa-check"></i><b>5.2.2</b> Quick Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#working-pipeline"><i class="fa fa-check"></i><b>5.3</b> Working Pipeline</a></li>
+<li class="chapter" data-level="5.4" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#parsing-your-texts"><i class="fa fa-check"></i><b>5.4</b> Parsing Your Texts</a></li>
+<li class="chapter" data-level="5.5" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#syntactic-complexity-analysis"><i class="fa fa-check"></i><b>5.5</b> Syntactic Complexity Analysis</a></li>
+<li class="chapter" data-level="5.6" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#construction-analysis"><i class="fa fa-check"></i><b>5.6</b> Construction Analysis</a></li>
+<li class="chapter" data-level="5.7" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#issues-on-pattern-retrieval"><i class="fa fa-check"></i><b>5.7</b> Issues on Pattern Retrieval</a></li>
+<li class="chapter" data-level="5.8" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#saving-pos-tagged-texts"><i class="fa fa-check"></i><b>5.8</b> Saving POS-tagged Texts</a></li>
+<li class="chapter" data-level="5.9" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#finalize-spacy"><i class="fa fa-check"></i><b>5.9</b> Finalize spaCy</a></li>
+<li class="chapter" data-level="5.10" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#notes-on-chinese-processing"><i class="fa fa-check"></i><b>5.10</b> Notes on Chinese Processing</a></li>
+<li class="chapter" data-level="5.11" data-path="parts-of-speech-tagging.html"><a href="parts-of-speech-tagging.html#useful-information"><i class="fa fa-check"></i><b>5.11</b> Useful Information</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="keyword-analysis.html"><a href="keyword-analysis.html"><i class="fa fa-check"></i><b>6</b> Keyword Analysis</a>
 <ul>
@@ -297,13 +305,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#data"><i class="fa fa-check"></i><b>7.3</b> Data</a></li>
 <li class="chapter" data-level="7.4" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#loading-text-data"><i class="fa fa-check"></i><b>7.4</b> Loading Text Data</a></li>
-<li class="chapter" data-level="7.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#quanteda-based-exploration"><i class="fa fa-check"></i><b>7.5</b> Quanteda-based Exploration</a></li>
+<li class="chapter" data-level="7.5" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#corpus-profile"><i class="fa fa-check"></i><b>7.5</b> Corpus Profile</a></li>
 <li class="chapter" data-level="7.6" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#initialize-jiebar"><i class="fa fa-check"></i><b>7.6</b> Initialize <code>jiebaR</code></a></li>
 <li class="chapter" data-level="7.7" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-1-concordances-with-kwic"><i class="fa fa-check"></i><b>7.7</b> Case Study 1: Concordances with <code>kwic()</code></a></li>
-<li class="chapter" data-level="7.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.8</b> Case Study 2: Word Frequency and Wordcloud</a></li>
+<li class="chapter" data-level="7.8" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-2-word-frequency-and-wordcloud"><i class="fa fa-check"></i><b>7.8</b> Case Study 2: Word Frequency and Wordcloud</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#general-steps"><i class="fa fa-check"></i><b>7.8.1</b> General steps</a></li>
+<li class="chapter" data-level="7.8.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#tokenizations-lines-and-words"><i class="fa fa-check"></i><b>7.8.2</b> Tokenizations (Lines and Words)</a></li>
+<li class="chapter" data-level="7.8.3" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#frequency-list-and-wordcloud"><i class="fa fa-check"></i><b>7.8.3</b> Frequency list and Wordcloud</a></li>
+</ul></li>
 <li class="chapter" data-level="7.9" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-3-patterns"><i class="fa fa-check"></i><b>7.9</b> Case Study 3: Patterns</a>
 <ul>
-<li class="chapter" data-level="7.9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>7.9.1</b> BEI Construction</a></li>
+<li class="chapter" data-level="7.9.1" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#corpus-pos-tagging"><i class="fa fa-check"></i><b>7.9.1</b> Corpus POS Tagging</a></li>
+<li class="chapter" data-level="7.9.2" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#bei-construction"><i class="fa fa-check"></i><b>7.9.2</b> BEI Construction</a></li>
 </ul></li>
 <li class="chapter" data-level="7.10" data-path="chinese-text-processing.html"><a href="chinese-text-processing.html#case-study-4-lexical-bundles"><i class="fa fa-check"></i><b>7.10</b> Case Study 4: Lexical Bundles</a>
 <ul>
@@ -315,21 +329,27 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html"><i class="fa fa-check"></i><b>8</b> Constructions and Idioms</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#collostruction"><i class="fa fa-check"></i><b>8.1</b> Collostruction</a></li>
+<li class="chapter" data-level="8.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#collostructional-analysis-an-introduction"><i class="fa fa-check"></i><b>8.1</b> Collostructional Analysis: An Introduction</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#the-four-main-methods"><i class="fa fa-check"></i><b>8.1.1</b> The Four Main Methods</a></li>
+<li class="chapter" data-level="8.1.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#important-studies-and-foundations"><i class="fa fa-check"></i><b>8.1.2</b> Important Studies and Foundations</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#corpus"><i class="fa fa-check"></i><b>8.2</b> Corpus</a></li>
 <li class="chapter" data-level="8.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-segmentation"><i class="fa fa-check"></i><b>8.3</b> Word Segmentation</a></li>
-<li class="chapter" data-level="8.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#extract-constructions"><i class="fa fa-check"></i><b>8.4</b> Extract Constructions</a></li>
-<li class="chapter" data-level="8.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#distributional-information-needed-for-ca"><i class="fa fa-check"></i><b>8.5</b> Distributional Information Needed for CA</a>
+<li class="chapter" data-level="8.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#collexeme-analysis"><i class="fa fa-check"></i><b>8.4</b> Collexeme Analysis</a>
 <ul>
-<li class="chapter" data-level="8.5.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#word-frequency-list"><i class="fa fa-check"></i><b>8.5.1</b> Word Frequency List</a></li>
-<li class="chapter" data-level="8.5.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#joint-frequencies"><i class="fa fa-check"></i><b>8.5.2</b> Joint Frequencies</a></li>
-<li class="chapter" data-level="8.5.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#input-for-coll.analysis.r"><i class="fa fa-check"></i><b>8.5.3</b> Input for <code>coll.analysis.r</code></a></li>
-<li class="chapter" data-level="8.5.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#other-information"><i class="fa fa-check"></i><b>8.5.4</b> Other Information</a></li>
-<li class="chapter" data-level="8.5.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#create-output-file"><i class="fa fa-check"></i><b>8.5.5</b> Create Output File</a></li>
+<li class="chapter" data-level="8.4.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#extract-constructions"><i class="fa fa-check"></i><b>8.4.1</b> Extract Constructions</a></li>
+<li class="chapter" data-level="8.4.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#distributional-information-needed-for-ca"><i class="fa fa-check"></i><b>8.4.2</b> Distributional Information Needed for CA</a></li>
+<li class="chapter" data-level="8.4.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#running-collostructional-analysis"><i class="fa fa-check"></i><b>8.4.3</b> Running Collostructional Analysis</a></li>
+<li class="chapter" data-level="8.4.4" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>8.4.4</b> Interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#running-collostructional-analysis"><i class="fa fa-check"></i><b>8.6</b> Running Collostructional Analysis</a></li>
-<li class="chapter" data-level="8.7" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretations"><i class="fa fa-check"></i><b>8.7</b> Interpretations</a></li>
-<li class="chapter" data-level="8.8" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#exercises"><i class="fa fa-check"></i><b>8.8</b> Exercises</a></li>
+<li class="chapter" data-level="8.5" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#distinctive-collexeme-analysis"><i class="fa fa-check"></i><b>8.5</b> Distinctive Collexeme Analysis</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#data-1"><i class="fa fa-check"></i><b>8.5.1</b> Data</a></li>
+<li class="chapter" data-level="8.5.2" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#analysis"><i class="fa fa-check"></i><b>8.5.2</b> Analysis</a></li>
+<li class="chapter" data-level="8.5.3" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#interpretation"><i class="fa fa-check"></i><b>8.5.3</b> Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="constructions-and-idioms.html"><a href="constructions-and-idioms.html#more-exercises-1"><i class="fa fa-check"></i><b>8.6</b> More Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="ckiptagger.html"><a href="ckiptagger.html"><i class="fa fa-check"></i><b>9</b> CKIP Tagger</a>
 <ul>
@@ -403,22 +423,92 @@ div.csl-indent {
 <li class="chapter" data-level="12.2.9" data-path="vector-space-representation.html"><a href="vector-space-representation.html#document-similarity"><i class="fa fa-check"></i><b>12.2.9</b> Document Similarity</a></li>
 <li class="chapter" data-level="12.2.10" data-path="vector-space-representation.html"><a href="vector-space-representation.html#cluster-analysis"><i class="fa fa-check"></i><b>12.2.10</b> Cluster Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words-self-study"><i class="fa fa-check"></i><b>12.3</b> Vector Space Model for Words (Self-Study)</a>
+<li class="chapter" data-level="12.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#vector-space-model-for-words"><i class="fa fa-check"></i><b>12.3</b> Vector Space Model for Words</a>
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#feature-coocurrence-matrix-fcm"><i class="fa fa-check"></i><b>12.3.1</b> Feature-Coocurrence Matrix (<code>fcm</code>)</a></li>
 <li class="chapter" data-level="12.3.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-tokens-to-fcm"><i class="fa fa-check"></i><b>12.3.2</b> From <code>tokens</code> to <code>fcm</code></a></li>
-<li class="chapter" data-level="12.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-dfm-to-fcm"><i class="fa fa-check"></i><b>12.3.3</b> From <code>dfm</code> to <code>fcm</code></a></li>
+<li class="chapter" data-level="12.3.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#from-fcm-to-collocations"><i class="fa fa-check"></i><b>12.3.3</b> From FCM to Collocations</a></li>
 <li class="chapter" data-level="12.3.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#lexical-similarity"><i class="fa fa-check"></i><b>12.3.4</b> Lexical Similarity</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises-1"><i class="fa fa-check"></i><b>12.4</b> Exercises</a></li>
+<li class="chapter" data-level="12.4" data-path="vector-space-representation.html"><a href="vector-space-representation.html#semantic-representations-supplement"><i class="fa fa-check"></i><b>12.4</b> Semantic Representations (Supplement)</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vector-space-representation.html"><a href="vector-space-representation.html#count-based-models-judging-a-word-by-its-neighbors"><i class="fa fa-check"></i><b>12.4.1</b> Count-Based Models: “Judging a Word by its Neighbors”</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vector-space-representation.html"><a href="vector-space-representation.html#prediction-based-models-learning-through-statistical-modeling"><i class="fa fa-check"></i><b>12.4.2</b> Prediction-Based Models: Learning through Statistical Modeling</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vector-space-representation.html"><a href="vector-space-representation.html#summary-the-intuitive-difference"><i class="fa fa-check"></i><b>12.4.3</b> Summary: The Intuitive Difference</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>13</b> Python Environment</a>
+<li class="chapter" data-level="12.5" data-path="vector-space-representation.html"><a href="vector-space-representation.html#exercises"><i class="fa fa-check"></i><b>12.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html"><i class="fa fa-check"></i><b>13</b> Semantic Representations: Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a-typical-data-analysis-workflow"><i class="fa fa-check"></i><b>13.1</b> A Typical Data Analysis Workflow</a></li>
+<li class="chapter" data-level="13.2" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#data-collection"><i class="fa fa-check"></i><b>13.2</b> Data Collection</a></li>
+<li class="chapter" data-level="13.3" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#data-preprocessing"><i class="fa fa-check"></i><b>13.3</b> Data Preprocessing</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#common-text-processing"><i class="fa fa-check"></i>Common Text Processing</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#word-segmentation-chinese-preprocessing"><i class="fa fa-check"></i>Word Segmentation (Chinese Preprocessing)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#how-do-we-define-the-sentiment-of-man-and-woman-concepts"><i class="fa fa-check"></i><b>13.4</b> How do we define the sentiment of “Man” and “Woman” concepts?</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-classic-approach-collocations"><i class="fa fa-check"></i>The Classic Approach: Collocations</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-deep-learning-approach-word-embeddings"><i class="fa fa-check"></i>The Deep Learning Approach: Word Embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#deep-learning-word-embeddings"><i class="fa fa-check"></i><b>13.5</b> Deep Learning “Word Embeddings”</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#what-are-the-benefits-of-word-embeddings"><i class="fa fa-check"></i><b>13.5.1</b> What are the benefits of Word Embeddings?</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a.-prepare-the-tokens"><i class="fa fa-check"></i>a. Prepare the Tokens</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#b.-training-the-model"><i class="fa fa-check"></i>b. Training the Model</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#c.-extracting-and-using-embeddings"><i class="fa fa-check"></i>c. Extracting and Using Embeddings</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#d.-finding-semantic-neighbors"><i class="fa fa-check"></i>d. Finding Semantic Neighbors</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#e.-saving-and-loading-the-model"><i class="fa fa-check"></i>e. Saving and Loading the Model</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#f.-visualization"><i class="fa fa-check"></i>f. Visualization</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#g.-key-word2vec-hyperparameters-to-consider"><i class="fa fa-check"></i>g. Key <code>word2vec</code> Hyperparameters to Consider</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#intuitions-for-word-embeddings"><i class="fa fa-check"></i><b>13.6</b> Intuitions for Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#semantic-calculation-and-lexical-distance"><i class="fa fa-check"></i>Semantic Calculation and Lexical Distance</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#a-quick-example-based-on-sinca-corpus"><i class="fa fa-check"></i>A Quick Example based on Sinca Corpus</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#corpus-data-profile"><i class="fa fa-check"></i><b>13.7</b> Corpus Data Profile</a></li>
+<li class="chapter" data-level="13.8" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#embeddings-training"><i class="fa fa-check"></i><b>13.8</b> Embeddings Training</a>
+<ul>
+<li class="chapter" data-level="13.8.1" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#train-a-base-word-embedding-model"><i class="fa fa-check"></i><b>13.8.1</b> Train a base word embedding model</a></li>
+<li class="chapter" data-level="13.8.2" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#artist-specific-fine-tuning"><i class="fa fa-check"></i><b>13.8.2</b> Artist-Specific Fine-tuning</a></li>
+<li class="chapter" data-level="13.8.3" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#identify-nearest-neighbors"><i class="fa fa-check"></i><b>13.8.3</b> Identify nearest neighbors</a></li>
+</ul></li>
+<li class="chapter" data-level="13.9" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#sentiment-analysis"><i class="fa fa-check"></i><b>13.9</b> Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#analyzing-the-sentiment-distribution-of-neighboring-words"><i class="fa fa-check"></i>Analyzing the Sentiment Distribution of Neighboring Words</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#check-the-dictionary-sentiment-dictionary"><i class="fa fa-check"></i>Check the Dictionary! Sentiment Dictionary!</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#distribution-of-nrc-sentiment-lexicon"><i class="fa fa-check"></i>Distribution of NRC Sentiment Lexicon</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#distribution-of-nrc-emotion-lexicon"><i class="fa fa-check"></i>Distribution of NRC Emotion Lexicon</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="python-environment.html"><a href="#mapping-%E7%94%B7%E4%BA%BA%E5%A5%B3%E4%BA%BA-neighbors-to-nrc-sentiment-dictionary"><i class="fa fa-check"></i><b>13.10</b> Mapping 男人/女人 Neighbors to NRC Sentiment Dictionary</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#visualization-of-results-sentiment"><i class="fa fa-check"></i>Visualization of Results: Sentiment</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-%E7%94%B7%E4%BA%BA-sentiment-relevant-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring 男人 Sentiment-relevant Neighbors</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-sentiment-relevant-%E5%A5%B3%E4%BA%BA-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring Sentiment-relevant 女人 Neighbors</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#simple-statistical-analysis-positivenegative-binary-sentiment"><i class="fa fa-check"></i>Simple Statistical Analysis (Positive/Negative Binary Sentiment)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.11" data-path="python-environment.html"><a href="#mapping-%E7%94%B7%E4%BA%BA%E5%A5%B3%E4%BA%BA-neighbors-to-nrc-emotion-dictionary"><i class="fa fa-check"></i><b>13.11</b> Mapping 男人/女人 Neighbors to NRC Emotion Dictionary</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#visualization-of-results-emotion"><i class="fa fa-check"></i>Visualization of Results: Emotion</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-%E7%94%B7%E4%BA%BA-emotion-relevant-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring 男人 Emotion-relevant Neighbors</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#post-hoc-analysis-exploring-emotion-relevant-%E5%A5%B3%E4%BA%BA-neighbors"><i class="fa fa-check"></i>Post-hoc Analysis: Exploring Emotion-relevant 女人 Neighbors</a></li>
+</ul></li>
+<li class="chapter" data-level="13.12" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#conclusion-1"><i class="fa fa-check"></i><b>13.12</b> Conclusion</a>
+<ul>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#corpus-analysis-and-computer-science"><i class="fa fa-check"></i>Corpus Analysis and Computer Science</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#the-future-of-linguistics"><i class="fa fa-check"></i>The Future of Linguistics?</a></li>
+<li class="chapter" data-level="" data-path="semantic-representations-word-embeddings.html"><a href="semantic-representations-word-embeddings.html#dont-overthink-it-just-learn-it"><i class="fa fa-check"></i>Don’t overthink it, just learn it!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="python-environment.html"><a href="python-environment.html"><i class="fa fa-check"></i><b>14</b> Python Environment</a>
 <ul>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-the-python-with-anaconda"><i class="fa fa-check"></i>Install the python with Anaconda</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#create-conda-environment"><i class="fa fa-check"></i>Create Conda Environment</a></li>
 <li class="chapter" data-level="" data-path="python-environment.html"><a href="python-environment.html#install-python-modules"><i class="fa fa-check"></i>Install Python Modules</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="15" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>15</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://web.ntnu.edu.tw/~alvinchen" target ="blank">Alvin Chen </a></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -441,8 +531,8 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <script src="https://hypothes.is/embed.js" async></script>
-<div id="python-environment" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Python Environment<a href="python-environment.html#python-environment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="python-environment" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Python Environment<a href="python-environment.html#python-environment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>All the codes starting with <code>$</code> should be run in the terminal or Anaconda Prompt.</p>
 <p>For Windows users, we assume that you run the following steps in Anaconda Powershell Prompt.</p>
@@ -504,6 +594,9 @@ div.csl-indent {
 <div class="sourceCode" id="cb4"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb4-1"><a href="python-environment.html#cb4-1" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">RETICULATE_PYTHON =</span> <span class="st">&quot;/Users/alvinchen/anaconda3/envs/corpling/bin/python&quot;</span>) <span class="co"># needs to point to python binary</span></span></code></pre></div>
 <p>Also, in RStudio, we can specify the default conda environment to be used in R. For each project, we can also specify a project-specific conda.</p>
 </div>
+<div class="warning">
+<p>For <code>spacyr</code>, it seems that we have to specify the python path explicitly using <code>Sys.setenv()</code>.</p>
+</div>
 
 </div>
 </div>
@@ -512,7 +605,7 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="vector-space-representation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semantic-representations-word-embeddings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
