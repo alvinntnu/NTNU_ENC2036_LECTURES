@@ -23,7 +23,7 @@
 <meta name="author" content="Alvin Cheng-Hsien Chen" />
 
 
-<meta name="date" content="2026-05-27" />
+<meta name="date" content="2026-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1043,6 +1043,15 @@ Figure 12.4: Example of Document-Feature Matrix
 <li>Dispersion: <code>dfm_trim(DFM, min_docfreq = ..., max_docfreq = ...)</code></li>
 <li>Weights: <code>dfm_weight(DFM, scheme = ...)</code> or <code>dfm_tfidf(DFM)</code></li>
 </ul>
+<div class="try">
+<p>When specifying feature selection thresholds, the arguments <code>termfreq_type</code> and <code>docfreq_type</code> determine how the respective <code>min_*</code> and <code>max_*</code> limits are interpreted:</p>
+<ul>
+<li><strong><code>"count"</code></strong>: Interprets the cutoff values as absolute frequency counts.</li>
+<li><strong><code>"prop"</code></strong>: Interprets the cutoff values as proportions, dividing the raw frequencies by the total number of tokens in the collection.</li>
+<li><strong><code>"rank"</code></strong>: Matches the cutoff values against an inverted frequency ranking. A value of 1 represents the most frequent feature, 2 represents the second most frequent, and so on.</li>
+<li><strong><code>"quantile"</code></strong>: Sets the cutoffs dynamically based on the mathematical quantiles of the frequency distribution.</li>
+</ul>
+</div>
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 12.2  </strong></span>Please read the documentations of <code>dfm_trim()</code>, <code>dfm_weight()</code>, <code>dfm_tfidf()</code> very carefully and make sure you know how to use them.</p>
 </div>
@@ -1076,16 +1085,6 @@ Figure 12.4: Example of Document-Feature Matrix
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["doc_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["fellow-citizens"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["senate"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["house"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["representatives"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["among"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["life"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["event"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["greater"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["order"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["received"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["day"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["present"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["one"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["hand"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["country"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["whose"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["voice"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["can"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["never"],"name":[20],"type":["dbl"],"align":["right"]}],"data":[{"1":"1789-Washington","2":"1","3":"1","4":"2","5":"2","6":"1","7":"1","8":"2","9":"1","10":"2","11":"1","12":"2","13":"5","14":"4","15":"3","16":"5","17":"2","18":"2","19":"9","20":"2","_rn_":"1"},{"1":"1793-Washington","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"0","13":"1","14":"0","15":"0","16":"1","17":"0","18":"1","19":"0","20":"0","_rn_":"2"},{"1":"1797-Adams","2":"3","3":"1","4":"0","5":"2","6":"4","7":"2","8":"0","9":"0","10":"4","11":"0","12":"1","13":"2","14":"0","15":"0","16":"9","17":"0","18":"1","19":"9","20":"1","_rn_":"3"},{"1":"1801-Jefferson","2":"2","3":"0","4":"0","5":"0","6":"1","7":"1","8":"0","9":"1","10":"1","11":"0","12":"1","13":"0","14":"6","15":"0","16":"3","17":"2","18":"1","19":"3","20":"1","_rn_":"4"},{"1":"1805-Jefferson","2":"0","3":"0","4":"0","5":"0","6":"7","7":"2","8":"0","9":"0","10":"3","11":"0","12":"1","13":"3","14":"0","15":"0","16":"4","17":"3","18":"0","19":"6","20":"0","_rn_":"5"},{"1":"1809-Madison","2":"1","3":"0","4":"0","5":"0","6":"0","7":"1","8":"0","9":"0","10":"0","11":"0","12":"0","13":"1","14":"0","15":"0","16":"4","17":"2","18":"0","19":"5","20":"1","_rn_":"6"},{"1":"1813-Madison","2":"1","3":"0","4":"0","5":"0","6":"1","7":"1","8":"0","9":"1","10":"0","11":"2","12":"0","13":"0","14":"1","15":"0","16":"5","17":"1","18":"1","19":"1","20":"2","_rn_":"7"},{"1":"1817-Monroe","2":"5","3":"0","4":"0","5":"1","6":"3","7":"1","8":"3","9":"3","10":"1","11":"1","12":"1","13":"4","14":"2","15":"0","16":"9","17":"1","18":"0","19":"7","20":"3","_rn_":"8"},{"1":"1821-Monroe","2":"1","3":"0","4":"0","5":"0","6":"1","7":"2","8":"1","9":"0","10":"3","11":"2","12":"0","13":"3","14":"6","15":"0","16":"6","17":"6","18":"0","19":"3","20":"2","_rn_":"9"},{"1":"1825-Adams","2":"0","3":"0","4":"0","5":"1","6":"3","7":"1","8":"0","9":"0","10":"0","11":"0","12":"0","13":"1","14":"4","15":"3","16":"9","17":"0","18":"1","19":"3","20":"0","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
-</div>
-<div class="info">
-<p>In <code>dfm_trim()</code>, we can specify the cutoff values of <code>min_termfreq</code>/<code>max_termfreq</code> and <code>min_docfreq</code>/<code>max_docfreq</code> in different ways.</p>
-<p>The numbers could refer to:</p>
-<ul>
-<li><code>"count"</code>: Raw termfreq/docfreq counts;</li>
-<li><code>"prop"</code>: Normalized termfreq/docfreq (percentages);</li>
-<li><code>"rank"</code>: Inverted ranking of the features in terms of overall termfreq/docfreq;</li>
-<li><code>"quantile"</code>: Quantiles of termfreq/docfreq.</li>
-</ul>
 </div>
 </div>
 </div>
@@ -1321,7 +1320,7 @@ docs              fellow-citizens    senate    house representatives     among
 </div>
 <div id="cluster-analysis" class="section level3 hasAnchor" number="12.2.10">
 <h3><span class="header-section-number">12.2.10</span> Cluster Analysis<a href="vector-space-representation.html#cluster-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The pairise distance/similarity matrices are sometimes less comprehensive. We can visulize the document distances in a more comprehensive way by an exploratory technique called <strong>hierarchical cluster analysis</strong>.</p>
+<p>The pairwise distance/similarity matrices are sometimes less comprehensive. We can visualize the document distances in a more comprehensive way by an exploratory technique called <strong>hierarchical cluster analysis</strong>.</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb74-1"><a href="vector-space-representation.html#cb74-1" tabindex="-1"></a><span class="do">## distance-based</span></span>
 <span id="cb74-2"><a href="vector-space-representation.html#cb74-2" tabindex="-1"></a>corp_us_hist_euclidean <span class="ot">&lt;-</span> corp_us_euclidean <span class="sc">%&gt;%</span> </span>
 <span id="cb74-3"><a href="vector-space-representation.html#cb74-3" tabindex="-1"></a>  as.dist <span class="sc">%&gt;%</span> <span class="do">## DFM to dist</span></span>
@@ -1753,9 +1752,11 @@ features Among people States Great nation free shall great world union
 <span id="cb100-8"><a href="vector-space-representation.html#cb100-8" tabindex="-1"></a>                                                   <span class="dv">1</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">5</span>))</span>
 <span id="cb100-9"><a href="vector-space-representation.html#cb100-9" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="figs/vector-space-representation-unnamed-chunk-65-1.png" alt="" width="672" /></p>
+<hr />
 <div class="exercise">
-<p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 12.3  </strong></span>In the above example, our original goal was to subset the FCM by including only the target words (rows) and contextual features (columns) that are on the list of the top 50 contextual features (<code>names(corp_fcm_win_5_top50)</code>). In other words, the subset FCM should have been a 50 by 50 matrix? But it’s not. Why?</p>
+<p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 12.3  </strong></span>In the above example, our original goal was to subset the FCM by including only the target words (rows) and contextual features (columns) that are on the list of the top 50 contextual features (<code>names(corp_fcm_win_5_top50)</code>). In other words, the subset FCM should have been a 50 by 50 matrix? But it’s not. Why? (Check <code>dim(fcm4network)</code>)</p>
 </div>
+<hr />
 <ul>
 <li>In addition to a network, we can also create a dendrogram showing the semantic relations in-between a set of contextual features. (For example, the following shows a cluster analysis of the top 100 contextual features.)</li>
 </ul>
