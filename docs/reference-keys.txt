@@ -278,3 +278,6 @@ fig:htmltree
 fig:unnamed-chunk-18
 exr:wcex1
 a-step-by-step-training-of-word-embeddings
+intuitions-for-word-embeddings-self-study
+train-a-base-word-embedding-model-on-the-entire-dataset
+artist-specific-model-training
